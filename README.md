@@ -16,9 +16,9 @@ Oracleを使用すると、[Coherence](https://oracle.github.io/coherence)を使
 * Grafana、ELK (またはより具体的にはElasticsearch、Fluentd and Kibana (EFK)スタック)、Prometheusなどの一般的な業界標準ツールを使用して、クラスタのパフォーマンス、ログおよびヘルスを監視します。
 
 -------
-Coherence Operator向けのドキュメントは、[こちら](https://oracle.github.io/coherence-operator/docs/latest)で入手できます
+Coherence Operator向けのドキュメントは、[こちら](https://oracle.github.io/coherence-operator/docs/)で入手できます。
 
-オペレータを最も速く体験するには、[「クイック・スタート・ガイド」](https://oracle-japan-oss-docs.github.io/coherence-operator/docs/latest/#/about/03_quickstart)に従います。
+オペレータを最も速く体験するには、[「クイック・スタート・ガイド」](https://oracle-japan-oss-docs.github.io/coherence-operator/#/about/03_quickstart)に従います。
 -------
 
 # さらにサポートが必要ですか? 提案がありますか?
