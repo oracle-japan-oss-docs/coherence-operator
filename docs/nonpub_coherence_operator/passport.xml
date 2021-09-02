@@ -1,0 +1,13 @@
+<passport>
+	<book>
+		<title>nonpub_coherence_operator</title>
+			<scope>
+				<language>ja</language>
+			</scope>
+			<output>HTML</output>
+		<file>
+			<source>all.html</source>
+			<filetype>jadoc-html</filetype>
+		</file>
+	</book>
+</passport>
