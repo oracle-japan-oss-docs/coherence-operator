@@ -1,3 +1,12 @@
+<!--
+Copyright 2019, 2021 Oracle Corporation and/or its affiliates.
+All rights reserved.  Licensed under the Universal
+Permissive License v 1.0 as shown at
+http://oss.oracle.com/licenses/upl.
+
+-->
+
+-----
 ![logo](docs/images/logo-with-name.png)
 
 ![オペレータCI [「ライセンス」](https://oss.oracle.com/licenses/upl/) [「Report Cardに移動」](https://goreportcard.com/report/github.com/oracle/coherence-operator) GitHubリリース(最新日付)](https://github.com/oracle/coherence-operator/workflows/Operator%20CI/badge.svg?branch=master)![](http://img.shields.io/badge/license-UPL%201.0-blue.svg)![](https://goreportcard.com/badge/github.com/oracle/coherence-operator)![](https://img.shields.io/github/v/release/oracle/coherence-operator)
