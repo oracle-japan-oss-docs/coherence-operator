@@ -18,7 +18,7 @@ Oracleを使用すると、[Coherence](https://oracle.github.io/coherence)を使
 -------
 Coherence Operator向けのドキュメントは、[こちら](https://oracle.github.io/coherence-operator/docs/)で入手できます。
 
-オペレータを最も速く体験するには、[「クイック・スタート・ガイド」](https://oracle-japan-oss-docs.github.io/coherence-operator/#/about/03_quickstart)に従います。
+オペレータを最も速く体験するには、[「クイック・スタート・ガイド」](https://oracle-japan-oss-docs.github.io/coherence-operator/docs/#/about/03_quickstart)を参照します。
 -------
 
 # さらにサポートが必要ですか? 提案がありますか?
