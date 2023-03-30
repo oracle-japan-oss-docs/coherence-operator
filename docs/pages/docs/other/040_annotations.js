@@ -21,7 +21,7 @@ spec:
     prometheus.io/scrape: "true"</markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.2zp4Ll" title="原文 : A number of Prometheus annotations will be added to this Coherence deployment&rsquo;s Pods">多数のPrometheus注釈がこの<code>Coherence</code>デプロイメントの<code>Pods</code>に追加されます</span></li>
+<li data-value="1"><span class="merged" id="all.2zp4Ll" title="原文 : A number of Prometheus annotations will be added to this Coherence deployment’s Pods">多数のPrometheus注釈がこの<code>Coherence</code>デプロイメントの<code>Pods</code>に追加されます</span></li>
 </ul>
 </div>
 </doc-view>

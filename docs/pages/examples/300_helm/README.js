@@ -209,7 +209,7 @@ docker run -it --rm ${operator.image} status -h</markup>
 <tbody>
 <tr>
 <td class=""><span class="merged" id="all.19PwnP"  title="原文: --operator-url"><code>--operator-url</code></span></td>
-<td class=""><span class="merged" id="all.3QaiDq" title="原文 : The Coherence Operator URL, typically the operator&rsquo;s REST service (default &quot;http://coherence-operator-rest.coherence.svc.local:8000&quot;">Coherence Operator URL。通常は、オペレータのRESTサービス(デフォルトはhttp://coherence-operator-rest.coherence.svc.local:8000")</span></td>
+<td class=""><span class="merged" id="all.3QaiDq" title="原文 : The Coherence Operator URL, typically the operator’s REST service (default &quot;http://coherence-operator-rest.coherence.svc.local:8000&quot;">Coherence Operator URL。通常は、オペレータのRESTサービス(デフォルトはhttp://coherence-operator-rest.coherence.svc.local:8000")</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.iE5d5"  title="原文: --namespace"><code>--namespace</code></span></td>
@@ -331,7 +331,7 @@ lang="bash"
 
 <h4 id="_other_helm_hooks"><span class="merged" id="all.3tiFzK" title="原文 : Other Helm Hooks">その他のHelmフック</span></h4>
 <div class="section">
-<p><span class="merged" id="all.62SU9.spl1" title="原文 : We saw above how a custom post-install and post-update hook could be used to work aroud the restrictions of Helm&rsquo;s --wait argument.">Helmの<code>--wait</code>引数の制限を補うために、カスタムの事後インストールおよび事後更新フックを使用する方法が上に示されました。</span> <span class="merged" id="all.62SU9.spl2" title="原文 : Of course there are other hooks available in Helm that the method above could be used in.">もちろん、Helmでは前述のメソッドを使用できる他のフックがあります。</span> <span class="merged" id="all.62SU9.spl3" title="原文 : For example, say I had a front end application to be deployed using a Helm chart, but I did not want Helm to start the deployment until the Coherence back-end was ready, I could use the same method above in a pre-install hook.">たとえば、Helmチャートを使用してフロント・エンド・アプリケーションをデプロイしたとしますが、Coherenceバックエンドの準備が完了するまでHelmでデプロイメントを開始したくない場合、インストール前フックで同じメソッドを使用できます。</span> </p>
+<p><span class="merged" id="all.62SU9.spl1" title="原文 : We saw above how a custom post-install and post-update hook could be used to work aroud the restrictions of Helm’s --wait argument.">Helmの<code>--wait</code>引数の制限を補うために、カスタムの事後インストールおよび事後更新フックを使用する方法が上に示されました。</span> <span class="merged" id="all.62SU9.spl2" title="原文 : Of course there are other hooks available in Helm that the method above could be used in.">もちろん、Helmでは前述のメソッドを使用できる他のフックがあります。</span> <span class="merged" id="all.62SU9.spl3" title="原文 : For example, say I had a front end application to be deployed using a Helm chart, but I did not want Helm to start the deployment until the Coherence back-end was ready, I could use the same method above in a pre-install hook.">たとえば、Helmチャートを使用してフロント・エンド・アプリケーションをデプロイしたとしますが、Coherenceバックエンドの準備が完了するまでHelmでデプロイメントを開始したくない場合、インストール前フックで同じメソッドを使用できます。</span> </p>
 
 </div>
 </div>

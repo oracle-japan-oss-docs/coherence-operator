@@ -40,7 +40,7 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.4XIITG" title="原文 : I&rsquo;m using Arm64 and Java 8 and the JVM will not start due to using G1GC"><router-link @click.native="this.scrollFix('#arm-java8')" to="#arm-java8">Arm64およびJava 8を使用しているため、JVMはG1GCの使用により開始されません</router-link></span></p>
+<p><span class="merged" id="all.4XIITG" title="原文 : I’m using Arm64 and Java 8 and the JVM will not start due to using G1GC"><router-link @click.native="this.scrollFix('#arm-java8')" to="#arm-java8">Arm64およびJava 8を使用しているため、JVMはG1GCの使用により開始されません</router-link></span></p>
 
 </li>
 </ul>
@@ -93,7 +93,7 @@ kubectl -n &lt;NAMESPACE&gt; delete coherence/&lt;COHERENCE_RESOURCE_NAME&gt;</m
 
 <p><span class="merged" id="all.1rWOh5" title="原文 : If this is not possible then the following steps will allow the deployment to be scaled down.">これができない場合は、次のステップでデプロイメントをスケール・ダウンできます。</span></p>
 
-<p><span class="merged" id="all.32tiNo" title="原文 : 1 Update the stuck Coherence deployment&rsquo;s scaling policy to be Parallel">1 スタックCoherenceデプロイメントのスケーリング・ポリシーを<code>Parallel</code>に更新</span></p>
+<p><span class="merged" id="all.32tiNo" title="原文 : 1 Update the stuck Coherence deployment’s scaling policy to be Parallel">1 スタックCoherenceデプロイメントのスケーリング・ポリシーを<code>Parallel</code>に更新</span></p>
 
 <markup
 lang="yaml"
@@ -135,7 +135,7 @@ lang="console"
 
 >kubectl -n coherence-test patch coherence/my-cluster -p '{"metadata":{"finalizers":[]}}' --type=merge</markup>
 
-<p><span class="merged" id="all.1BrJsz" title="原文 : This will remove the Operator&rsquo;s finalizer from the Coherence deployment.">これにより、オペレータのファイナライザがCoherenceデプロイメントから削除されます。</span></p>
+<p><span class="merged" id="all.1BrJsz" title="原文 : This will remove the Operator’s finalizer from the Coherence deployment.">これにより、オペレータのファイナライザがCoherenceデプロイメントから削除されます。</span></p>
 
 <p><span class="merged" id="all.3eZdwS" title="原文 : At this point the my-cluster Coherence deployment might already have been removed, if not try the delete command again.">この時点で、削除コマンドを再試行しない場合、<code>my-cluster</code> Coherenceデプロイメントはすでに削除されている可能性があります。</span></p>
 
@@ -159,7 +159,7 @@ lang="console"
 
 </div>
 
-<h3 id="arm-java8"><span class="merged" id="all.rZAz6" title="原文 : I&rsquo;m using Arm64 and Java 8 and the JVM will not start due to using G1GC">Arm64およびJava 8を使用しているため、JVMはG1GCの使用により開始されません</span></h3>
+<h3 id="arm-java8"><span class="merged" id="all.rZAz6" title="原文 : I’m using Arm64 and Java 8 and the JVM will not start due to using G1GC">Arm64およびJava 8を使用しているため、JVMはG1GCの使用により開始されません</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4YuR9O.1" title="原文 : If running Kubernetes on ARM processors and using Coherence images built on Java 8 for ARM, note that the G1 garbage collector in that version of Java on ARM is marked as experimental.">ARMプロセッサでKubernetesを実行し、Java 8 for ARMでビルドされたCoherenceイメージを使用する場合、ARM上のそのバージョンのJavaのG1ガベージ・コレクタは実験的としてマークされます。</span></p>
 

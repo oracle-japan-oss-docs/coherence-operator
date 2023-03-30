@@ -103,7 +103,7 @@ lang="bash"
 
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.2s8QB" title="原文 : The clusterRoles value is set to false."><code>clusterRoles</code>値は<code>false</code>に設定されます。</span></li>
-<li data-value="2"><span class="merged" id="all.Xi4ln" title="原文 : The nodeRoles value is set to true, so a single ClusterRole will be applied to the Operator&rsquo;s service account"><code>nodeRoles</code>値は<code>true</code>に設定されているため、1つのClusterRoleがオペレータのサービス・アカウントに適用されます</span></li>
+<li data-value="2"><span class="merged" id="all.Xi4ln" title="原文 : The nodeRoles value is set to true, so a single ClusterRole will be applied to the Operator’s service account"><code>nodeRoles</code>値は<code>true</code>に設定されているため、1つのClusterRoleがオペレータのサービス・アカウントに適用されます</span></li>
 </ul>
 </div>
 </div>

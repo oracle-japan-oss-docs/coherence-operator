@@ -327,7 +327,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.2mErj2"  title="原文: cluster"><code>cluster</code></span></td>
-<td class=""><span class="merged" id="all.2S83jb.spl1" title="原文 : The optional name of the Coherence cluster that this Coherence resource belongs to.">このCoherenceリソースが属するCoherenceクラスタのオプション名。</span> <span class="merged" id="all.2S83jb.spl2" title="原文 : If this value is set the Pods controlled by this Coherence resource will form a cluster with other Pods controlled by Coherence resources with the same cluster name.">この値が設定されている場合、このCoherenceリソースによって制御されるポッドは、同じクラスタ名を持つCoherenceリソースによって制御される他のポッドを持つクラスタを形成します。</span> <span class="merged" id="all.2S83jb.spl3" title="原文 : If not set the Coherence resource&rsquo;s name will be used as the cluster name.">設定しない場合、Coherenceリソースの名前はクラスタ名として使用されます。</span> </td>
+<td class=""><span class="merged" id="all.2S83jb.spl1" title="原文 : The optional name of the Coherence cluster that this Coherence resource belongs to.">このCoherenceリソースが属するCoherenceクラスタのオプション名。</span> <span class="merged" id="all.2S83jb.spl2" title="原文 : If this value is set the Pods controlled by this Coherence resource will form a cluster with other Pods controlled by Coherence resources with the same cluster name.">この値が設定されている場合、このCoherenceリソースによって制御されるポッドは、同じクラスタ名を持つCoherenceリソースによって制御される他のポッドを持つクラスタを形成します。</span> <span class="merged" id="all.2S83jb.spl3" title="原文 : If not set the Coherence resource’s name will be used as the cluster name.">設定しない場合、Coherenceリソースの名前はクラスタ名として使用されます。</span> </td>
 <td class=""><span class="merged" id="all.2JXhOu.1"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.9"  title="原文:: false">false</span></td>
 </tr>
@@ -435,25 +435,25 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.39gtZv"  title="原文: initContainers"><code>initContainers</code></span></td>
-<td class=""><span class="merged" id="all.1919Iy.spl1" title="原文 : List of additional initialization containers to add to the deployment&rsquo;s Pod.">デプロイメントのポッドに追加する追加の初期化コンテナのリスト。</span> <span class="merged" id="all.1919Iy.spl2" title="原文 : More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">詳細情報: <a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/" id="" target="_blank" >https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</a></span> </td>
+<td class=""><span class="merged" id="all.1919Iy.spl1" title="原文 : List of additional initialization containers to add to the deployment’s Pod.">デプロイメントのポッドに追加する追加の初期化コンテナのリスト。</span> <span class="merged" id="all.1919Iy.spl2" title="原文 : More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">詳細情報: <a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/" id="" target="_blank" >https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</a></span> </td>
 <td class=""><span class="merged" id="all.2RxUBu"  title="原文: []corev1.Container"><code>[]<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#container-v1-core" id="" target="_blank" >corev1.Container</a></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.27"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3kcK47"  title="原文: sideCars"><code>sideCars</code></span></td>
-<td class=""><span class="merged" id="all.4c1uYW" title="原文 : List of additional side-car containers to add to the deployment&rsquo;s Pod.">デプロイメントのポッドに追加する追加サイドカー・コンテナのリスト。</span></td>
+<td class=""><span class="merged" id="all.4c1uYW" title="原文 : List of additional side-car containers to add to the deployment’s Pod.">デプロイメントのポッドに追加する追加サイドカー・コンテナのリスト。</span></td>
 <td class=""><span class="merged" id="all.2RxUBu.1"  title="原文: []corev1.Container"><code>[]<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#container-v1-core" id="" target="_blank" >corev1.Container</a></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.28"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1Q1gqJ"  title="原文: configMapVolumes"><code>configMapVolumes</code></span></td>
-<td class=""><span class="merged" id="all.3fPqjF.spl1" title="原文 : A list of ConfigMaps to add as volumes.">ボリュームとして追加するConfigMapsのリスト。</span> <span class="merged" id="all.3fPqjF.spl2" title="原文 : Each entry in the list will be added as a ConfigMap Volume to the deployment&rsquo;s Pods and as a VolumeMount to all the containers and init-containers in the Pod. see: Add ConfigMap Volumes">リスト内の各エントリは、ConfigMapボリュームとしてデプロイメント・ポッドに追加され、ポッド内のすべてのコンテナおよびinitコンテナにVolumeMountとして追加されます。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/050_configmap_volumes.adoc')" to="#misc_pod_settings/050_configmap_volumes.adoc">ConfigMapボリュームの追加</router-link></span> </td>
+<td class=""><span class="merged" id="all.3fPqjF.spl1" title="原文 : A list of ConfigMaps to add as volumes.">ボリュームとして追加するConfigMapsのリスト。</span> <span class="merged" id="all.3fPqjF.spl2" title="原文 : Each entry in the list will be added as a ConfigMap Volume to the deployment’s Pods and as a VolumeMount to all the containers and init-containers in the Pod. see: Add ConfigMap Volumes">リスト内の各エントリは、ConfigMapボリュームとしてデプロイメント・ポッドに追加され、ポッド内のすべてのコンテナおよびinitコンテナにVolumeMountとして追加されます。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/050_configmap_volumes.adoc')" to="#misc_pod_settings/050_configmap_volumes.adoc">ConfigMapボリュームの追加</router-link></span> </td>
 <td class=""><span class="merged" id="all.1Ir1sQ"  title="原文: []ConfigMapVolumeSpec"><code>[]<router-link @click.native="this.scrollFix('#_configmapvolumespec')" to="#_configmapvolumespec">ConfigMapVolumeSpec</router-link></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.29"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1BjbC2"  title="原文: secretVolumes"><code>secretVolumes</code></span></td>
-<td class=""><span class="merged" id="all.1cg8Wx.spl1" title="原文 : A list of Secrets to add as volumes.">ボリュームとして追加するシークレットのリスト。</span> <span class="merged" id="all.1cg8Wx.spl2" title="原文 : Each entry in the list will be added as a Secret Volume to the deployment&rsquo;s Pods and as a VolumeMount to all the containers and init-containers in the Pod. see: Add Secret Volumes">リスト内の各エントリは、デプロイメント・ポッドにシークレット・ボリュームとして追加され、ポッド内のすべてのコンテナおよびinit-containersにVolumeMountとして追加されます。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/020_secret_volumes.adoc')" to="#misc_pod_settings/020_secret_volumes.adoc">シークレット・ボリュームの追加</router-link></span> </td>
+<td class=""><span class="merged" id="all.1cg8Wx.spl1" title="原文 : A list of Secrets to add as volumes.">ボリュームとして追加するシークレットのリスト。</span> <span class="merged" id="all.1cg8Wx.spl2" title="原文 : Each entry in the list will be added as a Secret Volume to the deployment’s Pods and as a VolumeMount to all the containers and init-containers in the Pod. see: Add Secret Volumes">リスト内の各エントリは、デプロイメント・ポッドにシークレット・ボリュームとして追加され、ポッド内のすべてのコンテナおよびinit-containersにVolumeMountとして追加されます。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/020_secret_volumes.adoc')" to="#misc_pod_settings/020_secret_volumes.adoc">シークレット・ボリュームの追加</router-link></span> </td>
 <td class=""><span class="merged" id="all.3Av1V3"  title="原文: []SecretVolumeSpec"><code>[]<router-link @click.native="this.scrollFix('#_secretvolumespec')" to="#_secretvolumespec">SecretVolumeSpec</router-link></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.30"  title="原文:: false">false</span></td>
 </tr>
@@ -549,7 +549,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.MBbPG"  title="原文: hostIPC"><code>hostIPC</code></span></td>
-<td class=""><span class="merged" id="all.2q45Bb.spl1" title="原文 : Use the host&rsquo;s ipc namespace.">ホストのipcネームスペースを使用します。</span> <span class="merged" id="all.2q45Bb.spl2" title="原文 : Optional: Default to false.">オプション: デフォルトはfalseです。</span> </td>
+<td class=""><span class="merged" id="all.2q45Bb.spl1" title="原文 : Use the host’s ipc namespace.">ホストのipcネームスペースを使用します。</span> <span class="merged" id="all.2q45Bb.spl2" title="原文 : Optional: Default to false.">オプション: デフォルトはfalseです。</span> </td>
 <td class=""><span class="merged" id="all.q9cn0.3"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.46"  title="原文:: false">false</span></td>
 </tr>
@@ -603,7 +603,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1NAysW"  title="原文: enableServiceLinks"><code>enableServiceLinks</code></span></td>
-<td class=""><span class="merged" id="all.1LVghx.spl1" title="原文 : EnableServiceLinks indicates whether information about services should be injected into pod&rsquo;s environment variables, matching the syntax of Docker links.">EnableServiceLinksは、サービスに関する情報がDockerリンクの構文と一致して、ポッドの環境変数にインジェクトされるかどうかを示します。</span> <span class="merged" id="all.1LVghx.spl2" title="原文 : Optional: Defaults to true.">オプション: デフォルトはtrueです。</span> </td>
+<td class=""><span class="merged" id="all.1LVghx.spl1" title="原文 : EnableServiceLinks indicates whether information about services should be injected into pod’s environment variables, matching the syntax of Docker links.">EnableServiceLinksは、サービスに関する情報がDockerリンクの構文と一致して、ポッドの環境変数にインジェクトされるかどうかを示します。</span> <span class="merged" id="all.1LVghx.spl2" title="原文 : Optional: Defaults to true.">オプション: デフォルトはtrueです。</span> </td>
 <td class=""><span class="merged" id="all.q9cn0.6"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.55"  title="原文:: false">false</span></td>
 </tr>
@@ -615,7 +615,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3ySiat"  title="原文: priorityClassName"><code>priorityClassName</code></span></td>
-<td class=""><span class="merged" id="all.3sPPLE.spl1" title="原文 : PriorityClassName, if specified, indicates the pod&rsquo;s priority. &quot;system-node-critical&quot; and &quot;system-cluster-critical&quot; are two special keywords which indicate the highest priorities with the former being the highest priority.">PriorityClassNameは、指定された場合、ポッドの優先度を示します。"system-node-critical"および"system-cluster-critical"は、前者の優先度が最も高い優先度を示す2つの特殊なキーワードです。</span> <span class="merged" id="all.3sPPLE.spl2" title="原文 : Any other name must be defined by creating a PriorityClass object with that name.">他の名前を定義するには、その名前のPriorityClassオブジェクトを作成する必要があります。</span> <span class="merged" id="all.3sPPLE.spl3" title="原文 : If not specified, the pod priority will be default or zero if there is no default.">指定しない場合、ポッド優先度はデフォルトまたはゼロになります(デフォルトがない場合)。</span> </td>
+<td class=""><span class="merged" id="all.3sPPLE.spl1" title="原文 : PriorityClassName, if specified, indicates the pod’s priority. &quot;system-node-critical&quot; and &quot;system-cluster-critical&quot; are two special keywords which indicate the highest priorities with the former being the highest priority.">PriorityClassNameは、指定された場合、ポッドの優先度を示します。"system-node-critical"および"system-cluster-critical"は、前者の優先度が最も高い優先度を示す2つの特殊なキーワードです。</span> <span class="merged" id="all.3sPPLE.spl2" title="原文 : Any other name must be defined by creating a PriorityClass object with that name.">他の名前を定義するには、その名前のPriorityClassオブジェクトを作成する必要があります。</span> <span class="merged" id="all.3sPPLE.spl3" title="原文 : If not specified, the pod priority will be default or zero if there is no default.">指定しない場合、ポッド優先度はデフォルトまたはゼロになります(デフォルトがない場合)。</span> </td>
 <td class=""><span class="merged" id="all.2JXhOu.4"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.57"  title="原文:: false">false</span></td>
 </tr>
@@ -645,13 +645,13 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.10B6kj"  title="原文: rackLabel"><code>rackLabel</code></span></td>
-<td class=""><span class="merged" id="all.2BJZXR.spl1" title="原文 : RackLabel is an optional Node label to use for the value of the Coherence member&rsquo;s rack name.">RackLabelは、Coherenceメンバーのラック名の値に使用するオプションのノード・ラベルです。</span> <span class="merged" id="all.2BJZXR.spl2" title="原文 : The default labels to use are determined by the Operator.">使用するデフォルトのラベルは、オペレータによって決まります。</span> </td>
+<td class=""><span class="merged" id="all.2BJZXR.spl1" title="原文 : RackLabel is an optional Node label to use for the value of the Coherence member’s rack name.">RackLabelは、Coherenceメンバーのラック名の値に使用するオプションのノード・ラベルです。</span> <span class="merged" id="all.2BJZXR.spl2" title="原文 : The default labels to use are determined by the Operator.">使用するデフォルトのラベルは、オペレータによって決まります。</span> </td>
 <td class=""><span class="merged" id="all.2JXhOu.7"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.62"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3COROV"  title="原文: siteLabel"><code>siteLabel</code></span></td>
-<td class=""><span class="merged" id="all.3d5llS" title="原文 : SiteLabel is an optional Node label to use for the value of the Coherence member&rsquo;s site name The default labels to use are determined by the Operator.">SiteLabelは、Coherenceメンバーのサイト名の値に使用するオプションのノード・ラベルです。使用するデフォルト・ラベルは、オペレータによって決まります。</span></td>
+<td class=""><span class="merged" id="all.3d5llS" title="原文 : SiteLabel is an optional Node label to use for the value of the Coherence member’s site name The default labels to use are determined by the Operator.">SiteLabelは、Coherenceメンバーのサイト名の値に使用するオプションのノード・ラベルです。使用するデフォルト・ラベルは、オペレータによって決まります。</span></td>
 <td class=""><span class="merged" id="all.2JXhOu.8"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.63"  title="原文:: false">false</span></td>
 </tr>
@@ -846,7 +846,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3T4f2k"  title="原文: excludeFromWKA"><code>excludeFromWKA</code></span></td>
-<td class=""><span class="merged" id="all.cgqYC" title="原文 : Exclude members of this deployment from being part of the cluster&rsquo;s WKA list. see: Well Known Addressing">このデプロイメントのメンバーをクラスタWKAリストの一部から除外します。<br>参照: <router-link @click.native="this.scrollFix('#coherence_settings/070_wka.adoc')" to="#coherence_settings/070_wka.adoc">よく知られたアドレス指定</router-link></span></td>
+<td class=""><span class="merged" id="all.cgqYC" title="原文 : Exclude members of this deployment from being part of the cluster’s WKA list. see: Well Known Addressing">このデプロイメントのメンバーをクラスタWKAリストの一部から除外します。<br>参照: <router-link @click.native="this.scrollFix('#coherence_settings/070_wka.adoc')" to="#coherence_settings/070_wka.adoc">よく知られたアドレス指定</router-link></span></td>
 <td class=""><span class="merged" id="all.q9cn0.9"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.81"  title="原文:: false">false</span></td>
 </tr>
@@ -952,7 +952,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3fCyV9"  title="原文: namespace"><code>namespace</code></span></td>
-<td class=""><span class="merged" id="all.2nilNh" title="原文 : The optional namespace of the existing Coherence deployment to use for WKA if different from this deployment&rsquo;s namespace.">このデプロイメントのネームスペースと異なる場合、WKAに使用する既存のCoherenceデプロイメントのオプションのネームスペース。</span></td>
+<td class=""><span class="merged" id="all.2nilNh" title="原文 : The optional namespace of the existing Coherence deployment to use for WKA if different from this deployment’s namespace.">このデプロイメントのネームスペースと異なる場合、WKAに使用する既存のCoherenceデプロイメントのオプションのネームスペース。</span></td>
 <td class=""><span class="merged" id="all.W18FC.4"  title="原文: string"><code>string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.88"  title="原文:: false">false</span></td>
 </tr>
@@ -965,7 +965,7 @@
 
 <h3 id="_configmapvolumespec"><span class="merged" id="all.3Ta4Lu"  title="原文: ConfigMapVolumeSpec">ConfigMapVolumeSpec</span></h3>
 <div class="section">
-<p><span class="merged" id="all.3RZ7S2" title="原文 : ConfigMapVolumeSpec represents a ConfigMap that will be added to the deployment&rsquo;s Pods as an additional Volume and as a VolumeMount in the containers. see: Add ConfigMap Volumes">ConfigMapVolumeSpecは、追加のボリュームとしてデプロイメント・ポッドに追加され、コンテナ内のVolumeMountとして追加されるConfigMapを表します。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/050_configmap_volumes.adoc')" to="#misc_pod_settings/050_configmap_volumes.adoc">ConfigMapボリュームの追加</router-link></span></p>
+<p><span class="merged" id="all.3RZ7S2" title="原文 : ConfigMapVolumeSpec represents a ConfigMap that will be added to the deployment’s Pods as an additional Volume and as a VolumeMount in the containers. see: Add ConfigMap Volumes">ConfigMapVolumeSpecは、追加のボリュームとしてデプロイメント・ポッドに追加され、コンテナ内のVolumeMountとして追加されるConfigMapを表します。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/050_configmap_volumes.adoc')" to="#misc_pod_settings/050_configmap_volumes.adoc">ConfigMapボリュームの追加</router-link></span></p>
 
 
 <div class="table__overflow elevation-1  ">
@@ -1011,7 +1011,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.uxrbO"  title="原文: subPath"><code>subPath</code></span></td>
-<td class=""><span class="merged" id="all.18jA47.spl1" title="原文 : Path within the volume from which the container&rsquo;s volume should be mounted.">コンテナのボリュームをマウントするボリューム内のパス。</span> <span class="merged" id="all.18jA47.spl2" title="原文 : Defaults to &quot;&quot; (volume&rsquo;s root).">デフォルトは"" (ボリュームのルート)です。</span> </td>
+<td class=""><span class="merged" id="all.18jA47.spl1" title="原文 : Path within the volume from which the container’s volume should be mounted.">コンテナのボリュームをマウントするボリューム内のパス。</span> <span class="merged" id="all.18jA47.spl2" title="原文 : Defaults to &quot;&quot; (volume’s root).">デフォルトは"" (ボリュームのルート)です。</span> </td>
 <td class=""><span class="merged" id="all.W18FC.8"  title="原文: string"><code>string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.91"  title="原文:: false">false</span></td>
 </tr>
@@ -1023,7 +1023,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.2XcR2k"  title="原文: subPathExpr"><code>subPathExpr</code></span></td>
-<td class=""><span class="merged" id="all.37dv3Z.spl1" title="原文 : Expanded path within the volume from which the container&rsquo;s volume should be mounted.">コンテナのボリュームをマウントするボリューム内の拡張パス。</span> <span class="merged" id="all.37dv3Z.spl2" title="原文 : Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&rsquo;s environment.">SubPathと同様に動作しますが、環境変数参照$(VAR_NAME)はコンテナの環境を使用して展開されます。</span> <span class="merged" id="all.37dv3Z.spl3" title="原文 : Defaults to &quot;&quot; (volume&rsquo;s root).">デフォルトは"" (ボリュームのルート)です。</span> <span class="merged" id="all.37dv3Z.spl4" title="原文 : SubPathExpr and SubPath are mutually exclusive.">SubPathExprとSubPathは相互に排他的です。</span> </td>
+<td class=""><span class="merged" id="all.37dv3Z.spl1" title="原文 : Expanded path within the volume from which the container’s volume should be mounted.">コンテナのボリュームをマウントするボリューム内の拡張パス。</span> <span class="merged" id="all.37dv3Z.spl2" title="原文 : Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container’s environment.">SubPathと同様に動作しますが、環境変数参照$(VAR_NAME)はコンテナの環境を使用して展開されます。</span> <span class="merged" id="all.37dv3Z.spl3" title="原文 : Defaults to &quot;&quot; (volume’s root).">デフォルトは"" (ボリュームのルート)です。</span> <span class="merged" id="all.37dv3Z.spl4" title="原文 : SubPathExpr and SubPath are mutually exclusive.">SubPathExprとSubPathは相互に排他的です。</span> </td>
 <td class=""><span class="merged" id="all.W18FC.9"  title="原文: string"><code>string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.93"  title="原文:: false">false</span></td>
 </tr>
@@ -1389,7 +1389,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.42BsZO"  title="原文: stackSize"><code>stackSize</code></span></td>
-<td class=""><span class="merged" id="all.8rQwl.spl1" title="原文 : StackSize is the stack size value to pass to the JVM.">StackSizeは、JVMに渡すスタック・サイズ値です。</span> <span class="merged" id="all.8rQwl.spl2" title="原文 : The format should be the same as that used for Java&rsquo;s -Xss JVM option.">形式は、Javaの -Xss JVMオプションに使用される形式と同じである必要があります。</span> <span class="merged" id="all.8rQwl.spl3" title="原文 : If not set the JVM defaults are used.">設定しない場合、JVMのデフォルトが使用されます。</span> </td>
+<td class=""><span class="merged" id="all.8rQwl.spl1" title="原文 : StackSize is the stack size value to pass to the JVM.">StackSizeは、JVMに渡すスタック・サイズ値です。</span> <span class="merged" id="all.8rQwl.spl2" title="原文 : The format should be the same as that used for Java’s -Xss JVM option.">形式は、Javaの -Xss JVMオプションに使用される形式と同じである必要があります。</span> <span class="merged" id="all.8rQwl.spl3" title="原文 : If not set the JVM defaults are used.">設定しない場合、JVMのデフォルトが使用されます。</span> </td>
 <td class=""><span class="merged" id="all.2JXhOu.23"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.125"  title="原文:: false">false</span></td>
 </tr>
@@ -1619,25 +1619,25 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1x8Vka"  title="原文: hostAliases"><code>hostAliases</code></span></td>
-<td class=""><span class="merged" id="all.csLDP.spl1" title="原文 : HostAliases is an optional list of hosts and IPs that will be injected into the pod&rsquo;s hosts file if specified.">HostAliasesは、指定された場合にポッドのhostsファイルにインジェクトされるホストおよびIPのオプションのリストです。</span> <span class="merged" id="all.csLDP.spl2" title="原文 : This is only valid for non-hostNetwork pods.">これは、hostNetwork以外のポッドにのみ有効です。</span> </td>
+<td class=""><span class="merged" id="all.csLDP.spl1" title="原文 : HostAliases is an optional list of hosts and IPs that will be injected into the pod’s hosts file if specified.">HostAliasesは、指定された場合にポッドのhostsファイルにインジェクトされるホストおよびIPのオプションのリストです。</span> <span class="merged" id="all.csLDP.spl2" title="原文 : This is only valid for non-hostNetwork pods.">これは、hostNetwork以外のポッドにのみ有効です。</span> </td>
 <td class=""><span class="merged" id="all.40QfDb"  title="原文: []corev1.HostAlias"><code>[]<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#hostalias-v1-core" id="" target="_blank" >corev1.HostAlias</a></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.142"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.yM6uO"  title="原文: hostNetwork"><code>hostNetwork</code></span></td>
-<td class=""><span class="merged" id="all.42LdBP.spl1" title="原文 : Host networking requested for this pod.">このポッドでホスト・ネットワーキングがリクエストされました。</span> <span class="merged" id="all.42LdBP.spl2" title="原文 : Use the host&rsquo;s network namespace.">ホストのネットワーク・ネームスペースを使用します。</span> <span class="merged" id="all.42LdBP.spl3" title="原文 : If this option is set, the ports that will be used must be specified.">このオプションが設定されている場合は、使用されるポートを指定する必要があります。</span> <span class="merged" id="all.42LdBP.spl4"  title="原文:: Default to false.">デフォルトはfalseです。</span> </td>
+<td class=""><span class="merged" id="all.42LdBP.spl1" title="原文 : Host networking requested for this pod.">このポッドでホスト・ネットワーキングがリクエストされました。</span> <span class="merged" id="all.42LdBP.spl2" title="原文 : Use the host’s network namespace.">ホストのネットワーク・ネームスペースを使用します。</span> <span class="merged" id="all.42LdBP.spl3" title="原文 : If this option is set, the ports that will be used must be specified.">このオプションが設定されている場合は、使用されるポートを指定する必要があります。</span> <span class="merged" id="all.42LdBP.spl4"  title="原文:: Default to false.">デフォルトはfalseです。</span> </td>
 <td class=""><span class="merged" id="all.q9cn0.21"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.143"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.28fJbR"  title="原文: hostname"><code>hostname</code></span></td>
-<td class=""><span class="merged" id="all.VMWGt" title="原文 : Specifies the hostname of the Pod If not specified, the pod&rsquo;s hostname will be set to a system-defined value.">ポッドのホスト名を指定します。指定しない場合、ポッドのホスト名はシステム定義の値に設定されます。</span></td>
+<td class=""><span class="merged" id="all.VMWGt" title="原文 : Specifies the hostname of the Pod If not specified, the pod’s hostname will be set to a system-defined value.">ポッドのホスト名を指定します。指定しない場合、ポッドのホスト名はシステム定義の値に設定されます。</span></td>
 <td class=""><span class="merged" id="all.2JXhOu.29"  title="原文: *string"><code>*string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.144"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1WY9fs"  title="原文: setHostnameAsFQDN"><code>setHostnameAsFQDN</code></span></td>
-<td class=""><span class="merged" id="all.2DDUPH.spl1" title="原文 : SetHostnameAsFQDN if true the pod&rsquo;s hostname will be configured as the pod&rsquo;s FQDN, rather than the leaf name (the default).">SetHostnameAsFQDN trueの場合、ポッドのホスト名はリーフ名(デフォルト)ではなく、ポッドのFQDNとして構成されます。</span> <span class="merged" id="all.2DDUPH.spl2" title="原文 : In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname).">Linuxコンテナでは、これはカーネルのホスト名フィールドのFQDN (構造体utsnameのノード名フィールド)を設定することを意味します。</span> <span class="merged" id="all.2DDUPH.spl3" title="原文 : In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters to FQDN.">Windowsコンテナでは、レジストリ・キーHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parametersのホスト名のレジストリ値をFQDNに設定します。</span> <span class="merged" id="all.2DDUPH.spl4" title="原文 : If a pod does not have FQDN, this has no effect.">ポッドにFQDNがない場合、これは効果がありません。</span> <span class="merged" id="all.2DDUPH.spl5"  title="原文:: Default to false.">デフォルトはfalseです。</span> </td>
+<td class=""><span class="merged" id="all.2DDUPH.spl1" title="原文 : SetHostnameAsFQDN if true the pod’s hostname will be configured as the pod’s FQDN, rather than the leaf name (the default).">SetHostnameAsFQDN trueの場合、ポッドのホスト名はリーフ名(デフォルト)ではなく、ポッドのFQDNとして構成されます。</span> <span class="merged" id="all.2DDUPH.spl2" title="原文 : In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname).">Linuxコンテナでは、これはカーネルのホスト名フィールドのFQDN (構造体utsnameのノード名フィールド)を設定することを意味します。</span> <span class="merged" id="all.2DDUPH.spl3" title="原文 : In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters to FQDN.">Windowsコンテナでは、レジストリ・キーHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parametersのホスト名のレジストリ値をFQDNに設定します。</span> <span class="merged" id="all.2DDUPH.spl4" title="原文 : If a pod does not have FQDN, this has no effect.">ポッドにFQDNがない場合、これは効果がありません。</span> <span class="merged" id="all.2DDUPH.spl5"  title="原文:: Default to false.">デフォルトはfalseです。</span> </td>
 <td class=""><span class="merged" id="all.q9cn0.22"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.145"  title="原文:: false">false</span></td>
 </tr>
@@ -1772,7 +1772,7 @@
 <tbody>
 <tr>
 <td class=""><span class="merged" id="all.Tgr1J"  title="原文: metadata"><code>metadata</code></span></td>
-<td class=""><span class="merged" id="all.4NNFob.spl1" title="原文 : Standard object&rsquo;s metadata.">Standardオブジェクトのメタデータ。</span> <span class="merged" id="all.4NNFob.spl2" title="原文 : More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">詳細情報: <a href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata" id="" target="_blank" >https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></span> </td>
+<td class=""><span class="merged" id="all.4NNFob.spl1" title="原文 : Standard object’s metadata.">Standardオブジェクトのメタデータ。</span> <span class="merged" id="all.4NNFob.spl2" title="原文 : More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">詳細情報: <a href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata" id="" target="_blank" >https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></span> </td>
 <td class=""><span class="merged" id="all.4Jkso5"  title="原文: PersistentVolumeClaimObjectMeta"><code><router-link @click.native="this.scrollFix('#_persistentvolumeclaimobjectmeta')" to="#_persistentvolumeclaimobjectmeta">PersistentVolumeClaimObjectMeta</router-link></code></span></td>
 <td class=""><span class="merged" id="all.njUKu.153"  title="原文:: false">false</span></td>
 </tr>
@@ -2333,7 +2333,7 @@
 
 <h3 id="_secretvolumespec"><span class="merged" id="all.2shwm"  title="原文: SecretVolumeSpec">SecretVolumeSpec</span></h3>
 <div class="section">
-<p><span class="merged" id="all.tPNp1" title="原文 : SecretVolumeSpec represents a Secret that will be added to the deployment&rsquo;s Pods as an additional Volume and as a VolumeMount in the containers. see: Add Secret Volumes">SecretVolumeSpecは、追加のボリュームとしてデプロイメント・ポッドに追加され、コンテナ内のVolumeMountとして追加されるシークレットを表します。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/020_secret_volumes.adoc')" to="#misc_pod_settings/020_secret_volumes.adoc">シークレット・ボリュームの追加</router-link></span></p>
+<p><span class="merged" id="all.tPNp1" title="原文 : SecretVolumeSpec represents a Secret that will be added to the deployment’s Pods as an additional Volume and as a VolumeMount in the containers. see: Add Secret Volumes">SecretVolumeSpecは、追加のボリュームとしてデプロイメント・ポッドに追加され、コンテナ内のVolumeMountとして追加されるシークレットを表します。<br>参照: <router-link @click.native="this.scrollFix('#misc_pod_settings/020_secret_volumes.adoc')" to="#misc_pod_settings/020_secret_volumes.adoc">シークレット・ボリュームの追加</router-link></span></p>
 
 
 <div class="table__overflow elevation-1  ">
@@ -2379,7 +2379,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.uxrbO.1"  title="原文: subPath"><code>subPath</code></span></td>
-<td class=""><span class="merged" id="all.18jA47.1.spl1" title="原文 : Path within the volume from which the container&rsquo;s volume should be mounted.">コンテナのボリュームをマウントするボリューム内のパス。</span> <span class="merged" id="all.18jA47.1.spl2" title="原文 : Defaults to &quot;&quot; (volume&rsquo;s root).">デフォルトは"" (ボリュームのルート)です。</span> </td>
+<td class=""><span class="merged" id="all.18jA47.1.spl1" title="原文 : Path within the volume from which the container’s volume should be mounted.">コンテナのボリュームをマウントするボリューム内のパス。</span> <span class="merged" id="all.18jA47.1.spl2" title="原文 : Defaults to &quot;&quot; (volume’s root).">デフォルトは"" (ボリュームのルート)です。</span> </td>
 <td class=""><span class="merged" id="all.W18FC.17"  title="原文: string"><code>string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.194"  title="原文:: false">false</span></td>
 </tr>
@@ -2391,7 +2391,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.2XcR2k.1"  title="原文: subPathExpr"><code>subPathExpr</code></span></td>
-<td class=""><span class="merged" id="all.37dv3Z.1.spl1" title="原文 : Expanded path within the volume from which the container&rsquo;s volume should be mounted.">コンテナのボリュームをマウントするボリューム内の拡張パス。</span> <span class="merged" id="all.37dv3Z.1.spl2" title="原文 : Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&rsquo;s environment.">SubPathと同様に動作しますが、環境変数参照$(VAR_NAME)はコンテナの環境を使用して展開されます。</span> <span class="merged" id="all.37dv3Z.1.spl3" title="原文 : Defaults to &quot;&quot; (volume&rsquo;s root).">デフォルトは"" (ボリュームのルート)です。</span> <span class="merged" id="all.37dv3Z.1.spl4" title="原文 : SubPathExpr and SubPath are mutually exclusive.">SubPathExprとSubPathは相互に排他的です。</span> </td>
+<td class=""><span class="merged" id="all.37dv3Z.1.spl1" title="原文 : Expanded path within the volume from which the container’s volume should be mounted.">コンテナのボリュームをマウントするボリューム内の拡張パス。</span> <span class="merged" id="all.37dv3Z.1.spl2" title="原文 : Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container’s environment.">SubPathと同様に動作しますが、環境変数参照$(VAR_NAME)はコンテナの環境を使用して展開されます。</span> <span class="merged" id="all.37dv3Z.1.spl3" title="原文 : Defaults to &quot;&quot; (volume’s root).">デフォルトは"" (ボリュームのルート)です。</span> <span class="merged" id="all.37dv3Z.1.spl4" title="原文 : SubPathExpr and SubPath are mutually exclusive.">SubPathExprとSubPathは相互に排他的です。</span> </td>
 <td class=""><span class="merged" id="all.W18FC.18"  title="原文: string"><code>string</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.196"  title="原文:: false">false</span></td>
 </tr>
@@ -2689,7 +2689,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.2YOyFT"  title="原文: publishNotReadyAddresses"><code>publishNotReadyAddresses</code></span></td>
-<td class=""><span class="merged" id="all.2LicmE.spl1" title="原文 : publishNotReadyAddresses, when set to true, indicates that DNS implementations must publish the notReadyAddresses of subsets for the Endpoints associated with the Service.">publishNotReadyAddressesがtrueに設定されている場合、DNS実装がサービスに関連付けられたエンドポイントのサブセットのnotReadyAddressesを公開する必要があることを示します。</span> <span class="merged" id="all.2LicmE.spl2"  title="原文: The default value is false.">デフォルト値はfalseです。</span> <span class="merged" id="all.2LicmE.spl3" title="原文 : The primary use case for setting this field is to use a StatefulSet&rsquo;s Headless Service to propagate SRV records for its Pods without respect to their readiness for purpose of peer discovery.">このフィールドを設定する主なユース・ケースは、StatefulSetのヘッドレス・サービスを使用して、ピア検出のためのレディネスを考慮せずに、ポッドのSRVレコードを伝播することです。</span> </td>
+<td class=""><span class="merged" id="all.2LicmE.spl1" title="原文 : publishNotReadyAddresses, when set to true, indicates that DNS implementations must publish the notReadyAddresses of subsets for the Endpoints associated with the Service.">publishNotReadyAddressesがtrueに設定されている場合、DNS実装がサービスに関連付けられたエンドポイントのサブセットのnotReadyAddressesを公開する必要があることを示します。</span> <span class="merged" id="all.2LicmE.spl2"  title="原文: The default value is false.">デフォルト値はfalseです。</span> <span class="merged" id="all.2LicmE.spl3" title="原文 : The primary use case for setting this field is to use a StatefulSet’s Headless Service to propagate SRV records for its Pods without respect to their readiness for purpose of peer discovery.">このフィールドを設定する主なユース・ケースは、StatefulSetのヘッドレス・サービスを使用して、ピア検出のためのレディネスを考慮せずに、ポッドのSRVレコードを伝播することです。</span> </td>
 <td class=""><span class="merged" id="all.q9cn0.30"  title="原文: *bool"><code>*bool</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.236"  title="原文:: false">false</span></td>
 </tr>
@@ -2773,7 +2773,7 @@
 
 <h3 id="_startquorumstatus"><span class="merged" id="all.1FHhKl"  title="原文: StartQuorumStatus">StartQuorumStatus</span></h3>
 <div class="section">
-<p><span class="merged" id="all.227ypn" title="原文 : StartQuorumStatus tracks the state of a deployment&rsquo;s start quorums.">StartQuorumStatusは、デプロイメントの開始コーラムの状態を追跡します。</span></p>
+<p><span class="merged" id="all.227ypn" title="原文 : StartQuorumStatus tracks the state of a deployment’s start quorums.">StartQuorumStatusは、デプロイメントの開始コーラムの状態を追跡します。</span></p>
 
 
 <div class="table__overflow elevation-1  ">
@@ -2813,7 +2813,7 @@
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.29tQvf"  title="原文: ready"><code>ready</code></span></td>
-<td class=""><span class="merged" id="all.2qSX8I" title="原文 : Whether this quorum&rsquo;s condition has been met">この定足数の条件が満たされているかどうか</span></td>
+<td class=""><span class="merged" id="all.2qSX8I" title="原文 : Whether this quorum’s condition has been met">この定足数の条件が満たされているかどうか</span></td>
 <td class=""><span class="merged" id="all.2Sqi2i.3"  title="原文: bool"><code>bool</code></span></td>
 <td class=""><span class="merged" id="all.4eNR3V.15"  title="原文:: true">true</span></td>
 </tr>
@@ -2936,7 +2936,7 @@
 <tbody>
 <tr>
 <td class=""><span class="merged" id="all.3G3hIZ"  title="原文: phase"><code>phase</code></span></td>
-<td class=""><span class="merged" id="all.11nOhS.spl1" title="原文 : The phase of a Coherence resource is a simple, high-level summary of where the Coherence resource is in its lifecycle.">Coherenceリソースのフェーズは、Coherenceリソースがライフサイクル内にある単純な概要です。</span> <span class="merged" id="all.11nOhS.spl2" title="原文 : The conditions array, the reason and message fields, and the individual container status arrays contain more detail about the pod&rsquo;s status.">条件配列、理由およびメッセージ・フィールドおよび個々のコンテナ・ステータス配列には、ポッドのステータスに関する詳細が含まれます。</span> <span class="merged" id="all.11nOhS.spl3" title="原文 : There are eight possible phase values: Initialized: The deployment has been accepted by the Kubernetes system.">次の8つのフェーズ値があります:<br><br> 初期化済: デプロイメントはKubernetesシステムによって受け入れられました。</span> <span class="merged" id="all.11nOhS.spl4" title="原文 : Created: The deployments secondary resources, (e.g. the StatefulSet, Services etc) have been created.">作成日: デプロイメントのセカンダリ・リソース(例、StatefulSet、サービスなど)が作成されました。</span> <span class="merged" id="all.11nOhS.spl5" title="原文 : Ready: The StatefulSet for the deployment has the correct number of replicas and ready replicas.">準備完了: デプロイメントのStatefulSetには、適切な数のレプリカおよび準備完了レプリカがあります。</span> <span class="merged" id="all.11nOhS.spl6" title="原文 : Waiting: The deployment&rsquo;s start quorum conditions have not yet been met.">待機中: デプロイメント開始定足数の条件がまだ満たされていません。</span> <span class="merged" id="all.11nOhS.spl7" title="原文 : Scaling: The number of replicas in the deployment is being scaled up or down.">スケーリング: デプロイメント内のレプリカの数がスケール・アップまたはスケール・ダウン中です。</span> <span class="merged" id="all.11nOhS.spl8" title="原文 : RollingUpgrade: The StatefulSet is performing a rolling upgrade.">RollingUpgrade: StatefulSetはローリング・アップグレードを実行しています。</span> <span class="merged" id="all.11nOhS.spl9" title="原文 : Stopped: The replica count has been set to zero.">停止: レプリカ数がゼロに設定されています。</span> <span class="merged" id="all.11nOhS.spl10" title="原文 : Failed: An error occurred reconciling the deployment and its secondary resources.">失敗: デプロイメントとそのセカンダリ・リソースの調整中にエラーが発生しました。</span> </td>
+<td class=""><span class="merged" id="all.11nOhS.spl1" title="原文 : The phase of a Coherence resource is a simple, high-level summary of where the Coherence resource is in its lifecycle.">Coherenceリソースのフェーズは、Coherenceリソースがライフサイクル内にある単純な概要です。</span> <span class="merged" id="all.11nOhS.spl2" title="原文 : The conditions array, the reason and message fields, and the individual container status arrays contain more detail about the pod’s status.">条件配列、理由およびメッセージ・フィールドおよび個々のコンテナ・ステータス配列には、ポッドのステータスに関する詳細が含まれます。</span> <span class="merged" id="all.11nOhS.spl3" title="原文 : There are eight possible phase values: Initialized: The deployment has been accepted by the Kubernetes system.">次の8つのフェーズ値があります:<br><br> 初期化済: デプロイメントはKubernetesシステムによって受け入れられました。</span> <span class="merged" id="all.11nOhS.spl4" title="原文 : Created: The deployments secondary resources, (e.g. the StatefulSet, Services etc) have been created.">作成日: デプロイメントのセカンダリ・リソース(例、StatefulSet、サービスなど)が作成されました。</span> <span class="merged" id="all.11nOhS.spl5" title="原文 : Ready: The StatefulSet for the deployment has the correct number of replicas and ready replicas.">準備完了: デプロイメントのStatefulSetには、適切な数のレプリカおよび準備完了レプリカがあります。</span> <span class="merged" id="all.11nOhS.spl6" title="原文 : Waiting: The deployment’s start quorum conditions have not yet been met.">待機中: デプロイメント開始定足数の条件がまだ満たされていません。</span> <span class="merged" id="all.11nOhS.spl7" title="原文 : Scaling: The number of replicas in the deployment is being scaled up or down.">スケーリング: デプロイメント内のレプリカの数がスケール・アップまたはスケール・ダウン中です。</span> <span class="merged" id="all.11nOhS.spl8" title="原文 : RollingUpgrade: The StatefulSet is performing a rolling upgrade.">RollingUpgrade: StatefulSetはローリング・アップグレードを実行しています。</span> <span class="merged" id="all.11nOhS.spl9" title="原文 : Stopped: The replica count has been set to zero.">停止: レプリカ数がゼロに設定されています。</span> <span class="merged" id="all.11nOhS.spl10" title="原文 : Failed: An error occurred reconciling the deployment and its secondary resources.">失敗: デプロイメントとそのセカンダリ・リソースの調整中にエラーが発生しました。</span> </td>
 <td class=""><span class="merged" id="all.3FAYn9"  title="原文: status.ConditionType"><code>status.ConditionType</code></span></td>
 <td class=""><span class="merged" id="all.njUKu.249"  title="原文:: false">false</span></td>
 </tr>

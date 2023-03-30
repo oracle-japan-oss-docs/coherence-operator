@@ -128,7 +128,7 @@ now:  throughput(out 34805msg/s 1.14gb/s, in 348msg/s 11.3mb/s), latency(respons
 
 <div class="admonition note">
 <p class="admonition-textlabel"><span class="merged" id="all.22fJPu.2"  title="原文:: Note">ノート</span></p>
-<p ><p><span class="merged" id="all.EAnTt" title="原文 : Don&rsquo;t forget to stop the Pods after obtaining the results:">結果の取得後に<code>Pods</code>を停止することを忘れないでください:</span></p>
+<p ><p><span class="merged" id="all.EAnTt" title="原文 : Don’t forget to stop the Pods after obtaining the results:">結果の取得後に<code>Pods</code>を停止することを忘れないでください:</span></p>
 
 <markup
 lang="bash"

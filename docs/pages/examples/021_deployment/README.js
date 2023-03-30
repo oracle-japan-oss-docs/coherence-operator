@@ -697,7 +697,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_view_the_running_pods_and_pvcs"><span class="merged" id="all.10h1OQ" title="原文 : View the running pods and PVC&rsquo;s">実行中のポッドおよびPVCの表示</span></h4>
+<h4 id="_view_the_running_pods_and_pvcs"><span class="merged" id="all.10h1OQ" title="原文 : View the running pods and PVC’s">実行中のポッドおよびPVCの表示</span></h4>
 <div class="section">
 <markup
 lang="bash"
@@ -784,7 +784,7 @@ lang="bash"
 <h4 id="_delete_the_cluster"><span class="merged" id="all.1i1bZX"  title="原文:: Delete the cluster">クラスタの削除</span></h4>
 <div class="section">
 <div class="admonition note">
-<p class="admonition-inline"><span class="merged" id="all.3cClPo" title="原文 : This will not delete the PVC&rsquo;s.">これにより、PVCは削除されません。</span></p>
+<p class="admonition-inline"><span class="merged" id="all.3cClPo" title="原文 : This will not delete the PVC’s.">これにより、PVCは削除されません。</span></p>
 </div>
 <markup
 lang="bash"
@@ -795,7 +795,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_confirm_the_pvcs_are_still_present"><span class="merged" id="all.OUtg9" title="原文 : Confirm the PVC&rsquo;s are still present">PVCがまだ存在することを確認</span></h4>
+<h4 id="_confirm_the_pvcs_are_still_present"><span class="merged" id="all.OUtg9" title="原文 : Confirm the PVC’s are still present">PVCがまだ存在することを確認</span></h4>
 <div class="section">
 <markup
 lang="bash"
@@ -932,9 +932,9 @@ lang="bash"
 
 </div>
 
-<h4 id="_delete_the_pvcs"><span class="merged" id="all.1Zow6Z" title="原文 : Delete the PVC&rsquo;s">PVCの削除</span></h4>
+<h4 id="_delete_the_pvcs"><span class="merged" id="all.1Zow6Z" title="原文 : Delete the PVC’s">PVCの削除</span></h4>
 <div class="section">
-<p><span class="merged" id="all.1CEt7j" title="原文 : Ensure all the pods have all terminated before you delete the PVC&rsquo;s.">PVCを削除する前に、すべてのポッドが終了していることを確認してください。</span></p>
+<p><span class="merged" id="all.1CEt7j" title="原文 : Ensure all the pods have all terminated before you delete the PVC’s.">PVCを削除する前に、すべてのポッドが終了していることを確認してください。</span></p>
 
 <markup
 lang="bash"

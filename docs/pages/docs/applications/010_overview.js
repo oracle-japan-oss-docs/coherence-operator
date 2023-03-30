@@ -45,7 +45,7 @@
 </v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/applications/060_application_working_dir"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">作業ディレクトリ</span></v-card-title> <v-card-text class="caption">
 <p></p>
-<p><span class="merged" id="all.1VT6Z6" title="原文 : Setting the application&rsquo;s working directory.">アプリケーションの作業ディレクトリを設定します。</span></p>
+<p><span class="merged" id="all.1VT6Z6" title="原文 : Setting the application’s working directory.">アプリケーションの作業ディレクトリを設定します。</span></p>
 </v-card-text>
 </v-card>
 </v-flex>

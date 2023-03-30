@@ -24,7 +24,7 @@ spec:
   image: catalogue:1.0.0  <span class="conum" data-value="1" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.2cggkz" title="原文 : The catalogue:1.0.0 will be used in the coherence container in the deployment&rsquo;s Pods."><code>catalogue:1.0.0</code>は、デプロイメントのポッドの<code>coherence</code>コンテナで使用されます。</span></li>
+<li data-value="1"><span class="merged" id="all.2cggkz" title="原文 : The catalogue:1.0.0 will be used in the coherence container in the deployment’s Pods."><code>catalogue:1.0.0</code>は、デプロイメントのポッドの<code>coherence</code>コンテナで使用されます。</span></li>
 </ul>
 <p><span class="merged" id="all.zUE64" title="原文 : The example above would assume that the catalogue:1.0.0 has a JVM on the PATH and all the required .jar files, or Java classes, in the default classpath locations used by the Operator.">前述の例では、<code>catalogue:1.0.0</code>に<code>PATH</code>上のJVMがあり、オペレータで使用されるデフォルトのクラスパスのロケーションで必要なすべての<code>.jar</code>ファイルまたはJavaクラスがあることを前提としています。</span></p>
 

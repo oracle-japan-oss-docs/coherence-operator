@@ -23,7 +23,7 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.ooWlj" title="原文 : Enter your Oracle credentials or create an account if you don&rsquo;t have one.">Oracle資格証明を入力するか、アカウントがない場合は作成します。</span></p>
+<p><span class="merged" id="all.ooWlj" title="原文 : Enter your Oracle credentials or create an account if you don’t have one.">Oracle資格証明を入力するか、アカウントがない場合は作成します。</span></p>
 
 </li>
 <li>

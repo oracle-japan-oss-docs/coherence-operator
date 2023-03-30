@@ -190,7 +190,7 @@ lang="json"
 
 <h3 id="_access_the_swagger_endpoint"><span class="merged" id="all.3qP6rL" title="原文 : Access the Swagger Endpoint">Swaggerエンドポイントへのアクセス</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2T0axS" title="原文 : Issue the following curl command to access the Sagger endpoint, which documents all the REST API&rsquo;s available.">次の<code>curl</code>コマンドを発行してSaggerエンドポイントにアクセスします。このエンドポイントでは、使用可能なすべてのREST APIがドキュメント化されています。</span></p>
+<p><span class="merged" id="all.2T0axS" title="原文 : Issue the following curl command to access the Sagger endpoint, which documents all the REST API’s available.">次の<code>curl</code>コマンドを発行してSaggerエンドポイントにアクセスします。このエンドポイントでは、使用可能なすべてのREST APIがドキュメント化されています。</span></p>
 
 <markup
 lang="bash"

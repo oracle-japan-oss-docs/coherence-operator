@@ -106,7 +106,7 @@ lang="bash"
 
 <h3 id="_deploy_the_simple_server_image"><span class="merged" id="all.3L5qRp" title="原文 : Deploy the Simple Server Image">簡易サーバー・イメージのデプロイ</span></h3>
 <div class="section">
-<p><span class="merged" id="all.4WmYpp.spl1" title="原文 : We can deploy a specific image by setting the spec.image field in the yaml.">yamlの<code>spec.image</code>フィールドを設定することで、特定のイメージをデプロイできます。</span> <span class="merged" id="all.4WmYpp.spl2" title="原文 : In this example we&rsquo;ll deploy the simple-coherence:1.0.0 image built in the Build a Coherence Server Image example.">この例では、<router-link to="/examples/015_simple_image/README">「Coherenceサーバー・イメージのビルド」</router-link>の例で作成した<code>simple-coherence:1.0.0</code>イメージをデプロイします。</span> </p>
+<p><span class="merged" id="all.4WmYpp.spl1" title="原文 : We can deploy a specific image by setting the spec.image field in the yaml.">yamlの<code>spec.image</code>フィールドを設定することで、特定のイメージをデプロイできます。</span> <span class="merged" id="all.4WmYpp.spl2" title="原文 : In this example we’ll deploy the simple-coherence:1.0.0 image built in the Build a Coherence Server Image example.">この例では、<router-link to="/examples/015_simple_image/README">「Coherenceサーバー・イメージのビルド」</router-link>の例で作成した<code>simple-coherence:1.0.0</code>イメージをデプロイします。</span> </p>
 
 <p><span class="merged" id="all.143w3o" title="原文 : To deploy a specific image we just need to set the spec.image field.">特定のイメージをデプロイするには、<code>spec.image</code>フィールドのみを設定する必要があります。</span></p>
 

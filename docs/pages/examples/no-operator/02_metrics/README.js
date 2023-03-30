@@ -117,7 +117,7 @@ statefulset.apps/storage   3/3     10s</markup>
 
 <h2 id="_retrieve_metrics"><span class="merged" id="all.CwdJ9" title="原文 : Retrieve Metrics">メトリクスの取得</span></h2>
 <div class="section">
-<p><span class="merged" id="all.18kQff.spl1" title="原文 : To test that we can access metrics we will port-forward to one of the Pods and use curl to get the metrics.">メトリクスにアクセスできることをテストするには、<code>Pods</code>のいずれかにポート・フォワードし、<code>curl</code>を使用してメトリクスを取得します。</span> <span class="merged" id="all.18kQff.spl2" title="原文 : We can choose any of the three Pods to test, or repeat the test for each Pod.">テストする3つの<code>Pods</code>のいずれかを選択するか、<code>Pod</code>ごとにテストを繰り返します。</span> <span class="merged" id="all.18kQff.spl3" title="原文 : In this example, we&rsquo;ll just port-forward local port 9612 to port 9612 in pod/storage-0.">この例では、ポート転送ローカル・ポート9612を<code>pod/storage-0</code>のポート9612にのみ行います。</span> </p>
+<p><span class="merged" id="all.18kQff.spl1" title="原文 : To test that we can access metrics we will port-forward to one of the Pods and use curl to get the metrics.">メトリクスにアクセスできることをテストするには、<code>Pods</code>のいずれかにポート・フォワードし、<code>curl</code>を使用してメトリクスを取得します。</span> <span class="merged" id="all.18kQff.spl2" title="原文 : We can choose any of the three Pods to test, or repeat the test for each Pod.">テストする3つの<code>Pods</code>のいずれかを選択するか、<code>Pod</code>ごとにテストを繰り返します。</span> <span class="merged" id="all.18kQff.spl3" title="原文 : In this example, we’ll just port-forward local port 9612 to port 9612 in pod/storage-0.">この例では、ポート転送ローカル・ポート9612を<code>pod/storage-0</code>のポート9612にのみ行います。</span> </p>
 
 <markup
 lang="bash"
@@ -196,7 +196,7 @@ lang="bash"
 
 <v-card> <v-card-text class="overflow-y-hidden"> <img alt="Prometheus UI" src="./images/img/prom.png" /> </v-card-text> </v-card>
 
-<p><span class="merged" id="all.4MkOCO" title="原文 : At this stage there will be no Coherence metrics, but we&rsquo;ll change that in the next section.">この段階ではCoherenceメトリクスはありませんが、次のセクションで変更を行います。</span></p>
+<p><span class="merged" id="all.4MkOCO" title="原文 : At this stage there will be no Coherence metrics, but we’ll change that in the next section.">この段階ではCoherenceメトリクスはありませんが、次のセクションで変更を行います。</span></p>
 
 </div>
 
@@ -306,7 +306,7 @@ lang="bash"
 
 >kubectl --namespace monitoring port-forward svc/prometheus-k8s 9091:9090</markup>
 
-<p><span class="merged" id="all.36BKMa.spl1" title="原文 : We&rsquo;re now forwarding local port 9091 to Prometheus service port 9090 so we can run the local Prometheus instance.">ローカル・ポート9091をPrometheusサービス・ポート9090に転送して、ローカルPrometheusインスタンスを実行できます。</span> <span class="merged" id="all.36BKMa.spl2" title="原文 : As described in the Prometheus documentation, from the Prometheus installation directory run the command:">Prometheusドキュメントの説明に従って、Prometheusインストール・ディレクトリから次のコマンドを実行します:</span> </p>
+<p><span class="merged" id="all.36BKMa.spl1" title="原文 : We’re now forwarding local port 9091 to Prometheus service port 9090 so we can run the local Prometheus instance.">ローカル・ポート9091をPrometheusサービス・ポート9090に転送して、ローカルPrometheusインスタンスを実行できます。</span> <span class="merged" id="all.36BKMa.spl2" title="原文 : As described in the Prometheus documentation, from the Prometheus installation directory run the command:">Prometheusドキュメントの説明に従って、Prometheusインストール・ディレクトリから次のコマンドを実行します:</span> </p>
 
 <markup
 lang="bash"

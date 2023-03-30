@@ -4,7 +4,7 @@
 
 <h2 id="_set_the_application_main"><span class="merged" id="all.3NEJZT" title="原文 : Set the Application Main">アプリケーション・メインの設定</span></h2>
 <div class="section">
-<p><span class="merged" id="all.4aqTWu.spl1" title="原文 : The Coherence container in the deployment&rsquo;s Pods will, by default, run com.tangosol.net.DefaultCacheServer as the Java main class.">デプロイメントのポッド内のCoherenceコンテナは、デフォルトで、Javaメイン・クラスとして<code>com.tangosol.net.DefaultCacheServer</code>を実行します。</span> <span class="merged" id="all.4aqTWu.spl2" title="原文 : It is possible to change this when running a custom application that requires a different main.">別のメインを必要とするカスタム・アプリケーションを実行する場合は、これを変更できます。</span> </p>
+<p><span class="merged" id="all.4aqTWu.spl1" title="原文 : The Coherence container in the deployment’s Pods will, by default, run com.tangosol.net.DefaultCacheServer as the Java main class.">デプロイメントのポッド内のCoherenceコンテナは、デフォルトで、Javaメイン・クラスとして<code>com.tangosol.net.DefaultCacheServer</code>を実行します。</span> <span class="merged" id="all.4aqTWu.spl2" title="原文 : It is possible to change this when running a custom application that requires a different main.">別のメインを必要とするカスタム・アプリケーションを実行する場合は、これを変更できます。</span> </p>
 
 <p><span class="merged" id="all.2EgDKg" title="原文 : The name of the main is set in the application.main field in the Coherence spec.">メインの名前は、<code>Coherence</code>仕様の<code>application.main</code>フィールドに設定されます。</span></p>
 

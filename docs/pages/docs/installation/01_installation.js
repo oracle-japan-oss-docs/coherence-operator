@@ -176,7 +176,7 @@ lang="bash"
 helm repo update</markup>
 
 <div class="admonition note">
-<p class="admonition-inline"><span class="merged" id="all.bLbzF.spl1" title="原文 : To avoid confusion, the URL https://oracle.github.io/coherence-operator/charts is a Helm repo, it is not a website you open in a browser.">混乱を避けるために、URL <code><a href="https://oracle.github.io/coherence-operator/charts" id="" target="_blank" >https://oracle.github.io/coherence-operator/charts</a></code>はHelmリポジトリであり、ブラウザで開くwebサイトではありません。</span> <span class="merged" id="all.bLbzF.spl2" title="原文 : You may think we shouldn&rsquo;t have to say this, but you&rsquo;d be surprised.">知らない方のために。</span> </p>
+<p class="admonition-inline"><span class="merged" id="all.bLbzF.spl1" title="原文 : To avoid confusion, the URL https://oracle.github.io/coherence-operator/charts is a Helm repo, it is not a website you open in a browser.">混乱を避けるために、URL <code><a href="https://oracle.github.io/coherence-operator/charts" id="" target="_blank" >https://oracle.github.io/coherence-operator/charts</a></code>はHelmリポジトリであり、ブラウザで開くwebサイトではありません。</span> <span class="merged" id="all.bLbzF.spl2" title="原文 : You may think we shouldn’t have to say this, but you’d be surprised.">知らない方のために。</span> </p>
 </div>
 </div>
 

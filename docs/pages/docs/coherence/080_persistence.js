@@ -38,7 +38,7 @@ spec:
       mode: active  <span class="conum" data-value="1" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.2pVD1d" title="原文 : The example above sets the persistence mode to active which will effectively pass -Dcoherence.distributed.persistence-mode=active to the Coherence JVM&rsquo;s command line.">前述の例では、永続性モードを<code>active</code>に設定し、Coherence JVMのコマンドラインに<code>-Dcoherence.distributed.persistence-mode=active</code>を効果的に渡します。</span></li>
+<li data-value="1"><span class="merged" id="all.2pVD1d" title="原文 : The example above sets the persistence mode to active which will effectively pass -Dcoherence.distributed.persistence-mode=active to the Coherence JVM’s command line.">前述の例では、永続性モードを<code>active</code>に設定し、Coherence JVMのコマンドラインに<code>-Dcoherence.distributed.persistence-mode=active</code>を効果的に渡します。</span></li>
 </ul>
 </div>
 

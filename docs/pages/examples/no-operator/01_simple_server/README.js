@@ -166,7 +166,7 @@ spec:
 
 </li>
 <li>
-<p><span class="merged" id="all.1lnFSR.spl1" title="原文 : The cache configuration file configures a Coherence Extend proxy service, which will listen on port 20000.">キャッシュ構成ファイルは、ポート<code>20000</code>でリスニングするCoherence Extendプロキシ・サービスを構成します。</span> <span class="merged" id="all.1lnFSR.spl2" title="原文 : We need to expose this port in the container&rsquo;s ports section.">このポート・コンテナのポート・セクションで公開する必要があります。</span> </p>
+<p><span class="merged" id="all.1lnFSR.spl1" title="原文 : The cache configuration file configures a Coherence Extend proxy service, which will listen on port 20000.">キャッシュ構成ファイルは、ポート<code>20000</code>でリスニングするCoherence Extendプロキシ・サービスを構成します。</span> <span class="merged" id="all.1lnFSR.spl2" title="原文 : We need to expose this port in the container’s ports section.">このポート・コンテナのポート・セクションで公開する必要があります。</span> </p>
 
 </li>
 <li>

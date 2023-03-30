@@ -18,7 +18,7 @@ spec:
     logLevel: 9  <span class="conum" data-value="1" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.3OtG7g" title="原文 : The Coherence spec sets the log level to 9, effectively passing -Dcoherence.log.level=9 to the Coherence JVM&rsquo;s command line."><code>Coherence</code>スペックは、ログ・レベルを9に設定し、事実上、<code>-Dcoherence.log.level=9</code>をCoherence JVMのコマンドラインに渡します。</span></li>
+<li data-value="1"><span class="merged" id="all.3OtG7g" title="原文 : The Coherence spec sets the log level to 9, effectively passing -Dcoherence.log.level=9 to the Coherence JVM’s command line."><code>Coherence</code>スペックは、ログ・レベルを9に設定し、事実上、<code>-Dcoherence.log.level=9</code>をCoherence JVMのコマンドラインに渡します。</span></li>
 </ul>
 </div>
 </doc-view>

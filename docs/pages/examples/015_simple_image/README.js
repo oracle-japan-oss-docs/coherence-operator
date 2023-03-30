@@ -18,7 +18,7 @@
 
 <h3 id="_add_dependencies"><span class="merged" id="all.CXQ5D"  title="原文:: Add Dependencies">依存関係の追加</span></h3>
 <div class="section">
-<p><span class="merged" id="all.1pSBfj.spl1" title="原文 : To build a Coherence application there will obviously be at a minimum a dependency on coherence.jar.">Coherenceアプリケーションをビルドするには、少なくとも<code>coherence.jar</code>への依存関係があります。</span> <span class="merged" id="all.1pSBfj.spl2" title="原文 : Optionally we can also add dependencies on other Coherence modules.">オプションで、他のCoherenceモジュールに依存関係を追加することもできます。</span> <span class="merged" id="all.1pSBfj.spl3" title="原文 : In this example we&rsquo;re going to add json support to the application by adding a dependency on coherence-json.">この例では、<code>coherence-json</code>への依存関係を追加して、jsonサポートをアプリケーションに追加します。</span> </p>
+<p><span class="merged" id="all.1pSBfj.spl1" title="原文 : To build a Coherence application there will obviously be at a minimum a dependency on coherence.jar.">Coherenceアプリケーションをビルドするには、少なくとも<code>coherence.jar</code>への依存関係があります。</span> <span class="merged" id="all.1pSBfj.spl2" title="原文 : Optionally we can also add dependencies on other Coherence modules.">オプションで、他のCoherenceモジュールに依存関係を追加することもできます。</span> <span class="merged" id="all.1pSBfj.spl3" title="原文 : In this example we’re going to add json support to the application by adding a dependency on coherence-json.">この例では、<code>coherence-json</code>への依存関係を追加して、jsonサポートをアプリケーションに追加します。</span> </p>
 
 <p><span class="merged" id="all.2iqBU9.spl1" title="原文 : In the example we use the coherence-bom which ensures that we have consistent use of other Coherence modules.">この例では、<code>coherence-bom</code>を使用して、他のCoherenceモジュールを一貫して使用できるようにします。</span> <span class="merged" id="all.2iqBU9.spl2" title="原文 : In the pom.xml we have a dependencyManagement section."><code>pom.xml</code>には、<code>dependencyManagement</code>セクションがあります。</span> </p>
 
@@ -184,7 +184,7 @@ title="build.gradle"
 
 <h3 id="_build_the_image"><span class="merged" id="all.1o3aGx" title="原文 : Build the Image">イメージの作成</span></h3>
 <div class="section">
-<p><span class="merged" id="all.1zbO8y.spl1" title="原文 : To create the server image run the relevant commands as documented in the JIB plugin documentation.">サーバー・イメージを作成するには、JIBプラグインのドキュメントに記載されている関連コマンドを実行します。</span> <span class="merged" id="all.1zbO8y.spl2" title="原文 : In this case we&rsquo;re going to build the image using Docker, although JIB offers other alternatives.">この場合、Dockerを使用してイメージを作成しますが、JIBは他の選択肢を提供します。</span> </p>
+<p><span class="merged" id="all.1zbO8y.spl1" title="原文 : To create the server image run the relevant commands as documented in the JIB plugin documentation.">サーバー・イメージを作成するには、JIBプラグインのドキュメントに記載されている関連コマンドを実行します。</span> <span class="merged" id="all.1zbO8y.spl2" title="原文 : In this case we’re going to build the image using Docker, although JIB offers other alternatives.">この場合、Dockerを使用してイメージを作成しますが、JIBは他の選択肢を提供します。</span> </p>
 
 <p><span class="merged" id="all.2soSXi" title="原文 : Using Maven we run:">Mavenを使用して、次を実行します:</span></p>
 
@@ -213,7 +213,7 @@ simple-coherence   latest  1613cd3b894e   51 years ago  227MB</markup>
 
 <h3 id="_run_the_image"><span class="merged" id="all.g38mF" title="原文 : Run the Image">イメージの実行</span></h3>
 <div class="section">
-<p><span class="merged" id="all.4GdfWM.spl1" title="原文 : The image just built can be run using Docker (or your chosen container tool).">作成したイメージは、Docker (または選択したコンテナ・ツール)を使用して実行できます。</span> <span class="merged" id="all.4GdfWM.spl2" title="原文 : In this example we&rsquo;ll run it interactively, just to prove it runs and starts Coherence.">この例では、実行を証明してCoherenceを起動するだけで、対話的に実行します。</span> </p>
+<p><span class="merged" id="all.4GdfWM.spl1" title="原文 : The image just built can be run using Docker (or your chosen container tool).">作成したイメージは、Docker (または選択したコンテナ・ツール)を使用して実行できます。</span> <span class="merged" id="all.4GdfWM.spl2" title="原文 : In this example we’ll run it interactively, just to prove it runs and starts Coherence.">この例では、実行を証明してCoherenceを起動するだけで、対話的に実行します。</span> </p>
 
 <markup
 lang="bash"

@@ -34,7 +34,7 @@
 
 <h3 id="_jib_image_classpath"><span class="merged" id="all.4tS1i" title="原文 : JIB Image Classpath">JIBイメージ・クラスパス</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2PDwuP.spl1" title="原文 : A simple way to build Java images is using JIB.">Javaイメージを作成する簡単な方法は、<a href="https://github.com/GoogleContainerTools/jib/blob/master/README.md" id="" target="_blank" >JIB</a>を使用することです。</span> <span class="merged" id="all.2PDwuP.spl2" title="原文 : When JIB was with its Maven or Gradle plugin to produce an image it packages the application&rsquo;s dependencies, classes and resources into a set of well-known locations:">JIBがMavenまたはGradleプラグインとともにイメージを生成すると、アプリケーションの依存関係、クラスおよびリソースが既知のロケーションのセットにパッケージ化されます:</span> </p>
+<p><span class="merged" id="all.2PDwuP.spl1" title="原文 : A simple way to build Java images is using JIB.">Javaイメージを作成する簡単な方法は、<a href="https://github.com/GoogleContainerTools/jib/blob/master/README.md" id="" target="_blank" >JIB</a>を使用することです。</span> <span class="merged" id="all.2PDwuP.spl2" title="原文 : When JIB was with its Maven or Gradle plugin to produce an image it packages the application’s dependencies, classes and resources into a set of well-known locations:">JIBがMavenまたはGradleプラグインとともにイメージを生成すると、アプリケーションの依存関係、クラスおよびリソースが既知のロケーションのセットにパッケージ化されます:</span> </p>
 
 <ul class="ulist">
 <li>
@@ -42,11 +42,11 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.2JjETY" title="原文 : /app/classes - the application&rsquo;s class files"><code>/app/classes</code> - アプリケーション・クラス・ファイル</span></p>
+<p><span class="merged" id="all.2JjETY" title="原文 : /app/classes - the application’s class files"><code>/app/classes</code> - アプリケーション・クラス・ファイル</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.2BF5Zd" title="原文 : /app/resources - the application&rsquo;s other resources"><code>/app/resources</code> - アプリケーションその他のリソース</span></p>
+<p><span class="merged" id="all.2BF5Zd" title="原文 : /app/resources - the application’s other resources"><code>/app/resources</code> - アプリケーションその他のリソース</span></p>
 
 </li>
 </ul>

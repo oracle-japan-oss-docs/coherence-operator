@@ -266,7 +266,7 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1hXQ0n.spl1" title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.1hXQ0n.spl2" title="原文 : We set this using the COHERENCE_CACHE_CONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we&rsquo;re using in this example.">これは、<code>COHERENCE_CACHE_CONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
+<p><span class="merged" id="all.1hXQ0n.spl1" title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.1hXQ0n.spl2" title="原文 : We set this using the COHERENCE_CACHE_CONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we’re using in this example.">これは、<code>COHERENCE_CACHE_CONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
 
 </li>
 <li>
@@ -557,9 +557,9 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.1EXYBE.spl1" title="原文 : The example server configuration used for connecting external clients can also be used for internal Extend clients, which is useful for use-cases where some clients are inside Kubernetes and some outside.">外部クライアントの接続に使用するサーバー構成の例は、内部Extendクライアントにも使用できます。これは、一部のクライアントがKubernetes内および一部の外部にあるユースケースに役立ちます。</span> <span class="merged" id="all.1EXYBE.spl2" title="原文 : An Extend client running inside Kubernetes then has the choice of using the NameService configuration from the first example, or using the fixed address and port configuration of the second example.">Kubernetes内で実行中のExtendクライアントでは、最初の例からNameService構成を使用するか、2番目の例の固定アドレスおよびポート構成を使用するかを選択できます。</span> </p>
 
-<p><span class="merged" id="all.3w3wci" title="原文 : If an internal Extend client is configured to use a fixed address then the host name of the proxy can be set to the service used to expose the server&rsquo;s extend port.">内部拡張クライアントが固定アドレスを使用するように構成されている場合、プロキシのホスト名をサーバーの拡張ポートの公開に使用するサービスに設定できます。</span></p>
+<p><span class="merged" id="all.3w3wci" title="原文 : If an internal Extend client is configured to use a fixed address then the host name of the proxy can be set to the service used to expose the server’s extend port.">内部拡張クライアントが固定アドレスを使用するように構成されている場合、プロキシのホスト名をサーバーの拡張ポートの公開に使用するサービスに設定できます。</span></p>
 
-<p><span class="merged" id="all.1eL1v8" title="原文 : For example, if the client&rsquo;s cache configuration file contains a remote scheme like the external example above:">たとえば、クライアントのキャッシュ構成ファイルに、前述の外部の例のようなリモート・スキームが含まれている場合:</span></p>
+<p><span class="merged" id="all.1eL1v8" title="原文 : For example, if the client’s cache configuration file contains a remote scheme like the external example above:">たとえば、クライアントのキャッシュ構成ファイルに、前述の外部の例のようなリモート・スキームが含まれている場合:</span></p>
 
 <markup
 lang="xml"
