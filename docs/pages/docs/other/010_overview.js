@@ -64,7 +64,7 @@
 </v-layout>
 </div>
 
-<h3 id="_pod_scheduling"><span class="merged" id="all.eaO02" title="原文 : Pod Scheduling">ポッド・スケジューリング</span></h3>
+<h3 id="_pod_scheduling"><span class="merged" id="all.eaO02"  title="原文:: Pod Scheduling">ポッド・スケジューリング</span></h3>
 <div class="section">
 <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/other/090_pod_scheduling"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">ポッド・スケジューリング</span></v-card-title> <v-card-text class="caption">

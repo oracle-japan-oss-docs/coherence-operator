@@ -3,7 +3,7 @@
  <v-layout row wrap> <v-flex xs12 sm10 lg10> <v-card class="section-def" v-bind:color="$store.state.currentColor"> <v-card-text class="pa-3"> <v-card class="section-def__card"> <v-card-text>
 <dl>
 <dt slot=title><span class="merged" id="all.1Tb5TG" title="原文 : Coherence Operator Installation">Coherence Operatorインストール</span></dt>
-<dd slot="desc"><p><span class="merged" id="all.3VjuBq" title="原文 : The Coherence Operator is available as a Docker image oracle/coherence-operator:3.2.8 that can easily be installed into a Kubernetes cluster.">Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるDockerイメージ<code>oracle/coherence-operator:3.2.8</code>として使用できます。</span></p>
+<dd slot="desc"><p><span class="merged" id="all.UWBep" title="原文 : The Coherence Operator is available as an image from the GitHub container registry ghcr.io/oracle/coherence-operator:3.3.0 that can easily be installed into a Kubernetes cluster.">Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるGitHubコンテナ・レジストリ<code>ghcr.io/oracle/coherence-operator:3.3.0</code>のイメージとして使用できます。</span></p>
 </dd>
 </dl>
 </v-card-text>
@@ -15,8 +15,78 @@
 
 <h2 id="_coherence_operator_installation"><span class="merged" id="all.1Tb5TG.1" title="原文 : Coherence Operator Installation">Coherence Operatorインストール</span></h2>
 <div class="section">
+<p><span class="merged" id="all.t9CKG"  title="原文:: Contents"><strong>目次</strong></span></p>
 
-<h3 id="_prerequisites"><span class="merged" id="all.2LZvWc.1"  title="原文:: Prerequisites">前提条件</span></h3>
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.2qXR83" title="原文 : Prerequisites before installation"><router-link @click.native="this.scrollFix('#prereq')" to="#prereq">インストール前の前提条件</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.opOQH" title="原文 : Operator High Availability"><router-link @click.native="this.scrollFix('#ha')" to="#ha">オペレータの高可用性</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.2eT6sK" title="原文 : Coherence Operator Images"><router-link @click.native="this.scrollFix('#images')" to="#images">Coherence Operatorイメージ</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.4fFd5p" title="原文 : Operator Scope - monitoring all or a fixed set of namespaces"><router-link @click.native="this.scrollFix('#scope')" to="#scope">オペレータ・スコープ - すべてまたは固定のネームスペース・セットのモニタリング</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.s2FFb"  title="原文:: Installation Options">インストール・オプション</span></p>
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.Ck2Yr" title="原文 : Simple installation using Kubectl"><router-link @click.native="this.scrollFix('#manifest')" to="#manifest">Kubectlを使用したシンプルなインストール</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.28yMoG" title="原文 : Install the Helm chart"><router-link @click.native="this.scrollFix('#helm')" to="#helm">Helmチャートのインストール</router-link></span></p>
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.3yEUhK" title="原文 : Set the Operator Image"><router-link @click.native="this.scrollFix('#helm-operator-image')" to="#helm-operator-image">オペレータ・イメージの設定</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.2n3oPj" title="原文 : Image Pull Secrets"><router-link @click.native="this.scrollFix('#helm-pull-secrets')" to="#helm-pull-secrets">イメージ・プル・シークレット</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.3wewco" title="原文 : Set the Watch Namespaces"><router-link @click.native="this.scrollFix('#helm-watch-ns')" to="#helm-watch-ns">ウォッチ・ネームスペースの設定</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.2GD70l" title="原文 : Install the Operator with a Security Context"><router-link @click.native="this.scrollFix('#helm-sec-context')" to="#helm-sec-context">セキュリティ・コンテキストを使用したオペレータのインストール</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.1mD035" title="原文 : Set Additional Labels"><router-link @click.native="this.scrollFix('#helm-labels')" to="#helm-labels">追加ラベルの設定</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.1iGGea" title="原文 : Set Additional Annotations"><router-link @click.native="this.scrollFix('#helm-annotations')" to="#helm-annotations">追加注釈の設定</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.3RKEYf" title="原文 : Uninstall the Coherence Operator Helm chart"><router-link @click.native="this.scrollFix('#helm-uninstall')" to="#helm-uninstall">Coherence Operator Helmチャートをアンインストール</router-link></span></p>
+
+</li>
+</ul>
+</li>
+<li>
+<p><span class="merged" id="all.4Gho1H" title="原文 : Kubectl with Kustomize"><router-link @click.native="this.scrollFix('#kubectl')" to="#kubectl">KubectlとKustomize</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.48YUjU" title="原文 : VMWare Tanzu Package (kapp-controller)"><router-link @click.native="this.scrollFix('#tanzu')" to="#tanzu">VMWare Tanzuパッケージ(kapp-controller)</router-link></span></p>
+
+</li>
+</ul>
+</li>
+</ul>
+
+<h3 id="prereq"><span class="merged" id="all.2LZvWc.1"  title="原文:: Prerequisites">前提条件</span></h3>
 <div class="section">
 <p><span class="merged" id="all.G9aDD" title="原文 : The prerequisites apply to all installation methods.">前提条件は、すべてのインストール・メソッドに適用されます。</span></p>
 
@@ -26,7 +96,7 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.1br2M3.spl1" title="原文 : Access to a Kubernetes v1.18.0+ cluster.">Kubernetes v1.18.0+クラスタにアクセスします。</span> <span class="merged" id="all.1br2M3.spl2" title="原文 : The Operator test pipeline is run using Kubernetes versions v1.18 upto v1.24">オペレータ・テスト・パイプラインは、Kubernetesバージョンv1.18を使用してv1.24まで実行されます</span> </p>
+<p><span class="merged" id="all.3XYGfD.spl1" title="原文 : Access to a Kubernetes v1.19.0+ cluster.">Kubernetes v1.19.0+クラスタへのアクセス。</span> <span class="merged" id="all.3XYGfD.spl2" title="原文 : The Operator test pipeline is run using Kubernetes versions v1.19 upto v1.26">オペレータ・テスト・パイプラインは、v1.26までのKubernetesバージョンv1.19を使用して実行されます</span> </p>
 
 </li>
 <li>
@@ -41,25 +111,25 @@
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.Ck2Yr" title="原文 : Simple installation using Kubectl"><router-link @click.native="this.scrollFix('#manifest')" to="#manifest">Kubectlを使用したシンプルなインストール</router-link></span></p>
+<p><span class="merged" id="all.Ck2Yr.1" title="原文 : Simple installation using Kubectl"><router-link @click.native="this.scrollFix('#manifest')" to="#manifest">Kubectlを使用したシンプルなインストール</router-link></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.28yMoG" title="原文 : Install the Helm chart"><router-link @click.native="this.scrollFix('#helm')" to="#helm">Helmチャートのインストール</router-link></span></p>
+<p><span class="merged" id="all.28yMoG.1" title="原文 : Install the Helm chart"><router-link @click.native="this.scrollFix('#helm')" to="#helm">Helmチャートのインストール</router-link></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4Gho1H" title="原文 : Kubectl with Kustomize"><router-link @click.native="this.scrollFix('#kubectl')" to="#kubectl">KubectlとKustomize</router-link></span></p>
+<p><span class="merged" id="all.4Gho1H.1" title="原文 : Kubectl with Kustomize"><router-link @click.native="this.scrollFix('#kubectl')" to="#kubectl">KubectlとKustomize</router-link></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.48YUjU" title="原文 : VMWare Tanzu Package (kapp-controller)"><router-link @click.native="this.scrollFix('#tanzu')" to="#tanzu">VMWare Tanzuパッケージ(kapp-controller)</router-link></span></p>
+<p><span class="merged" id="all.48YUjU.1" title="原文 : VMWare Tanzu Package (kapp-controller)"><router-link @click.native="this.scrollFix('#tanzu')" to="#tanzu">VMWare Tanzuパッケージ(kapp-controller)</router-link></span></p>
 
 </li>
 </ul>
 </div>
 
-<h3 id="_high_availability"><span class="merged" id="all.ZIA7x"  title="原文:: High Availability">高可用性</span></h3>
+<h3 id="ha"><span class="merged" id="all.ZIA7x"  title="原文:: High Availability">高可用性</span></h3>
 <div class="section">
 <p><span class="merged" id="all.BEmRf.spl1" title="原文 : The Coherence Operator runs in HA mode by default.">Coherence Operatorは、デフォルトでHAモードで実行されます。</span> <span class="merged" id="all.BEmRf.spl2" title="原文 : The Deployment created by the installation will have a replica count of 3.">インストールによって作成された<code>Deployment</code>のレプリカ数は3です。</span> <span class="merged" id="all.BEmRf.spl3" title="原文 : In reduced capacity Kubernetes clusters, for example, local laptop development and test, the replica count can be reduced.">ローカル・ラップトップの開発やテストなど、容量の削減Kubernetesクラスタでは、レプリカ数を減らすことができます。</span> <span class="merged" id="all.BEmRf.spl4" title="原文 : It is recommended to leave the default of 3 for production environments.">本番環境では、デフォルトの3のままにすることをお薦めします。</span> <span class="merged" id="all.BEmRf.spl5" title="原文 : Instructions on how to change the replica count for the different install methods are included below.">異なるインストール・メソッドのレプリカ数を変更するメソッドの手順を次に示します。</span> </p>
 
@@ -83,9 +153,9 @@
 </div>
 </div>
 
-<h2 id="_coherence_operator_images"><span class="merged" id="all.3laiyk" title="原文 : Coherence Operator Images">Coherence Operatorイメージ</span></h2>
+<h2 id="images"><span class="merged" id="all.3laiyk" title="原文 : Coherence Operator Images">Coherence Operatorイメージ</span></h2>
 <div class="section">
-<p><span class="merged" id="all.E2qRz" title="原文 : The Coherence Operator uses a single images, the Operator also runs as an init-container in the Coherence cluster Pods.">Coherence Operatorでは単一のイメージが使用され、OperatorはCoherenceクラスタ・ポッドのinitコンテナとしても実行されます。</span></p>
+<p><span class="merged" id="all.4xCXs" title="原文 : The Coherence Operator uses a single image, the Operator also runs as an init-container in the Coherence cluster Pods.">Coherence Operatorは単一のイメージを使用し、オペレータはCoherenceクラスタ・ポッドでinitコンテナとしても実行されます。</span></p>
 
 <ul class="ulist">
 <li>
@@ -105,6 +175,34 @@
 
 </div>
 
+<h2 id="scope"><span class="merged" id="all.2YIaHI" title="原文 : Operator Scope">オペレータ・スコープ</span></h2>
+<div class="section">
+<p><span class="merged" id="all.1SB65k.spl1" title="原文 : The recommended way to install the Coherence Operator is to install a single instance of the operator into a namespace and where it will then control Coherence resources in all namespaces across the Kubernetes cluster.">Coherence Operatorをインストールするには、オペレータの単一インスタンスをネームスペースにインストールし、Kubernetesクラスタのすべてのネームスペースの<code>Coherence</code>リソースを制御することをお薦めします。</span> <span class="merged" id="all.1SB65k.spl2" title="原文 : Alternatively it may be configured to watch a sub-set of namespaces by setting the WATCH_NAMESPACE environment variable.">または、<code>WATCH_NAMESPACE</code>環境変数を設定して、ネームスペースのサブセットを監視するように構成できます。</span> <span class="merged" id="all.1SB65k.spl3" title="原文 : The watch namespace(s) does not have to include the installation namespace.">ウォッチ・ネームスペースには、インストール・ネームスペースを含める必要はありません。</span> </p>
+
+<div class="admonition caution">
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N"  title="原文:: Caution">注意</span></p>
+<p ><p><span class="merged" id="all.3M7kAk.spl1" title="原文 : In theory, it is possible to install multiple instances of the Coherence Operator into different namespaces, where each instance monitors a different set of namespaces.">理論上、Coherence Operatorの複数のインスタンスを異なるネームスペースにインストールでき、各インスタンスで異なるネームスペース・セットが監視されます。</span> <span class="merged" id="all.3M7kAk.spl2" title="原文 : There are a number of potential issues with this approach, so it is not recommended.">このアプローチには多くの潜在的な問題があるため、推奨されません。</span> </p>
+
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.4MB0eW.spl1" title="原文 : Only one version of a CRD can be installed - There is currently only a single version of the CRD, but different releases of the Operator may use slightly different specs of this CRD version, for example a new Operator release may introduce extra fields not in the previous releases.">インストールできるCRDのバージョンは1つのみです - 現在、CRDのバージョンは1つだけですが、オペレータのリリースによって、このCRDバージョンの仕様が若干異なる場合があります。たとえば、新しいOperatorリリースでは、以前のリリースにない追加のフィールドが導入される可能性があります。</span> <span class="merged" id="all.4MB0eW.spl2" title="原文 : As the CRD version is fixed at v1 there is no guarantee which CRD version has actually installed, which could lead to subtle issues.">CRDバージョンが<code>v1</code>で修正されるため、どのCRDバージョンが実際にインストールされているかは保証されず、微妙な問題につながる可能性があります。</span> </p>
+
+</li>
+<li>
+<p><span class="merged" id="all.RkRmn.spl1" title="原文 : The operator creates and installs defaulting and validating web-hooks.">オペレータは、webフックのデフォルト設定および検証を作成およびインストールします。</span> <span class="merged" id="all.RkRmn.spl2" title="原文 : A web-hook is associated to a CRD resource so installing multiple web-hooks for the same resource may lead to issues.">webフックはCRDリソースに関連付けられているため、同じリソースに複数のWebフックをインストールすると問題が発生する可能性があります。</span> <span class="merged" id="all.RkRmn.spl3" title="原文 : If an operator is uninstalled, but the web-hook configuration remains, then Kubernetes will not accept modifications to resources of that type as it will be unable to contact the web-hook.">オペレータがアンインストールされ、webフック構成が残っている場合、KubernetesはWebフックに接続できないため、そのタイプのリソースに対する変更を受け入れません。</span> </p>
+
+</li>
+</ul>
+<p><span class="merged" id="all.2cwJP6" title="原文 : It is possible to run the Operator without web-hooks, but this has its own caveats see the Web Hooks documentation for how to do this.">webフックなしでOperatorを実行できますが、これには独自の注意事項があります。この方法については、<router-link to="/docs/installation/07_webhooks">「Webフック」</router-link>のドキュメントを参照してください。</span></p>
+</p>
+</div>
+<div class="admonition important">
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p"  title="原文:: Important">重要</span></p>
+<p ><p><span class="merged" id="all.3Q04gp.spl1" title="原文 : If multiple instance of the Operator are installed, where they are monitoring the same namespaces, this can cause issues.">オペレータの複数のインスタンスがインストールされていて、それらが同じネームスペースをモニターしている場合、これによって問題が発生する可能性があります。</span> <span class="merged" id="all.3Q04gp.spl2" title="原文 : For example, when a Coherence resource is then changed, all the Operator deployments will receive the same events from Etcd and try to apply the same changes.">たとえば、<code>Coherence</code>リソースが変更されると、すべてのオペレータ・デプロイメントはEtcdから同じイベントを受信し、同じ変更を適用しようとします。</span> <span class="merged" id="all.3Q04gp.spl3" title="原文 : Sometimes this may work, sometimes there may be errors, for example multiple Operators trying to remove finalizers and delete a Coherence cluster.">場合によっては、ファイナライザを削除してCoherenceクラスタを削除しようとする複数のオペレータなど、エラーが発生することがあります。</span> </p>
+</p>
+</div>
+</div>
+
 <h2 id="manifest"><span class="merged" id="all.4Dp4iH" title="原文 : Default Install with Kubectl">Kubectlでのデフォルト・インストール</span></h2>
 <div class="section">
 <p><span class="merged" id="all.1v0YpD.1" title="原文 : If you want the default Coherence Operator installation then the simplest solution is use kubectl to apply the manifests from the Operator release.">デフォルトのCoherence Operatorインストールが必要な場合は、最も単純なソリューションは<code>kubectl</code>を使用して、Operatorリリースからのマニフェストを適用します。</span></p>
@@ -112,7 +210,7 @@
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator.yaml</markup>
 
 <p><span class="merged" id="all.2vyxRX.1.spl1" title="原文 : This will create a namespace called coherence and install the Operator into it along with all the required ClusterRole and RoleBinding resources.">これにより、<code>coherence</code>というネームスペースが作成され、必要なすべての<code>ClusterRole</code>および<code>RoleBinding</code>リソースとともにオペレータがインストールされます。</span> <span class="merged" id="all.2vyxRX.1.spl2" title="原文 : The coherence namespace can be changed by downloading and editing the yaml file."><code>coherence</code>ネームスペースは、yamlファイルをダウンロードおよび編集することによって変更できます。</span> </p>
 
@@ -159,12 +257,12 @@ lang="bash"
 </div>
 </div>
 
-<h2 id="_installing_with_helm"><span class="merged" id="all.1SBcfm" title="原文 : Installing With Helm">Helmを使用したインストール</span></h2>
+<h2 id="helm"><span class="merged" id="all.1SBcfm" title="原文 : Installing With Helm">Helmを使用したインストール</span></h2>
 <div class="section">
 <p><span class="merged" id="all.3fBKC6.spl1" title="原文 : For more flexibility but the simplest way to install the Coherence Operator is to use the Helm chart.">柔軟性を高めるために、Coherence Operatorをインストールする最も簡単な方法は、Helmチャートを使用することです。</span> <span class="merged" id="all.3fBKC6.spl2" title="原文 : This ensures that all the correct resources will be created in Kubernetes.">これにより、すべての正しいリソースがKubernetesに作成されます。</span> </p>
 
 
-<h3 id="helm"><span class="merged" id="all.2LiYhP" title="原文 : Add the Coherence Helm Repository">Coherence Helmリポジトリの追加</span></h3>
+<h3 id="_add_the_coherence_helm_repository"><span class="merged" id="all.2LiYhP" title="原文 : Add the Coherence Helm Repository">Coherence Helmリポジトリの追加</span></h3>
 <div class="section">
 <p><span class="merged" id="all.34cW7K" title="原文 : Add the coherence helm repository using the following commands:">次のコマンドを使用して、<code>coherence</code> helmリポジトリを追加します:</span></p>
 
@@ -198,123 +296,50 @@ lang="bash"
 </ul>
 </div>
 
-<h3 id="_change_the_operator_replica_count_2"><span class="merged" id="all.1w2ScV.1" title="原文 : Change the Operator Replica Count">オペレータ・レプリカ数の変更</span></h3>
+<h3 id="helm-operator-image"><span class="merged" id="all.3NvRwL" title="原文 : Set the Operator Image">オペレータ・イメージの設定</span></h3>
 <div class="section">
-<p><span class="merged" id="all.1hJJIo" title="原文 : To change the replica count when installing the Operator using Helm, the replicas value can be set.">Helmを使用してオペレータをインストールするときにレプリカ数を変更するには、<code>replicas</code>値を設定できます。</span></p>
+<p><span class="merged" id="all.25hQYd.spl1" title="原文 : The Helm chart uses a default Operator image from ghcr.io/oracle/coherence-operator:3.3.0.">Helmチャートでは、<code>ghcr.io/oracle/coherence-operator:3.3.0</code>のデフォルトのオペレータ・イメージが使用されます。</span> <span class="merged" id="all.25hQYd.spl2" title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then there are two ways to override the default.">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、デフォルトを上書きする方法が2つあります。</span> <span class="merged" id="all.25hQYd.spl3" title="原文 : Either set the individual image.registry, image.name and image.tag values, or set the whole image name by setting the image value.">個別の<code>image.registry</code>、<code>image.name</code>および<code>image.tag</code>値を設定するか、<code>image</code>値を設定してイメージ名全体を設定します。</span> </p>
 
-<p><span class="merged" id="all.3BtSTW" title="原文 : For example, to change the replica count from 3 to 1, the --set replicas=1 option can be used.">たとえば、レプリカ数を3から1に変更するには、<code>--set replicas=1</code>オプションを使用できます。</span></p>
+<p><span class="merged" id="all.4NNEv6" title="原文 : For example, if the Operator image has been deployed into a private registry named foo.com but with the same image name coherence-operator and tag 3.3.0 as the default image, then just the image.registry needs to be specified.">たとえば、オペレータ・イメージが<code>foo.com</code>という名前のプライベート・レジストリにデプロイされているが、デフォルト・イメージと同じイメージ名<code>coherence-operator</code>およびタグ<code>3.3.0</code>の場合は、<code>image.registry</code>のみを指定する必要があります。</span></p>
+
+<p><span class="merged" id="all.4C057w" title="原文 : In the example below, the image used to run the Operator will be foo.com/coherence-operator:3.3.0.">次の例では、オペレータの実行に使用されるイメージは<code>foo.com/coherence-operator:3.3.0</code>です。</span></p>
 
 <markup
 lang="bash"
 
 >helm install  \
     --namespace &lt;namespace&gt; \
-    --set replicas=1
-    coherence \
-    coherence/coherence-operator</markup>
-
-</div>
-
-<h3 id="_run_the_operator_as_a_non_root_user"><span class="merged" id="all.44sbPA" title="原文 : Run the Operator as a Non-Root User">ルート以外のユーザーとしてのオペレータの実行</span></h3>
-<div class="section">
-<p><span class="merged" id="all.4aVdMx" title="原文 : The Operator container can be configured with a securityContext so that it runs as a non-root user.">オペレータ・コンテナは、root以外のユーザーとして実行されるように<code>securityContext</code>で構成できます。</span></p>
-
-<p><span class="merged" id="all.2uqFQU" title="原文 : This can be done using a values file:">これは、値ファイルを使用して実行できます:</span></p>
-
-<markup
-lang="yaml"
-title="security-values.yaml"
->securityContext:
-  runAsNonRoot: true
-  runAsUser: 1000</markup>
-
-<p><span class="merged" id="all.3Mljgx" title="原文 : Then the security-values.yaml values file above can be used in the Helm install command.">次に、前述の<code>security-values.yaml</code>値ファイルをHelmインストール・コマンドで使用できます。</span></p>
-
-<markup
-lang="bash"
-
->helm install  \
-    --namespace &lt;namespace&gt; \
-    --values security-values.yaml \
-    coherence \
-    coherence/coherence-operator</markup>
-
-<p><span class="merged" id="all.3Kmjh0" title="原文 : Alternatively, the securityContext values can be set on the command line as --set parameters:">または、<code>securityContext</code>値をコマンドラインで<code>--set</code>パラメータとして設定できます:</span></p>
-
-<markup
-lang="bash"
-
->helm install  \
-    --namespace &lt;namespace&gt; \
-    --set securityContext.runAsNonRoot=true \
-    --set securityContext.runAsUser=1000 \
-    coherence \
-    coherence/coherence-operator</markup>
-
-</div>
-
-<h3 id="_uninstall_the_coherence_operator_helm_chart"><span class="merged" id="all.xWyRu" title="原文 : Uninstall the Coherence Operator Helm chart">Coherence Operator Helmチャートをアンインストール</span></h3>
-<div class="section">
-<p><span class="merged" id="all.4Kyu3l" title="原文 : To uninstall the operator:">オペレータをアンインストールするには:</span></p>
-
-<markup
-lang="bash"
-
->helm delete coherence-operator --namespace &lt;namespace&gt;</markup>
-
-</div>
-</div>
-
-<h2 id="_operator_scope"><span class="merged" id="all.2YIaHI" title="原文 : Operator Scope">オペレータ・スコープ</span></h2>
-<div class="section">
-<p><span class="merged" id="all.1SB65k.spl1" title="原文 : The recommended way to install the Coherence Operator is to install a single instance of the operator into a namespace and where it will then control Coherence resources in all namespaces across the Kubernetes cluster.">Coherence Operatorをインストールするには、オペレータの単一インスタンスをネームスペースにインストールし、Kubernetesクラスタのすべてのネームスペースの<code>Coherence</code>リソースを制御することをお薦めします。</span> <span class="merged" id="all.1SB65k.spl2" title="原文 : Alternatively it may be configured to watch a sub-set of namespaces by setting the WATCH_NAMESPACE environment variable.">または、<code>WATCH_NAMESPACE</code>環境変数を設定して、ネームスペースのサブセットを監視するように構成できます。</span> <span class="merged" id="all.1SB65k.spl3" title="原文 : The watch namespace(s) does not have to include the installation namespace.">ウォッチ・ネームスペースには、インストール・ネームスペースを含める必要はありません。</span> </p>
-
-<p><span class="merged" id="all.2D8r8e.spl1" title="原文 : In theory, it is possible to install multiple instances of the Coherence Operator into different namespaces, where each instances monitors a different set of namespaces.">理論的には、Coherence Operatorの複数のインスタンスを様々なネームスペースにインストールでき、各インスタンスは異なるネームスペース・セットをモニターします。</span> <span class="merged" id="all.2D8r8e.spl2" title="原文 : There are a number of potential issues with this approach, so it is not recommended.">このアプローチには多くの潜在的な問題があるため、推奨されません。</span> </p>
-
-<ul class="ulist">
-<li>
-<p><span class="merged" id="all.30PLC2.spl1" title="原文 : Only one CRD can be installed - Different releases of the Operator may use slightly different CRD versions, for example a new version may introduce extra fields not in the previous version.">1つのCRDのみをインストールできます - オペレータのリリースによって、若干異なるCRDバージョンが使用されることがあります。たとえば、新しいバージョンでは、前のバージョン以外の追加フィールドが導入される可能性があります。</span> <span class="merged" id="all.30PLC2.spl2" title="原文 : As the CRD version is v1 there is no guarantee which CRD version has actually installed, which could lead to subtle issues.">CRDバージョンは<code>v1</code>であるため、どのCRDバージョンが実際にインストールされているのかは保証されません。これにより、問題が生じる可能性があります。</span> </p>
-
-</li>
-<li>
-<p><span class="merged" id="all.RkRmn.spl1" title="原文 : The operator creates and installs defaulting and validating web-hooks.">オペレータは、webフックのデフォルト設定および検証を作成およびインストールします。</span> <span class="merged" id="all.RkRmn.spl2" title="原文 : A web-hook is associated to a CRD resource so installing multiple web-hooks for the same resource may lead to issues.">webフックはCRDリソースに関連付けられているため、同じリソースに複数のWebフックをインストールすると問題が発生する可能性があります。</span> <span class="merged" id="all.RkRmn.spl3" title="原文 : If an operator is uninstalled, but the web-hook configuration remains, then Kubernetes will not accept modifications to resources of that type as it will be unable to contact the web-hook.">オペレータがアンインストールされ、webフック構成が残っている場合、KubernetesはWebフックに接続できないため、そのタイプのリソースに対する変更を受け入れません。</span> </p>
-
-</li>
-</ul>
-<p><span class="merged" id="all.3e8B11" title="原文 : To set the watch namespaces when installing with helm set the watchNamespaces value, for example:">helmでインストールするときにウォッチ・ネームスペースを設定するには、<code>watchNamespaces</code>値を設定します。次に例を示します:</span></p>
-
-<markup
-lang="bash"
-
->helm install  \
-    --namespace &lt;namespace&gt; \
-    --set watchNamespaces=payments,catalog,customers <span class="conum" data-value="1" />
+    --set image.registry=foo.com \
     coherence-operator \
     coherence/coherence-operator</markup>
 
-<ul class="colist">
-<li data-value="1"><span class="merged" id="all.2XUFDk" title="原文 : The payments, catalog and customers namespaces will be watched by the Operator."><code>payments</code>、<code>catalog</code>および<code>customers</code>ネームスペースは、オペレータによって監視されます。</span></li>
-</ul>
-</div>
-
-<h2 id="_operator_image"><span class="merged" id="all.1RfYmi" title="原文 : Operator Image">オペレータ・イメージ</span></h2>
-<div class="section">
-<p><span class="merged" id="all.4IFHL7.spl1" title="原文 : The Helm chart uses a default registry to pull the Operator image from.">Helmチャートでは、デフォルトのレジストリを使用して、オペレータ・イメージをプルします。</span> <span class="merged" id="all.4IFHL7.spl2" title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then the image field in the values file can be set, for example:">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、値ファイルの<code>image</code>フィールドを設定できます。次に例を示します:</span> </p>
+<p><span class="merged" id="all.2omWLr.spl1" title="原文 : All three of the image parts can be specified individually using --set options.">3つのイメージ・パーツはすべて、<code>--set</code>オプションを使用して個別に指定できます。</span> <span class="merged" id="all.2omWLr.spl2" title="原文 : In the example below, the image used to run the Operator will be foo.com/operator:1.2.3.">次の例では、オペレータの実行に使用されるイメージは<code>foo.com/operator:1.2.3</code>です。</span> </p>
 
 <markup
 lang="bash"
 
 >helm install  \
     --namespace &lt;namespace&gt; \
-    --set image=images.com/coherence-operator:0.1.2 <span class="conum" data-value="1" />
+    --set image.registry=foo.com \
+    --set image.name=operator \
+    --set image.tag=1.2.3
     coherence-operator \
     coherence/coherence-operator</markup>
 
-<ul class="colist">
-<li data-value="1"><span class="merged" id="all.40Kc7m" title="原文 : The image used to run the Operator will be images.com/coherence-operator:0.1.2.">オペレータの実行に使用されるイメージは、<code>images.com/coherence-operator:0.1.2</code>になります。</span></li>
-</ul>
+<p><span class="merged" id="all.4NBaDS.spl1" title="原文 : Alternatively, the image can be set using a single image value.">または、単一の<code>image</code>値を使用してイメージを設定できます。</span> <span class="merged" id="all.4NBaDS.spl2" title="原文 : For example, the command below will set the Operator image to images.com/coherence-operator:0.1.2.">たとえば、次のコマンドは、オペレータ・イメージを<code>images.com/coherence-operator:0.1.2</code>に設定します。</span> </p>
 
-<h3 id="_image_pull_secrets"><span class="merged" id="all.MUXab.1" title="原文 : Image Pull Secrets">イメージ・プル・シークレット</span></h3>
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set image=images.com/coherence-operator:0.1.2 \
+    coherence-operator \
+    coherence/coherence-operator</markup>
+
+</div>
+
+<h3 id="helm-pull-secrets"><span class="merged" id="all.MUXab.1" title="原文 : Image Pull Secrets">イメージ・プル・シークレット</span></h3>
 <div class="section">
 <p><span class="merged" id="all.1eXQf4.spl1" title="原文 : If the image is to be pulled from a secure repository that requires credentials then the image pull secrets can be specified.">資格証明を必要とするセキュアなリポジトリからイメージをプルする場合は、イメージ・プル・シークレットを指定できます。</span> <span class="merged" id="all.1eXQf4.spl2" title="原文 : See the Kubernetes documentation on Pulling from a Private Registry."><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/" id="" target="_blank" >「プライベート・レジストリからのプル」</a>のKubernetesドキュメントを参照してください。</span> </p>
 
@@ -363,15 +388,344 @@ lang="bash"
 </ul>
 </div>
 </div>
+
+<h3 id="_change_the_operator_replica_count_2"><span class="merged" id="all.1w2ScV.1" title="原文 : Change the Operator Replica Count">オペレータ・レプリカ数の変更</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1hJJIo" title="原文 : To change the replica count when installing the Operator using Helm, the replicas value can be set.">Helmを使用してオペレータをインストールするときにレプリカ数を変更するには、<code>replicas</code>値を設定できます。</span></p>
+
+<p><span class="merged" id="all.3BtSTW" title="原文 : For example, to change the replica count from 3 to 1, the --set replicas=1 option can be used.">たとえば、レプリカ数を3から1に変更するには、<code>--set replicas=1</code>オプションを使用できます。</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set replicas=1
+    coherence \
+    coherence/coherence-operator</markup>
+
+</div>
+
+<h3 id="helm-watch-ns"><span class="merged" id="all.3ZRPoT" title="原文 : Set the Watch Namespaces">ウォッチ・ネームスペースの設定</span></h3>
+<div class="section">
+<p><span class="merged" id="all.3e8B11" title="原文 : To set the watch namespaces when installing with helm set the watchNamespaces value, for example:">helmでインストールするときにウォッチ・ネームスペースを設定するには、<code>watchNamespaces</code>値を設定します。次に例を示します:</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set watchNamespaces=payments,catalog,customers \
+    coherence-operator \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.2XUFDk" title="原文 : The payments, catalog and customers namespaces will be watched by the Operator."><code>payments</code>、<code>catalog</code>および<code>customers</code>ネームスペースは、オペレータによって監視されます。</span></p>
+
+
+<h4 id="_set_the_watch_namespace_to_the_operators_install_namespace"><span class="merged" id="all.45ohWm" title="原文 : Set the Watch Namespace to the Operator’s Install Namespace">監視ネームスペースをオペレータのインストール・ネームスペースに設定</span></h4>
+<div class="section">
+<p><span class="merged" id="all.2p0ISm.spl1" title="原文 : When installing the Operator using the Helm chart, there is a convenience value that can be set if the Operator should only monitor the same namespace that it is installed into.">Helmチャートを使用してオペレータをインストールする場合、オペレータがインストールされているネームスペースと同じネームスペースのみをモニターする必要がある場合に設定できる便利な値があります。</span> <span class="merged" id="all.2p0ISm.spl2" title="原文 : By setting the onlySameNamespace value to true the watch namespace will be set to the installation namespace."><code>onlySameNamespace</code>値を<code>true</code>に設定すると、ウォッチ・ネームスペースはインストール・ネームスペースに設定されます。</span> <span class="merged" id="all.2p0ISm.spl3" title="原文 : If the onlySameNamespace value is set to true then any value set for the watchNamespaces value will be ignored."><code>onlySameNamespace</code>値が<code>true</code>に設定されている場合、<code>watchNamespaces</code>値に設定された値は無視されます。</span> </p>
+
+<p><span class="merged" id="all.Mqgar" title="原文 : For example, the command below will set onlySameNamespace to true, and the Operator will be installed into, and only monitor the coh-testing namespace.">たとえば、次のコマンドは、<code>onlySameNamespace</code>をtrueに設定し、Operatorをインストールして、<code>coh-testing</code>ネームスペースのみをモニターします。</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace coh-testing \
+    --set onlySameNamespace=true \
+    coherence-operator \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.4IyFRm.spl1" title="原文 : In the example below, the onlySameNamespace is set to true, so the Operator will be installed into, and only monitor the coh-testing namespace.">次の例では、<code>onlySameNamespace</code>がtrueに設定されているため、Operatorはインストールされ、<code>coh-testing</code>ネームスペースのみを監視します。</span> <span class="merged" id="all.4IyFRm.spl2" title="原文 : Even though the watchNamespaces value is set, it will be ignored."><code>watchNamespaces</code>値が設定されていても、無視されます。</span> </p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace coh-testing \
+    --set watchNamespaces=payments,catalog,customers \
+    --set onlySameNamespace=true \
+    coherence-operator \
+    coherence/coherence-operator</markup>
+
+</div>
+</div>
+
+<h3 id="helm-sec-context"><span class="merged" id="all.2FZhLM" title="原文 : Install the Operator with a Security Context">セキュリティ・コンテキストを使用したオペレータのインストール</span></h3>
+<div class="section">
+<p><span class="merged" id="all.37fvA8" title="原文 : The Operator container can be configured with a Pod securityContext or a container securityContext, so that it runs as a non-root user.">オペレータ・コンテナは、ポッド<code>securityContext</code>またはコンテナ<code>securityContext</code>で構成して、非rootユーザーとして実行できます。</span></p>
+
+<p><span class="merged" id="all.2uqFQU" title="原文 : This can be done using a values file:">これは、値ファイルを使用して実行できます:</span></p>
+
+<p><span class="merged" id="all.2dhgZ2" title="原文 : Set the Pod securityContext"><strong>ポッドの設定securityContext</strong></span></p>
+
+<markup
+lang="yaml"
+title="security-values.yaml"
+>podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000</markup>
+
+<p><span class="merged" id="all.kbaNs" title="原文 : Set the Container securityContext"><strong>コンテナsecurityContextの設定</strong></span></p>
+
+<markup
+lang="yaml"
+title="security-values.yaml"
+>securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000</markup>
+
+<p><span class="merged" id="all.3Mljgx" title="原文 : Then the security-values.yaml values file above can be used in the Helm install command.">次に、前述の<code>security-values.yaml</code>値ファイルをHelmインストール・コマンドで使用できます。</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --values security-values.yaml \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.2nn9ac" title="原文 : Alternatively, the Pod or container securityContext values can be set on the command line as --set parameters:">または、ポッドまたはコンテナの<code>securityContext</code>値をコマンドラインで<code>--set</code>パラメータとして設定できます:</span></p>
+
+<p><span class="merged" id="all.2dhgZ2.1" title="原文 : Set the Pod securityContext"><strong>ポッドの設定securityContext</strong></span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set podSecurityContext.runAsNonRoot=true \
+    --set podSecurityContext.runAsUser=1000 \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.kbaNs.1" title="原文 : Set the Container securityContext"><strong>コンテナsecurityContextの設定</strong></span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set securityContext.runAsNonRoot=true \
+    --set securityContext.runAsUser=1000 \
+    coherence \
+    coherence/coherence-operator</markup>
+
+</div>
+
+<h3 id="helm-labels"><span class="merged" id="all.1X6N5U" title="原文 : Set Additional Labels">追加ラベルの設定</span></h3>
+<div class="section">
+<p><span class="merged" id="all.450GmD" title="原文 : When installing the Operator with Helm, it is possible to set additional labels to be applied to the Operator Pods and to the Operator Deployment.">Helmを使用してOperatorをインストールする場合、オペレータ・ポッドおよびオペレータ・デプロイメントに適用する追加のラベルを設定できます。</span></p>
+
+
+<h4 id="_adding_pod_labels"><span class="merged" id="all.2nGABN" title="原文 : Adding Pod Labels">ポッド・ラベルの追加</span></h4>
+<div class="section">
+<p><span class="merged" id="all.2HdWxr" title="原文 : To add labels to the Operator Pods set the labels value, either on the command line using --set or in the values file.">オペレータ・ポッドにラベルを追加するには、コマンドラインで<code>--set</code>を使用するか、値ファイルで<code>labels</code>値を設定します。</span></p>
+
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.3w23N8" title="原文 : Setting labels will only apply the additional labels to the Operator Pods, they will not be applied to any other resource created by the Helm chart."><code>labels</code>を設定すると、追加のラベルがオペレータ・ポッドにのみ適用され、Helmチャートによって作成された他のリソースには適用されません。</span></p>
+</p>
+</div>
+<p><span class="merged" id="all.2zuz5R" title="原文 : For example, using the command line:">たとえば、次のコマンドラインを使用します:</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set labels.one=value-one \
+    --set labels.two=value-two \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.jrqdO" title="原文 : The command above would add the following additional labels one and two to the Operator Pod as shown below:">前述のコマンドでは、次に示すように、オペレータ・ポッドに次のラベル<code>one</code>および<code>two</code>が追加されます:</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: v1
+kind: Pod
+metadata:
+  name: coherence-operator
+  labels:
+    one: value-one
+    two: value-two</markup>
+
+<p><span class="merged" id="all.1Ay9lA" title="原文 : The same labels could also be specified in a values file:">同じラベルを値ファイルで指定することもできます:</span></p>
+
+<markup
+
+title="add-labels-values.yaml"
+>labels:
+  one: value-one
+  two: value-two</markup>
+
+</div>
+
+<h4 id="_adding_deployment_labels"><span class="merged" id="all.HLULy" title="原文 : Adding Deployment Labels">デプロイメント・ラベルの追加</span></h4>
+<div class="section">
+<p><span class="merged" id="all.3HA9p9" title="原文 : To add labels to the Operator Deployment set the deploymentLabels value, either on the command line using --set or in the values file.">オペレータ・デプロイメントにラベルを追加するには、コマンドラインで<code>--set</code>を使用するか、値ファイルで<code>deploymentLabels</code>値を設定します。</span></p>
+
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.1"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.eHe7w" title="原文 : Setting deploymentLabels will only apply the additional labels to the Deployment, they will not be applied to any other resource created by the Helm chart."><code>deploymentLabels</code>を設定すると、追加のラベルがデプロイメントにのみ適用され、Helmチャートによって作成された他のリソースには適用されません。</span></p>
+</p>
+</div>
+<p><span class="merged" id="all.2zuz5R.1" title="原文 : For example, using the command line:">たとえば、次のコマンドラインを使用します:</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set deploymentLabels.one=value-one \
+    --set deploymentLabels.two=value-two \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.jrqdO.1" title="原文 : The command above would add the following additional labels one and two to the Operator Pod as shown below:">前述のコマンドでは、次に示すように、オペレータ・ポッドに次のラベル<code>one</code>および<code>two</code>が追加されます:</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coherence-operator
+  labels:
+    one: value-one
+    two: value-two</markup>
+
+<p><span class="merged" id="all.1Ay9lA.1" title="原文 : The same labels could also be specified in a values file:">同じラベルを値ファイルで指定することもできます:</span></p>
+
+<markup
+
+title="add-labels-values.yaml"
+>deploymentLabels:
+  one: value-one
+  two: value-two</markup>
+
+</div>
+</div>
+
+<h3 id="helm-annotations"><span class="merged" id="all.ctz0o" title="原文 : Set Additional Annotations">追加注釈の設定</span></h3>
+<div class="section">
+<p><span class="merged" id="all.2HE8Re" title="原文 : When installing the Operator with Helm, it is possible to set additional annotations to be applied to the Operator Pods and to the Operator Deployment.">Helmを使用してOperatorをインストールする場合、オペレータ・ポッドおよびオペレータ・デプロイメントに適用される追加の注釈を設定できます。</span></p>
+
+
+<h4 id="_adding_pod_annotations"><span class="merged" id="all.1PevBK" title="原文 : Adding Pod Annotations">ポッド注釈の追加</span></h4>
+<div class="section">
+<p><span class="merged" id="all.1NeKgb" title="原文 : To add annotations to the Operator Pods set the annotations value, either on the command line using --set or in the values file.">オペレータ・ポッドに注釈を追加するには、コマンドラインで<code>--set</code>を使用するか、値ファイルで<code>annotations</code>値を設定します。</span></p>
+
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.2"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.2kJ2CK" title="原文 : Setting annotations will only apply the additional annotations to the Operator Pods, they will not be applied to any other resource created by the Helm chart."><code>annotations</code>を設定すると、オペレータ・ポッドに追加の注釈のみが適用され、Helmチャートによって作成された他のリソースには適用されません。</span></p>
+</p>
+</div>
+<p><span class="merged" id="all.2zuz5R.2" title="原文 : For example, using the command line:">たとえば、次のコマンドラインを使用します:</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set annotations.one=value-one \
+    --set annotations.two=value-two \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.YvWEt" title="原文 : The command above would add the following additional annotations one and two to the Operator Pod as shown below:">前述のコマンドでは、次に示すように、オペレータ・ポッドに次の注釈<code>one</code>および<code>two</code>が追加されます:</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: v1
+kind: Pod
+metadata:
+  name: coherence-operator
+  annotations:
+    one: value-one
+    two: value-two</markup>
+
+<p><span class="merged" id="all.1aHXze" title="原文 : The same annotations could also be specified in a values file:">同じ注釈を値ファイルで指定することもできます:</span></p>
+
+<markup
+
+title="add-annotations-values.yaml"
+>annotations:
+  one: value-one
+  two: value-two</markup>
+
+</div>
+
+<h4 id="_adding_deployment_annotations"><span class="merged" id="all.2Y3cEV" title="原文 : Adding Deployment Annotations">デプロイメント注釈の追加</span></h4>
+<div class="section">
+<p><span class="merged" id="all.3RGv6C" title="原文 : To add annotations to the Operator Deployment set the deploymentAnnotations value, either on the command line using --set or in the values file.">オペレータ・デプロイメントに注釈を追加するには、コマンドラインで<code>--set</code>を使用して、または値ファイルで<code>deploymentAnnotations</code>値を設定します。</span></p>
+
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.3"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.P1hvE" title="原文 : Setting deploymentAnnotations will only apply the additional annotations to the Deployment, they will not be applied to any other resource created by the Helm chart."><code>deploymentAnnotations</code>を設定すると、追加の注釈のみがデプロイメントに適用され、Helmチャートによって作成された他のリソースには適用されません。</span></p>
+</p>
+</div>
+<p><span class="merged" id="all.2zuz5R.3" title="原文 : For example, using the command line:">たとえば、次のコマンドラインを使用します:</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set deploymentAnnotations.one=value-one \
+    --set deploymentAnnotations.two=value-two \
+    coherence \
+    coherence/coherence-operator</markup>
+
+<p><span class="merged" id="all.YvWEt.1" title="原文 : The command above would add the following additional annotations one and two to the Operator Pod as shown below:">前述のコマンドでは、次に示すように、オペレータ・ポッドに次の注釈<code>one</code>および<code>two</code>が追加されます:</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coherence-operator
+  annotations:
+    one: value-one
+    two: value-two</markup>
+
+<p><span class="merged" id="all.1aHXze.1" title="原文 : The same annotations could also be specified in a values file:">同じ注釈を値ファイルで指定することもできます:</span></p>
+
+<markup
+
+title="add-annotations-values.yaml"
+>deploymentAnnotations:
+  one: value-one
+  two: value-two</markup>
+
+</div>
+</div>
+
+<h3 id="helm-uninstall"><span class="merged" id="all.xWyRu" title="原文 : Uninstall the Coherence Operator Helm chart">Coherence Operator Helmチャートをアンインストール</span></h3>
+<div class="section">
+<p><span class="merged" id="all.4Kyu3l" title="原文 : To uninstall the operator:">オペレータをアンインストールするには:</span></p>
+
+<markup
+lang="bash"
+
+>helm delete coherence-operator --namespace &lt;namespace&gt;</markup>
+
+</div>
 </div>
 
 <h2 id="kubectl"><span class="merged" id="all.g4cZe" title="原文 : Install with Kubectl and Kustomize">KubectlおよびKustomizeでインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.4duetQ" title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.2.8 Manifests">yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.2.8 マニフェスト</a></span></p>
+<p><span class="merged" id="all.49cG6C" title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.3.0 Manifests">yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.0 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3iFoWt" title="原文 : These manifest files are for use with a tool called Kustomize, which is built into kubectl see the documentation here: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">これらのマニフェスト・ファイルは、<code>kubectl</code>に組み込まれたKustomizeと呼ばれるツールで使用します。ここにあるドキュメントを参照してください: <a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/" id="" target="_blank" >https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/</a></span></p>
 
-<p><span class="merged" id="all.qaDOg" title="原文 : Download the 3.2.8 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.2.8 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
+<p><span class="merged" id="all.9OU78" title="原文 : Download the 3.3.0 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.3.0 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
 
 <markup
 
@@ -426,14 +780,14 @@ lang="bash"
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.2.8</markup>
+>cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.3.0</markup>
 
 <p><span class="merged" id="all.325mTV" title="原文 : Change the name of the Operator image by running the command below, changing the image name to the registry and image name that you are using for the Operator utilities image">次のコマンドを実行してOperatorイメージの名前を変更し、そのイメージ名を、Operatorユーティリティのイメージに使用するレジストリおよびイメージ名に変更</span></p>
 
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.2.8</markup>
+>cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.3.0</markup>
 
 <p><span class="merged" id="all.3AmH2f.spl1" title="原文 : Change the name of the default Coherence image.">デフォルトのCoherenceイメージの名前を変更します。</span> <span class="merged" id="all.3AmH2f.spl2" title="原文 : If you are always going to be deploying your own application images then this does not need to change.">独自のアプリケーション・イメージを常にデプロイする場合、これを変更する必要はありません。</span> </p>
 
@@ -504,11 +858,11 @@ kubectl -n coherence-test create -f operator.yaml</markup>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.wsMyg" title="原文 : ghcr.io/oracle/coherence-operator-package:3.2.8 - the Coherence Operator package"><code>ghcr.io/oracle/coherence-operator-package:3.2.8</code> - Coherence Operatorパッケージ</span></p>
+<p><span class="merged" id="all.1dq0tB" title="原文 : ghcr.io/oracle/coherence-operator-package:3.3.0 - the Coherence Operator package"><code>ghcr.io/oracle/coherence-operator-package:3.3.0</code> - Coherence Operatorパッケージ</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.3HDkpP" title="原文 : ghcr.io/oracle/coherence-operator-repo:3.2.8 - the Coherence Operator repository"><code>ghcr.io/oracle/coherence-operator-repo:3.2.8</code> - Coherence Operatorリポジトリ</span></p>
+<p><span class="merged" id="all.1IdYtF" title="原文 : ghcr.io/oracle/coherence-operator-repo:3.3.0 - the Coherence Operator repository"><code>ghcr.io/oracle/coherence-operator-repo:3.3.0</code> - Coherence Operatorリポジトリ</span></p>
 
 </li>
 </ul>
@@ -521,7 +875,7 @@ kubectl -n coherence-test create -f operator.yaml</markup>
 lang="bash"
 
 >tanzu package repository add coherence-repo \
-    --url ghcr.io/oracle/coherence-operator-repo:3.2.8 \
+    --url ghcr.io/oracle/coherence-operator-repo:3.3.0 \
     --namespace coherence \
     --create-namespace</markup>
 
@@ -553,7 +907,7 @@ lang="bash"
 lang="bash"
 
 >NAME                                  DISPLAY-NAME               SHORT-DESCRIPTION                                             LATEST-VERSION
-coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.2.8</markup>
+coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.3.0</markup>
 
 </div>
 
@@ -566,7 +920,7 @@ lang="bash"
 
 >tanzu package install coherence \
     --package-name coherence-operator.oracle.github.com \
-    --version 3.2.8 \
+    --version 3.3.0 \
     --namespace coherence</markup>
 
 <p><span class="merged" id="all.HoaXg" title="原文 : The Tanzu CLI will display the various steps it is going through to install the package and if all goes well, finally display Added installed package &apos;coherence&apos; The packages installed in the coherence namespace can be displayed using the CLI.">Tanzu CLIでは、パッケージのインストールに使用する様々なステップが表示され、すべてうまくいけば<code>Added installed package 'coherence'</code>が表示されます。<code>coherence</code>ネームスペースにインストールされたパッケージは、CLIを使用して表示できます。</span></p>
@@ -582,7 +936,7 @@ lang="bash"
 lang="bash"
 
 >NAME       PACKAGE-NAME                          PACKAGE-VERSION  STATUS
-coherence  coherence-operator.oracle.github.com  3.2.8            Reconcile succeeded</markup>
+coherence  coherence-operator.oracle.github.com  3.3.0            Reconcile succeeded</markup>
 
 <p><span class="merged" id="all.3WbWXb" title="原文 : The Operator is now installed and ready to mage Coherence clusters.">オペレータがインストールされ、Coherenceクラスタを形成する準備ができました。</span></p>
 

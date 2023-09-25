@@ -31,7 +31,7 @@ tar -zxvf coherence-dashboards.tar.gz</markup>
 <p><span class="merged" id="all.48acbp.spl1" title="原文 : This section shows you how to import the Grafana dashboards into your own Grafana instance.">この項では、Grafanaダッシュボードを独自のGrafanaインスタンスにインポートする方法を示します。</span> <span class="merged" id="all.48acbp.spl2" title="原文 : Once you have obtained the dashboards using one of the methods above, the Grafana dashboard .json files will be in the dashboards/grafana/ subdirectory">前述のメソッドのいずれかを使用してダッシュボードを取得すると、Grafanaダッシュボードの<code>.json</code>ファイルが<code>dashboards/grafana/</code>サブディレクトリに格納されます</span> </p>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.2"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.3"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.1ShKUZ.spl1" title="原文 : By default, the Coherence dashboards require a datasource in Grafana named prometheus (which is case-sensitive).">デフォルトでは、Coherenceダッシュボードには<code>prometheus</code>という名前のGrafanaのデータソースが必要です(大/小文字が区別されます)。</span> <span class="merged" id="all.1ShKUZ.spl2" title="原文 : This datasource usually exists in an out-of-the-box Prometheus Operator installation.">通常、このデータソースは、すぐに使用できるPrometheusオペレータ・インストールに存在します。</span> <span class="merged" id="all.1ShKUZ.spl3" title="原文 : If your Grafana environment does not have this datasource, then there are two choices.">Grafana環境にこのデータソースがない場合は、2つの選択肢があります。</span> </p>
 
 <ul class="ulist">
@@ -50,12 +50,14 @@ do
     sed -i '' -e 's/"datasource": "prometheus"/"datasource": "Coherence-Prometheus"/g' $file;
 done</markup>
 </div>
+
+<p><span class="merged" id="all.2nmn94" title="原文 : The above sed command works for MacOS, but if you are running on Linux you need to remove the &apos;&apos; after the -i.">前述のsedコマンドはMacOSに対して機能しますが、Linuxで実行している場合は、<code>-i</code>の後に<code>''</code>を削除する必要があります。</span></p>
 </p>
 </div>
 
 <h3 id="_manually_import_grafana_dashboards"><span class="merged" id="all.1pVGp4" title="原文 : Manually Import Grafana Dashboards">Grafanaダッシュボードの手動インポート</span></h3>
 <div class="section">
-<p><span class="merged" id="all.UYk58" title="原文 : The dashboard .json files can be manually imported into Grafana using the Grafana UI following the instructions in the Grafana Import Dashboard documentation.">ダッシュボード<code>.json</code>ファイルは、<a href="https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard" id="" target="_blank" >「Grafanaインポート・ダッシュボード」</a>ドキュメントの指示に従ってGrafana UIを使用して、Grafanaに手動でインポートできます。</span></p>
+<p><span class="merged" id="all.2TRpgD" title="原文 : The dashboard .json files can be manually imported into Grafana using the Grafana UI following the instructions in the Grafana Import Dashboard documentation.">ダッシュボード<code>.json</code>ファイルは、<a href="https://grafana.com/docs/grafana/latest/dashboards/manage-dashboards/#import-a-dashboard" id="" target="_blank" >「Grafanaインポート・ダッシュボード」</a>ドキュメントの指示に従ってGrafana UIを使用して、Grafanaに手動でインポートできます。</span></p>
 
 </div>
 

@@ -453,7 +453,7 @@ server-keystore   True    coherence-server-certs   2m13s</markup>
 </div>
 </div>
 
-<h2 id="coherence"><span class="merged" id="all.2J4qIX"  title="原文:: Securing Coherence"> Coherenceの保護</span></h2>
+<h2 id="coherence"><span class="merged" id="all.2J4qIX"  title="原文:: Securing Coherence">Coherenceの保護</span></h2>
 <div class="section">
 <p><span class="merged" id="all.8cNCL.spl1" title="原文 : By this point, you should have installed the Operator and have the four Secrets required, either created by Cert Manager, or manually.">この時点で、オペレータをインストールし、4つの<code>Secrets</code>が必要(証明書マネージャによって作成するか、手動で作成する必要があります)。</span> <span class="merged" id="all.8cNCL.spl2" title="原文 : Now we can secure Coherence clusters.">これで、Coherenceクラスタを保護できます。</span> </p>
 

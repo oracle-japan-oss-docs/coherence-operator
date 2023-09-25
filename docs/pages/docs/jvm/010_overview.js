@@ -31,10 +31,6 @@
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">デバッガ</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.4VSzwl" title="原文 : Using debugger settings.">デバッガ設定の使用。</span></p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/jvm/080_jmx"><div class="card__link-hover"/>
-</router-link> <v-card-title primary class="headline layout justify-center"> <span style="text-align:center">JMX</span> </v-card-title> <v-card-text class="caption">
-<p></p>
-<p><span class="merged" id="all.2mQ0Cb" title="原文 : Using JMX.">JMXを使用します。</span></p>
 </v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/jvm/090_container_limits"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">コンテナ制限の使用</span></v-card-title> <v-card-text class="caption">
 <p></p>

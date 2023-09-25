@@ -7,14 +7,14 @@
 
 <h3 id="_operating_system_library_requirements"><span class="merged" id="all.4bwahA" title="原文 : Operating System Library Requirements">オペレーティング・システム・ライブラリの要件</span></h3>
 <div class="section">
-<p><span class="merged" id="all.Lp5Oz.spl1" title="原文 : In order for Coherence clusters to form correctly, the conntrack library must be installed.">Coherenceクラスタが正しく形成されるようにするには、<code>conntrack</code>ライブラリをインストールする必要があります。</span> <span class="merged" id="all.Lp5Oz.spl2" title="原文 : Most Kubernetes distributions will do this for you.">ほとんどのKubernetesディストリビューションでこれが実行されます。</span> <span class="merged" id="all.Lp5Oz.spl3" title="原文 : If you have issues with clusters not forming, then you should check that conntrack is installed using this command (or equivalent):">クラスタの形成に問題がある場合は、次のコマンド(または同等)を使用して<code>conntrack</code>がインストールされていることを確認します:</span> </p>
+<p><span class="merged" id="all.Lp5Oz.spl1" title="原文 : In order for Coherence clusters to form correctly, the conntrack library must be installed.">Coherenceクラスタを正しく形成するには、<code>conntrack</code>ライブラリをインストールする必要があります。</span> <span class="merged" id="all.Lp5Oz.spl2" title="原文 : Most Kubernetes distributions will do this for you.">これは、ほとんどのKubernetesディストリビューションで行われます。</span> <span class="merged" id="all.Lp5Oz.spl3" title="原文 : If you have issues with clusters not forming, then you should check that conntrack is installed using this command (or equivalent):">クラスタが形成されない問題がある場合は、次のコマンド(または同等のコマンド)を使用して、<code>conntrack</code>がインストールされていることを確認する必要があります:</span> </p>
 
 <markup
 lang="bash"
 
 >rpm -qa | grep conntrack</markup>
 
-<p><span class="merged" id="all.2Qi10S.spl1" title="原文 : You should see output similar to that shown below.">次のように出力されます。</span> <span class="merged" id="all.2Qi10S.spl2" title="原文 : If you do not, then you should install conntrack using your operating system tools.">そうでない場合は、オペレーティング・システム・ツールを使用して<code>conntrack</code>をインストールする必要があります。</span> </p>
+<p><span class="merged" id="all.2Qi10S.spl1" title="原文 : You should see output similar to that shown below.">次のように出力されます。</span> <span class="merged" id="all.2Qi10S.spl2" title="原文 : If you do not, then you should install conntrack using your operating system tools.">そうでない場合は、オペレーティング・システムのツールを使用して<code>conntrack</code>をインストールする必要があります。</span> </p>
 
 <markup
 lang="bash"
@@ -26,7 +26,7 @@ conntrack-tools-1.4.4-4.el7.x86_64</markup>
 
 <h3 id="_firewall_iptables_requirements"><span class="merged" id="all.2Fxxiw" title="原文 : Firewall (iptables) Requirements">ファイアウォール(iptables)の要件</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2rv2Dt.spl1"  title="原文: Some Kubernetes distributions create iptables rules that block some types of traffic that Coherence requires to form clusters.">一部のKubernetesディストリビューションでは、Coherenceがクラスタを形成するために必要とする一部のトラフィック・タイプをブロックする<code>iptables</code>ルールが作成されます。</span> <span class="merged" id="all.2rv2Dt.spl2"  title="原文: If you are not able to form clusters, then you can check for this issue using the following command:">クラスタを形成できない場合は、次のコマンドを使用して、問題がないか確認できます:</span> </p>
+<p><span class="merged" id="all.2rv2Dt.spl1" title="原文 : Some Kubernetes distributions create iptables rules that block some types of traffic that Coherence requires to form clusters.">一部のKubernetesディストリビューションでは、Coherenceがクラスタを形成するために必要とする一部のタイプのトラフィックをブロックする<code>iptables</code>ルールが作成されます。</span> <span class="merged" id="all.2rv2Dt.spl2"  title="原文: If you are not able to form clusters, then you can check for this issue using the following command:">クラスタを形成できない場合は、次のコマンドを使用してこの問題を確認できます:</span> </p>
 
 <markup
 lang="bash"
@@ -50,22 +50,22 @@ lang="bash"
 
 >iptables -t nat -v -D POST_public_allow 1</markup>
 
-<p><span class="merged" id="all.3xfGCa.spl1"  title="原文: Note that you will need to run that command for each line.">そのコマンドは行ごとに実行する必要があります。</span> <span class="merged" id="all.3xfGCa.spl2" title="原文 : So in the example above, you would need to run it twice.">前述の例では、2回実行する必要があります。</span> </p>
+<p><span class="merged" id="all.3xfGCa.spl1"  title="原文: Note that you will need to run that command for each line.">このコマンドは行ごとに実行する必要があることに注意してください。</span> <span class="merged" id="all.3xfGCa.spl2" title="原文 : So in the example above, you would need to run it twice.">したがって、前述の例では、2回実行する必要があります。</span> </p>
 
-<p><span class="merged" id="all.2kFZai"  title="原文: After you are done, you can run the previous command again and verify that the output is now an empty list.">完了したら、前のコマンドを再実行して、出力が空のリストになったことを確認します。</span></p>
+<p><span class="merged" id="all.2kFZai"  title="原文: After you are done, you can run the previous command again and verify that the output is now an empty list.">完了したら、前のコマンドを再度実行して、出力が空のリストになったことを確認できます。</span></p>
 
-<p><span class="merged" id="all.3NQnna"  title="原文: After making this change, restart your domains and the Coherence cluster should now form correctly.">この変更を行った後、ドメインを再起動すると、Coherenceクラスタが正しく形成されるようになります。</span></p>
+<p><span class="merged" id="all.3NQnna"  title="原文: After making this change, restart your domains and the Coherence cluster should now form correctly.">この変更を行った後、ドメインを再起動すると、Coherenceクラスタが正しく形成されます。</span></p>
 
 
 <h4 id="_make_iptables_updates_permanent_across_reboots"><span class="merged" id="all.3FOJYY" title="原文 : Make iptables Updates Permanent Across Reboots">リブート時にiptablesの更新を永続的にします</span></h4>
 <div class="section">
-<p><span class="merged" id="all.4IYErZ"  title="原文: The recommended way to make iptables updates permanent across reboots is to create a systemd service that applies the necessary updates during the startup process.">再起動後も<code>iptables</code>更新を永続的にするには、起動プロセス中に必要な更新を適用する<code>systemd</code>サービスを作成することをお薦めします。</span></p>
+<p><span class="merged" id="all.4IYErZ" title="原文 : The recommended way to make iptables updates permanent across reboots is to create a systemd service that applies the necessary updates during the startup process.">再起動後も<code>iptables</code>の更新を永続的にするには、起動プロセス中に必要な更新を適用する<code>systemd</code>サービスを作成することをお薦めします。</span></p>
 
-<p><span class="merged" id="all.2orxxk"  title="原文: Here is an example; you may need to adjust this to suit your own environment:">次に例を示しますが、自身の環境に合わせて調整する必要がある場合があります:</span></p>
+<p><span class="merged" id="all.2orxxk"  title="原文: Here is an example; you may need to adjust this to suit your own environment:">次に例を示します。これは、ご使用の環境に合せて調整する必要があります:</span></p>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.37ki2U"  title="原文: Create a systemd service:"><code>systemd</code>サービスを作成します:</span></p>
+<p><span class="merged" id="all.37ki2U" title="原文 : Create a systemd service:"><code>systemd</code>サービスを作成します:</span></p>
 
 </li>
 </ul>
@@ -89,7 +89,7 @@ EOF</markup>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1oy0st"  title="原文: Create the script to update iptables:"><code>iptables</code>を更新するスクリプトを作成します:</span></p>
+<p><span class="merged" id="all.1oy0st" title="原文 : Create the script to update iptables:"><code>iptables</code>を更新するスクリプトを作成します:</span></p>
 
 </li>
 </ul>
@@ -109,7 +109,7 @@ EOF</markup>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.4DVz6"  title="原文: Start the service (or just reboot):">サービスを起動します(または単に再起動します):</span></p>
+<p><span class="merged" id="all.4DVz6"  title="原文: Start the service (or just reboot):">サービスを開始します(または単に再起動します):</span></p>
 
 </li>
 </ul>

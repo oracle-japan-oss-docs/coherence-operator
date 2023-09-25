@@ -77,7 +77,7 @@ lang="bash"
 
 coherence.coherence.oracle.com/metrics-cluster created</markup>
 
-<p><span class="merged" id="all.4Z0Y0O.2" title="原文 : The kubectl CLI can be used to list Pods for the cluster:"><code>kubectl</code> CLIを使用して、クラスタの<code>Pods</code>をリストできます:</span></p>
+<p><span class="merged" id="all.4Z0Y0O.1" title="原文 : The kubectl CLI can be used to list Pods for the cluster:"><code>kubectl</code> CLIを使用して、クラスタの<code>Pods</code>をリストできます:</span></p>
 
 <markup
 lang="bash"
@@ -89,7 +89,7 @@ metrics-cluster-0   1/1     Running   0          36s
 metrics-cluster-1   1/1     Running   0          36s
 metrics-cluster-2   1/1     Running   0          36s</markup>
 
-<p><span class="merged" id="all.2Dp1Jz.2.spl1" title="原文 : In a test or development environment the simplest way to reach an exposed port is to use the kubectl port-forward command.">テストまたは開発環境では、公開されたポートに到達する最も簡単な方法は、<code>kubectl port-forward</code>コマンドを使用することです。</span> <span class="merged" id="all.2Dp1Jz.2.spl2" title="原文 : For example to connect to the first Pod in the deployment:">たとえば、デプロイメントの最初の<code>Pod</code>に接続するには:</span> </p>
+<p><span class="merged" id="all.2Dp1Jz.1.spl1" title="原文 : In a test or development environment the simplest way to reach an exposed port is to use the kubectl port-forward command.">テストまたは開発環境では、公開されたポートに到達する最も簡単な方法は、<code>kubectl port-forward</code>コマンドを使用することです。</span> <span class="merged" id="all.2Dp1Jz.1.spl2" title="原文 : For example to connect to the first Pod in the deployment:">たとえば、デプロイメントの最初の<code>Pod</code>に接続するには:</span> </p>
 
 <markup
 lang="bash"

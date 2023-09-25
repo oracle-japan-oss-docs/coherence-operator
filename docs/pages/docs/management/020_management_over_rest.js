@@ -179,9 +179,9 @@ lang="json"
   "clusterName": "management-cluster",
   "membersDepartureCount": 0,
   "members": [
-    "Member(Id=1, Timestamp=2019-10-15 03:46:15.848, Address=10.1.2.184:36531, MachineId=49519, Location=site:coherence.coherence-test.svc.cluster.local,machine:docker-desktop,process:1,member:management-cluster-1, Role=storage)",
-    "Member(Id=2, Timestamp=2019-10-15 03:46:19.405, Address=10.1.2.183:40341, MachineId=49519, Location=site:coherence.coherence-test.svc.cluster.local,machine:docker-desktop,process:1,member:management-cluster-2, Role=storage)",
-    "Member(Id=3, Timestamp=2019-10-15 03:46:19.455, Address=10.1.2.185:38719, MachineId=49519, Location=site:coherence.coherence-test.svc.cluster.local,machine:docker-desktop,process:1,member:management-cluster-0, Role=storage)"
+    "Member(Id=1, Timestamp=2019-10-15 03:46:15.848, Address=10.1.2.184:36531, MachineId=49519, Location=site:coherence.coherence-test.svc,machine:docker-desktop,process:1,member:management-cluster-1, Role=storage)",
+    "Member(Id=2, Timestamp=2019-10-15 03:46:19.405, Address=10.1.2.183:40341, MachineId=49519, Location=site:coherence.coherence-test.svc,machine:docker-desktop,process:1,member:management-cluster-2, Role=storage)",
+    "Member(Id=3, Timestamp=2019-10-15 03:46:19.455, Address=10.1.2.185:38719, MachineId=49519, Location=site:coherence.coherence-test.svc,machine:docker-desktop,process:1,member:management-cluster-0, Role=storage)"
   ],
   "type": "Cluster"
 }</markup>
@@ -190,7 +190,7 @@ lang="json"
 
 <h3 id="_access_the_swagger_endpoint"><span class="merged" id="all.3qP6rL" title="原文 : Access the Swagger Endpoint">Swaggerエンドポイントへのアクセス</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2T0axS" title="原文 : Issue the following curl command to access the Sagger endpoint, which documents all the REST API’s available.">次の<code>curl</code>コマンドを発行してSaggerエンドポイントにアクセスします。このエンドポイントでは、使用可能なすべてのREST APIがドキュメント化されています。</span></p>
+<p><span class="merged" id="all.1v3BYl" title="原文 : Issue the following curl command to access the Swagger endpoint, which documents all the REST APIs available.">次の<code>curl</code>コマンドを発行して、使用可能なすべてのREST APIを記述するSwaggerエンドポイントにアクセスします。</span></p>
 
 <markup
 lang="bash"

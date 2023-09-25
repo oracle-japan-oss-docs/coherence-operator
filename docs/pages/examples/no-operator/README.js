@@ -7,17 +7,17 @@
 <p><span class="merged" id="all.1MeDP0.1.spl1" title="原文 : Although this project is all about the Coherence Kubernetes Operator, there are occasions where using an Operator is not possible.">このプロジェクトはすべてCoherence Kubernetes Operatorに関するものですが、オペレータを使用できない場合があります。</span> <span class="merged" id="all.1MeDP0.1.spl2" title="原文 : For example, some corporate or cloud security policies ban the use of CRDs, or have very restrictive RBAC policies that ultimately make it impossible to run Operators that uses their own CRDs or require cluster roles (or even just namespace roles).">たとえば、企業またはクラウドのセキュリティ・ポリシーによっては、CRDの使用を禁止したり、独自のCRDを使用するオペレータを実行したり、クラスタ・ロール(またはネームスペース・ロールのみ)を必要としたりできないようにする非常に限定的なRBACポリシーがあります。</span> <span class="merged" id="all.1MeDP0.1.spl3" title="原文 : These example shows how to run a Coherence clusters in Kubernetes manually.">次の例は、KubernetesでCoherenceクラスタを手動で実行する方法を示しています。</span> <span class="merged" id="all.1MeDP0.1.spl4" title="原文 : Obviously the features of the Operator such as safe scaling, safe rolling upgrades, etc. will not be available.">明らかに、セーフ・スケーリング、安全なローリング・アップグレードなどのオペレータの機能は利用できません。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.9"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.14"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.1d1YDX.1.spl1" title="原文 : We really recommend that you try and use the Coherence Operator for managing Coherence clusters in Kubernetes.">KubernetesでCoherenceクラスタを管理するには、Coherence Operatorを使用することをお薦めします。</span> <span class="merged" id="all.1d1YDX.1.spl2" title="原文 : It is possible to run the Operator with fewer RBAC permissions, for example without ClusterRoles and only using Roles restricted to a single namespace."><code>ClusterRoles</code>を使用せず、単一のネームスペースに制限された<code>Roles</code>のみを使用するなど、RBAC権限が少ないオペレータを実行できます。</span> <span class="merged" id="all.1d1YDX.1.spl3" title="原文 : The Operator can also run without installing its web-hooks.">オペレータは、webフックをインストールせずに実行することもできます。</span> <span class="merged" id="all.1d1YDX.1.spl4" title="原文 : Ultimately though it requires the CRD to be installed, which could be done manually instead of allowing the Operator to install it.">最終的には、CRDをインストールする必要がありますが、オペレータによるインストールを許可するかわりに手動で行うことができます。</span> <span class="merged" id="all.1d1YDX.1.spl5" title="原文 : If you really cannot change the minds of those dictating policies that mean you cannot use the Operator then these examples may be useful.">オペレータを使用できないことをこれらの決定するポリシーの考えを実際に変更できない場合は、これらの例が役立つことがあります。</span> </p>
 </p>
 </div>
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.16"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.17"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.1fxxJ5.1" title="原文 :  The complete source code for the examples is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />例のソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/no-operator/" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
 
-<h3 id="_prerequisites"><span class="merged" id="all.2LZvWc.8"  title="原文:: Prerequisites">前提条件</span></h3>
+<h3 id="_prerequisites"><span class="merged" id="all.2LZvWc.7"  title="原文:: Prerequisites">前提条件</span></h3>
 <div class="section">
 <p><span class="merged" id="all.3N9KGw.1" title="原文 : There are some common prerequisites used by all the examples.">すべての例で使用される一般的な前提条件があります。</span></p>
 

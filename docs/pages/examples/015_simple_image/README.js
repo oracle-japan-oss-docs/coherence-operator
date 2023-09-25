@@ -43,7 +43,7 @@ title="pom.xml"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.1")</markup>
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.4")</markup>
 
 <p><span class="merged" id="all.1kOa4P" title="原文 : We can then add the coherence and coherence-json modules as dependencies">その後、<code>coherence</code>および<code>coherence-json</code>モジュールを依存関係として追加できます</span></p>
 
@@ -67,7 +67,7 @@ title="pom.xml"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.1")
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.4")
 
     implementation "com.oracle.coherence.ce:coherence"
     implementation "com.oracle.coherence.ce:coherence-json"
@@ -89,7 +89,7 @@ title="pom.xml"
             &lt;plugin&gt;
                 &lt;groupId&gt;com.google.cloud.tools&lt;/groupId&gt;
                 &lt;artifactId&gt;jib-maven-plugin&lt;/artifactId&gt;
-                &lt;version&gt;3.1.4&lt;/version&gt;
+                &lt;version&gt;3.3.2&lt;/version&gt;
             &lt;/plugin&gt;
         &lt;/plugins&gt;
     &lt;/build&gt;</markup>
@@ -101,7 +101,7 @@ lang="groovy"
 title="build.gradle"
 >plugins {
     id 'java'
-    id 'com.google.cloud.tools.jib' version '3.1.4'
+    id 'com.google.cloud.tools.jib' version '3.3.2'
 }</markup>
 
 </div>

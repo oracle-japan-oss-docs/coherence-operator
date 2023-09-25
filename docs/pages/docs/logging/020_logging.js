@@ -60,7 +60,7 @@ java.util.logging.SimpleFormatter.format=%5$s%6$s%n</markup>
 
 <p><span class="merged" id="all.1EOCPa" title="原文 : To configure Cohrence and the logger some system properties need to be added to the jvm.args field of the Coherence CRD spec:">Cohrenceとロガーを構成するには、<code>Coherence</code> CRD仕様の<code>jvm.args</code>フィールドにシステム・プロパティを追加する必要があります:</span></p>
 
-<p><span class="merged" id="all.6vDv5.16"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.16"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -87,7 +87,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.1gjS7m.spl1" title="原文 : The logging configuration above configures Coherence to write logs to the /logs directory.">前述のロギング構成では、Coherenceを構成してログを<code>/logs</code>ディレクトリに書き込みます。</span> <span class="merged" id="all.1gjS7m.spl2" title="原文 : For this location to be accessible to both the coherence container and to the fluentd container it needs to be created as a Volume in the Pod and mounted to both containers.">このロケーションが<code>coherence</code>コンテナと<code>fluentd</code>コンテナの両方からアクセスできるようにするには、<code>Pod</code>で<code>Volume</code>として作成し、両方のコンテナにマウントする必要があります。</span> <span class="merged" id="all.1gjS7m.spl3" title="原文 : As this Volume can be ephemeral and is typically not required to live longer than the Pod the simplest type of Volume to use is an emptyDir volume source.">この<code>Volume</code>は一時的であり、通常は<code>Pod</code>より長く存続する必要がないため、使用する最も単純なタイプの<code>Volume</code>は<code>emptyDir</code>ボリューム・ソースです。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.17"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.17"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -136,13 +136,13 @@ spec:
       - "-Dcoherence.log.logger=com.oracle.coherence"
       - "-Djava.util.logging.config.file=/coherence-operator/utils/logging/logging.properties"
   volumes:
-    - name: logs           <span class="conum" data-value="1" />
+    - name: logs
       emptyDir: {}
   volumeMounts:
-    - name: logs           <span class="conum" data-value="2" />
+    - name: logs
       mountPath: /logs
   sideCars:
-    - name: fluentd                                                                    <span class="conum" data-value="1" />
+    - name: fluentd                                     <span class="conum" data-value="1" />
       image: "fluent/fluentd-kubernetes-daemonset:v1.14-debian-elasticsearch7-1"
       args:
         - "-c"

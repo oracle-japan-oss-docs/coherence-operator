@@ -44,10 +44,10 @@
 <h3 id="_manually_install_crds"><span class="merged" id="all.1ZVh36" title="原文 : Manually Install CRDs">CRDを手動でインストール</span></h3>
 <div class="section">
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.1"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.2cA5Zk" title="原文 : Before installing the Operator, with either method described below, the CRDs MUST be manually installed from the Operator manifest files.">オペレータをインストールする前に、後述するいずれかのメソッドで、オペレータ・マニフェスト・ファイルからCRDを手動でインストールする必要があります。</span></p>
 
-<p><span class="merged" id="all.bGfur" title="原文 : The manifest files are published with the GitHub release at this link: 3.2.8 Manifests">マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.2.8 マニフェスト</a></span></p>
+<p><span class="merged" id="all.1AGY4b" title="原文 : The manifest files are published with the GitHub release at this link: 3.3.0 Manifests">マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.0 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3wyRpn" title="原文 : You MUST ensure that the CRD manifests match the version of the Operator being installed.">CRDマニフェストがインストールされるオペレータのバージョンと一致していることを確認する必要があります。</span></p>
 
@@ -65,6 +65,24 @@
 lang="bash"
 
 >kubectl create -f crd/coherence.oracle.com_coherence.yaml</markup>
+
+<p><span class="merged" id="all.1VKZPs" title="原文 : To update an existing CRD install use the replace command:">既存のCRDインストールを更新するには、replaceコマンドを使用します:</span></p>
+
+<markup
+lang="bash"
+
+>kubectl replace -f crd/coherence.oracle.com_coherence.yaml</markup>
+
+<p><span class="merged" id="all.KdOtV" title="原文 : Installing the CRD Using kubectl apply"><strong><code>kubectl apply</code>を使用したCRDのインストール</strong></span></p>
+
+<p><span class="merged" id="all.20KYoc.spl1" title="原文 : The default Coherence CRD cannot be installed using kubectl apply as it is larger than the 1MB limit imposed by Etcd.">デフォルトのCoherence CRDは、Etcdによって課される1MBの制限を超えているため、<code>kubectl apply</code>を使用してインストールできません。</span> <span class="merged" id="all.20KYoc.spl2" title="原文 : For customers who cannot use the kubectl create/replace combination, a smaller version of the CRD is available."><code>kubectl create/replace</code>の組合せを使用できない顧客の場合は、より小さいバージョンのCRDを使用できます。</span> <span class="merged" id="all.20KYoc.spl3" title="原文 : This small CRD has no description fields which makes is smaller to install, but less useful for validating the yaml in an IDE.">この小さいCRDには<code>description</code>フィールドがないため、インストールは小さくなりますが、IDEでのyamlの検証にはあまり役立ちません。</span> </p>
+
+<p><span class="merged" id="all.2RWjME" title="原文 : The small CRD can be found in the coherence-operator-manifests.tar.gz file in the crd-small/ directory.">小さいCRDは、<code>crd-small/</code>ディレクトリのcoherence-operator-manifests.tar.gzファイルにあります。</span></p>
+
+<markup
+lang="bash"
+
+>kubectl apply -f crd-small/coherence.oracle.com_coherence.yaml</markup>
 </p>
 </div>
 </div>
@@ -117,7 +135,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.357g24" title="原文 : To install without cluster roles, after unpacking the manifests .tar.gz edit the config/kustomization.yaml file to comment out the inclusion of the cluster role bindings.">クラスタ・ロールなしでインストールするには、マニフェスト<code>.tar.gz</code>を解凍した後、<code>config/kustomization.yaml</code>ファイルを編集して、クラスタ・ロール・バインディングの包含をコメント・アウトします。</span></p>
 
-<p><span class="merged" id="all.6vDv5.6"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.6"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -145,7 +163,7 @@ title="kustomization.yaml"
 lang="yaml"
 title="manager/manager.yaml"
 >        command:
-          - /manager
+          - /files/runner
         args:
           - --enable-leader-election
         envFrom:</markup>
@@ -156,7 +174,7 @@ title="manager/manager.yaml"
 lang="yaml"
 title="manager/manager.yaml"
 >        command:
-          - /manager
+          - /files/runner
         args:
           - --enable-leader-election
           - --enable-webhook=false
@@ -169,7 +187,7 @@ title="manager/manager.yaml"
 <div class="section">
 <p><span class="merged" id="all.2iS3e0.spl1" title="原文 : The Operator will require a role and role binding to work in a single namespace.">オペレータは、単一のネームスペースで機能するには、ロールおよびロール・バインディングが必要です。</span> <span class="merged" id="all.2iS3e0.spl2" title="原文 : Edit the config/role.yaml to change its type from ClusterRole to Role."><code>config/role.yaml</code>を編集して、そのタイプを<code>ClusterRole</code>から<code>Role</code>に変更します。</span> </p>
 
-<p><span class="merged" id="all.3WWi6T"  title="原文:: For example, change:">次に例を示します。</span></p>
+<p><span class="merged" id="all.3WWi6T"  title="原文:: For example, change:">たとえば、次のものを変更します:</span></p>
 
 <markup
 lang="yaml"
@@ -246,7 +264,7 @@ subjects:
 <div class="section">
 <p><span class="merged" id="all.10x5oR" title="原文 : In environments where Kubernetes administrators are happy to allow the Operator read-only access to Node information, the required ClusterRole can be created by leaving the relevant lines uncommented in the config/kustomization.yaml file.">Kubernetes管理者が<code>Node</code>情報へのオペレータの読取り専用アクセスを満足できる環境では、関連する行を<code>config/kustomization.yaml</code>ファイルにコメント解除して、必要な<code>ClusterRole</code>を作成できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.7"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.7"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

@@ -54,7 +54,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.1atKBX" title="原文 : The site and rack values can be specified as system properties as part of the Coherence deployment yaml.">サイトおよびラックの値は、Coherenceデプロイメントyamlの一部としてシステム・プロパティとして指定できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.1"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.1"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

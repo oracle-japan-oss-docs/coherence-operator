@@ -29,7 +29,7 @@ lang="bash"
 
 <p><span class="merged" id="all.3ss4mL" title="原文 : and to annotate the Coherence containers, update the Coherence resource to include annotations">Coherenceコンテナに注釈を付けるには、注釈を含めるように<code>Coherence</code>リソースを更新</span></p>
 
-<p><span class="merged" id="all.6vDv5.3"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.3"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

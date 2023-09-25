@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.1Qo2lk.spl1" title="原文 : This example shows how to deploy a simple Coherence cluster in Kubernetes manually, and enabling the Pods in that cluster to expose a http endpoint to allow access to Coherence metrics.">この例は、Kubernetesに単純なCoherenceクラスタを手動でデプロイし、そのクラスタ内のポッドがhttpエンドポイントを公開してCoherenceメトリクスへのアクセスを許可する方法を示しています。</span> <span class="merged" id="all.1Qo2lk.spl2" title="原文 : This example expands on the StatefulSet used in the first simple deployment example.">この例では、最初の単純なデプロイメント例で使用されている<code>StatefulSet</code>を展開します。</span> </p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.14"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.15"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.2ZhQJ8" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/no-operator/02_metrics" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>

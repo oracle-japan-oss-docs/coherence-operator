@@ -9,7 +9,7 @@
 <p><span class="merged" id="all.2iuV5X.spl1" title="原文 : These examples are not going to cover all the possible use-cases for Extend, the examples are specifically about different ways to connect a client to a Coherence cluster running inside kubernetes.">これらの例は、Extendの考えられるすべてのユースケースを対象としません。具体的には、kubernetes内で動作するCoherenceクラスタにクライアントを接続する様々な方法について例です。</span> <span class="merged" id="all.2iuV5X.spl2" title="原文 : Extend is extensively documented in the official Coherence documentation.">拡張については、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/develop-remote-clients/getting-started-coherenceextend.html" id="" target="_blank" >「公式のCoherenceドキュメント」</a>を参照してください。</span> </p>
 
 
-<h3 id="_prerequisites"><span class="merged" id="all.2LZvWc.4"  title="原文:: Prerequisites">前提条件</span></h3>
+<h3 id="_prerequisites"><span class="merged" id="all.2LZvWc.3"  title="原文:: Prerequisites">前提条件</span></h3>
 <div class="section">
 
 <h4 id="_server_image"><span class="merged" id="all.1Hj8Ck"  title="原文:: Server Image">サーバー・イメージ</span></h4>
@@ -331,7 +331,7 @@ lang="bash"
 
 <p><span class="merged" id="all.2zLOZ4.spl1" title="原文 : The values will be different as we put different random values each time the client runs.">クライアントを実行するたびに異なるランダム値を配置するため、値は異なります。</span> <span class="merged" id="all.2zLOZ4.spl2" title="原文 : The previous value was null in this case as we have not run any other client with this cluster.">このクラスタで他のクライアントを実行していないため、前の値は<code>null</code>でした。</span> <span class="merged" id="all.2zLOZ4.spl3" title="原文 : If we re-ran the client Job the previous value would be displayed as the cache on the server now has data in it.">クライアント<code>Job</code>を再実行すると、サーバー上のキャッシュにデータが含まれるため、以前の値が表示されます。</span> </p>
 
-<p><span class="merged" id="all.lK96I" title="原文 : Clean-Up"><strong>クリーンアップ</strong></span></p>
+<p><span class="merged" id="all.lK96I"  title="原文:: Clean-Up"><strong>クリーンアップ</strong></span></p>
 
 <p><span class="merged" id="all.1BiTmq.spl1" title="原文 : We have shown a simple Extend client running in Kubernetes, connecting to a Coherence cluster using the NameService.">Kubernetesで実行されている単純なExtendクライアントを示し、NameServiceを使用してCoherenceクラスタに接続しています。</span> <span class="merged" id="all.1BiTmq.spl2" title="原文 : We can now delete the Job using kubectl."><code>kubectl</code>を使用して<code>Job</code>を削除できるようになりました。</span> </p>
 
@@ -352,7 +352,7 @@ lang="bash"
 
 <h3 id="_deploy_the_client_to_a_different_namespace"><span class="merged" id="all.2bGEIB" title="原文 : Deploy the Client to a Different Namespace">別のネームスペースへのクライアントのデプロイ</span></h3>
 <div class="section">
-<p><span class="merged" id="all.UhyVv.spl1" title="原文 : In the first example we deployed the client to the same namespace as the server.">最初の例では、クライアントをサーバーと同じネームスペースにデプロイしました。</span> <span class="merged" id="all.UhyVv.spl2" title="原文 : If we wanted to deploy the client to a different namespace we would need to ensure the fully qualified name of the WKA service is used when setting the COHERENCE_WKA environment variable.">クライアントを別のネームスペースにデプロイする場合は、<code>COHERENCE_WKA</code>環境変数を設定するときにWKAサービスの完全修飾名を使用する必要があります。</span> <span class="merged" id="all.UhyVv.spl3" title="原文 : The Coherence cluster is deployed into the default namespace so the fully qualified WKA service name is storage-wka.default.svc, or we could also use storage-wka.default.svc.cluster.local.">Coherenceクラスタは<code>default</code>ネームスペースにデプロイされるため、完全修飾WKAサービス名は<code>storage-wka.default.svc</code>であり、<code>storage-wka.default.svc.cluster.local</code>も使用できます。</span> </p>
+<p><span class="merged" id="all.7ApNM.spl1" title="原文 : In the first example we deployed the client to the same namespace as the server.">最初の例では、クライアントをサーバーと同じネームスペースにデプロイしました。</span> <span class="merged" id="all.7ApNM.spl2" title="原文 : If we wanted to deploy the client to a different namespace we would need to ensure the fully qualified name of the WKA service is used when setting the COHERENCE_WKA environment variable.">クライアントを別のネームスペースにデプロイする場合は、<code>COHERENCE_WKA</code>環境変数を設定するときにWKAサービスの完全修飾名を使用する必要があります。</span> <span class="merged" id="all.7ApNM.spl3" title="原文 : The Coherence cluster is deployed into the default namespace so the fully qualified WKA service name is storage-wka.default.svc.">Coherenceクラスタは、<code>default</code>ネームスペースにデプロイされるため、完全修飾WKAサービス名は<code>storage-wka.default.svc</code>です。</span> </p>
 
 <markup
 lang="yaml"
@@ -372,7 +372,7 @@ spec:
             - name: COHERENCE_CACHE_CONFIG
               value: minimal-client-cache-config.xml
             - name: COHERENCE_WKA
-              value: storage-wka.default.svc.cluster.local
+              value: storage-wka.default.svc
             - name: COHERENCE_CLUSTER
               value: storage</markup>
 
@@ -581,7 +581,7 @@ title="src/main/resources/fixed-address-cache-config.xml"
   &lt;/initiator-config&gt;
 &lt;/remote-cache-scheme&gt;</markup>
 
-<p><span class="merged" id="all.4UAXvF" title="原文 : The client would be run with the coherence.extend.address system property, (or COHERENCE_EXTEND_ADDRESS environment variable) set to the fully qualified name of the Extend service, in the case of our example server running in the default namespace, this would be -Dcoherence.extend.address=storage-extend.default.svc.cluster.local">クライアントは、<code>coherence.extend.address</code>システム・プロパティ(または<code>COHERENCE_EXTEND_ADDRESS</code>環境変数)をExtendサービスの完全修飾名に設定して実行されます(デフォルト・ネームスペースで実行されているサンプル・サーバーの場合、これは<code>-Dcoherence.extend.address=storage-extend.default.svc.cluster.local</code>になります)</span></p>
+<p><span class="merged" id="all.mkOqI" title="原文 : The client would be run with the coherence.extend.address system property, (or COHERENCE_EXTEND_ADDRESS environment variable) set to the fully qualified name of the Extend service, in the case of our example server running in the default namespace, this would be -Dcoherence.extend.address=storage-extend.default.svc">クライアントは、<code>coherence.extend.address</code>システム・プロパティ(または<code>COHERENCE_EXTEND_ADDRESS</code>環境変数)をExtendサービスの完全修飾名に設定して実行されます(デフォルト・ネームスペースで実行されているサンプル・サーバーの場合、これは<code>-Dcoherence.extend.address=storage-extend.default.svc</code>になります)</span></p>
 
 </div>
 

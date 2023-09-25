@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.tvuys.spl1" title="原文 : As described in the Additional Container Ports documentation, it is possible to expose additional ports on the Coherence container in the Pods of a Coherence resource."><router-link to="/docs/ports/020_container_ports">「追加コンテナ・ポート」</router-link>ドキュメントで説明されているように、<code>Coherence</code>リソースのポッドにCoherenceコンテナに追加のポートを公開できます。</span> <span class="merged" id="all.tvuys.spl2" title="原文 : The Coherence Operator will create a Service to expose each additional port.">Coherence Operatorは、追加の各ポートを公開する<code>Service</code>を作成します。</span> <span class="merged" id="all.tvuys.spl3" title="原文 : By default, the name of the service is the combination of the Coherence resource name and the port name (this can default behaviour can be overridden as shown below in the section).">デフォルトでは、サービスの名前は<code>Coherence</code>リソース名とポート名の組合せです(これは、<router-link @click.native="this.scrollFix('#_override_the_service_name')" to="#_override_the_service_name"></router-link>セクションの次に示すように、デフォルトの動作をオーバーライドできます)。</span> <span class="merged" id="all.tvuys.spl4" title="原文 : The configuration of the Service can be altered using fields in the port spec’s service section."><code>Service</code>の構成は、ポート仕様の<code>service</code>セクションのフィールドを使用して変更できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -130,7 +130,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.481XJl.spl1" title="原文 : The Coherence resource CRD allows many other settings to be configured on the Service."><code>Coherence</code>リソースのCRDを使用すると、他の多くの設定を<code>Service</code>で構成できます。</span> <span class="merged" id="all.481XJl.spl2" title="原文 : These fields are identical to the corresponding fields in the Kubernetes Service spec.">これらのフィールドは、Kubernetes <code>Service</code>仕様の対応するフィールドと同じです。</span> </p>
 
-<p><span class="merged" id="all.3rnccM" title="原文 : See the Coherence CRD Service Spec documentation and the Kubernetes Service API reference."><code>Coherence</code> CRD <router-link @click.native="this.scrollFix('#_servicespec')" to="#_servicespec">「サービス仕様」</router-link>ドキュメントおよびKubernetes <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#servicespec-v1-core" id="" target="_blank" >「Service APIリファレンス」</a>を参照してください。</span></p>
+<p><span class="merged" id="all.kzS7h" title="原文 : See the Coherence CRD Service Spec documentation and the Kubernetes Service API reference."><code>Coherence</code> CRD <router-link @click.native="this.scrollFix('#_servicespec')" to="#_servicespec">「サービス仕様」</router-link>ドキュメントおよびKubernetes <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/${k8s-doc-version}/#servicespec-v1-core" id="" target="_blank" >「Service APIリファレンス」</a>を参照してください。</span></p>
 
 </div>
 </doc-view>

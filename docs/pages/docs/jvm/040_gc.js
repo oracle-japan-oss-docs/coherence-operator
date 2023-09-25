@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.labfc.spl1" title="原文 : The Coherence CRD has fields in the jvm.gc section to allow certain garbage collection parameters to be set."><code>Coherence</code> CRDには、特定のガベージ・コレクション・パラメータを設定できるように、<code>jvm.gc</code>セクションのフィールドがあります。</span> <span class="merged" id="all.labfc.spl2" title="原文 : These include GC logging, setting the collector to use and arbitrary GC arguments.">これには、GCロギング、使用するコレクタの設定、任意のGC引数が含まれます。</span> </p>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.1"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.2"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.4YuR9O" title="原文 : If running Kubernetes on ARM processors and using Coherence images built on Java 8 for ARM, note that the G1 garbage collector in that version of Java on ARM is marked as experimental.">ARMプロセッサでKubernetesを実行し、Java 8 for ARMでビルドされたCoherenceイメージを使用する場合、ARM上のそのバージョンのJavaのG1ガベージ・コレクタは実験的としてマークされます。</span></p>
 
 <p><span class="merged" id="all.2zwPk3.spl1" title="原文 : By default, the Operator configures the Coherence JVM to use G1.">デフォルトでは、オペレータはG1を使用するようにCoherence JVMを構成します。</span> <span class="merged" id="all.2zwPk3.spl2" title="原文 : This will cause errors on Arm64 Java 8 JMS unless the JVM option -XX:+UnlockExperimentalVMOptions is added in the Coherence resource spec.">これにより、JVMオプション<code>-XX:+UnlockExperimentalVMOptions</code>がCoherenceリソース仕様に追加されないかぎり、Arm64 Java 8 JMSにエラーが発生します。</span> <span class="merged" id="all.2zwPk3.spl3" title="原文 : Alternatively specify a different garbage collector, ideally on a version of Java this old, use CMS.">または、この古いバージョンのJavaで別のガベージ・コレクタを指定する場合は、CMSを使用します。</span> </p>
@@ -16,7 +16,7 @@
 
 <h3 id="_enable_gc_logging"><span class="merged" id="all.3MlOED" title="原文 : Enable GC Logging">GCロギングの有効化</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2XOnk7.spl1" title="原文 : To enable GC logging set the jvm.gc.logging field to true.">GCロギングを有効にするには、<code>jvm.gc.logging</code>フィールドを<code>true</code>に設定します。</span> <span class="merged" id="all.2XOnk7.spl2"  title="原文:: For example:">次に例を示します。</span> </p>
+<p><span class="merged" id="all.2XOnk7.spl1" title="原文 : To enable GC logging set the jvm.gc.logging field to true.">GCロギングを有効にするには、<code>jvm.gc.logging</code>フィールドを<code>true</code>に設定します。</span> <span class="merged" id="all.2XOnk7.spl2"  title="原文:: For example:">例えば:</span> </p>
 
 <markup
 lang="yaml"
@@ -79,7 +79,7 @@ spec:
 </tbody>
 </table>
 </div>
-<p><span class="merged" id="all.6vDv5.9"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.9"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -101,7 +101,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.4MXJ7R.spl1" title="原文 : Any arbitrary GC argument can be added to the jvm.gc.args field.">任意のGC引数を<code>jvm.gc.args</code>フィールドに追加できます。</span> <span class="merged" id="all.4MXJ7R.spl2" title="原文 : These arguments will be passed verbatim to the JVM command line.">これらの引数は、JVMコマンドラインにそのまま渡されます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.10"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.10"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

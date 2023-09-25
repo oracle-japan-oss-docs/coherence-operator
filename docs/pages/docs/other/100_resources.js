@@ -9,7 +9,7 @@
 <div class="admonition warning">
 <p class="admonition-inline"><span class="merged" id="all.6DWk0.spl1" title="原文 : When setting resource limits, in particular memory limits, for a container it is important to ensure that the Coherence JVM is properly configured so that it does not consume more memory than the limits.">リソース制限(特定のメモリー制限)を設定する場合、コンテナのCoherence JVMが制限よりも多くのメモリーを消費しないように適切に構成されるようにすることが重要です。</span> <span class="merged" id="all.6DWk0.spl2" title="原文 : If the JVM attempts to consume more memory than the resource limits allow the Pod can be killed by Kubernetes.">JVMがリソース制限よりも多くのメモリーを消費しようとすると、<code>Pod</code>をKubernetesで強制終了できます。</span> <span class="merged" id="all.6DWk0.spl3" title="原文 : See Configuring the JVM Memory for details on the different memory settings.">異なるメモリー設定の詳細は、<router-link to="/docs/jvm/050_memory">「JVMメモリーの構成」</router-link>を参照してください。</span> </p>
 </div>
-<p><span class="merged" id="all.6vDv5.25"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.25"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

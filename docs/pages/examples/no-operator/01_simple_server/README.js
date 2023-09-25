@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.2hRFrs" title="原文 : This example shows how to deploy a simple Coherence cluster in Kubernetes manually, without using the Coherence Operator.">この例では、Coherence Operatorを使用せずに、Kubernetesに単純なCoherenceクラスタを手動でデプロイする方法を示します。</span></p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.13"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.14"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.1Ja7TA" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/no-operator/01_simple_server" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
@@ -129,7 +129,7 @@ spec:
             - name: COHERENCE_CLUSTER
               value: storage
             - name: COHERENCE_WKA
-              value: storage-wka.svc.cluster.local
+              value: storage-wka.svc
             - name: COHERENCE_CACHECONFIG
               value: "test-cache-config.xml"
           ports:
@@ -192,7 +192,7 @@ spec:
 <tbody>
 <tr>
 <td class=""><span class="merged" id="all.3ffl6H" title="原文 : COHERENCE_CLUSTER">COHERENCE_CLUSTER</span></td>
-<td class=""><span class="merged" id="all.1XunTw"  title="原文:: storage">storage</span></td>
+<td class=""><span class="merged" id="all.1XunTw"  title="原文:: storage">ストレージ</span></td>
 <td class=""><span class="merged" id="all.3PSY9v" title="原文 : This sets the cluster name in Coherence (the same as setting -Dcoherence.cluster=storage)">これにより、Coherenceでクラスタ名が設定されます(<code>-Dcoherence.cluster=storage</code>の設定と同じ)</span></td>
 </tr>
 <tr>

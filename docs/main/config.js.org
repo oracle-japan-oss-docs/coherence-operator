@@ -1,9 +1,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.2.8",
+        release: "3.3.0",
         releases: [
-            "3.2.8"
+            "3.3.0"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -494,19 +494,6 @@ function createRoutes(){
             component: loadPage('docs-jvm-070_debugger', '/docs/jvm/070_debugger', {})
         },
         {
-            path: '/docs/jvm/080_jmx',
-            meta: {
-                h1: 'Using JMX',
-                title: 'Using JMX',
-                h1Prefix: null,
-                description: null,
-                keywords: null,
-                customLayout: null,
-                hasNav: true
-            },
-            component: loadPage('docs-jvm-080_jmx', '/docs/jvm/080_jmx', {})
-        },
-        {
             path: '/docs/jvm/090_container_limits',
             meta: {
                 h1: 'Container Resource Limits',
@@ -624,17 +611,17 @@ function createRoutes(){
             component: loadPage('docs-management-020_management_over_rest', '/docs/management/020_management_over_rest', {})
         },
         {
-            path: '/docs/management/030_visualvm',
+            path: '/docs/management/025_coherence_cli',
             meta: {
-                h1: 'Using VisualVM',
-                title: 'Using VisualVM',
+                h1: 'The Coherence CLI',
+                title: 'The Coherence CLI',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
                 customLayout: null,
                 hasNav: true
             },
-            component: loadPage('docs-management-030_visualvm', '/docs/management/030_visualvm', {})
+            component: loadPage('docs-management-025_coherence_cli', '/docs/management/025_coherence_cli', {})
         },
         {
             path: '/docs/management/040_ssl',
@@ -808,8 +795,8 @@ function createRoutes(){
         {
             path: '/docs/other/040_annotations',
             meta: {
-                h1: 'Pod Annotations',
-                title: 'Pod Annotations',
+                h1: 'Adding Annotations',
+                title: 'Adding Annotations',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
@@ -1315,7 +1302,6 @@ function createNav(){
                 { href: '/docs/jvm/040_gc', title: 'Garbage Collector Settings' },
                 { href: '/docs/jvm/050_memory', title: 'Heap & Memory Settings' },
                 { href: '/docs/jvm/070_debugger', title: 'Debugger Configuration' },
-                { href: '/docs/jvm/080_jmx', title: 'Using JMX' },
                 { href: '/docs/jvm/090_container_limits', title: 'Container Resource Limits' }
             ]
         },
@@ -1353,7 +1339,7 @@ function createNav(){
             items: [
                 { href: '/docs/management/010_overview', title: 'Overview' },
                 { href: '/docs/management/020_management_over_rest', title: 'Management over REST' },
-                { href: '/docs/management/030_visualvm', title: 'Using VisualVM' },
+                { href: '/docs/management/025_coherence_cli', title: 'The Coherence CLI' },
                 { href: '/docs/management/040_ssl', title: 'SSL with Management over REST' },
                 { href: '/docs/management/100_tmb_test', title: 'Coherence Network Testing' }
             ]
@@ -1388,7 +1374,7 @@ function createNav(){
                 { href: '/docs/other/010_overview', title: 'Overview' },
                 { href: '/docs/other/020_environment', title: 'Environment Variables' },
                 { href: '/docs/other/030_labels', title: 'Pod Labels' },
-                { href: '/docs/other/040_annotations', title: 'Pod Annotations' },
+                { href: '/docs/other/040_annotations', title: 'Adding Annotations' },
                 { href: '/docs/other/045_security_context', title: 'Pod & Container SecurityContext' },
                 { href: '/docs/other/050_configmap_volumes', title: 'Add ConfigMap Volumes' },
                 { href: '/docs/other/060_secret_volumes', title: 'Add Secrets Volumes' },

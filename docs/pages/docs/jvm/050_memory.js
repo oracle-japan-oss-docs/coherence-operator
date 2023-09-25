@@ -51,7 +51,7 @@ spec:
 <tbody>
 <tr>
 <td class=""><span class="merged" id="all.2xctqM"  title="原文: -XX:InitialRAMPercentage=N"><code>-XX:InitialRAMPercentage=N</code></span></td>
-<td class=""><span class="merged" id="all.K1LBD.spl1"  title="原文: Sets the initial amount of memory that the JVM will use for the Java heap before applying ergonomics heuristics as a percentage of the maximum amount determined as described in the -XX:MaxRAM option.">-XX:MaxRAMオプションで説明されているとおり、人間工学に基づくヒューリスティックを最大量の割合として適用する前に、JVMがJavaヒープに使用する初期のメモリー量を設定します。</span> <span class="merged" id="all.K1LBD.spl2"  title="原文: The default value is 1.5625 percent.">デフォルト値は1.5625%です。</span> </td>
+<td class=""><span class="merged" id="all.K1LBD.spl1" title="原文 : Sets the initial amount of memory that the JVM will use for the Java heap before applying ergonomics heuristics as a percentage of the maximum amount determined as described in the -XX:MaxRAM option.">-XX:MaxRAMオプションの説明に従って、エルゴノミクス・ヒューリスティックを最大量のパーセンテージとして適用する前に、JVMがJavaヒープに使用する初期メモリー量を設定します。</span> <span class="merged" id="all.K1LBD.spl2"  title="原文: The default value is 1.5625 percent.">デフォルト値は1.5625%です。</span> </td>
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.3nnCkS"  title="原文: &apos;-XX:MaxRAMPercentage=N&apos;">'-XX:MaxRAMPercentage=N'</span></td>
@@ -59,12 +59,12 @@ spec:
 </tr>
 <tr>
 <td class=""><span class="merged" id="all.1ul6iv"  title="原文: &apos;-XX:MinRAMPercentage=N&apos;">'-XX:MinRAMPercentage=N'</span></td>
-<td class=""><span class="merged" id="all.4j8Hz.spl1"  title="原文: Sets the maximum amount of memory that the JVM may use for the Java heap before applying ergonomics heuristics as a percentage of the maximum amount determined as described in the -XX:MaxRAM option for small heaps.">小さいヒープ用の-XX:MaxRAMオプションで説明されているとおり、人間工学に基づくヒューリスティックを最大量の割合として適用する前に、JVMがJavaヒープに使用できるメモリーの最大量を設定します。</span> <span class="merged" id="all.4j8Hz.spl2"  title="原文: A small heap is a heap of approximately 125 MB.">小さいヒープは、約125 MBのヒープです。</span> <span class="merged" id="all.4j8Hz.spl3"  title="原文: The default value is 50 percent.">デフォルト値は50%です。</span> </td>
+<td class=""><span class="merged" id="all.4j8Hz.spl1" title="原文 : Sets the maximum amount of memory that the JVM may use for the Java heap before applying ergonomics heuristics as a percentage of the maximum amount determined as described in the -XX:MaxRAM option for small heaps.">小さいヒープの -XX:MaxRAMオプションで説明されているように、人間工学のヒューリスティックを適用する前に、JVMがJavaヒープに対して使用できるメモリーの最大量を設定します。</span> <span class="merged" id="all.4j8Hz.spl2"  title="原文: A small heap is a heap of approximately 125 MB.">小さいヒープは、約125 MBのヒープです。</span> <span class="merged" id="all.4j8Hz.spl3"  title="原文: The default value is 50 percent.">デフォルト値は50%です。</span> </td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><span class="merged" id="all.2AzHbt.spl1" title="原文 : Where N is a decimal value between 0 and 100.">ここで、<code>N</code>は0から100までの10進値です。</span> <span class="merged" id="all.2AzHbt.spl2"  title="原文:: For example, 12.3456.">次に例を示します。 12.3456</span> </p>
+<p><span class="merged" id="all.2AzHbt.spl1" title="原文 : Where N is a decimal value between 0 and 100.">ここで、<code>N</code>は0から100までの10進値です。</span> <span class="merged" id="all.2AzHbt.spl2"  title="原文:: For example, 12.3456.">たとえば、 12.3456</span> </p>
 
 <p><span class="merged" id="all.3HsvP3" title="原文 : When running in a container, and the -XX:+UseContainerSupport is set (which it is by default for the Coherence container), both the default heap size for containers, the -XX:InitialRAMPercentage option, the -XX:MaxRAMPercentage option, and the -XX:MaxRAMPercentage option, will be based on the available container memory.">コンテナで実行していて、<code>-XX:+UseContainerSupport</code>が設定されている場合(デフォルトでCoherenceコンテナ用)、コンテナのデフォルトのヒープ・サイズ、<code>-XX:InitialRAMPercentage</code>オプション、<code>-XX:MaxRAMPercentage</code>オプションおよび<code>-XX:MaxRAMPercentage</code>オプションは、使用可能なコンテナ・メモリーに基づきます。</span></p>
 
@@ -150,7 +150,7 @@ spec:
 </div>
 <p><span class="merged" id="all.2PYNEu" title="原文 : The &lt;size&gt; parameter is a numeric integer followed by a suffix to the size value: &quot;k&quot; or &quot;K&quot; to indicate kilobytes, &quot;m&quot; or &quot;M&quot; to indicate megabytes, &quot;g&quot; or &quot;G&quot; to indicate gigabytes, or, &quot;t&quot; or &quot;T&quot; to indicate terabytes."><code>&lt;size></code>パラメータは数値整数で、その後にサイズ値のサフィクスが続きます: キロバイトを示す"k"または"K"、メガバイトを示す"m"または"M"、ギガバイトを示す"g"または"G"、テラバイトを示す"t"または"T"です。</span></p>
 
-<p><span class="merged" id="all.6vDv5.11"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.11"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -179,7 +179,7 @@ spec:
 
 <p><span class="merged" id="all.3pnVcl.spl1" title="原文 : To set the JVM both the initial amd max heap sizes to the same value, set the jvm.memory.heapSize field.">初期値および最大ヒープ・サイズの両方のJVMを同じ値に設定するには、<code>jvm.memory.heapSize</code>フィールドを設定します。</span> <span class="merged" id="all.3pnVcl.spl2" title="原文 : The value of the field can be any value that can be used with the JVM -XX:InitialHeapSize and -XX:MaxHeapSize (or -Xmx and -Xms) arguments.">フィールドの値は、JVM <code>-XX:InitialHeapSize</code>および<code>-XX:MaxHeapSize</code> (または<code>-Xmx</code>および<code>-Xms</code>)引数で使用できる任意の値です。</span> <span class="merged" id="all.3pnVcl.spl3" title="原文 : The value of the jvm.memory.heapSize field will be used to set both the -XX:InitialHeapSize, and the -XX:MaxHeapSize arguments to the same value, so the heap will be a fixed size."><code>jvm.memory.heapSize</code>フィールドの値は、<code>-XX:InitialHeapSize</code>引数と<code>-XX:MaxHeapSize</code>引数の両方を同じ値に設定するために使用されるため、ヒープは固定サイズになります。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.12"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.12"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

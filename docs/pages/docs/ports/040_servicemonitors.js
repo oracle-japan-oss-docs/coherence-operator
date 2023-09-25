@@ -8,7 +8,7 @@
 
 <p><span class="merged" id="all.2t6EFf.spl1" title="原文 : A ServiceMonitor is created for an exposed port by setting the serviceMonitor.enabled field to true."><code>serviceMonitor.enabled</code>フィールドを<code>true</code>に設定することで、公開ポートに対して<code>ServiceMonitor</code>が作成されます。</span> <span class="merged" id="all.2t6EFf.spl2" title="原文 : The Operator will create a ServiceMonitor with the same name as the Service.">オペレータは、<code>Service</code>と同じ名前の<code>ServiceMonitor</code>を作成します。</span> <span class="merged" id="all.2t6EFf.spl3" title="原文 : The ServiceMonitor created will have a single endpoint for the port being exposed.">作成された<code>ServiceMonitor</code>には、公開されるポートの単一のエンドポイントが含まれます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.29"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.29"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

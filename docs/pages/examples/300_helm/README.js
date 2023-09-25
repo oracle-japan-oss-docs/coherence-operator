@@ -9,7 +9,7 @@
 <p><span class="merged" id="all.Dy8kq" title="原文 : This example shows some ways that Helm can be used to manage Coherence resources.">この例では、Helmを使用してCoherenceリソースを管理する方法を示します。</span></p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.10"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.11"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.2H6jHC" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/300_helm" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
@@ -241,7 +241,7 @@ operator:
   namespace: coherence
   service: coherence-operator-rest
   port: 8000
-  image: ghcr.io/oracle/coherence-operator-utils:3.2.8
+  image: ghcr.io/oracle/coherence-operator-utils:3.3.0
   condition: Ready
   timeout: 5m
   interval: 10s</markup>
@@ -275,7 +275,7 @@ spec:
           - "--name"
           - {{ .Release.Name | quote }}
           - "--operator-url"
-          - "http://{{ .Values.operator.service | default "coherence-operator-rest" }}.{{ .Values.operator.namespace | default "coherence" }}.svc.cluster.local:{{ .Values.operator.port | default 8000 }}"
+          - "http://{{ .Values.operator.service | default "coherence-operator-rest" }}.{{ .Values.operator.namespace | default "coherence" }}.svc:{{ .Values.operator.port | default 8000 }}"
           - "--condition"
           - {{ .Values.operator.condition | default "Ready" | quote }}
           - "--timeout"

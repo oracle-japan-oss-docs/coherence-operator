@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.3nec9n.spl1" title="原文 : This simple example demonstrates the Coherence federation feature.">この単純な例は、Coherenceフェデレーション機能を示しています。</span> <span class="merged" id="all.3nec9n.spl2" title="原文 : It shows how to deploy two Coherence clusters that federating data between them using the Coherence Operator.">Coherence Operatorを使用して、データ間にデータをフェデレートする2つのCoherenceクラスタをデプロイする方法を示します。</span> <span class="merged" id="all.3nec9n.spl3" title="原文 : The Coherence federation feature requires Coherence Grid Edition.">Coherenceフェデレーション機能には、Coherence Grid Editionが必要です。</span> <span class="merged" id="all.3nec9n.spl4" title="原文 : See Obtain Coherence Images on how to get a commercial Coherence image.">商用Coherenceイメージの取得方法は、<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/04_obtain_coherence_images" id="" target="_blank" >「Coherenceイメージの取得」</a>を参照してください。</span> </p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.8"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.9"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.3IZ9uF" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/100_federation" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
@@ -38,7 +38,7 @@
 </ul>
 </div>
 
-<h3 id="install-operator"><span class="merged" id="all.LO8kI.2" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h3>
+<h3 id="install-operator"><span class="merged" id="all.LO8kI.1" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2UE6k0" title="原文 : To run the examples below, you will need to have installed the Coherence Operator, do this using whatever method you prefer from the Installation Guide.">次の例では、Coherence Operatorをインストールし、<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/01_installation" id="" target="_blank" >「インストール・ガイド」</a>から必要なメソッドを使用してインストールする必要があります。</span></p>
 

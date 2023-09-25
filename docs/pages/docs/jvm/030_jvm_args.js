@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.3oglnm.spl1" title="原文 : The Coherence CRD allows any arbitrary JVM arguments to be passed to the JVM in the coherence container by using the jvm.args field of the CRD spec."><code>Coherence</code> CRDを使用すると、CRD仕様の<code>jvm.args</code>フィールドを使用して、任意のJVM引数を<code>coherence</code>コンテナのJVMに渡すことができます。</span> <span class="merged" id="all.3oglnm.spl2" title="原文 : Any valid system property or JVM argument can be added to the jvm.args list.">有効なシステム・プロパティまたはJVM引数を<code>jvm.args</code>リストに追加できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.8"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.8"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -27,7 +27,7 @@ spec:
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.27EZlm.spl1" title="原文 : When the Operator builds the command line to use when starting Coherence Pods, any arguments added to the jvm.args field will be added after all the arguments added by the Operator from other configuration fields.">オペレータがCoherenceポッドの起動時に使用するコマンドラインをビルドすると、<code>jvm.args</code>フィールドに追加されたすべての引数が、他の構成フィールドからオペレータによって追加されたすべての引数の後に追加されます。</span> <span class="merged" id="all.27EZlm.spl2" title="原文 : This means that arguments such as system properties added to jvm.args will override any added by the Operator.">つまり、<code>jvm.args</code>に追加されたシステム・プロパティなどの引数は、オペレータによって追加されたすべての引数をオーバーライドします。</span> </p>
 </div>
-<p><span class="merged" id="all.2x2VMf"  title="原文:: For example">次に例を示します</span></p>
+<p><span class="merged" id="all.2x2VMf"  title="原文:: For example">たとえば</span></p>
 
 <markup
 lang="yaml"
@@ -59,7 +59,7 @@ spec:
 
 >-Dcoherence.cluster=&lt;cluster-name&gt;
 -Dcoherence.role=&lt;role&gt;
--Dcoherence.wka=&lt;deployment-name&gt;-wka.svc.cluster.local
+-Dcoherence.wka=&lt;deployment-name&gt;-wka.svc
 -Dcoherence.cacheconfig=coherence-cache-config.xml
 -Dcoherence.k8s.operator.health.port=6676
 -Dcoherence.management.http.port=30000

@@ -80,7 +80,7 @@
 
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="すべてのメッセージ" src="./images/kibana-all-messages.png" width="900" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メッセージ (全件)" src="./images/kibana-all-messages.png" width="900" /> </v-card-text> </v-card>
 
 </div>
 

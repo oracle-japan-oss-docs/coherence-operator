@@ -10,7 +10,11 @@
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">RESTの管理</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1I4dSJ" title="原文 : Coherence Management over REST feature">REST機能でのCoherence管理</span></p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/management/030_visualvm"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/management/025_coherence_cli"><div class="card__link-hover"/>
+</router-link> <v-card-title primary class="headline layout justify-center"> <span style="text-align:center">The Coherence CLI</span> </v-card-title> <v-card-text class="caption">
+<p></p>
+<p><span class="merged" id="all.1PNJzx" title="原文 : Using the Coherence CLI in Pods">ポッドでのCoherence CLIの使用</span></p>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link @click.native="this.scrollFix('#docs/management/030_visualvm.adoc')" to="#docs/management/030_visualvm.adoc"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"> <span style="text-align:center">VisualVM</span> </v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.225SaK" title="原文 : Coherence VisualVM plugin.">Coherence VisualVMプラグイン。</span></p>

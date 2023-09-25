@@ -139,10 +139,51 @@ spec:
 <li data-value="2"><span class="merged" id="all.4Jr8cw" title="原文 : The Coherence cluster name is set to shop to match the data deployment">Coherenceクラスタ名は、<code>data</code>デプロイメントと一致するように<code>shop</code>に設定されます</span></li>
 <li data-value="3"><span class="merged" id="all.1jT469" title="原文 : The coherence.wka section specifies the name of the Coherence deployment to use for WKA so in this case the data deployment in the back-end namespace."><code>coherence.wka</code>セクションでは、WKAに使用する<code>Coherence</code>デプロイメントの名前を指定します。この場合は、<code>back-end</code>ネームスペースの<code>data</code>デプロイメントを指定します。</span></li>
 </ul>
-<p><span class="merged" id="all.4BD0ah.spl1" title="原文 : As described already above the data deployment will have a headless Service created for WKA named data-wka, which will be in the back-end namespace.">すでに<code>data</code>デプロイメントの上で説明したように、<code>data-wka</code>という名前の<code>WKA</code>に対してヘッドレス<code>Service</code>が作成され、<code>back-end</code>ネームスペースに格納されます。</span> <span class="merged" id="all.4BD0ah.spl2" title="原文 : The full name of this Service in Kubernetes will be data-wka.back-end.svc.cluster.local and this will be the name that the members of the web-store deployment will be configured to use for WKA.">Kubernetesのこの<code>Service</code>のフルネームは<code>data-wka.back-end.svc.cluster.local</code>となり、これは<code>web-store</code>デプロイメントのメンバーがWKA用に構成される名前になります。</span> </p>
+<p><span class="merged" id="all.1oU0yt.spl1" title="原文 : As described already above the data deployment will have a headless Service created for WKA named data-wka, which will be in the back-end namespace.">すでに<code>data</code>デプロイメントの上で説明したように、<code>data-wka</code>という名前の<code>WKA</code>に対してヘッドレス<code>Service</code>が作成され、<code>back-end</code>ネームスペースに格納されます。</span> <span class="merged" id="all.1oU0yt.spl2" title="原文 : The full name of this Service in Kubernetes will be data-wka.back-end.svc and this will be the name that the members of the web-store deployment will be configured to use for WKA.">Kubernetesのこの<code>Service</code>のフルネームは<code>data-wka.back-end.svc</code>となり、これは<code>web-store</code>デプロイメントのメンバーがWKA用に構成される名前になります。</span> </p>
 
 <div class="admonition warning">
 <p class="admonition-inline"><span class="merged" id="all.mwQ8V" title="原文 : When using WKA in this way the Coherence deployment that is providing the WKA Service should be running before any deployment that depends on it is deployed.">この方法でWKAを使用する場合、WKA <code>Service</code>を提供する<code>Coherence</code>デプロイメントは、それに依存するデプロイメントがデプロイされる前に実行する必要があります。</span></p>
 </div>
+</div>
+
+<h2 id="_override_the_wka_addresses"><span class="merged" id="all.1lFXjG" title="原文 : Override the WKA Address(es)">WKA Address(es)をオーバーライド</span></h2>
+<div class="section">
+<p><span class="merged" id="all.3JvC4G.spl1" title="原文 : It is possible to fully override the WKA address that will be configured by the Operator.">オペレータによって構成されるWKAアドレスを完全にオーバーライドできます。</span> <span class="merged" id="all.3JvC4G.spl2" title="原文 : This is useful where a different service exists that will perform the DNS resolution (for example when using Submariner[https://submariner.io] to communicate over k8s clusters).">これは、DNS解決を実行する別のサービスが存在する場合に便利です(たとえば、Submariner[ <a href="https://submariner.io" id="" target="_blank" >https://submariner.io</a> ]を使用してk8sクラスタ経由で通信する場合)。</span> <span class="merged" id="all.3JvC4G.spl3" title="原文 : In this case set the spec.coherence.wka.addresses field to be the WKA address (which is a list of string values).">この場合、<code>spec.coherence.wka.addresses</code>フィールドをWKAアドレス(文字列値のリスト)に設定します。</span> </p>
+
+<markup
+lang="yaml"
+title="web-store-deployment.yaml"
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: web-store
+  namespace: front-end
+spec:
+  cluster: `shop`
+  coherence:
+    wka:
+      addresses:
+        - data.back-end.svc</markup>
+
+<p><span class="merged" id="all.27xDS0.spl1" title="原文 : In the example above, the the Coherence WKA list would be configured as COHERENCE_WKA=data.back-end.svc.">前述の例では、Coherence WKAリストは<code>COHERENCE_WKA=data.back-end.svc</code>として構成されます。</span> <span class="merged" id="all.27xDS0.spl2" title="原文 : It is possible to use multiple addresses for WKA in the addresses field.">WKAの複数のアドレスをアドレス・フィールドで使用できます。</span> </p>
+
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: web-store
+  namespace: front-end
+spec:
+  cluster: `shop`
+  coherence:
+    wka:
+      addresses:
+        - data-01.back-end.svc
+        - data-02.back-end.svc</markup>
+
+<p><span class="merged" id="all.RSEIP" title="原文 : In the example above, the Coherence WKA list would be configured as COHERENCE_WKA=data-01.back-end.svc,data-02.back-end.svc">前述の例では、Coherence WKAリストは<code>COHERENCE_WKA=data-01.back-end.svc,data-02.back-end.svc</code>として構成されます</span></p>
+
 </div>
 </doc-view>

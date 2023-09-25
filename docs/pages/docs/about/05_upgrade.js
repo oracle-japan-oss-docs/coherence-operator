@@ -8,7 +8,7 @@
 
 <p><span class="merged" id="all.2DeZIo.spl1" title="原文 : In terms of usage and concepts, the biggest change is that there are no longer clusters and roles.">使用方法および概念に関して、最大の変化は、クラスタおよびロールがないことです。</span> <span class="merged" id="all.2DeZIo.spl2" title="原文 : The Coherence CRD represents what would previously in v2 have been a role."><code>Coherence</code> CRDは、v2で以前はロールであったものを表します。</span> <span class="merged" id="all.2DeZIo.spl3" title="原文 : A Coherence cluster that is made up of multiple roles will just require multiple Coherence resources deploying to Kubernetes.">複数のロールで構成されるCoherenceクラスタでは、Kubernetesにデプロイする複数の<code>Coherence</code>リソースのみが必要です。</span> <span class="merged" id="all.2DeZIo.spl4" title="原文 : The simplification of the operator, and consequently the better reliability, far outweigh any advantage of being able to put multiple roles in a single yaml file.">オペレータの簡素化、そしてその結果、信頼性の向上が、複数のロールを1つのyamlファイルに配置できるという利点よりもはるかに優れています。</span> <span class="merged" id="all.2DeZIo.spl5" title="原文 : If this is desire just put multiple Coherence resource definitions in a single yaml file with the --- separator.">これが必要な場合は、<code>---</code>セパレータを含む単一のyamlファイルに複数の<code>Coherence</code>リソース定義を置きます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5"  title="原文:: For example:">例えば:</span></p>
 
 <p><span class="merged" id="all.3c0vu" title="原文 : In Operator v2 a cluster may have been defined with two roles, storage and proxy like this:">オペレータv2では、<code>storage</code>および<code>proxy</code>という2つのロールを使用してクラスタが定義されている場合があります:</span></p>
 

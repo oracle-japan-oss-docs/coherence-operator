@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.2NUJzS.1" title="原文 : This example shows how to use the Kubernetes Horizontal Pod Autoscaler to scale Coherence clusters.">この例では、Kubernetes Horizontal Pod Autoscalerを使用してCoherenceクラスタをスケーリングする方法を示します。</span></p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.9"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.10"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.37f75q" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/200_autoscaler" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
@@ -88,19 +88,19 @@ cd coherence-operator/examples</markup>
 <h3 id="_build_the_examples"><span class="merged" id="all.KkREp" title="原文 : Build the Examples">例の作成</span></h3>
 <div class="section">
 
-<h4 id="_prerequisites"><span class="merged" id="all.2LZvWc.5"  title="原文:: Prerequisites">前提条件</span></h4>
+<h4 id="_prerequisites"><span class="merged" id="all.2LZvWc.4"  title="原文:: Prerequisites">前提条件</span></h4>
 <div class="section">
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.2QWpOS.1" title="原文 : Java 11+ JDK either [OpenJDK](https://adoptopenjdk.net/) or [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html)">Java 11+ JDK [OpenJDK](<a href="https://adoptopenjdk.net/" id="" target="_blank" >https://adoptopenjdk.net/</a>)または[Oracle JDK](<a href="https://www.oracle.com/java/technologies/javase-downloads.html" id="" target="_blank" >https://www.oracle.com/java/technologies/javase-downloads.html</a>)]</span></p>
+<p><span class="merged" id="all.2ZKytW" title="原文 : Java 11+ JDK either OpenJDK or Oracle JDK">Java 11+ JDK <a href="https://adoptopenjdk.net/" id="" target="_blank" >OpenJDK</a>または<a href="https://www.oracle.com/java/technologies/javase-downloads.html" id="" target="_blank" >Oracle JDK</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4TToE6" title="原文 : [Docker](https://docs.docker.com/install/) version 17.03+.">[Docker](<a href="https://docs.docker.com/install/" id="" target="_blank" >https://docs.docker.com/install/</a>)バージョン17.03 +。</span></p>
+<p><span class="merged" id="all.j38oP.1" title="原文 : Docker version 17.03+."><a href="https://docs.docker.com/install/" id="" target="_blank" >Docker</a>バージョン17.03+。</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.cRWHJ" title="原文 : [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) version v1.13.0+ .">[kubectl](<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" id="" target="_blank" >https://kubernetes.io/docs/tasks/tools/install-kubectl/</a>)バージョンv1.13.0+。</span></p>
+<p><span class="merged" id="all.2U5Gf2" title="原文 : kubectl version v1.13.0+ ."><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" id="" target="_blank" >kubectl</a>バージョンv1.13.0+。</span></p>
 
 </li>
 <li>
@@ -108,11 +108,11 @@ cd coherence-operator/examples</markup>
 
 </li>
 <li>
-<p><span class="merged" id="all.4L7e4p" title="原文 : [Helm](https://helm.sh/docs/intro/install/) version 3.2.4+">[Helm](<a href="https://helm.sh/docs/intro/install/" id="" target="_blank" >https://helm.sh/docs/intro/install/</a>)バージョン3.2.4 +</span></p>
+<p><span class="merged" id="all.37lroG" title="原文 : Helm version 3.2.4+"><a href="https://helm.sh/docs/intro/install/" id="" target="_blank" >Helm</a>バージョン3.2.4+</span></p>
 
 </li>
 </ul>
-<p><span class="merged" id="all.3dG61P.spl1" title="原文 : Building the project requires [Maven](https://maven.apache.org) version 3.6.0+.">プロジェクトのビルドには、[Maven](<a href="https://maven.apache.org" id="" target="_blank" >https://maven.apache.org</a>)バージョン3.6.0 +が必要です。</span> <span class="merged" id="all.3dG61P.spl2" title="原文 : The commands below use the Maven Wrapper to run the commands, which will install Maven if it is not already on the development machine.">次のコマンドは、Mavenラッパーを使用してコマンドを実行します。コマンドがまだ開発マシン上にない場合は、Mavenをインストールします。</span> <span class="merged" id="all.3dG61P.spl3" title="原文 : If you already have a suitable version of Maven installed feel free to replace the use of ./mvnw in the examples with your normal Maven command (typically just mvn).">適切なバージョンのMavenがすでにインストールされている場合は、例での<code>./mvnw</code>の使用を通常のMavenコマンド(通常は<code>mvn</code>のみ)に置き換えることができます。</span> </p>
+<p><span class="merged" id="all.u7vtk.spl1" title="原文 : Building the project requires Maven version 3.6.0+.">プロジェクトをビルドするには、<a href="https://maven.apache.org" id="" target="_blank" >Maven</a>バージョン3.6.0+が必要です。</span> <span class="merged" id="all.u7vtk.spl2" title="原文 : The commands below use the Maven Wrapper to run the commands, which will install Maven if it is not already on the development machine.">次のコマンドは、Mavenラッパーを使用してコマンドを実行します。コマンドがまだ開発マシン上にない場合は、Mavenをインストールします。</span> <span class="merged" id="all.u7vtk.spl3" title="原文 : If you already have a suitable version of Maven installed feel free to replace the use of ./mvnw in the examples with your normal Maven command (typically just mvn).">適切なバージョンのMavenがすでにインストールされている場合は、例での<code>./mvnw</code>の使用を通常のMavenコマンド(通常は<code>mvn</code>のみ)に置き換えることができます。</span> </p>
 
 
 <h5 id="_corporate_proxies"><span class="merged" id="all.LW0uM" title="原文 : Corporate Proxies">企業プロキシ</span></h5>
@@ -152,7 +152,7 @@ lang="bash"
 <p class="admonition-inline"><span class="merged" id="all.2SIvEd.spl1" title="原文 : To simplify the example commands none of the examples below use a Kubernetes namespace.">サンプル・コマンドを簡略化するために、次のいずれの例もKubernetesネームスペースを使用しません。</span> <span class="merged" id="all.2SIvEd.spl2" title="原文 : If you wish to install the components below into a namespace other than default, then use the required kubectl and Helm namespace options.">下のコンポーネントを<code>default</code>以外のネームスペースにインストールする場合は、必要なkubectlおよびHelmネームスペース・オプションを使用します。</span> </p>
 </div>
 
-<h3 id="_install_the_coherence_operator"><span class="merged" id="all.LO8kI.3" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h3>
+<h3 id="_install_the_coherence_operator"><span class="merged" id="all.LO8kI.2" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h3>
 <div class="section">
 <p><span class="merged" id="all.3AJ9nf" title="原文 : First install the Coherence Operator, TBD…​">最初にCoherence Operatorをインストールしてください、TBD…</span></p>
 
@@ -253,8 +253,8 @@ lang="bash"
 <markup
 lang="bash"
 
->application:coherence_heap_usage_percentage_used{cluster="test-cluster", machine="docker-desktop", member="test-cluster-0", node_id="2", role="test-cluster", site="test-cluster-sts.operator-test.svc.cluster.local"} 3.09
-application:coherence_heap_usage_used{cluster="test-cluster", machine="docker-desktop", member="test-cluster-0", node_id="2", role="test-cluster", site="test-cluster-sts.operator-test.svc.cluster.local"} 16177976</markup>
+>application:coherence_heap_usage_percentage_used{cluster="test-cluster", machine="docker-desktop", member="test-cluster-0", node_id="2", role="test-cluster", site="test-cluster-sts.operator-test.svc"} 3.09
+application:coherence_heap_usage_used{cluster="test-cluster", machine="docker-desktop", member="test-cluster-0", node_id="2", role="test-cluster", site="test-cluster-sts.operator-test.svc"} 16177976</markup>
 
 <p><span class="merged" id="all.27BC9L.spl1" title="原文 : The first metric application:coherence_heap_usage_percentage_used shows the heap was 3.09% full after the last gc.">最初のメトリック<code>application:coherence_heap_usage_percentage_used</code>は、最後のgcの後にヒープが<code>3.09%</code>フルだったことを示しています。</span> <span class="merged" id="all.27BC9L.spl2" title="原文 : The second metric application:coherence_heap_usage_used shows that the in-use heap after the last gc was 16177976 bytes, or around 16 MB.">2番目のメトリック<code>application:coherence_heap_usage_used</code>は、最後のgcの後の使用中ヒープが16177976バイトまたは約16 MBであったことを示しています。</span> </p>
 
@@ -742,7 +742,7 @@ test-cluster-2   1/1     Running   0          1m10s</markup>
 </div>
 </div>
 
-<h3 id="_clean_up"><span class="merged" id="all.GvSAu" title="原文 : Clean-Up">クリーンアップ</span></h3>
+<h3 id="_clean_up"><span class="merged" id="all.GvSAu.1"  title="原文:: Clean-Up">クリーンアップ</span></h3>
 <div class="section">
 <p><span class="merged" id="all.3AWF56" title="原文 : To clean-up after running the example just uninstall everything in the reverse order:">例の実行後にクリーンアップするには、逆順ですべてをアンインストールします:</span></p>
 

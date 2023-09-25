@@ -2,7 +2,7 @@
 <span title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center;"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html" target="disclaimer">&nbsp;&nbsp;機械翻訳について&nbsp;&nbsp;</a></span>
 
 
-<h2 id="_get_going"><span class="merged" id="all.17YHHU" title="原文 : Get Going">開始</span></h2>
+<h2 id="_get_going"><span class="merged" id="all.17YHHU" title="原文 : Get Going">始動</span></h2>
 <div class="section">
 <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/about/03_quickstart"><div class="card__link-hover"/>
 <span class="merged" id="all.47whZK" title="原文 :  fa-rocket "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">fa-rocket</v-icon> </v-avatar> </v-layout></span>
@@ -48,7 +48,7 @@
 <h2 id="_examples"><span class="merged" id="all.2OLHXv"  title="原文:: Examples">例</span></h2>
 <div class="section">
 <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/000_overview"><div class="card__link-hover"/>
-<span class="merged" id="all.1G78Lh" title="原文 :  explore "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">explore</v-icon> </v-avatar> </v-layout></span>
+<span class="merged" id="all.1G78Lh" title="原文 :  explore "></router-link> <v-layout align-center justify-center class=""><v-avatar size="150px"><v-icon class="xxx-large">explore</v-icon></v-avatar></v-layout></span>
 <div class="px-3">
 <v-divider class="indigo lighten-4"/>
 </div>

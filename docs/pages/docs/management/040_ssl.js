@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.4FkkOG.spl1" title="原文 : It is possible to configure Management over REST endpoint to use SSL to secure the communication between server and client.">SSLを使用してサーバーとクライアント間の通信を保護するように、RESTエンドポイントを介した管理を構成できます。</span> <span class="merged" id="all.4FkkOG.spl2" title="原文 : The SSL configuration is in the coherence.metrics.ssl section of the CRD spec.">SSL構成は、CRD仕様の<code>coherence.metrics.ssl</code>セクションにあります。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.18"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.18"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

@@ -23,7 +23,7 @@
 <div class="section">
 <p><span class="merged" id="all.3skhD1.spl1" title="原文 : There are three default persistence modes available, active, active-async and on-demand; the default mode is on-demand.">使用可能なデフォルトの永続性モードは、<code>active</code>、<code>active-async</code>および<code>on-demand</code>の3つです。デフォルトのモードは<code>on-demand</code>です。</span> <span class="merged" id="all.3skhD1.spl2" title="原文 : The persistence mode will be set using the spec.coherence.persistence,mode field in the CRD.">永続性モードは、CRDの<code>spec.coherence.persistence,mode</code>フィールドを使用して設定されます。</span> <span class="merged" id="all.3skhD1.spl3" title="原文 : The value of this field will be used to set the coherence.distributed.persistence-mode system property in the Coherence JVM.">このフィールドの値は、Coherence JVMで<code>coherence.distributed.persistence-mode</code>システム・プロパティを設定するために使用されます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.2"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.2"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -101,7 +101,7 @@ spec:
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.1aAvV6" title="原文 : In the example above a Volume has been configured for persistence, in this case a HostPath volume pointing to the /mnt/ssd/coherence/persistence directory on the Node.">前述の例では、ボリュームが永続性用に構成されています。この場合、ノードの<code>/mnt/ssd/coherence/persistence</code>ディレクトリを指す<code>HostPath</code>ボリュームになります。</span></li>
 </ul>
-<p><span class="merged" id="all.3Q57Cu.spl1" title="原文 : The configuration under the spec.coherence.persistence.volume section is a normal Kubernetes VolumeSource so any valid VolumeSource configuration can be used."><code>spec.coherence.persistence.volume</code>セクションの下の構成は通常のKubernetes <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#volume-v1-core" id="" target="_blank" >VolumeSource</a>であるため、有効な<code>VolumeSource</code>構成を使用できます。</span> <span class="merged" id="all.3Q57Cu.spl2" title="原文 : See the Kubernetes Volumes documentation for more details.">詳細は、Kubernetes <a href="https://kubernetes.io/docs/concepts/storage/volumes/" id="" target="_blank" >「ボリューム」</a>のドキュメントを参照してください。</span> </p>
+<p><span class="merged" id="all.2CcQX2.spl1" title="原文 : The configuration under the spec.coherence.persistence.volume section is a normal Kubernetes VolumeSource so any valid VolumeSource configuration can be used."><code>spec.coherence.persistence.volume</code>セクションの下の構成は通常のKubernetes <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/${k8s-doc-version}/#volume-v1-core" id="" target="_blank" >VolumeSource</a>であるため、有効な<code>VolumeSource</code>構成を使用できます。</span> <span class="merged" id="all.2CcQX2.spl2" title="原文 : See the Kubernetes Volumes documentation for more details.">詳細は、Kubernetes <a href="https://kubernetes.io/docs/concepts/storage/volumes/" id="" target="_blank" >「ボリューム」</a>のドキュメントを参照してください。</span> </p>
 
 </div>
 </div>

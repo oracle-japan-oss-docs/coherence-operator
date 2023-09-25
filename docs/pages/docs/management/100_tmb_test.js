@@ -127,7 +127,7 @@ now:  throughput(out 34805msg/s 1.14gb/s, in 348msg/s 11.3mb/s), latency(respons
 now:  throughput(out 34805msg/s 1.14gb/s, in 348msg/s 11.3mb/s), latency(response(avg 25.31ms, effective 110.03ms, min 374.70us, max 158.10ms), receipt 25.47ms), backlog(out 77% 83/s 308KB, in 0% 0/s 0B), connections 1, errors 0</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.2"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.6"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.EAnTt" title="原文 : Don’t forget to stop the Pods after obtaining the results:">結果の取得後に<code>Pods</code>を停止することを忘れないでください:</span></p>
 
 <markup

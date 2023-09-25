@@ -210,7 +210,7 @@ lang="xml"
 </ul>
 </li>
 <li>
-<p><span class="merged" id="all.1Ck8mE.spl1" title="原文 : The &lt;dependencySets&gt; configuration copies all the project dependencies (including transitive dependencies) to the app/libs directory (actually the target/docker/app/libs directory)."><code>&lt;dependencySets></code>構成では、すべてのプロジェクト依存関係(推移的依存関係を含む)が<code>app/libs</code>ディレクトリ(実際は<code>target/docker/app/libs</code>ディレクトリ)にコピーされます。</span> <span class="merged" id="all.1Ck8mE.spl2" title="原文 : Any version information will be stripped from the files, so coherence-22.06.1.jar would become coherence.jar.">バージョン情報はファイルから取り除かれるため、<code>coherence-22.06.1.jar</code>は<code>coherence.jar</code>になります。</span> </p>
+<p><span class="merged" id="all.ZL39u.spl1" title="原文 : The &lt;dependencySets&gt; configuration copies all the project dependencies (including transitive dependencies) to the app/libs directory (actually the target/docker/app/libs directory)."><code>&lt;dependencySets></code>構成では、すべてのプロジェクト依存関係(推移的依存関係を含む)が<code>app/libs</code>ディレクトリ(実際は<code>target/docker/app/libs</code>ディレクトリ)にコピーされます。</span> <span class="merged" id="all.ZL39u.spl2" title="原文 : Any version information will be stripped from the files, so coherence-22.06.4.jar would become coherence.jar.">バージョン情報はファイルから取り除かれるため、<code>coherence-22.06.4.jar</code>は<code>coherence.jar</code>になります。</span> </p>
 
 </li>
 </ul>
@@ -281,7 +281,7 @@ lang="bash"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.1")
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.4")
 
     implementation "com.oracle.coherence.ce:coherence"
     implementation "com.oracle.coherence.ce:coherence-json"

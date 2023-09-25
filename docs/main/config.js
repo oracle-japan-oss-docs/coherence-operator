@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.2.8",
+        release: "3.3.0",
         releases: [
-            "3.2.8"
+            "3.3.0"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -494,19 +494,6 @@ function createRoutes(){
             component: loadPage('docs-jvm-070_debugger', '/docs/jvm/070_debugger', {})
         },
         {
-            path: '/docs/jvm/080_jmx',
-            meta: {
-                h1: 'JMXの使用',
-                title: 'JMXの使用',
-                h1Prefix: null,
-                description: null,
-                keywords: null,
-                customLayout: null,
-                hasNav: true
-            },
-            component: loadPage('docs-jvm-080_jmx', '/docs/jvm/080_jmx', {})
-        },
-        {
             path: '/docs/jvm/090_container_limits',
             meta: {
                 h1: 'コンテナ・リソースの制限',
@@ -624,17 +611,17 @@ function createRoutes(){
             component: loadPage('docs-management-020_management_over_rest', '/docs/management/020_management_over_rest', {})
         },
         {
-            path: '/docs/management/030_visualvm',
+            path: '/docs/management/025_coherence_cli',
             meta: {
-                h1: 'VisualVMの使用',
-                title: 'VisualVMの使用',
+                h1: 'Coherence CLI',
+                title: 'Coherence CLI',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
                 customLayout: null,
                 hasNav: true
             },
-            component: loadPage('docs-management-030_visualvm', '/docs/management/030_visualvm', {})
+            component: loadPage('docs-management-025_coherence_cli', '/docs/management/025_coherence_cli', {})
         },
         {
             path: '/docs/management/040_ssl',
@@ -808,8 +795,8 @@ function createRoutes(){
         {
             path: '/docs/other/040_annotations',
             meta: {
-                h1: 'ポッド注釈',
-                title: 'ポッド注釈',
+                h1: '注釈の追加',
+                title: '注釈の追加',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
@@ -1314,7 +1301,6 @@ function createNav(){
                 { href: '/docs/jvm/040_gc', title: 'ガベージ・コレクタ設定' },
                 { href: '/docs/jvm/050_memory', title: 'ヒープとメモリーの設定' },
                 { href: '/docs/jvm/070_debugger', title: 'デバッガ構成' },
-                { href: '/docs/jvm/080_jmx', title: 'JMXの使用' },
                 { href: '/docs/jvm/090_container_limits', title: 'コンテナ・リソースの制限' }
             ]
         },
@@ -1352,7 +1338,7 @@ function createNav(){
             items: [
                 { href: '/docs/management/010_overview', title: '概要' },
                 { href: '/docs/management/020_management_over_rest', title: 'RESTを介した管理' },
-                { href: '/docs/management/030_visualvm', title: 'VisualVMの使用' },
+                { href: '/docs/management/025_coherence_cli', title: 'Coherence CLI' },
                 { href: '/docs/management/040_ssl', title: 'RESTでの管理によるSSL' },
                 { href: '/docs/management/100_tmb_test', title: 'Coherenceネットワーク・テスト' }
             ]
@@ -1387,7 +1373,7 @@ function createNav(){
                 { href: '/docs/other/010_overview', title: '概要' },
                 { href: '/docs/other/020_environment', title: '環境変数' },
                 { href: '/docs/other/030_labels', title: 'ポッド・ラベル' },
-                { href: '/docs/other/040_annotations', title: 'ポッド注釈' },
+                { href: '/docs/other/040_annotations', title: '注釈の追加' },
                 { href: '/docs/other/045_security_context', title: 'ポッド&コンテナSecurityContext' },
                 { href: '/docs/other/050_configmap_volumes', title: 'ConfigMapボリュームの追加' },
                 { href: '/docs/other/060_secret_volumes', title: 'シークレット・ボリュームの追加' },

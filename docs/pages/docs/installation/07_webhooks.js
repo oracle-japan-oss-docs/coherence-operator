@@ -38,18 +38,18 @@
 <div class="section">
 <p><span class="merged" id="all.4Xpk9x" title="原文 : If installing the operator using the manifest yaml file first replace the occurrences of self-signed in the yaml file with cert-manager.">manifest yamlファイルを使用してオペレータをインストールする場合、yamlファイル内の<code>self-signed</code>の出現箇所を<code>cert-manager</code>に置き換えます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.4"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.4"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/cert-manager/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.4"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup
@@ -121,18 +121,18 @@ data:
 <div class="section">
 <p><span class="merged" id="all.4Xpk9x.1" title="原文 : If installing the operator using the manifest yaml file first replace the occurrences of self-signed in the yaml file with cert-manager.">manifest yamlファイルを使用してオペレータをインストールする場合、yamlファイル内の<code>self-signed</code>の出現箇所を<code>cert-manager</code>に置き換えます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.5"  title="原文:: For example:">次に例を示します。</span></p>
+<p><span class="merged" id="all.6vDv5.5"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.2.8/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/manual/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.1"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.5"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI.1" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup
@@ -152,7 +152,7 @@ lang="bash"
 
 >helm install  \
     --namespace &lt;namespace&gt; \
-    --set webhookCertType=manual <span class="conum" data-value="1" />
+    --set webhookCertType=manual \ <span class="conum" data-value="1" />
     coherence-operator \
     coherence/coherence-operator</markup>
 
@@ -166,8 +166,8 @@ lang="bash"
 
 >helm install  \
     --namespace &lt;namespace&gt; \
-    --set webhookCertType=manual <span class="conum" data-value="1" />
-    --set webhookCertSecret=operator-certs <span class="conum" data-value="2" />
+    --set webhookCertType=manual \ <span class="conum" data-value="1" />
+    --set webhookCertSecret=operator-certs \ <span class="conum" data-value="2" />
     coherence-operator \
     coherence/coherence-operator</markup>
 
@@ -176,6 +176,59 @@ lang="bash"
 <li data-value="2"><span class="merged" id="all.6vTdq" title="原文 : The name of the secret is set to operator-certs">シークレットの名前は<code>operator-certs</code>に設定されます</span></li>
 </ul>
 <p><span class="merged" id="all.4e9HXI" title="原文 : The Coherence Operator will now expect to find the keys and certs in a Secret named operator-certs in the same namespace that the Operator is deployed into.">Coherence Operatorでは、オペレータがデプロイされているのと同じネームスペースで、<code>operator-certs</code>という名前の<code>Secret</code>内のキーおよび証明書を検索する必要があります。</span></p>
+
+</div>
+</div>
+
+<h3 id="no-hooks"><span class="merged" id="all.4CGEmz" title="原文 : Install the Operator Without Web-Hooks">Webフックを使用しないオペレータのインストール</span></h3>
+<div class="section">
+<p><span class="merged" id="all.2cjOdm" title="原文 : It is possible to start the Operator without it registering any web-hooks with the API server.">APIサーバーにwebフックを登録せずに、オペレータを起動できます。</span></p>
+
+<div class="admonition caution">
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.1"  title="原文:: Caution">注意</span></p>
+<p ><p><span class="merged" id="all.1Xdgbj.spl1" title="原文 : Running the Operator without web-hooks is not recommended.">webフックなしでオペレータを実行することはお薦めしません。</span> <span class="merged" id="all.1Xdgbj.spl2" title="原文 : The admission web-hooks validate the Coherence resource yaml before it gets into the k8s cluster.">アドミッションwebフックは、<code>Coherence</code>リソースyamlがk8sクラスタに入る前にバリデートします。</span> <span class="merged" id="all.1Xdgbj.spl3" title="原文 : Without the web-hooks, invalid yaml will be accepted by k8s and the Operator will then log errors when it tries to reconcile invalid yaml.">webフックがない場合、無効なyamlはk8sによって受け入れられ、無効なyamlを調整しようとすると、オペレータはエラーをログに記録します。</span> <span class="merged" id="all.1Xdgbj.spl4" title="原文 : Or worse, the Operator will create an invalid StatefulSet which will then fail to start.">さらに悪い場合は、オペレータによって無効な<code>StatefulSet</code>が作成され、起動に失敗します。</span> </p>
+</p>
+</div>
+
+<h4 id="_install_using_manifest_file_3"><span class="merged" id="all.4BU8BY.2" title="原文 : Install Using Manifest File">マニフェスト・ファイルを使用したインストール</span></h4>
+<div class="section">
+<p><span class="merged" id="all.292xd6" title="原文 : If installing using the manifest yaml files, then you need to edit the coherence-operator.yaml manifest to add a command line argument to the Operator.">マニフェストyamlファイルを使用してインストールする場合は、<code>coherence-operator.yaml</code>マニフェストを編集して、オペレータにコマンドライン引数を追加する必要があります。</span></p>
+
+<p><span class="merged" id="all.1ieFpK" title="原文 : Update the controller-manager deployment and add an argument, edit the section that looks like this:"><code>controller-manager</code>デプロイメントを更新し、引数を追加し、次のようなセクションを編集します:</span></p>
+
+<markup
+lang="yaml"
+
+>        args:
+          - operator
+          - --enable-leader-election</markup>
+
+<p><span class="merged" id="all.4dOyn0" title="原文 : and add the additional --enable-webhook=false argument like this:">次のように<code>--enable-webhook=false</code>引数を追加します:</span></p>
+
+<markup
+lang="yaml"
+
+>        args:
+          - operator
+          - --enable-leader-election
+          - --enable-webhook=false</markup>
+
+<p><span class="merged" id="all.3gH1L" title="原文 : apiVersion: apps/v1 kind: Deployment metadata: name: controller-manager">apiVersion: アプリ/v1の種類: デプロイメント・メタデータ: 名前: controller-manager</span></p>
+
+</div>
+
+<h4 id="_installing_using_helm"><span class="merged" id="all.4e3KgA" title="原文 : Installing Using Helm">Helmを使用したインストール</span></h4>
+<div class="section">
+<p><span class="merged" id="all.1Egmcu" title="原文 : If installing the Operator using Helm, the webhooks value can be set to false in the values file or on the command line.">Helmを使用してオペレータをインストールする場合、値ファイルまたはコマンドラインで<code>webhooks</code>値をfalseに設定できます。</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set webhooks=false \
+    coherence-operator \
+    coherence/coherence-operator</markup>
 
 </div>
 </div>

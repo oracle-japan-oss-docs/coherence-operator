@@ -16,6 +16,10 @@
 
 </li>
 <li>
+<p><span class="merged" id="all.3PaPv9" title="原文 : Deleting a Namespace Containing Coherence Resource(s) is Stuck Pending Deletion"><router-link @click.native="this.scrollFix('#ns-delete')" to="#ns-delete">Coherenceリソースを含むネームスペースの削除は、削除の保留中のままです</router-link></span></p>
+
+</li>
+<li>
 <p><span class="merged" id="all.293CDp" title="原文 : Why Does the Operator Pod Restart"><router-link @click.native="this.scrollFix('#restart')" to="#restart">オペレータ・ポッドが再起動するのはなぜですか</router-link></span></p>
 
 </li>
@@ -69,6 +73,33 @@ lang="bash"
 >kubectl -n &lt;NAMESPACE&gt; patch coherence/&lt;COHERENCE_RESOURCE_NAME&gt; -p '{"metadata":{"finalizers":[]}}' --type=merge
 kubectl -n &lt;NAMESPACE&gt; delete coherence/&lt;COHERENCE_RESOURCE_NAME&gt;</markup>
 
+</div>
+
+<h3 id="ns-delete"><span class="merged" id="all.3UG0Kt" title="原文 : Deleting a Namespace Containing Coherence Resource(s) is Stuck Pending Deletion">Coherenceリソースを含むネームスペースの削除は、削除の保留中のままです</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1VRguD.spl1" title="原文 : If you have tried to delete a namespace using kubectl delete and the namespace is now stuck pending deletion, this could be related to the issue above."><code>kubectl delete</code>を使用してネームスペースを削除しようとしたときに、ネームスペースが削除の保留中になった場合、これは前述の問題に関連している可能性があります。</span> <span class="merged" id="all.1VRguD.spl2" title="原文 : This is especially true if the Operator is either not running, or it is in the same namespace that is being deleted.">これは、オペレータが実行されていないか、削除される同じネームスペースにある場合に特に当てはまります。</span> </p>
+
+<p><span class="merged" id="all.2Yl7uO.spl1" title="原文 : If deleting a namespace containing the Operator and a running Coherence cluster, or deleting a namespace containing a running Coherence cluster when the Operator is stopped will mean the finalizers the Operator added to the Coherence resources cannot be removed so the namespace will remain in a pending deletion state.">オペレータと実行中のCoherenceクラスタを含むネームスペースを削除する場合、またはオペレータが停止したときに実行中のCoherenceクラスタを含むネームスペースを削除した場合、オペレータがCoherenceリソースに追加したファイナライザを削除できないため、ネームスペースは削除保留状態のままになります。</span> <span class="merged" id="all.2Yl7uO.spl2" title="原文 : The solution to this is the same as the point above in I Uninstalled the Operator and Cannot Delete the Coherence Clusters">これに対する解答は、<router-link @click.native="this.scrollFix('#no-operator')" to="#no-operator">「オペレータをアンインストールし、Coherenceクラスタを削除できません」</router-link>の上の点と同じです</span> </p>
+
+<p><span class="merged" id="all.3Rat3.spl1" title="原文 : Alternatively, if you are running the Operator in a CI/CD environment and just want to be able to clean up after tests you can run Coherence clusters with the allowUnsafeDelete option enabled.">または、オペレータをCI/CD環境で実行していて、テスト後にクリーン・アップできるようにする場合は、<code>allowUnsafeDelete</code>オプションを有効にしてCoherenceクラスタを実行できます。</span> <span class="merged" id="all.3Rat3.spl2" title="原文 : By setting the allowUnsafeDelete field to true in the Coherence resource the Operator will not add a finalizer to that Coherence resource, allowing it to be deleted if its namespace is deleted."><code>Coherence</code>リソースで<code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはそのCoherenceリソースにファイナライザを追加せず、そのネームスペースが削除された場合にファイナライザを削除できます。</span> </p>
+
+<p><span class="merged" id="all.6vDv5.30"  title="原文:: For example:">例えば:</span></p>
+
+<markup
+lang="yaml"
+title="cluster.yaml"
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: unsafe-cluster
+spec:
+  allowUnsafeDelete: true</markup>
+
+<div class="admonition caution">
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.2"  title="原文:: Caution">注意</span></p>
+<p ><p><span class="merged" id="all.1NWBl2.spl1" title="原文 : Setting the allowUnsafeDelete field to true will mean that the Operator will not be able to intercept the deletion and shutdown of a Coherence cluster and ensure it has a clean, safe shutdown."><code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはCoherenceクラスタの削除と停止をインターセプトできず、クリーンで安全な停止を確保できなくなります。</span> <span class="merged" id="all.1NWBl2.spl2" title="原文 : This is usually ok in CI/CD environments where the cluster and namespace are being cleaned up at the end of a test.">これは通常、CI/CD環境で、テストの終了時にクラスタおよびネームスペースがクリーンアップされている場合に問題ありません。</span> <span class="merged" id="all.1NWBl2.spl3" title="原文 : This options should not be used in a production cluster, especially where features such as Coherence persistence are being used, otherwise the cluster may not cleanly shut down and will then not be able to be restarted using the persisted data.">このオプションは、特にCoherence永続性などの機能が使用されている本番クラスタでは使用しないでください。そうしないと、クラスタがクリーンに停止して、永続データを使用して再起動できなくなります。</span> </p>
+</p>
+</div>
 </div>
 
 <h3 id="restart"><span class="merged" id="all.32hxbE" title="原文 : Why Does the Operator Pod Restart After Installation">インストール後にオペレータ・ポッドが再起動するのはなぜですか</span></h3>
