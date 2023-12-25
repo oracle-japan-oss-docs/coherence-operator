@@ -108,7 +108,7 @@ lang="bash"
 namespace/coherence-example created</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.7"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.9"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.1kBG9f.spl1" title="原文 : In the examples, a Kubernetes namespace called coherence-example is used.">この例では、<code>coherence-example</code>というKubernetesネームスペースが使用されます。</span> <span class="merged" id="all.1kBG9f.spl2" title="原文 : If you want to change this namespace, ensure that you change any references to this namespace to match your selected namespace when running the examples.">このネームスペースを変更する場合は、例の実行時に、選択したネームスペースと一致するようにこのネームスペースへの参照を変更してください。</span> </p>
 </p>
 </div>
@@ -135,7 +135,7 @@ lang="bash"
 >./mvnw package jib:dockerBuild</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.8"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.10"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.uy3xO" title="原文 : If you are running behind a corporate proxy and receive the following message building the Docker image: Connect to gcr.io:443 [gcr.io/172.217.212.82] failed: connect timed out you must modify the build command to add the proxy hosts and ports to be used by the jib-maven-plugin as shown below:">企業プロキシの背後で実行していて、Dockerイメージを作成する次のメッセージを受信した場合: <code>Connect to gcr.io:443 [gcr.io/172.217.212.82] failed: connect timed out</code>ビルド・コマンドを変更して、次に示すように、<code>jib-maven-plugin</code>で使用されるプロキシ・ホストおよびポートを追加する必要があります:</span></p>
 
 <markup
@@ -153,7 +153,7 @@ lang="bash"
 >deployment-example:1.0.0</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.9"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.11"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.12z1wf.spl1" title="原文 : If you are running against a remote Kubernetes cluster, you need to tag and push the Docker image to your repository accessible to that cluster.">リモートのKubernetesクラスタに対して実行している場合は、Dockerイメージにタグ付けして、そのクラスタからアクセス可能なリポジトリにプッシュする必要があります。</span> <span class="merged" id="all.12z1wf.spl2" title="原文 : You also need to prefix the image name in the yaml files below.">また、次の<code>yaml</code>ファイルにイメージ名のプレフィクスを付ける必要があります。</span> </p>
 </p>
 </div>
@@ -879,7 +879,7 @@ lang="bash"
 <p><span class="merged" id="all.1rilVh.spl1" title="原文 : Install the Prometheus Operator, as documented in the Prometheus Operator Quick Start page.">Prometheusオペレータ<a href="https://prometheus-operator.dev/docs/prologue/quick-start/" id="" target="_blank" >「クイック・スタート」</a>ページの説明に従って、Prometheusオペレータをインストールします。</span> <span class="merged" id="all.1rilVh.spl2" title="原文 : Prometheus can then be accessed as documented in the Access Prometheus section of the Quick Start page.">Prometheusには、<a href="https://prometheus-operator.dev/docs/prologue/quick-start/#access-prometheus" id="" target="_blank" >「クイック・スタートのPrometheusセクションにアクセス」</a>ページの説明に従ってアクセスできます。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.10"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.12"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.4FYG0J" title="原文 : Using RBAC"><strong>RBACの使用</strong></span></p>
 
 <p><span class="merged" id="all.3Mi8rl.spl1" title="原文 : If installing Prometheus into RBAC enabled k8s clusters, you may need to create the required RBAC resources as described in the Prometheus RBAC documentation.">PrometheusをRBAC対応k8sクラスタにインストールする場合は、<a href="https://prometheus-operator.dev/docs/operator/rbac/" id="" target="_blank" >Prometheus RBAC</a>ドキュメントの説明に従って、必要なRBACリソースを作成する必要があります。</span> <span class="merged" id="all.3Mi8rl.spl2" title="原文 : The Coherence Operator contains an example that works with the out-of-the-box Prometheus Operator install that we use for testing prometheus-rbac.yaml This yaml creates a ClusterRole with the required permissions and a ClusterRoleBinding that binds the role to the prometheus-k8s service account (which is the name of the account created, and used by the Prometheus Operator).">Coherence Operatorには、<a href="https://raw.githubusercontent.com/oracle/coherence-operator/main/hack/prometheus-rbac.yaml" id="" target="_blank" >prometheus-rbac.yaml</a>のテストに使用する即時利用可能なPrometheusオペレータ・インストールと連携する例が含まれています。このyamlは、必要な権限を持つ<code>ClusterRole</code>と、<code>prometheus-k8s</code>サービス・アカウント(作成されたアカウントの名前で、Prometheusオペレータによって使用される)にロールをバインドする<code>ClusterRoleBinding</code>を作成します。</span> <span class="merged" id="all.3Mi8rl.spl3" title="原文 : This yaml file can be installed into k8s before installing the Prometheus Operator.">このyamlファイルは、Prometheusオペレータをインストールする前にk8sにインストールできます。</span> </p>

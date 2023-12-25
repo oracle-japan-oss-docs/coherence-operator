@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.3qAAFk.spl1" title="原文 : This example covers running the Coherence Operator and Coherence clusters in Kubernetes with network policies.">この例では、ネットワーク・ポリシーを使用してKubernetesでCoherence OperatorおよびCoherenceクラスタを実行する方法について説明します。</span> <span class="merged" id="all.3qAAFk.spl2" title="原文 : In Kubernetes, a Network Policy is an application-centric construct which allow you to specify how a pod is allowed to communicate with various network &quot;entities&quot; (we use the word &quot;entity&quot; here to avoid overloading the more common terms such as &quot;endpoints&quot; and &quot;services&quot;, which have specific Kubernetes connotations) over the network.">Kubernetesでは、<a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/" id="" target="_blank" >「ネットワーク・ポリシー」</a>はアプリケーション中心のコンストラクトであり、これによって、ポッドが様々なネットワーク・エンティティと通信する方法を指定できます(ここでは「エンティティ」という語を使用して、特定のKubernetes接続を持つ「エンドポイント」や「サービス」より一般的な用語のオーバーロードを回避します)。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.11"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.13"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3hLfz5.spl1" title="原文 : Network policies in Kubernetes are easy to get wrong if you are not careful.">注意しないと、Kubernetesのネットワーク・ポリシーが間違ってしまうことがよくあります。</span> <span class="merged" id="all.3hLfz5.spl2" title="原文 : In this case a policy will either block traffic it should not, in which case your application will not work, or it will let traffic through it should block, which will be an invisible security hole.">この場合、ポリシーによってトラフィックがブロックされる(この場合、アプリケーションが動作しない)か、ポリシーによってトラフィックがブロックされる(不可視のセキュリティ・ホールになる)かのいずれかになります。</span> </p>
 
 <p><span class="merged" id="all.363qVI" title="原文 : It is obviously important to test your policies, but Kubernetes offers next to zero visibility into what the policies are actually doing, as it is typically the network CNI extensions that are providing the policy implementation and each of these may work in a different way.">ポリシーをテストすることは明らかに重要ですが、Kubernetesは、ポリシー実装を提供しているネットワークCNI拡張機能であり、これらのそれぞれが異なる方法で機能する可能性があるため、ポリシーが実際に行っていることはゼロの可視性に近くなります。</span></p>
@@ -345,7 +345,7 @@ kubectl -n coherence apply -f manifests/allow-operator-cluster-member-egress.yam
 <div class="section">
 <p><span class="merged" id="all.2lZkDM" title="原文 : With all the above policies in place, the Operator is able to work correctly, but if a Coherence resource is now created Kubernetes will be unable to call the Operator’s webhook without the correct ingress policy.">前述のポリシーをすべて設定すると、オペレータは正しく動作できますが、<code>Coherence</code>リソースが作成された場合、Kubernetesは、正しいイングレス・ポリシーなしでオペレータのwebフックをコールできません。</span></p>
 
-<p><span class="merged" id="all.3IVnXi.spl1" title="原文 : The following example demonstrates this.">次の例でこれを説明します。</span> <span class="merged" id="all.3IVnXi.spl2" title="原文 : Assume there is a minimal`Coherence` yaml file named minimal.yaml that will create a single member Coherence cluster.">単一のメンバーCoherenceクラスタを作成する最小限の`Coherence` yaml file name <code>minimal.yaml</code>があるとします。</span> </p>
+<p><span class="merged" id="all.3IVnXi.spl1"  title="原文: The following example demonstrates this.">次の例でこれを説明します。</span> <span class="merged" id="all.3IVnXi.spl2" title="原文 : Assume there is a minimal`Coherence` yaml file named minimal.yaml that will create a single member Coherence cluster.">単一のメンバーCoherenceクラスタを作成する最小限の`Coherence` yaml file name <code>minimal.yaml</code>があるとします。</span> </p>
 
 <markup
 lang="yaml"
@@ -948,7 +948,7 @@ lang="bash"
 <markup
 
 
->1.6727606592497227e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727606592497227e+09	INFO	runner	Operator Version: 3.3.1
 1.6727606592497835e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727606592500978e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727606592501197e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -992,7 +992,7 @@ lang="bash"
 <markup
 
 
->1.6727631152848177e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727631152848177e+09	INFO	runner	Operator Version: 3.3.1
 1.6727631152849226e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727631152849536e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727631152849755e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1050,7 +1050,7 @@ lang="bash"
 <markup
 
 
->1.6727639834559627e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727639834559627e+09	INFO	runner	Operator Version: 3.3.1
 1.6727639834562948e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727639834563956e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727639834565024e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1098,7 +1098,7 @@ spec:
     spec:
       containers:
       - name: net-test
-        image: ghcr.io/oracle/coherence-operator:3.3.0
+        image: ghcr.io/oracle/coherence-operator:3.3.2
         env:
           - name: HOST
             value: net-test-coherence-server.coh-test.svc
@@ -1133,7 +1133,7 @@ lang="bash"
 <markup
 
 
->1.6727665901488597e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727665901488597e+09	INFO	runner	Operator Version: 3.3.1
 1.6727665901497366e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727665901498337e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727665901498716e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1183,7 +1183,7 @@ lang="bash"
 <markup
 
 
->1.6727671834237397e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727671834237397e+09	INFO	runner	Operator Version: 3.3.1
 1.6727671834238796e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727671834239576e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727671834240365e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1233,7 +1233,7 @@ lang="bash"
 <markup
 
 
->1.6727691273634596e+09	INFO	runner	Operator Version: 3.3.0
+>1.6727691273634596e+09	INFO	runner	Operator Version: 3.3.1
 1.6727691273635025e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727691273635256e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727691273635616e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5

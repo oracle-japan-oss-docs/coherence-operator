@@ -43,7 +43,7 @@ title="pom.xml"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.4")</markup>
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.6")</markup>
 
 <p><span class="merged" id="all.1kOa4P" title="原文 : We can then add the coherence and coherence-json modules as dependencies">その後、<code>coherence</code>および<code>coherence-json</code>モジュールを依存関係として追加できます</span></p>
 
@@ -67,7 +67,7 @@ title="pom.xml"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.4")
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.6")
 
     implementation "com.oracle.coherence.ce:coherence"
     implementation "com.oracle.coherence.ce:coherence-json"

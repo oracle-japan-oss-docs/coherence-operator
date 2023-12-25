@@ -43,13 +43,13 @@
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.2/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/cert-manager/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.4"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.6"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup
@@ -126,13 +126,13 @@ data:
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.0/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.3.2/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/manual/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.5"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.7"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI.1" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup

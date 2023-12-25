@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.2RtAoY.spl1" title="原文 : This example shows how to deploy a simple Coherence cluster in Kubernetes manually, and secure the Extend endpoint using TLS.">この例では、Kubernetesに単純なCoherenceクラスタを手動でデプロイし、TLSを使用して拡張エンドポイントを保護する方法を示します。</span> <span class="merged" id="all.2RtAoY.spl2" title="原文 : This example expands on the StatefulSet used in the first simple deployment example.">この例では、最初の単純なデプロイメント例で使用されている<code>StatefulSet</code>を展開します。</span> </p>
 
 <div class="admonition tip">
-<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.16"  title="原文:: Tip">ヒント</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.245DJ6.17"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.4Q3rp" title="原文 :  The complete source code for this example is in the Coherence Operator GitHub repository."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />この例の完全なソース・コードは、<a href="https://github.com/oracle/coherence-operator/tree/main/examples/no-operator/03_extend_tls" id="" target="_blank" >Coherence Operator GitHub</a>リポジトリにあります。</span></p>
 </p>
 </div>
@@ -297,7 +297,7 @@ spec:
 </div>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.13"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.15"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.1omHLr.spl1" title="原文 : The COHERENCE_EXTEND_KEYSTORE and COHERENCE_EXTEND_TRUSTSTORE values must be URLs."><code>COHERENCE_EXTEND_KEYSTORE</code>および<code>COHERENCE_EXTEND_TRUSTSTORE</code>の値はURLである必要があります。</span> <span class="merged" id="all.1omHLr.spl2" title="原文 : In this case we refer to files usinf the file: prefix.">この場合、ファイルでは<code>file:</code>プレフィクスを使用します。</span> </p>
 </p>
 </div>

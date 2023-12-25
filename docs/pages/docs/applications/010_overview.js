@@ -26,7 +26,7 @@
 </v-layout>
 </div>
 
-<h3 id="_configuring_applications"><span class="merged" id="all.1jIGUZ" title="原文 : Configuring Applications">アプリケーションの構成</span></h3>
+<h3 id="_configuring_applications"><span class="merged" id="all.1jIGUZ"  title="原文:: Configuring Applications">アプリケーションの構成</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2qgfo4.spl1" title="原文 : There are many settings in a Coherence resource that control the behaviour of Coherence, the JVM and the application code."><code>Coherence</code>リソースには、Coherence、JVMおよびアプリケーション・コードの動作を制御する多くの設定があります。</span> <span class="merged" id="all.2qgfo4.spl2" title="原文 : Some of the application specific settings are shown below:">アプリケーション固有の設定の一部を次に示します:</span> </p>
 

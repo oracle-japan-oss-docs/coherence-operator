@@ -27,5 +27,25 @@ spec:
 <li data-value="1"><span class="merged" id="all.6tflb" title="原文 : The VAR_ONE environment variable is a simple variable with a value of VALUE_ONE"><code>VAR_ONE</code>環境変数は、値が<code>VALUE_ONE</code>の単純な変数です</span></li>
 <li data-value="2"><span class="merged" id="all.2YYVf6" title="原文 : The VAR_TWO environment variable is variable that is loaded from a secret."><code>VAR_TWO</code>環境変数は、シークレットからロードされる変数です。</span></li>
 </ul>
+
+<h3 id="_environment_variables_from"><span class="merged" id="all.406KCz" title="原文 : Environment Variables From">環境変数From</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1W5bjY" title="原文 : It is also possible to specify environment variables from a ConfigMap or Secret as you would for a Kubernetes container.">Kubernetesコンテナの場合と同様に、<code>ConfigMap</code>または<code>Secret</code>から環境変数を指定することもできます。</span></p>
+
+<p><span class="merged" id="all.3ETCyX" title="原文 : For example, if there was a ConfigMap named special-config that contained environment variable values, it can be added to the Coherence spec as shown below.">たとえば、環境変数値を含む<code>special-config</code>という名前の<code>ConfigMap</code>がある場合、次に示すように<code>Coherence</code>仕様に追加できます。</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: test
+spec:
+  envFrom:
+    - configMapRef:
+      name: special-config</markup>
+
+</div>
 </div>
 </doc-view>

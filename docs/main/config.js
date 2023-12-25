@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.3.0",
+        release: "3.3.2",
         releases: [
-            "3.3.0"
+            "3.3.2"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -41,8 +41,8 @@ function createRoutes(){
         {
             path: '/docs/about/02_introduction',
             meta: {
-                h1: 'Coherenceオペレータの導入',
-                title: 'Coherenceオペレータの導入',
+                h1: 'Coherence Operatorの導入',
+                title: 'Coherence Operatorの導入',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
@@ -1131,6 +1131,19 @@ function createRoutes(){
             component: loadPage('examples-no-operator-03_extend_tls-README', '/examples/no-operator/03_extend_tls/README', {})
         },
         {
+            path: '/examples/no-operator/04_istio/README',
+            meta: {
+                h1: 'Istioを使用したCoherenceの実行',
+                title: 'Istioを使用したCoherenceの実行',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('examples-no-operator-04_istio-README', '/examples/no-operator/04_istio/README', {})
+        },
+        {
             path: '/examples/no-operator/test-client/README',
             meta: {
                 h1: 'クライアントの拡張の例',
@@ -1238,7 +1251,7 @@ function createNav(){
             group: '/about',
             items: [
                 { href: '/docs/about/01_overview', title: '概要' },
-                { href: '/docs/about/02_introduction', title: 'Coherenceオペレータの導入' },
+                { href: '/docs/about/02_introduction', title: 'Coherence Operatorの導入' },
                 { href: '/docs/about/03_quickstart', title: 'クイック・スタート' },
                 { href: '/docs/about/04_coherence_spec', title: 'Coherence Operator APIドキュメント' },
                 { href: '/docs/about/05_upgrade', title: 'バージョン2からのアップグレード' }
@@ -1413,6 +1426,7 @@ function createNav(){
                 { href: '/examples/no-operator/01_simple_server/README', title: 'シンプルなCoherenceクラスタ' },
                 { href: '/examples/no-operator/02_metrics/README', title: 'Coherenceメトリクスの有効化' },
                 { href: '/examples/no-operator/03_extend_tls/README', title: 'TLSによるセキュアなCoherence拡張' },
+                { href: '/examples/no-operator/04_istio/README', title: 'Istioを使用したCoherenceの実行' },
                 { href: '/examples/no-operator/test-client/README', title: 'クライアントの拡張の例' }
             ]
         },

@@ -21,8 +21,11 @@
 
 <h2 id="_persistence_mode"><span class="merged" id="all.2gHMSK"  title="原文:: Persistence Mode">永続性モード</span></h2>
 <div class="section">
-<p><span class="merged" id="all.3skhD1.spl1" title="原文 : There are three default persistence modes available, active, active-async and on-demand; the default mode is on-demand.">使用可能なデフォルトの永続性モードは、<code>active</code>、<code>active-async</code>および<code>on-demand</code>の3つです。デフォルトのモードは<code>on-demand</code>です。</span> <span class="merged" id="all.3skhD1.spl2" title="原文 : The persistence mode will be set using the spec.coherence.persistence,mode field in the CRD.">永続性モードは、CRDの<code>spec.coherence.persistence,mode</code>フィールドを使用して設定されます。</span> <span class="merged" id="all.3skhD1.spl3" title="原文 : The value of this field will be used to set the coherence.distributed.persistence-mode system property in the Coherence JVM.">このフィールドの値は、Coherence JVMで<code>coherence.distributed.persistence-mode</code>システム・プロパティを設定するために使用されます。</span> </p>
+<p><span class="merged" id="all.3Tvvmz.spl1" title="原文 : There are four default persistence modes available, active, active-async, active-backup, and on-demand; the default mode is on-demand.">使用可能なデフォルトの永続性モードは、<code>active</code>, <code>active-async</code>, <code>active-backup</code>および<code>on-demand</code>の4つあり、デフォルト・モードは<code>on-demand</code>です。</span> <span class="merged" id="all.3Tvvmz.spl2" title="原文 : The persistence mode will be set using the spec.coherence.persistence,mode field in the CRD.">永続性モードは、CRDの<code>spec.coherence.persistence,mode</code>フィールドを使用して設定されます。</span> <span class="merged" id="all.3Tvvmz.spl3" title="原文 : The value of this field will be used to set the coherence.distributed.persistence.mode system property in the Coherence JVM.">このフィールドの値は、Coherence JVMで<code>coherence.distributed.persistence.mode</code>システム・プロパティを設定するために使用されます。</span> </p>
 
+<div class="admonition note">
+<p class="admonition-inline"><span class="merged" id="all.3weZL2.spl1" title="原文 : active-backup persistence mode is only available in the most recent versions of Coherence."><code>active-backup</code>永続性モードは、Coherenceの最新バージョンでのみ使用できます。</span> <span class="merged" id="all.3weZL2.spl2" title="原文 : Please check the release notes for your version.">ご使用のバージョンのリリース・ノートを確認してください。</span> </p>
+</div>
 <p><span class="merged" id="all.6vDv5.2"  title="原文:: For example:">例えば:</span></p>
 
 <markup
