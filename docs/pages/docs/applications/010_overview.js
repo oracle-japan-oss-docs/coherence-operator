@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.zsEjh.spl1" title="原文 : A typical Coherence deployment contains custom application code that runs with Coherence.">通常のCoherenceデプロイメントには、Coherenceで実行されるカスタム・アプリケーション・コードが含まれます。</span> <span class="merged" id="all.zsEjh.spl2" title="原文 : To run custom application code in a Coherence resource that code needs to be packaged into an image that the deployment will use."><code>Coherence</code>リソースでカスタム・アプリケーション・コードを実行するには、デプロイメントで使用するイメージにコードをパッケージ化する必要があります。</span> </p>
 
 
-<h3 id="_building_and_deploying_applications"><span class="merged" id="all.2k71Z9" title="原文 : Building and Deploying Applications">アプリケーションのビルドおよびデプロイ</span></h3>
+<h3 id="_building_and_deploying_applications"><span class="merged" id="all.2k71Z9"  title="原文:: Building and Deploying Applications">アプリケーションのビルドおよびデプロイ</span></h3>
 <div class="section">
 <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/applications/020_build_application"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">カスタム・アプリケーション・イメージの作成</span></v-card-title> <v-card-text class="caption">
@@ -26,7 +26,7 @@
 </v-layout>
 </div>
 
-<h3 id="_configuring_applications"><span class="merged" id="all.1jIGUZ"  title="原文:: Configuring Applications">アプリケーションの構成</span></h3>
+<h3 id="_configuring_applications"><span class="merged" id="all.1jIGUZ" title="原文 : Configuring Applications">アプリケーションの構成</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2qgfo4.spl1" title="原文 : There are many settings in a Coherence resource that control the behaviour of Coherence, the JVM and the application code."><code>Coherence</code>リソースには、Coherence、JVMおよびアプリケーション・コードの動作を制御する多くの設定があります。</span> <span class="merged" id="all.2qgfo4.spl2" title="原文 : Some of the application specific settings are shown below:">アプリケーション固有の設定の一部を次に示します:</span> </p>
 

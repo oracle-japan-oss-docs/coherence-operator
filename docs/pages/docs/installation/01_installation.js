@@ -3,7 +3,7 @@
  <v-layout row wrap> <v-flex xs12 sm10 lg10> <v-card class="section-def" v-bind:color="$store.state.currentColor"> <v-card-text class="pa-3"> <v-card class="section-def__card"> <v-card-text>
 <dl>
 <dt slot=title><span class="merged" id="all.1Tb5TG" title="原文 : Coherence Operator Installation">Coherence Operatorインストール</span></dt>
-<dd slot="desc"><p><span class="merged" id="all.46J0gG" title="原文 : The Coherence Operator is available as an image from the GitHub container registry ghcr.io/oracle/coherence-operator:3.3.2 that can easily be installed into a Kubernetes cluster.">Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるGitHubコンテナ・レジストリ<code>ghcr.io/oracle/coherence-operator:3.3.2</code>のイメージとして使用できます。</span></p>
+<dd slot="desc"><p><span class="merged" id="all.1NtU1g" style='background-color:yellow' title="原文 : The Coherence Operator is available as an image from the GitHub container registry ghcr.io/oracle/coherence-operator:3.3.4 that can easily be installed into a Kubernetes cluster.">♪Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるGitHubコンテナ・レジストリ<code>ghcr.io/oracle/coherence-operator:3.3.4</code>のイメージとして使用できます。</span></p>
 </dd>
 </dl>
 </v-card-text>
@@ -66,6 +66,10 @@
 </li>
 <li>
 <p><span class="merged" id="all.1iGGea" title="原文 : Set Additional Annotations"><router-link @click.native="this.scrollFix('#helm-annotations')" to="#helm-annotations">追加注釈の設定</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.nieDr" style='background-color:yellow' title="原文 : CoherenceJob CRD Support">♪<router-link @click.native="this.scrollFix('#helm-job')" to="#helm-job">CoherenceJob CRDのサポート</router-link></span></p>
 
 </li>
 <li>
@@ -219,7 +223,7 @@
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.3.1/coherence-operator.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.4.0/coherence-operator.yaml</markup>
 
 <p><span class="merged" id="all.2vyxRX.1.spl1" title="原文 : This will create a namespace called coherence and install the Operator into it along with all the required ClusterRole and RoleBinding resources.">これにより、<code>coherence</code>というネームスペースが作成され、必要なすべての<code>ClusterRole</code>および<code>RoleBinding</code>リソースとともにオペレータがインストールされます。</span> <span class="merged" id="all.2vyxRX.1.spl2" title="原文 : The coherence namespace can be changed by downloading and editing the yaml file."><code>coherence</code>ネームスペースは、yamlファイルをダウンロードおよび編集することによって変更できます。</span> </p>
 
@@ -307,11 +311,11 @@ lang="bash"
 
 <h3 id="helm-operator-image"><span class="merged" id="all.3NvRwL" title="原文 : Set the Operator Image">オペレータ・イメージの設定</span></h3>
 <div class="section">
-<p><span class="merged" id="all.1ZHE69.spl1" title="原文 : The Helm chart uses a default Operator image from ghcr.io/oracle/coherence-operator:3.3.2.">Helmチャートでは、<code>ghcr.io/oracle/coherence-operator:3.3.2</code>のデフォルトのオペレータ・イメージが使用されます。</span> <span class="merged" id="all.1ZHE69.spl2" title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then there are two ways to override the default.">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、デフォルトを上書きする方法が2つあります。</span> <span class="merged" id="all.1ZHE69.spl3" title="原文 : Either set the individual image.registry, image.name and image.tag values, or set the whole image name by setting the image value.">個別の<code>image.registry</code>、<code>image.name</code>および<code>image.tag</code>値を設定するか、<code>image</code>値を設定してイメージ名全体を設定します。</span> </p>
+<p><span class="merged" id="all.17Midz.spl1" style='background-color:yellow' title="原文 : The Helm chart uses a default Operator image from ghcr.io/oracle/coherence-operator:3.3.4.">♪Helmチャートでは、<code>ghcr.io/oracle/coherence-operator:3.3.4</code>のデフォルトのオペレータ・イメージが使用されます。</span> <span class="merged" id="all.17Midz.spl2" style='background-color:yellow' title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then there are two ways to override the default.">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、デフォルトを上書きする方法が2つあります。</span> <span class="merged" id="all.17Midz.spl3" style='background-color:yellow' title="原文 : Either set the individual image.registry, image.name and image.tag values, or set the whole image name by setting the image value.">個別の<code>image.registry</code>、<code>image.name</code>および<code>image.tag</code>値を設定するか、<code>image</code>値を設定してイメージ名全体を設定します。</span> </p>
 
-<p><span class="merged" id="all.ecSQG" title="原文 : For example, if the Operator image has been deployed into a private registry named foo.com but with the same image name coherence-operator and tag 3.3.2 as the default image, then just the image.registry needs to be specified.">たとえば、オペレータ・イメージが<code>foo.com</code>という名前のプライベート・レジストリにデプロイされているが、デフォルト・イメージと同じイメージ名<code>coherence-operator</code>およびタグ<code>3.3.2</code>の場合は、<code>image.registry</code>のみを指定する必要があります。</span></p>
+<p><span class="merged" id="all.3BXbmv" style='background-color:yellow' title="原文 : For example, if the Operator image has been deployed into a private registry named foo.com but with the same image name coherence-operator and tag 3.3.4 as the default image, then just the image.registry needs to be specified.">♪たとえば、オペレータ・イメージが<code>foo.com</code>という名前のプライベート・レジストリにデプロイされているが、デフォルト・イメージと同じイメージ名<code>coherence-operator</code>およびタグ<code>3.3.4</code>の場合は、<code>image.registry</code>のみを指定する必要があります。</span></p>
 
-<p><span class="merged" id="all.3hO6wI" title="原文 : In the example below, the image used to run the Operator will be foo.com/coherence-operator:3.3.2.">次の例では、オペレータの実行に使用されるイメージは<code>foo.com/coherence-operator:3.3.2</code>です。</span></p>
+<p><span class="merged" id="all.3O8ELU" style='background-color:yellow' title="原文 : In the example below, the image used to run the Operator will be foo.com/coherence-operator:3.3.4.">♪次の例では、オペレータの実行に使用されるイメージは<code>foo.com/coherence-operator:3.3.4</code>です。</span></p>
 
 <markup
 lang="bash"
@@ -716,6 +720,23 @@ title="add-annotations-values.yaml"
 </div>
 </div>
 
+<h3 id="helm-job"><span class="merged" id="all.ryYBR" style='background-color:yellow' title="原文 : CoherenceJob CRD Support">♪CoherenceJob CRDのサポート</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1tOvVd.spl1" style='background-color:yellow' title="原文 : By default, the Operator will install both CRDs, Coherence and CoherenceJob.">♪デフォルトでは、オペレータはCRD (<code>Coherence</code>および<code>CoherenceJob</code>)の両方をインストールします。</span> <span class="merged" id="all.1tOvVd.spl2" style='background-color:yellow' title="原文 : If support for CoherenceJob is not required then it can be excluded from being installed setting the Operator command line parameter --install-job-crd to false.">♪<code>CoherenceJob</code>のサポートが不要な場合は、オペレータ・コマンドライン・パラメータ<code>--install-job-crd</code>を<code>false</code>に設定してインストールから除外できます。</span> </p>
+
+<p><span class="merged" id="all.1G3c44" style='background-color:yellow' title="原文 : When installing with Helm, the allowCoherenceJobs value can be set to false to disable support for CoherenceJob resources (the default value is true).">♪Helmを使用してインストールする場合、<code>allowCoherenceJobs</code>値を<code>false</code>に設定して、<code>CoherenceJob</code>リソースのサポートを無効にできます(デフォルト値は<code>true</code>です)。</span></p>
+
+<markup
+lang="bash"
+
+>helm install  \
+    --namespace &lt;namespace&gt; \
+    --set allowCoherenceJobs=false \
+    coherence \
+    coherence/coherence-operator</markup>
+
+</div>
+
 <h3 id="helm-uninstall"><span class="merged" id="all.xWyRu" title="原文 : Uninstall the Coherence Operator Helm chart">Coherence Operator Helmチャートをアンインストール</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4Kyu3l" title="原文 : To uninstall the operator:">オペレータをアンインストールするには:</span></p>
@@ -730,11 +751,11 @@ lang="bash"
 
 <h2 id="kubectl"><span class="merged" id="all.g4cZe" title="原文 : Install with Kubectl and Kustomize">KubectlおよびKustomizeでインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.19gZP6" title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.3.1 Manifests">yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.1/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.1 マニフェスト</a></span></p>
+<p><span class="merged" id="all.4fNzUo" style='background-color:yellow' title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.3.5 Manifests">♪yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.5/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.5 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3iFoWt" title="原文 : These manifest files are for use with a tool called Kustomize, which is built into kubectl see the documentation here: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">これらのマニフェスト・ファイルは、<code>kubectl</code>に組み込まれたKustomizeと呼ばれるツールで使用します。ここにあるドキュメントを参照してください: <a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/" id="" target="_blank" >https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/</a></span></p>
 
-<p><span class="merged" id="all.4OSQFk" title="原文 : Download the 3.3.1 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.1/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.3.1 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
+<p><span class="merged" id="all.3etd2o" style='background-color:yellow' title="原文 : Download the 3.3.5 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">♪リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.5/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.3.5 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
 
 <markup
 
@@ -789,14 +810,14 @@ lang="bash"
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.3.1</markup>
+>cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.3.5</markup>
 
 <p><span class="merged" id="all.325mTV" title="原文 : Change the name of the Operator image by running the command below, changing the image name to the registry and image name that you are using for the Operator utilities image">次のコマンドを実行してOperatorイメージの名前を変更し、そのイメージ名を、Operatorユーティリティのイメージに使用するレジストリおよびイメージ名に変更</span></p>
 
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.3.1</markup>
+>cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.3.5</markup>
 
 <p><span class="merged" id="all.3AmH2f.spl1" title="原文 : Change the name of the default Coherence image.">デフォルトのCoherenceイメージの名前を変更します。</span> <span class="merged" id="all.3AmH2f.spl2" title="原文 : If you are always going to be deploying your own application images then this does not need to change.">独自のアプリケーション・イメージを常にデプロイする場合、これを変更する必要はありません。</span> </p>
 
@@ -859,19 +880,19 @@ kubectl -n coherence-test create -f operator.yaml</markup>
 </div>
 </div>
 
-<h2 id="tanzu"><span class="merged" id="all.rVQEp" title="原文 : Install as a VMWare Tanzu Package (Carvel kapp-controller)">VMWare Tanzuパッケージとしてインストールする(Carvel kapp-controller)</span></h2>
+<h2 id="tanzu"><span class="merged" id="all.rVQEp" title="原文 : Install as a VMWare Tanzu Package (Carvel kapp-controller)">VMWare Tanzuパッケージとしてインストール (Carvel kapp-controller)</span></h2>
 <div class="section">
-<p><span class="merged" id="all.pXaDI.spl1" title="原文 : If using VMWare Tanzu the Coherence Operator can be installed as a package."><a href="https://tanzucommunityedition.io" id="" target="_blank" >VMWare Tanzu</a>を使用する場合、Coherence Operatorをパッケージとしてインストールできます。</span> <span class="merged" id="all.pXaDI.spl2" title="原文 : Under the covers, Tanzu uses the Carvel tool set to deploy packages.">カバーでは、Tanzuは<a href="https://carvel.dev" id="" target="_blank" >Carvel</a>ツール・セットを使用してパッケージをデプロイします。</span> <span class="merged" id="all.pXaDI.spl3" title="原文 : The Carvel tools can be used outside Tanzu, so the Coherence Operator repo and package images could also be deployed using a standalone Carvel kapp-controller.">CarvelはTanzu外部で使用できるため、Coherence Operatorリポジトリおよびパッケージ・イメージは、スタンドアロンのCarvel <a href="https://carvel.dev/kapp-controller/" id="" target="_blank" >kapp-controller</a>を使用してデプロイすることもできます。</span> </p>
+<p><span class="merged" id="all.pXaDI.spl1" title="原文 : If using VMWare Tanzu the Coherence Operator can be installed as a package."><a href="https://tanzucommunityedition.io" id="" target="_blank" >VMWare Tanzu</a>を使用する場合、Coherence Operatorをパッケージとしてインストールできます。</span> <span class="merged" id="all.pXaDI.spl2" title="原文 : Under the covers, Tanzu uses the Carvel tool set to deploy packages.">カバーの下では、Tanzuは<a href="https://carvel.dev" id="" target="_blank" >Carvel</a>ツール・セットを使用してパッケージをデプロイします。</span> <span class="merged" id="all.pXaDI.spl3" title="原文 : The Carvel tools can be used outside Tanzu, so the Coherence Operator repo and package images could also be deployed using a standalone Carvel kapp-controller.">CarvelはTanzu外部で使用できるため、Coherence Operatorリポジトリおよびパッケージ・イメージは、スタンドアロンのCarvel <a href="https://carvel.dev/kapp-controller/" id="" target="_blank" >kapp-controller</a>を使用してデプロイすることもできます。</span> </p>
 
 <p><span class="merged" id="all.1QjwLD" title="原文 : The Coherence Operator release published two images required to deploy the Operator as a Tanzu package.">Coherence Operatorリリースでは、OperatorをTanzuパッケージとしてデプロイするために必要な2つのイメージが公開されました。</span></p>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1WAK4s" title="原文 : ghcr.io/oracle/coherence-operator-package:3.3.2 - the Coherence Operator package"><code>ghcr.io/oracle/coherence-operator-package:3.3.2</code> - Coherence Operatorパッケージ</span></p>
+<p><span class="merged" id="all.1Rl23n" style='background-color:yellow' title="原文 : ghcr.io/oracle/coherence-operator-package:3.3.4 - the Coherence Operator package">♪<code>ghcr.io/oracle/coherence-operator-package:3.3.4</code> - Coherence Operatorパッケージ</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.LwuP7" title="原文 : ghcr.io/oracle/coherence-operator-repo:3.3.2 - the Coherence Operator repository"><code>ghcr.io/oracle/coherence-operator-repo:3.3.2</code> - Coherence Operatorリポジトリ</span></p>
+<p><span class="merged" id="all.4O62I5" style='background-color:yellow' title="原文 : ghcr.io/oracle/coherence-operator-repo:3.3.4 - the Coherence Operator repository">♪<code>ghcr.io/oracle/coherence-operator-repo:3.3.4</code> - Coherence Operatorリポジトリ</span></p>
 
 </li>
 </ul>
@@ -884,7 +905,7 @@ kubectl -n coherence-test create -f operator.yaml</markup>
 lang="bash"
 
 >tanzu package repository add coherence-repo \
-    --url ghcr.io/oracle/coherence-operator-repo:3.3.1 \
+    --url ghcr.io/oracle/coherence-operator-repo:3.3.5 \
     --namespace coherence \
     --create-namespace</markup>
 
@@ -895,7 +916,7 @@ lang="bash"
 
 >tanzu package repository list --namespace coherence</markup>
 
-<p><span class="merged" id="all.3XKtX2" title="原文 : which should display something like the following">次のようなものを表示</span></p>
+<p><span class="merged" id="all.3XKtX2" title="原文 : which should display something like the following">次のようなものを表示します</span></p>
 
 <markup
 lang="bash"
@@ -916,7 +937,7 @@ lang="bash"
 lang="bash"
 
 >NAME                                  DISPLAY-NAME               SHORT-DESCRIPTION                                             LATEST-VERSION
-coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.3.1</markup>
+coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.3.5</markup>
 
 </div>
 
@@ -929,7 +950,7 @@ lang="bash"
 
 >tanzu package install coherence \
     --package-name coherence-operator.oracle.github.com \
-    --version 3.3.1 \
+    --version 3.3.5 \
     --namespace coherence</markup>
 
 <p><span class="merged" id="all.HoaXg" title="原文 : The Tanzu CLI will display the various steps it is going through to install the package and if all goes well, finally display Added installed package &apos;coherence&apos; The packages installed in the coherence namespace can be displayed using the CLI.">Tanzu CLIでは、パッケージのインストールに使用する様々なステップが表示され、すべてうまくいけば<code>Added installed package 'coherence'</code>が表示されます。<code>coherence</code>ネームスペースにインストールされたパッケージは、CLIを使用して表示できます。</span></p>
@@ -945,7 +966,7 @@ lang="bash"
 lang="bash"
 
 >NAME       PACKAGE-NAME                          PACKAGE-VERSION  STATUS
-coherence  coherence-operator.oracle.github.com  3.3.1            Reconcile succeeded</markup>
+coherence  coherence-operator.oracle.github.com  3.3.5            Reconcile succeeded</markup>
 
 <p><span class="merged" id="all.3WbWXb" title="原文 : The Operator is now installed and ready to mage Coherence clusters.">オペレータがインストールされ、Coherenceクラスタを形成する準備ができました。</span></p>
 

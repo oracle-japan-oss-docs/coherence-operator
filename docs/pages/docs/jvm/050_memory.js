@@ -45,7 +45,7 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.40"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.41"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
@@ -133,7 +133,7 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE.1"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.41"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.42"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>

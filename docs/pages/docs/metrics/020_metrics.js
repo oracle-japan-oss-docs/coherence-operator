@@ -13,7 +13,7 @@
 
 <p><span class="merged" id="all.323cf1" title="原文 : Once the metrics port has been exposed, for example via a load balancer or port-forward command, the metrics endpoint is available at http://host:port/metrics.">メトリクス・ポートがロード・バランサやport-forwardコマンドを介して公開されると、メトリクス・エンドポイントは<code><a href="http://host:port/metrics" id="" target="_blank" >http://host:port/metrics</a></code>にあります。</span></p>
 
-<p><span class="merged" id="all.2ZcuVP" title="原文 : See the Using Coherence Metrics documentation for full details on the available metrics.">使用可能なメトリクスの詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.0/manage/using-coherence-metrics.html" id="" target="_blank" >「Coherenceメトリクスの使用」</a>ドキュメントを参照してください。</span></p>
+<p><span class="merged" id="all.2qeSht" title="原文 : See the Using Coherence Metrics documentation for full details on the available metrics.">使用可能なメトリクスの詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/manage/using-coherence-metrics.html" id="" target="_blank" >「Coherenceメトリクスの使用」</a>ドキュメントを参照してください。</span></p>
 
 
 <h3 id="_deploy_coherence_with_metrics_enabled"><span class="merged" id="all.22Nga4" title="原文 : Deploy Coherence with Metrics Enabled">メトリクスの有効化によるCoherenceのデプロイ</span></h3>

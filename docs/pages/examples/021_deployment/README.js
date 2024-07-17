@@ -876,7 +876,7 @@ lang="bash"
 
 <h4 id="_install_prometheus_operator"><span class="merged" id="all.3ZIuve" title="原文 : Install Prometheus Operator">Prometheusオペレータのインストール</span></h4>
 <div class="section">
-<p><span class="merged" id="all.1rilVh.spl1" title="原文 : Install the Prometheus Operator, as documented in the Prometheus Operator Quick Start page.">Prometheusオペレータ<a href="https://prometheus-operator.dev/docs/prologue/quick-start/" id="" target="_blank" >「クイック・スタート」</a>ページの説明に従って、Prometheusオペレータをインストールします。</span> <span class="merged" id="all.1rilVh.spl2" title="原文 : Prometheus can then be accessed as documented in the Access Prometheus section of the Quick Start page.">Prometheusには、<a href="https://prometheus-operator.dev/docs/prologue/quick-start/#access-prometheus" id="" target="_blank" >「クイック・スタートのPrometheusセクションにアクセス」</a>ページの説明に従ってアクセスできます。</span> </p>
+<p><span class="merged" id="all.RPXiG.spl1" title="原文 : Install the Prometheus Operator, as documented in the Prometheus Operator Quick Start page.">Prometheusオペレータ<a href="https://prometheus-operator.dev/docs/getting-started/quick-start/" id="" target="_blank" >「クイック・スタート」</a>ページの説明に従って、Prometheusオペレータをインストールします。</span> <span class="merged" id="all.RPXiG.spl2" title="原文 : Prometheus can then be accessed as documented in the Access Prometheus section of the Quick Start page.">Prometheusには、<a href="https://prometheus-operator.dev/docs/getting-started/quick-start/#access-prometheus" id="" target="_blank" >「クイック・スタートのPrometheusセクションにアクセス」</a>ページの説明に従ってアクセスできます。</span> </p>
 
 <div class="admonition note">
 <p class="admonition-textlabel"><span class="merged" id="all.22fJPu.12"  title="原文:: Note">ノート</span></p>
@@ -889,7 +889,7 @@ lang="bash"
 
 <h4 id="_access_grafana"><span class="merged" id="all.SDX6G" title="原文 : Access Grafana">Grafanaへのアクセス</span></h4>
 <div class="section">
-<p><span class="merged" id="all.2sskRZ.spl1" title="原文 : The Prometheus Operator also installs Grafana.">Prometheusオペレータは、Grafanaもインストールします。</span> <span class="merged" id="all.2sskRZ.spl2" title="原文 : Grafana can be accessed as documented in the Access Grafana section of the Quick Start page.">Grafanaには、<a href="https://prometheus-operator.dev/docs/prologue/quick-start/#access-grafana" id="" target="_blank" >「クイック・スタートのGrafanaセクションにアクセス」</a>ページの説明に従ってアクセスできます。</span> <span class="merged" id="all.2sskRZ.spl3" title="原文 : Note that the default credentials are specified in that section of the documentation.">デフォルトの資格証明は、ドキュメントのそのセクションで指定されています。</span> </p>
+<p><span class="merged" id="all.1Qfbke.spl1" title="原文 : The Prometheus Operator also installs Grafana.">Prometheusオペレータは、Grafanaもインストールします。</span> <span class="merged" id="all.1Qfbke.spl2" title="原文 : Grafana can be accessed as documented in the Access Grafana section of the Quick Start page.">Grafanaには、<a href="https://prometheus-operator.dev/docs/getting-started/quick-start/#access-grafana" id="" target="_blank" >「クイック・スタートのGrafanaセクションにアクセス」</a>ページの説明に従ってアクセスできます。</span> <span class="merged" id="all.1Qfbke.spl3" title="原文 : Note that the default credentials are specified in that section of the documentation.">デフォルトの資格証明は、ドキュメントのそのセクションで指定されています。</span> </p>
 
 </div>
 
@@ -951,7 +951,7 @@ lang="bash"
 
 <h4 id="_delete_prometheus_operator"><span class="merged" id="all.2NfMny" title="原文 : Delete Prometheus Operator">Prometheusオペレータの削除</span></h4>
 <div class="section">
-<p><span class="merged" id="all.2SDdgu" title="原文 : Uninstall the Prometheus Operator as documented in the Remove kube-prometheus section of the Quick Start page."><a href="https://prometheus-operator.dev/docs/prologue/quick-start/#remove-kube-prometheus" id="" target="_blank" >「クイックスタートのkube-prometheusセクションを削除」</a>ページの説明に従って、Prometheusオペレータをアンインストールします。</span></p>
+<p><span class="merged" id="all.2SFDXj" title="原文 : Uninstall the Prometheus Operator as documented in the Remove kube-prometheus section of the Quick Start page."><a href="https://prometheus-operator.dev/docs/getting-started/quick-start/#remove-kube-prometheus" id="" target="_blank" >「クイックスタートのkube-prometheusセクションを削除」</a>ページの説明に従って、Prometheusオペレータをアンインストールします。</span></p>
 
 </div>
 </div>

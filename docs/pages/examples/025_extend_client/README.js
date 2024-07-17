@@ -255,7 +255,7 @@ spec:
         - name: client
           image: simple-extend-client:1.0.0
           env:
-            - name: COHERENCE_CACHE_CONFIG
+            - name: COHERENCE_CACHECONFIG
               value: minimal-client-cache-config.xml
             - name: COHERENCE_WKA
               value: storage-wka
@@ -266,7 +266,7 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1hXQ0n.spl1" title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.1hXQ0n.spl2" title="原文 : We set this using the COHERENCE_CACHE_CONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we’re using in this example.">これは、<code>COHERENCE_CACHE_CONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
+<p><span class="merged" id="all.14d2Fa.spl1" style='background-color:yellow' title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.14d2Fa.spl2" style='background-color:yellow' title="原文 : We set this using the COHERENCE_CACHECONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we’re using in this example.">♪これを<code>COHERENCE_CACHECONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
 
 </li>
 <li>
@@ -331,7 +331,7 @@ lang="bash"
 
 <p><span class="merged" id="all.2zLOZ4.spl1" title="原文 : The values will be different as we put different random values each time the client runs.">クライアントを実行するたびに異なるランダム値を配置するため、値は異なります。</span> <span class="merged" id="all.2zLOZ4.spl2" title="原文 : The previous value was null in this case as we have not run any other client with this cluster.">このクラスタで他のクライアントを実行していないため、前の値は<code>null</code>でした。</span> <span class="merged" id="all.2zLOZ4.spl3" title="原文 : If we re-ran the client Job the previous value would be displayed as the cache on the server now has data in it.">クライアント<code>Job</code>を再実行すると、サーバー上のキャッシュにデータが含まれるため、以前の値が表示されます。</span> </p>
 
-<p><span class="merged" id="all.lK96I"  title="原文:: Clean-Up"><strong>クリーンアップ</strong></span></p>
+<p><span class="merged" id="all.lK96I" title="原文 : Clean-Up"><strong>クリーンアップ</strong></span></p>
 
 <p><span class="merged" id="all.1BiTmq.spl1" title="原文 : We have shown a simple Extend client running in Kubernetes, connecting to a Coherence cluster using the NameService.">Kubernetesで実行されている単純なExtendクライアントを示し、NameServiceを使用してCoherenceクラスタに接続しています。</span> <span class="merged" id="all.1BiTmq.spl2" title="原文 : We can now delete the Job using kubectl."><code>kubectl</code>を使用して<code>Job</code>を削除できるようになりました。</span> </p>
 
@@ -369,7 +369,7 @@ spec:
         - name: client
           image: simple-extend-client:1.0.0
           env:
-            - name: COHERENCE_CACHE_CONFIG
+            - name: COHERENCE_CACHECONFIG
               value: minimal-client-cache-config.xml
             - name: COHERENCE_WKA
               value: storage-wka.default.svc

@@ -47,7 +47,7 @@
 <p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.1"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.2cA5Zk" title="原文 : Before installing the Operator, with either method described below, the CRDs MUST be manually installed from the Operator manifest files.">オペレータをインストールする前に、後述するいずれかのメソッドで、オペレータ・マニフェスト・ファイルからCRDを手動でインストールする必要があります。</span></p>
 
-<p><span class="merged" id="all.1kGl4m" title="原文 : The manifest files are published with the GitHub release at this link: 3.3.2 Manifests">マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.3.2/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.2 マニフェスト</a></span></p>
+<p><span class="merged" id="all.ac4Ox" style='background-color:yellow' title="原文 : The manifest files are published with the GitHub release at this link: 3.3.5 Manifests">♪マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.4.0/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.5 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3wyRpn" title="原文 : You MUST ensure that the CRD manifests match the version of the Operator being installed.">CRDマニフェストがインストールされるオペレータのバージョンと一致していることを確認する必要があります。</span></p>
 

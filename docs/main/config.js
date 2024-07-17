@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.3.2",
+        release: "3.3.4",
         releases: [
-            "3.3.2"
+            "3.3.4"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -613,8 +613,8 @@ function createRoutes(){
         {
             path: '/docs/management/025_coherence_cli',
             meta: {
-                h1: 'Coherence CLI',
-                title: 'Coherence CLI',
+                h1: 'The Coherence CLI',
+                title: 'The Coherence CLI',
                 h1Prefix: null,
                 description: null,
                 keywords: null,
@@ -804,6 +804,19 @@ function createRoutes(){
                 hasNav: true
             },
             component: loadPage('docs-other-040_annotations', '/docs/other/040_annotations', {})
+        },
+        {
+            path: '/docs/other/041_global_labels',
+            meta: {
+                h1: 'グローバル・ラベルと注釈',
+                title: 'グローバル・ラベルと注釈',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-other-041_global_labels', '/docs/other/041_global_labels', {})
         },
         {
             path: '/docs/other/045_security_context',
@@ -1351,7 +1364,7 @@ function createNav(){
             items: [
                 { href: '/docs/management/010_overview', title: '概要' },
                 { href: '/docs/management/020_management_over_rest', title: 'RESTを介した管理' },
-                { href: '/docs/management/025_coherence_cli', title: 'Coherence CLI' },
+                { href: '/docs/management/025_coherence_cli', title: 'The Coherence CLI' },
                 { href: '/docs/management/040_ssl', title: 'RESTでの管理によるSSL' },
                 { href: '/docs/management/100_tmb_test', title: 'Coherenceネットワーク・テスト' }
             ]
@@ -1379,7 +1392,7 @@ function createNav(){
             ]
         },
         {
-            title: '他のポッド設定',
+            title: '他の設定',
             action: 'widgets',
             group: '/other',
             items: [
@@ -1387,6 +1400,7 @@ function createNav(){
                 { href: '/docs/other/020_environment', title: '環境変数' },
                 { href: '/docs/other/030_labels', title: 'ポッド・ラベル' },
                 { href: '/docs/other/040_annotations', title: '注釈の追加' },
+                { href: '/docs/other/041_global_labels', title: 'グローバル・ラベルと注釈' },
                 { href: '/docs/other/045_security_context', title: 'ポッド&コンテナSecurityContext' },
                 { href: '/docs/other/050_configmap_volumes', title: 'ConfigMapボリュームの追加' },
                 { href: '/docs/other/060_secret_volumes', title: 'シークレット・ボリュームの追加' },

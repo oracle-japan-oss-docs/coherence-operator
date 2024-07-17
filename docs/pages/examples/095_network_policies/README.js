@@ -948,7 +948,7 @@ lang="bash"
 <markup
 
 
->1.6727606592497227e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727606592497227e+09	INFO	runner	Operator Version: 3.3.2
 1.6727606592497835e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727606592500978e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727606592501197e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -992,7 +992,7 @@ lang="bash"
 <markup
 
 
->1.6727631152848177e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727631152848177e+09	INFO	runner	Operator Version: 3.3.2
 1.6727631152849226e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727631152849536e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727631152849755e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1050,7 +1050,7 @@ lang="bash"
 <markup
 
 
->1.6727639834559627e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727639834559627e+09	INFO	runner	Operator Version: 3.3.2
 1.6727639834562948e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727639834563956e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727639834565024e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1098,7 +1098,7 @@ spec:
     spec:
       containers:
       - name: net-test
-        image: ghcr.io/oracle/coherence-operator:3.3.2
+        image: ghcr.io/oracle/coherence-operator:3.4.0
         env:
           - name: HOST
             value: net-test-coherence-server.coh-test.svc
@@ -1133,7 +1133,7 @@ lang="bash"
 <markup
 
 
->1.6727665901488597e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727665901488597e+09	INFO	runner	Operator Version: 3.3.2
 1.6727665901497366e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727665901498337e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727665901498716e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1183,7 +1183,7 @@ lang="bash"
 <markup
 
 
->1.6727671834237397e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727671834237397e+09	INFO	runner	Operator Version: 3.3.2
 1.6727671834238796e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727671834239576e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727671834240365e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1233,7 +1233,7 @@ lang="bash"
 <markup
 
 
->1.6727691273634596e+09	INFO	runner	Operator Version: 3.3.1
+>1.6727691273634596e+09	INFO	runner	Operator Version: 3.3.2
 1.6727691273635025e+09	INFO	runner	Operator Build Date: 2023-01-03T12:25:58Z
 1.6727691273635256e+09	INFO	runner	Operator Built By: jonathanknight
 1.6727691273635616e+09	INFO	runner	Operator Git Commit: c8118585b8f3d72b083ab1209211bcea364c85c5
@@ -1249,7 +1249,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_clean_up"><span class="merged" id="all.GvSAu"  title="原文:: Clean-Up">クリーンアップ</span></h4>
+<h4 id="_clean_up"><span class="merged" id="all.GvSAu" title="原文 : Clean-Up">クリーンアップ</span></h4>
 <div class="section">
 <p><span class="merged" id="all.2qUwy0" title="原文 : Once the tests are completed, the test servers and Jobs can be deleted.">テストが完了したら、テスト・サーバーおよびジョブを削除できます。</span></p>
 

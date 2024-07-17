@@ -17,8 +17,8 @@
 </colgroup>
 <thead>
 <tr>
-<th><span class="merged" id="all.2p5Jka.40"  title="原文:: Field">フィールド</span></th>
-<th><span class="merged" id="all.4JM9z7.42"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.2p5Jka.41"  title="原文:: Field">フィールド</span></th>
+<th><span class="merged" id="all.4JM9z7.43"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
@@ -39,7 +39,7 @@
 </div>
 <p><span class="merged" id="all.24G9b4.spl1" title="原文 : The nodeSelector, affinity and tolerations fields are all part of the Coherence CRD spec."><code>nodeSelector</code>、<code>affinity</code>および<code>tolerations</code>フィールドはすべて、<code>Coherence</code> CRD仕様の一部です。</span> <span class="merged" id="all.24G9b4.spl2" title="原文 : The format of the fields is that same as documented in the Kubernetes documentation Assigning Pods to Nodes and Taints and Tolerations">フィールドの形式は、Kubernetesドキュメントの<a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/" id="" target="_blank" >「ノードへのポッドの割当て」</a>および<a href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/" id="" target="_blank" >「TaintsとTolerations」</a>に記載されている形式と同じです</span> </p>
 
-<p><span class="merged" id="all.6vDv5.24"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.25"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

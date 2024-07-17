@@ -58,7 +58,7 @@ spec:
 
 <p><span class="merged" id="all.1LxhrB" title="原文 : As already stated, if the Coherence resource has additional containers the ConfigMap will be mounted in all of them.">すでに説明したように、<code>Coherence</code>リソースに追加のコンテナがある場合、<code>ConfigMap</code>はすべてのコンテナにマウントされます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.20"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.21"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

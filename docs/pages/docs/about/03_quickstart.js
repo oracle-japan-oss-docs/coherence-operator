@@ -26,7 +26,7 @@
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.3.2/coherence-operator.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.4.0/coherence-operator.yaml</markup>
 
 <p><span class="merged" id="all.2vyxRX.spl1" title="原文 : This will create a namespace called coherence and install the Operator into it along with all the required ClusterRole and RoleBinding resources.">これにより、<code>coherence</code>というネームスペースが作成され、必要なすべての<code>ClusterRole</code>および<code>RoleBinding</code>リソースとともにオペレータがインストールされます。</span> <span class="merged" id="all.2vyxRX.spl2" title="原文 : The coherence namespace can be changed by downloading and editing the yaml file."><code>coherence</code>ネームスペースは、yamlファイルをダウンロードおよび編集することによって変更できます。</span> </p>
 

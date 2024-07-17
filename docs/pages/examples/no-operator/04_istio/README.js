@@ -189,7 +189,7 @@ spec:
     spec:
       containers:
         - name: coherence
-          image: ghcr.io/oracle/coherence-ce:22.06.6   <span class="conum" data-value="2" />
+          image: ghcr.io/oracle/coherence-ce:22.06.7   <span class="conum" data-value="2" />
           env:
             - name: COHERENCE_CLUSTER          <span class="conum" data-value="3" />
               value: "test-cluster"
@@ -361,7 +361,7 @@ lang="yaml"
 >    spec:
       containers:
         - name: coherence
-          image: ghcr.io/oracle/coherence-ce:22.06.6
+          image: ghcr.io/oracle/coherence-ce:22.06.7
           env:
             - name: COHERENCE_EXTEND_PORT
               value: "20001"</markup>
@@ -385,7 +385,7 @@ lang="yaml"
 >    spec:
       containers:
         - name: coherence
-          image: ghcr.io/oracle/coherence-ce:22.06.6
+          image: ghcr.io/oracle/coherence-ce:22.06.7
           env:
             - name: COHERENCE_GRPC_SERVER_PORT
               value: "1408"</markup>
@@ -423,12 +423,12 @@ lang="yaml"
 <markup
 
 title="Dockerfile"
->FROM ghcr.io/oracle/coherence-operator:3.3.2 AS Builder
+>FROM ghcr.io/oracle/coherence-operator:3.4.0 AS Builder
 
-FROM ghcr.io/oracle/coherence-ce:22.06.6
+FROM ghcr.io/oracle/coherence-ce:22.06.7
 COPY --from=Builder /files /files
 COPY --from=Builder /files/lib/coherence-operator.jar /app/libs/coherence-operator.jar
-COPY coherence-java-client-22.06.6.jar /app/libs/coherence-java-client-22.06.6.jar
+COPY coherence-java-client-22.06.7.jar /app/libs/coherence-java-client-22.06.7.jar
 
 ENTRYPOINT ["files/runner"]
 CMD ["-h"]</markup>
@@ -438,8 +438,8 @@ CMD ["-h"]</markup>
 <markup
 lang="bash"
 
->curl -s https://repo1.maven.org/maven2/com/oracle/coherence/ce/coherence-java-client/22.06.6/coherence-java-client-22.06.6.jar \
-  -o coherence-java-client-22.06.6.jar</markup>
+>curl -s https://repo1.maven.org/maven2/com/oracle/coherence/ce/coherence-java-client/22.06.7/coherence-java-client-22.06.7.jar \
+  -o coherence-java-client-22.06.7.jar</markup>
 
 <p><span class="merged" id="all.47IsV3" title="原文 : Build the image with the following command:">次のコマンドを使用してイメージを構築します:</span></p>
 

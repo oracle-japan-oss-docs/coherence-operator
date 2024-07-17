@@ -203,7 +203,7 @@ docker run -it --rm ${operator.image} status -h</markup>
 <thead>
 <tr>
 <th><span class="merged" id="all.4TUuwG"  title="原文:: Argument">引数</span></th>
-<th><span class="merged" id="all.4JM9z7.44"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.45"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
@@ -241,7 +241,7 @@ operator:
   namespace: coherence
   service: coherence-operator-rest
   port: 8000
-  image: ghcr.io/oracle/coherence-operator-utils:3.3.2
+  image: ghcr.io/oracle/coherence-operator-utils:3.4.0
   condition: Ready
   timeout: 5m
   interval: 10s</markup>

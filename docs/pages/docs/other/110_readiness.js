@@ -2,7 +2,7 @@
 <span title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center;"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html" target="disclaimer">&nbsp;&nbsp;機械翻訳について&nbsp;&nbsp;</a></span>
 
 
-<h2 id="_readiness_liveness_probes"><span class="merged" id="all.3R1CdL" title="原文 : Readiness &amp; Liveness Probes">レディネス &amp;リブネス・プローブ</span></h2>
+<h2 id="_readiness_liveness_probes"><span class="merged" id="all.3R1CdL" title="原文 : Readiness &amp; Liveness Probes">レディネス&amp;リブネス・プローブ</span></h2>
 <div class="section">
 <p><span class="merged" id="all.aRlsp.spl1" title="原文 : The Coherence Operator injects a Readiness/Liveness endpoint into the Coherence container that is used as the default readiness and liveness check for the Pods deployed by the operator.">Coherence Operatorは、オペレータによってデプロイされた<code>Pods</code>のデフォルトのレディネスとチェックとして使用される、レディネス/リブネス・エンドポイントをCoherenceコンテナにインジェクトします。</span> <span class="merged" id="all.aRlsp.spl2" title="原文 : This endpoint is suitable for most use-cases, but it is possible to configure a different readiness and liveness probe, or just change the timings of the probes if required.">このエンドポイントは、ほとんどのユースケースに適していますが、別のレディネスとリブネス・プローブを構成したり、必要に応じてプローブのタイミングを変更したりできます。</span> </p>
 
@@ -40,7 +40,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.3zw9sD" title="原文 : The Coherence CRD spec.readinessProbe field is identical to configuring a readiness probe for a Pod in Kubernetes; see Configure Liveness &amp; Readiness"><code>Coherence</code> CRD <code>spec.readinessProbe</code>フィールドは、Kubernetesの<code>Pod</code>のレディネス・プローブの構成と同じです。<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/" id="" target="_blank" >「リブネス&amp;レディネスの構成」</a>を参照してください</span></p>
 
-<p><span class="merged" id="all.6vDv5.26"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -68,7 +68,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.1zoJFX" title="原文 : The Coherence CRD spec.livenessProbe field is identical to configuring a liveness probe for a Pod in Kubernetes; see Configure Liveness &amp; Readiness"><code>Coherence</code> CRD <code>spec.livenessProbe</code>フィールドは、Kubernetes内の<code>Pod</code>のリブネス・プローブの構成と同じです。<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/" id="" target="_blank" >「リブネス&amp;レディネスの構成」</a>を参照してください</span></p>
 
-<p><span class="merged" id="all.6vDv5.27"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.29"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

@@ -83,7 +83,7 @@ kubectl -n &lt;NAMESPACE&gt; delete coherence/&lt;COHERENCE_RESOURCE_NAME&gt;</m
 
 <p><span class="merged" id="all.3Rat3.spl1" title="原文 : Alternatively, if you are running the Operator in a CI/CD environment and just want to be able to clean up after tests you can run Coherence clusters with the allowUnsafeDelete option enabled.">または、オペレータをCI/CD環境で実行していて、テスト後にクリーン・アップできるようにする場合は、<code>allowUnsafeDelete</code>オプションを有効にしてCoherenceクラスタを実行できます。</span> <span class="merged" id="all.3Rat3.spl2" title="原文 : By setting the allowUnsafeDelete field to true in the Coherence resource the Operator will not add a finalizer to that Coherence resource, allowing it to be deleted if its namespace is deleted."><code>Coherence</code>リソースで<code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはそのCoherenceリソースにファイナライザを追加せず、そのネームスペースが削除された場合にファイナライザを削除できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.30"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.32"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
