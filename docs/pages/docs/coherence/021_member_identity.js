@@ -34,8 +34,22 @@
 
 <h2 id="_changing_site_and_rack_values"><span class="merged" id="all.2WIoFQ" title="原文 : Changing Site and Rack Values">サイトおよびラックの値の変更</span></h2>
 <div class="section">
-<p><span class="merged" id="all.3CZzU6.spl1" title="原文 : You should not usually need to change the default values applied for the member and machine names, but you may need to change the values used for the site, or rack.">通常、<code>member</code>および<code>machine</code>名に適用されるデフォルト値を変更する必要はありませんが、サイトまたはラックに使用される値を変更する必要がある場合があります。</span> <span class="merged" id="all.3CZzU6.spl2" title="原文 : The labels used for the site and rack are standard k8s labels but the k8s cluster being used may not have these labels set"><code>site</code>および<code>rack</code>に使用されるラベルは標準のk8sラベルですが、使用されるk8sクラスタにはこれらのラベル・セットがない可能性があります</span> </p>
+<p><span class="merged" id="all.C4GKm.spl1" title="原文 : You should not usually need to change the default values applied for the member and machine names, but you may need to change the values used for the site, or rack.">通常、<code>member</code>および<code>machine</code>名に適用されるデフォルト値を変更する必要はありませんが、サイトまたはラックに使用される値を変更する必要がある場合があります。</span> <span class="merged" id="all.C4GKm.spl2" title="原文 : The labels used for the site and rack are standard k8s labels but the k8s cluster being used may not have these labels set."><code>site</code>および<code>rack</code>に使用されるラベルは標準のk8sラベルですが、使用されるk8sクラスタにはこれらのラベルが設定されていない可能性があります。</span> </p>
 
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.2"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.WYKOG.spl1" title="原文 : If the Coherence site is specified but no value is set for rack, the Operator will configure the rack value to be the same as the site.">Coherenceサイトが指定されているが、ラックに値が設定されていない場合、オペレータはラック値をサイトと同じ値に構成します。</span> <span class="merged" id="all.WYKOG.spl2" title="原文 : Coherence will not set the site if any of the identity values below it are missing (i.e. rack, machine, member).">Coherenceは、その下のアイデンティティ値(ラック、マシン、メンバー)のいずれかが欠落している場合、サイトを設定しません。</span> </p>
+</p>
+</div>
+<div class="admonition important">
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p"  title="原文:: Important">重要</span></p>
+<p ><p><span class="merged" id="all.3WM05I" title="原文 : Maintaining Site and Rack Safety"><strong>サイトおよびラックの安全性の維持</strong></span></p>
+
+<p><span class="merged" id="all.14UvK.spl1" title="原文 : The details below show alternate approaches to set the Coherence site and rack identity.">次の詳細は、Coherenceサイトおよびラック・アイデンティティを設定するための代替アプローチを示しています。</span> <span class="merged" id="all.14UvK.spl2" title="原文 : If site and rack are set to a fixed value for the deployment, then all Coherence members in that deployment will have the same value.">サイトとラックがデプロイメントの固定値に設定されている場合、そのデプロイメント内のすべてのCoherenceメンバーは同じ値になります。</span> <span class="merged" id="all.14UvK.spl3" title="原文 : This means it would be impossible for Coherence to become site or rack safe.">つまり、Coherenceがサイトまたはラック・セーフになることは不可能です。</span> </p>
+
+<p><span class="merged" id="all.jCBm.spl1" title="原文 : A work-around for this would be to use multiple Coherence deployments configured with the same cluster name and each having different site and rack values.">これを回避するには、同じクラスタ名で構成された複数のCoherenceデプロイメントを使用し、それぞれが異なるサイトとラックの値を持つようにします。</span> <span class="merged" id="all.jCBm.spl2" title="原文 : For examples, if a Kubernetes cluster has two fault domains, two separate Coherence resources could be created with different site and rack values.">たとえば、Kubernetesクラスタに2つのフォルト・ドメインがある場合、異なるサイト値とラック値を使用して2つの別々のCoherenceリソースを作成できます。</span> <span class="merged" id="all.jCBm.spl3" title="原文 : Each Coherence resource would then have different Pod scheduling rules, so that each Coherence deployment is targeted at only one fault domain.">各Coherenceリソースにはそれぞれ異なるポッド・スケジューリング・ルールがあるため、各Coherenceデプロイメントのターゲットは1つのフォルト・ドメインのみです。</span> <span class="merged" id="all.jCBm.spl4" title="原文 : All the Pods in the two Coherence deployments would form a single Cluster, and because there will be Pods with different site and rack values, Coherence will be able to reach site safety.">2つのCoherenceデプロイメントのすべてのポッドは1つのクラスタを形成し、サイトとラックの値が異なるポッドが存在するため、Coherenceはサイトの安全性を確保できます。</span> </p>
+</p>
+</div>
 
 <h3 id="_apply_node_labels"><span class="merged" id="all.3N1eZo" title="原文 : Apply Node Labels">ノード・ラベルの適用</span></h3>
 <div class="section">
@@ -47,6 +61,48 @@
 lang="bash"
 
 >kubectl label node docker-desktop topology.kubernetes.io/zone=twighlight-zone</markup>
+
+</div>
+
+<h3 id="_specify_site_and_rack_using_environment_variables"><span class="merged" id="all.4F7ZgF" title="原文 : Specify Site and Rack using Environment Variables">環境変数を使用したサイトおよびラックの指定</span></h3>
+<div class="section">
+<p><span class="merged" id="all.2Q5Lxh" title="原文 : The site and rack values can be set by setting the COHERENCE_SITE and COHERENCE_RACK environment variables.">サイトおよびラックの値は、<code>COHERENCE_SITE</code>および<code>COHERENCE_RACK</code>環境変数を設定することで設定できます。</span></p>
+
+<p><span class="merged" id="all.2uQlPh" title="原文 : If these values are set then the Operator will not set the coherence.site or coherence.rack system properties as Coherence will read the environment variable values.">これらの値が設定されている場合、Coherenceは環境変数値を読み取るため、オペレータは<code>coherence.site</code>または<code>coherence.rack</code>システム・プロパティを設定しません。</span></p>
+
+<p><span class="merged" id="all.XyQaC" title="原文 : For example, the yaml below will set the sit to test-site and the rack to test-rack:">たとえば、次のyamlは、サイトを<code>test-site</code>に設定し、ラックを<code>test-rack</code>に設定します:</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: my-cluster
+spec:
+  env:
+    - name: COHERENCE_SITE
+      value: test-site
+    - name: COHERENCE_RACK
+      value: test-rack</markup>
+
+<p><span class="merged" id="all.3qE4WT" title="原文 : Site and rack environment variables will be expanded if they reference other variables.">サイトおよびラックの環境変数は、他の変数を参照すると展開されます。</span></p>
+
+<p><span class="merged" id="all.2ZCAH6" title="原文 : For example, the yaml below will set the site to the value of the MY_SITE environment variables, and rack to the value of the MY_RACK environment variable.">たとえば、次のyamlは、サイトを<code>MY_SITE</code>環境変数の値に設定し、ラックを<code>MY_RACK</code>環境変数の値に設定します。</span></p>
+
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: my-cluster
+spec:
+  env:
+    - name: COHERENCE_SITE
+      value: "${MY_SITE}"
+    - name: COHERENCE_RACK
+      value: "${MY_RACK}"</markup>
 
 </div>
 

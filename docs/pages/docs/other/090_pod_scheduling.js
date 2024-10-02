@@ -18,20 +18,20 @@
 <thead>
 <tr>
 <th><span class="merged" id="all.2p5Jka.41"  title="原文:: Field">フィールド</span></th>
-<th><span class="merged" id="all.4JM9z7.43"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.44"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class=""><span class="merged" id="all.3aBnkC.1"  title="原文: nodeSelector"><code>nodeSelector</code></span></td>
+<td class=""><code>nodeSelector</code></td>
 <td class=""><span class="merged" id="all.15yRwc.spl1" title="原文 : nodeSelector is the simplest recommended form of node selection constraint. nodeSelector is a field of role spec, it specifies a map of key-value pairs."><code>nodeSelector</code>は、ノード選択制約の最もシンプルな推奨形式です。<code>nodeSelector</code>はロール仕様のフィールドであり、キーと値のペアのマップを指定します。</span> <span class="merged" id="all.15yRwc.spl2" title="原文 : For the Pod to be eligible to run on a node, the node must have each of the indicated key-value pairs as labels (it can have additional labels as well)."><code>Pod</code>がノード上で実行されるようにするには、指定された各キーと値のペアをラベルとして持つ必要があります(追加のラベルも持つことができます)。</span> <span class="merged" id="all.15yRwc.spl3" title="原文 : See Assigning Pods to Nodes in the Kubernetes documentation">Kubernetesドキュメントの<a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/" id="" target="_blank" >「ノードへのポッドの割当て」</a>を参照してください</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.3DZ0qh.1"  title="原文: affinity"><code>affinity</code></span></td>
+<td class=""><code>affinity</code></td>
 <td class=""><span class="merged" id="all.25REfU.spl1" title="原文 : The affinity/anti-affinity feature, greatly expands the types of constraints you can express over just using labels in a nodeSelector.">アフィニティ/アンチ・アフィニティ機能では、<code>nodeSelector</code>のラベルを使用するだけで表現できる制約のタイプが大幅に拡張されます。</span> <span class="merged" id="all.25REfU.spl2" title="原文 : See Assigning Pods to Nodes in the Kubernetes documentation">Kubernetesドキュメントの<a href="https://kubernetes.io/docs/concepts/configuration/assign-pod-node/" id="" target="_blank" >「ノードへのポッドの割当て」</a>を参照してください</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.3i1GxM.1"  title="原文: tolerations"><code>tolerations</code></span></td>
+<td class=""><code>tolerations</code></td>
 <td class=""><span class="merged" id="all.4EfsZe.spl1" title="原文 : nodeSelector and affinity are properties of Pods that attracts them to a set of nodes (either as a preference or a hard requirement)."><code>nodeSelector</code>および<code>affinity</code>は、ノードのセット(プリファレンスまたはハード要件のいずれか)に引き付ける<code>Pods</code>のプロパティです。</span> <span class="merged" id="all.4EfsZe.spl2" title="原文 : Taints are the opposite - they allow a node to repel a set of Pods.">taintsは逆 - ノードは、一連の<code>Pods</code>をリペルできます。</span> <span class="merged" id="all.4EfsZe.spl3" title="原文 : Taints and tolerations work together to ensure that Pods are not scheduled onto inappropriate nodes.">taintsとtolerationsは連携して、<code>Pods</code>が不適切なノードにスケジュールされないようにします。</span> <span class="merged" id="all.4EfsZe.spl4" title="原文 : One or more taints are applied to a node; this marks that the node should not accept any Pods that do not tolerate the taints.">1つ以上のtaintsがノードに適用されます。これは、ノードがtaintsを許容しない<code>Pods</code>を受け入れないことを示します。</span> <span class="merged" id="all.4EfsZe.spl5" title="原文 : Tolerations are applied to Pods, and allow (but do not require) the Pods to schedule onto nodes with matching taints.">Tolerationsは<code>Pods</code>に適用され、<code>Pods</code>は、一致するtaintsを持つノードにスケジュールできます(ただし、必要ありません)。</span> <span class="merged" id="all.4EfsZe.spl6" title="原文 : See Taints and Tolerations in the Kubernetes documentation.">Kubernetesドキュメントの<a href="https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/" id="" target="_blank" >「TaintsとTolerations」</a>を参照してください。</span> </td>
 </tr>
 </tbody>

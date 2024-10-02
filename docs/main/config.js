@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.3.4",
+        release: "3.4.0",
         releases: [
-            "3.3.4"
+            "3.4.0"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -232,6 +232,19 @@ function createRoutes(){
                 hasNav: true
             },
             component: loadPage('docs-applications-030_deploy_application', '/docs/applications/030_deploy_application', {})
+        },
+        {
+            path: '/docs/applications/032_rolling_upgrade',
+            meta: {
+                h1: 'Coherenceアプリケーションのローリング・アップグレード',
+                title: 'Coherenceアプリケーションのローリング・アップグレード',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-applications-032_rolling_upgrade', '/docs/applications/032_rolling_upgrade', {})
         },
         {
             path: '/docs/applications/040_application_main',
@@ -1293,6 +1306,7 @@ function createNav(){
                 { href: '/docs/applications/010_overview', title: '概要' },
                 { href: '/docs/applications/020_build_application', title: 'アプリケーション・イメージの作成' },
                 { href: '/docs/applications/030_deploy_application', title: 'Coherenceアプリケーションのデプロイ' },
+                { href: '/docs/applications/032_rolling_upgrade', title: 'Coherenceアプリケーションのローリング・アップグレード' },
                 { href: '/docs/applications/040_application_main', title: 'アプリケーション・メインの設定' },
                 { href: '/docs/applications/050_application_args', title: 'アプリケーション引数の設定' },
                 { href: '/docs/applications/060_application_working_dir', title: '作業ディレクトリの設定' },

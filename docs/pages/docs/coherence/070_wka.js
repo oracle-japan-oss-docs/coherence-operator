@@ -96,6 +96,44 @@ spec:
 </div>
 </div>
 
+<h2 id="_wka_service_labels_and_annotations"><span class="merged" id="all.4LWf4S" title="原文 : WKA Service Labels and Annotations">WKAサービス・ラベルおよび注釈</span></h2>
+<div class="section">
+<p><span class="merged" id="all.1qYmhe.spl1" title="原文 : The Coherence Operator creates the Kubernetes Service to be used for WKA and correctly configures its ports and selectors.">Coherence Operatorは、WKAに使用されるKubernetesサービスを作成し、そのポートおよびセレクタを正しく構成します。</span> <span class="merged" id="all.1qYmhe.spl2" title="原文 : To add additional labels or annotations to this service, they can be specified in the spec.coherence.wka.labels and spec.coherence.wka.annotations fields in the yaml.">ラベルまたは注釈をこのサービスに追加するには、yamlの<code>spec.coherence.wka.labels</code>および<code>spec.coherence.wka.annotations</code>フィールドに指定します。</span> </p>
+
+<p><span class="merged" id="all.2nBqfO" title="原文 : For example, to add the label one: &quot;value-one&quot; to the spec.coherence.wka.labels field can be set as shown below:">たとえば、<code>one: "value-one"</code>というラベルを<code>spec.coherence.wka.labels</code>フィールドに追加するには、次のように設定します:</span></p>
+
+<markup
+lang="yaml"
+title="test-cluster.yaml"
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: test-cluster
+spec:
+  cluster: `my-cluster`
+  coherence:
+    wka:
+      labels:
+        one: "value-one"</markup>
+
+<p><span class="merged" id="all.3kS4Rm" title="原文 : For example, to add the annotation one: &quot;value-one&quot; to the spec.coherence.wka.annotations field can be set as shown below:">たとえば、注釈<code>one: "value-one"</code>を<code>spec.coherence.wka.annotations</code>フィールドに追加するには、次のように設定します:</span></p>
+
+<markup
+lang="yaml"
+title="test-cluster.yaml"
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: test-cluster
+spec:
+  cluster: `my-cluster`
+  coherence:
+    wka:
+      annotations:
+        one: "value-one"</markup>
+
+</div>
+
 <h2 id="_multi_namespace_clusters"><span class="merged" id="all.4d5awb" title="原文 : Multi-Namespace Clusters">マルチ・ネームスペース・クラスタ</span></h2>
 <div class="section">
 <p><span class="merged" id="all.1e7FAy" title="原文 : It is possible to configure a Coherence cluster made up of multiple Coherence deployments that are deployed into different namespaces in the same Kubernetes cluster (with some caveats).">同じKubernetesクラスタ内の異なるネームスペースにデプロイされた複数の<code>Coherence</code>デプロイメントで構成されるCoherenceクラスタを構成できます(いくつかの注意事項があります)。</span></p>

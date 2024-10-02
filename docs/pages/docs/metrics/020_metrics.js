@@ -16,6 +16,32 @@
 <p><span class="merged" id="all.2qeSht" title="原文 : See the Using Coherence Metrics documentation for full details on the available metrics.">使用可能なメトリクスの詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/manage/using-coherence-metrics.html" id="" target="_blank" >「Coherenceメトリクスの使用」</a>ドキュメントを参照してください。</span></p>
 
 
+<h3 id="_important_note_regarding_prometheus_metrics_prefix"><span class="merged" id="all.2oQ59c" title="原文 : Important Note Regarding Prometheus Metrics Prefix">Prometheusメトリクス・プレフィクスに関する重要なノート</span></h3>
+<div class="section">
+<p><span class="merged" id="all.2DzT6F.spl1" title="原文 : From version 3.4.1 of the Coherence Operator, the packaged Grafana dashboards no longer use the vendor: prefix for querying Prometheus metrics.">Coherence Operatorのバージョン3.4.1から、パッケージ化されたGrafanaダッシュボードでは、Prometheusメトリクスの問合せに<strong>ベンダー:</strong>プレフィクスは使用されなくなりました。</span> <span class="merged" id="all.2DzT6F.spl2" title="原文 : This prefix was deprecated a number of releases ago and the default, of legacy metrics, in Coherence and will be removed in the most recent Coherence releases after this Operator release.">このプレフィクスは、Coherenceで多数のリリースおよびデフォルトのレガシー・メトリクスが非推奨になり、このオペレータ・リリース以降の最新のCoherenceリリースで削除されます。</span> </p>
+
+<p><span class="merged" id="all.1ElKaN" title="原文 : If you are using a Coherence cluster version you are using has not yet changed this property, you may see no metrics in the Grafana dashboards.">使用しているCoherenceクラスタ・バージョンがこのプロパティを変更していない場合は、Grafanaダッシュボードにメトリクスが表示されない場合があります。</span></p>
+
+<p><span class="merged" id="all.1UKGA5" title="原文 : To change your cluster to not use legacy names, set the environment variable COHERENCE_METRICS_LEGACY_NAMES to false in your yaml.">レガシー名を使用しないようにクラスタを変更するには、yamlで環境変数<code>COHERENCE_METRICS_LEGACY_NAMES</code>を<code>false</code>に設定します。</span></p>
+
+<markup
+lang="yaml"
+title="metrics-cluster.yaml"
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: metrics-cluster
+spec:
+  env:
+    - name: "COHERENCE_METRICS_LEGACY_NAMES"
+      value: "false"
+  coherence:
+...</markup>
+
+<p><span class="merged" id="all.4XbTVd" title="原文 : has not set &quot;coherence.metrics.legacy.names=false&quot;">"coherence.metrics.legacy.names=false"が設定されていません</span></p>
+
+</div>
+
 <h3 id="_deploy_coherence_with_metrics_enabled"><span class="merged" id="all.22Nga4" title="原文 : Deploy Coherence with Metrics Enabled">メトリクスの有効化によるCoherenceのデプロイ</span></h3>
 <div class="section">
 <p><span class="merged" id="all.14t49U" title="原文 : To deploy a Coherence resource with metrics enabled and exposed on a port, the simplest yaml would look like this:">メトリクスが有効でポートで公開されている<code>Coherence</code>リソースをデプロイするには、最も単純なyamlは次のようになります:</span></p>

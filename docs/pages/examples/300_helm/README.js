@@ -203,28 +203,28 @@ docker run -it --rm ${operator.image} status -h</markup>
 <thead>
 <tr>
 <th><span class="merged" id="all.4TUuwG"  title="原文:: Argument">引数</span></th>
-<th><span class="merged" id="all.4JM9z7.45"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.46"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class=""><span class="merged" id="all.19PwnP"  title="原文: --operator-url"><code>--operator-url</code></span></td>
+<td class=""><code>--operator-url</code></td>
 <td class=""><span class="merged" id="all.3QaiDq" title="原文 : The Coherence Operator URL, typically the operator’s REST service (default &quot;http://coherence-operator-rest.coherence.svc.local:8000&quot;">Coherence Operator URL。通常は、オペレータのRESTサービス(デフォルトはhttp://coherence-operator-rest.coherence.svc.local:8000")</span></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.iE5d5"  title="原文: --namespace"><code>--namespace</code></span></td>
+<td class=""><code>--namespace</code></td>
 <td class=""><span class="merged" id="all.2F77t8.spl1" title="原文 : The namespace the Coherence resource is deployed into.">Coherenceリソースがデプロイされるネームスペース。</span> <span class="merged" id="all.2F77t8.spl2" title="原文 : This will be the namespace our Helm chart was installed into.">これは、Helmチャートがインストールされたネームスペースになります。</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.2Njkt8"  title="原文: --name"><code>--name</code></span></td>
+<td class=""><code>--name</code></td>
 <td class=""><span class="merged" id="all.c5fVW.spl1" title="原文 : The name of the Coherence resource.">Coherenceリソースの名前。</span> <span class="merged" id="all.c5fVW.spl2" title="原文 : This will be the name from the Helm chart install">これはHelmチャートのインストールの名前になります</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.1dY1xD"  title="原文: --timeout"><code>--timeout</code></span></td>
+<td class=""><code>--timeout</code></td>
 <td class=""><span class="merged" id="all.1gQqyv" title="原文 : The maximum amount of time to wait for the Coherence resource to reach the required condition (default 5m0s)">Coherenceリソースが必要な条件に達するまで待機する最大時間(デフォルトは5m0s)</span></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.3ZXy3k"  title="原文: --interval"><code>--interval</code></span></td>
+<td class=""><code>--interval</code></td>
 <td class=""><span class="merged" id="all.1DOO9q" title="原文 : The status check re-try interval (default 10s)">ステータス・チェックの再試行間隔(デフォルトは10秒)</span></td>
 </tr>
 </tbody>
@@ -241,7 +241,7 @@ operator:
   namespace: coherence
   service: coherence-operator-rest
   port: 8000
-  image: ghcr.io/oracle/coherence-operator-utils:3.4.0
+  image: ghcr.io/oracle/coherence-operator-utils:3.4.1
   condition: Ready
   timeout: 5m
   interval: 10s</markup>

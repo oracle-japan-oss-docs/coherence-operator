@@ -2,7 +2,7 @@
 <span title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center;"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html" target="disclaimer">&nbsp;&nbsp;機械翻訳について&nbsp;&nbsp;</a></span>
 
 
-<h2 id="_deploy_coherence_application_images"><span class="merged" id="all.3HPfeY" title="原文 : Deploy Coherence Application Images">Coherenceアプリケーション・イメージのデプロイ</span></h2>
+<h2 id="_deploy_coherence_applications"><span class="merged" id="all.A2dFi" title="原文 : Deploy Coherence Applications">Coherenceアプリケーションのデプロイ</span></h2>
 <div class="section">
 <p><span class="merged" id="all.2Th844" title="原文 : Once a custom application image has been built (as described in Build Custom Application Images) a Coherence resource can be configured to use that image.">カスタム・アプリケーション・イメージがビルドされたら (<router-link to="/docs/applications/020_build_application">「カスタム・アプリケーション・イメージの作成」</router-link>で記述)、そのイメージを使用するように<code>Coherence</code>リソースを構成できます。</span></p>
 

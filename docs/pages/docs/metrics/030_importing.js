@@ -22,7 +22,7 @@ tar -zxvf coherence-dashboards.tar.gz</markup>
 <p><span class="merged" id="all.s3P58" title="原文 : 2 - Clone the Coherence Operator GitHub repo, checkout the branch or tag for the version you want to use and then obtain the dashboards from the dashboards/ directory.">2 - Coherence Operator GitHubリポジトリをクローニングし、使用するバージョンのブランチまたはタグをチェックアウトし、<code>dashboards/</code>ディレクトリからダッシュボードを取得します。</span></p>
 
 <div class="admonition note">
-<p class="admonition-inline"><span class="merged" id="all.xWyRP.spl1" title="原文 : The recommended versions of Grafana to use are: 8.5.6 or 6.7.4.">使用するGrafanaの推奨バージョンは次のとおりです: <code>8.5.6</code>または<code>6.7.4</code>。</span> <span class="merged" id="all.xWyRP.spl2" title="原文 : It is not yet recommended to use the 9.x versions of Grafana as there are a number of bugs that cause issues when using the dashboards.">ダッシュボードの使用時に問題が発生するバグが多数あるため、<code>9.x</code>バージョンのGrafanaを使用することはまだお薦めしません。</span> </p>
+<p class="admonition-inline"><span class="merged" id="all.2dRKr1.spl1" title="原文 : The dashboards have been built using Grafana 10.0.13 and as such this is the minimum version required for this release.">ダッシュボードは、Grafana <code>10.0.13</code>を使用して構築されているため、このリリースに必要な最小バージョンです。</span> <span class="merged" id="all.2dRKr1.spl2" title="原文 : If you have an older Grafana installation, you can use previous versions of the dashboard.s">古いGrafanaインストールがある場合は、以前のバージョンのdashboard.sを使用できます</span> </p>
 </div>
 </div>
 
@@ -31,7 +31,7 @@ tar -zxvf coherence-dashboards.tar.gz</markup>
 <p><span class="merged" id="all.48acbp.spl1" title="原文 : This section shows you how to import the Grafana dashboards into your own Grafana instance.">この項では、Grafanaダッシュボードを独自のGrafanaインスタンスにインポートする方法を示します。</span> <span class="merged" id="all.48acbp.spl2" title="原文 : Once you have obtained the dashboards using one of the methods above, the Grafana dashboard .json files will be in the dashboards/grafana/ subdirectory">前述のメソッドのいずれかを使用してダッシュボードを取得すると、Grafanaダッシュボードの<code>.json</code>ファイルが<code>dashboards/grafana/</code>サブディレクトリに格納されます</span> </p>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.3"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.4"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.1ShKUZ.spl1" title="原文 : By default, the Coherence dashboards require a datasource in Grafana named prometheus (which is case-sensitive).">デフォルトでは、Coherenceダッシュボードには<code>prometheus</code>という名前のGrafanaのデータソースが必要です(大/小文字が区別されます)。</span> <span class="merged" id="all.1ShKUZ.spl2" title="原文 : This datasource usually exists in an out-of-the-box Prometheus Operator installation.">通常、このデータソースは、すぐに使用できるPrometheusオペレータ・インストールに存在します。</span> <span class="merged" id="all.1ShKUZ.spl3" title="原文 : If your Grafana environment does not have this datasource, then there are two choices.">Grafana環境にこのデータソースがない場合は、2つの選択肢があります。</span> </p>
 
 <ul class="ulist">
@@ -57,7 +57,7 @@ done</markup>
 
 <h3 id="_manually_import_grafana_dashboards"><span class="merged" id="all.1pVGp4" title="原文 : Manually Import Grafana Dashboards">Grafanaダッシュボードの手動インポート</span></h3>
 <div class="section">
-<p><span class="merged" id="all.4RCzH9" style='background-color:yellow' title="原文 : The dashboard .json files can be manually imported into Grafana using the Grafana UI following the instructions in the Grafana Import Dashboards documentation.">♪ダッシュボード<code>.json</code>ファイルは、<a href="https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/import-dashboards/" id="" target="_blank" >「Grafanaダッシュボードのインポート」</a>ドキュメントの指示に従ってGrafana UIを使用して、Grafanaに手動でインポートできます。</span></p>
+<p><span class="merged" id="all.4RCzH9" title="原文 : The dashboard .json files can be manually imported into Grafana using the Grafana UI following the instructions in the Grafana Import Dashboards documentation.">ダッシュボード<code>.json</code>ファイルは、<a href="https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/import-dashboards/" id="" target="_blank" >「Grafanaダッシュボードのインポート」</a>ドキュメントの指示に従ってGrafana UIを使用して、Grafanaに手動でインポートできます。</span></p>
 
 </div>
 
@@ -68,7 +68,7 @@ done</markup>
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.4L3zT7" title="原文 : The grafana-import.sh script requires the JQ utility to parse json."><code>grafana-import.sh</code>スクリプトでは、jsonを解析するために<a href="https://stedolan.github.io/jq/" id="" target="_blank" >JQ</a>ユーティリティが必要です。</span></p>
 </div>
-<p><span class="merged" id="all.Rc3aU.spl1" title="原文 : The commands below will download and run the shell script to import the dashboards.">次のコマンドは、ダッシュボードをインポートするためにシェル・スクリプトをダウンロードして実行します。</span> <span class="merged" id="all.Rc3aU.spl2" title="原文 : Change the &lt;GRAFANA-USER&gt; and &lt;GRAFANA_PWD&gt; to the Grafana credentials for your environment."><code>&lt;GRAFANA-USER></code>および<code>&lt;GRAFANA_PWD></code>を環境のGrafana資格証明に変更します。</span> <span class="merged" id="all.Rc3aU.spl3" title="原文 : For example if using the default Prometheus Operator installation they are as specified on the Access Grafana section of the Quick Start page.">たとえば、デフォルトのPrometheusオペレータ・インストールを使用する場合、<a href="https://prometheus-operator.dev/docs/getting-started/quick-start/#access-grafana" id="" target="_blank" >「クイック・スタートのGrafanaセクションにアクセス」</a>ページで指定されているようになります。</span> <span class="merged" id="all.Rc3aU.spl4" title="原文 : We do not document the credentials here as the default values have been known to change between Prometheus Operator and Grafana versions.">PrometheusオペレータとGrafanaバージョン間で変更することがわかっているため、ここで資格証明を文書化しません。</span> </p>
+<p><span class="merged" id="all.2YfUI1.spl1" title="原文 : The commands below will download and run the shell script to import the dashboards.">次のコマンドは、ダッシュボードをインポートするためにシェル・スクリプトをダウンロードして実行します。</span> <span class="merged" id="all.2YfUI1.spl2" title="原文 : Change the &lt;GRAFANA-USER&gt; and &lt;GRAFANA_PWD&gt; to the Grafana credentials for your environment."><code>&lt;GRAFANA-USER></code>および<code>&lt;GRAFANA_PWD></code>を環境のGrafana資格証明に変更します。</span> <span class="merged" id="all.2YfUI1.spl3" title="原文 : For example if using the default Prometheus Operator installation they are as specified on the Access Grafana section of the Quick Start page.">たとえば、デフォルトのPrometheusオペレータ・インストールを使用する場合、<a href="https://github.com/prometheus-operator/kube-prometheus/blob/main/docs/access-ui.md" id="" target="_blank" >「クイック・スタートのGrafanaセクションにアクセス」</a>ページで指定されているようになります。</span> <span class="merged" id="all.2YfUI1.spl4" title="原文 : We do not document the credentials here as the default values have been known to change between Prometheus Operator and Grafana versions.">PrometheusオペレータとGrafanaバージョン間で変更することがわかっているため、ここで資格証明を文書化しません。</span> </p>
 
 <markup
 lang="bash"

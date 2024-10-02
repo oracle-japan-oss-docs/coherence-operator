@@ -297,7 +297,7 @@ spec:
 </div>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.15"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.19"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.1omHLr.spl1" title="原文 : The COHERENCE_EXTEND_KEYSTORE and COHERENCE_EXTEND_TRUSTSTORE values must be URLs."><code>COHERENCE_EXTEND_KEYSTORE</code>および<code>COHERENCE_EXTEND_TRUSTSTORE</code>の値はURLである必要があります。</span> <span class="merged" id="all.1omHLr.spl2" title="原文 : In this case we refer to files usinf the file: prefix.">この場合、ファイルでは<code>file:</code>プレフィクスを使用します。</span> </p>
 </p>
 </div>

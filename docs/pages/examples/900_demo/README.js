@@ -7,7 +7,7 @@
 
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービスの詳細" src="./images/images/coherence-demo.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービス詳細" src="./images/images/coherence-demo.png" width="950" /> </v-card-text> </v-card>
 
 <p><span class="merged" id="all.42EjYS" title="原文 :  Please see The Coherence Demo GitHub project for full instructions."><img alt="GitHubマーク32px" src="./images/GitHub-Mark-32px.png" />完全な手順については、<a href="https://github.com/coherence-community/coherence-demo" id="" target="_blank" >「CoherenceデモGitHubプロジェクト」</a>を参照してください。</span></p>
 

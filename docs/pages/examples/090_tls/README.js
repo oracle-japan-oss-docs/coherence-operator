@@ -471,11 +471,11 @@ lang="bash"
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.4OTvIy"  title="原文: tls-example-server:1.0.0"><code>tls-example-server:1.0.0</code></span></p>
+<p><code>tls-example-server:1.0.0</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.1SXwmG"  title="原文: tls-example-client:1.0.0"><code>tls-example-client:1.0.0</code></span></p>
+<p><code>tls-example-client:1.0.0</code></p>
 
 </li>
 </ul>

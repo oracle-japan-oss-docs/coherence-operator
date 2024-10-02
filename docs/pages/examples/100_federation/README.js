@@ -129,7 +129,7 @@ coherence.coherence.oracle.com/secondary-cluster created</markup>
 
 </div>
 
-<h4 id="_2_list_the_created_coherence_clusters"><span class="merged" id="all.4bBJrk" title="原文 : 2. List the created Coherence clusters">2.作成されたCoherenceクラスタのリスト</span></h4>
+<h4 id="_2_list_the_created_coherence_clusters"><span class="merged" id="all.4bBJrk" title="原文 : 2. List the created Coherence clusters">2. 作成されたCoherenceクラスタのリスト</span></h4>
 <div class="section">
 <p><span class="merged" id="all.1krzcf" title="原文 : Run the following command to list the clusters:">クラスタをリストするには、次のコマンドを実行します:</span></p>
 
@@ -153,7 +153,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_3_view_the_running_pods"><span class="merged" id="all.3pgoei.1" title="原文 : 3. View the running pods">3.実行中のポッドの表示</span></h4>
+<h4 id="_3_view_the_running_pods"><span class="merged" id="all.3pgoei.1" title="原文 : 3. View the running pods">3. 実行中のポッドの表示</span></h4>
 <div class="section">
 <p><span class="merged" id="all.iH5zh.1" title="原文 : Run the following command to view the Pods:">次のコマンドを実行してポッドを表示します:</span></p>
 
@@ -173,7 +173,7 @@ secondary-cluster-1   1/1     Running   0          73s</markup>
 
 </div>
 
-<h4 id="_4_connect_to_the_coherence_console_inside_the_primary_cluster_to_add_data"><span class="merged" id="all.1KNz6R" title="原文 : 4. Connect to the Coherence Console inside the primary cluster to add data">4.プライマリ・クラスタ内のCoherenceコンソールに接続してデータを追加</span></h4>
+<h4 id="_4_connect_to_the_coherence_console_inside_the_primary_cluster_to_add_data"><span class="merged" id="all.1KNz6R" title="原文 : 4. Connect to the Coherence Console inside the primary cluster to add data">4. プライマリ・クラスタ内のCoherenceコンソールに接続してデータを追加</span></h4>
 <div class="section">
 <p><span class="merged" id="all.4OOCaP" title="原文 : We will connect via Coherence console to add some data using the following commands:">Coherenceコンソールを介して接続し、次のコマンドを使用してデータを追加します:</span></p>
 
@@ -209,7 +209,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_6_connect_to_the_coherence_console_inside_the_secondary_cluster_to_verify_that_data_is_federated_from_primary_cluster"><span class="merged" id="all.2MtwT3" title="原文 : 6. Connect to the Coherence Console inside the secondary cluster to verify that data is federated from primary cluster">6.セカンダリ・クラスタ内のCoherenceコンソールに接続して、データがプライマリ・クラスタからフェデレートされていることを確認</span></h4>
+<h4 id="_6_connect_to_the_coherence_console_inside_the_secondary_cluster_to_verify_that_data_is_federated_from_primary_cluster"><span class="merged" id="all.2MtwT3" title="原文 : 6. Connect to the Coherence Console inside the secondary cluster to verify that data is federated from primary cluster">6. セカンダリ・クラスタ内のCoherenceコンソールに接続して、データがプライマリ・クラスタからフェデレートされていることを確認</span></h4>
 <div class="section">
 <p><span class="merged" id="all.27QuPy" title="原文 : We will connect via Coherence console to confirm that the data we added to the primary cluster is federated to the secondary cluster.">Coherenceコンソールを使用して接続し、プライマリ・クラスタに追加したデータがセカンダリ・クラスタにフェデレートされていることを確認します。</span></p>
 
@@ -244,7 +244,7 @@ lang="bash"
 
 </div>
 
-<h4 id="_7_confirm_the_primary_cluster_also_received_secondarykey_secondaryvalue_entry"><span class="merged" id="all.43ZSnM" title="原文 : 7. Confirm the primary cluster also received &quot;secondarykey&quot;, &quot;secondaryvalue&quot; entry">7.プライマリ・クラスタが"secondarykey"、"secondaryvalue"エントリも受信したことを確認</span></h4>
+<h4 id="_7_confirm_the_primary_cluster_also_received_secondarykey_secondaryvalue_entry"><span class="merged" id="all.43ZSnM" title="原文 : 7. Confirm the primary cluster also received &quot;secondarykey&quot;, &quot;secondaryvalue&quot; entry">7. プライマリ・クラスタが"secondarykey"、"secondaryvalue"エントリも受信したことを確認</span></h4>
 <div class="section">
 <p><span class="merged" id="all.3JZNF2" title="原文 : Follow the command in the previous section to connect to the Coherence Console inside the primary cluster.">前のセクションのコマンドに従って、プライマリ・クラスタ内のCoherenceコンソールに接続します。</span></p>
 

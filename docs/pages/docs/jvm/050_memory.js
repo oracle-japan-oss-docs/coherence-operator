@@ -45,12 +45,12 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.41"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.42"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class=""><span class="merged" id="all.2xctqM"  title="原文: -XX:InitialRAMPercentage=N"><code>-XX:InitialRAMPercentage=N</code></span></td>
+<td class=""><code>-XX:InitialRAMPercentage=N</code></td>
 <td class=""><span class="merged" id="all.K1LBD.spl1" title="原文 : Sets the initial amount of memory that the JVM will use for the Java heap before applying ergonomics heuristics as a percentage of the maximum amount determined as described in the -XX:MaxRAM option.">-XX:MaxRAMオプションの説明に従って、エルゴノミクス・ヒューリスティックを最大量のパーセンテージとして適用する前に、JVMがJavaヒープに使用する初期メモリー量を設定します。</span> <span class="merged" id="all.K1LBD.spl2"  title="原文: The default value is 1.5625 percent.">デフォルト値は1.5625%です。</span> </td>
 </tr>
 <tr>
@@ -133,16 +133,16 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE.1"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.42"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.43"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class=""><span class="merged" id="all.gClxo"  title="原文: -XX:InitialHeapSize=&lt;size&gt;"><code>-XX:InitialHeapSize=&lt;size></code></span></td>
+<td class=""><code>-XX:InitialHeapSize=&lt;size></code></td>
 <td class=""><span class="merged" id="all.46s9Uf" title="原文 : Set initial heap size">初期ヒープ・サイズの設定</span></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.1GtVo7"  title="原文: -XX:MaxHeapSize=&lt;size&gt;"><code>-XX:MaxHeapSize=&lt;size></code></span></td>
+<td class=""><code>-XX:MaxHeapSize=&lt;size></code></td>
 <td class=""><span class="merged" id="all.19xLxx" title="原文 : Set maximum heap size">最大ヒープ・サイズの設定</span></td>
 </tr>
 </tbody>

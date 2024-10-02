@@ -45,11 +45,11 @@
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.2iWPmR"  title="原文: Coherence.HeapUsage.Used"><code>Coherence.HeapUsage.Used</code></span></p>
+<p><code>Coherence.HeapUsage.Used</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.2LolzE"  title="原文: Coherence.HeapUsage.PercentageUsed"><code>Coherence.HeapUsage.PercentageUsed</code></span></p>
+<p><code>Coherence.HeapUsage.PercentageUsed</code></p>
 
 </li>
 </ul>
@@ -57,11 +57,11 @@
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.2EGa2l"  title="原文: application:coherence_heap_usage_used"><code>application:coherence_heap_usage_used</code></span></p>
+<p><code>application:coherence_heap_usage_used</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4GeXGv"  title="原文: application:coherence_heap_usage_percentage_used"><code>application:coherence_heap_usage_percentage_used</code></span></p>
+<p><code>application:coherence_heap_usage_percentage_used</code></p>
 
 </li>
 </ul>
@@ -263,7 +263,7 @@ application:coherence_heap_usage_used{cluster="test-cluster", machine="docker-de
 </div>
 </div>
 
-<h3 id="_install_prometheus"><span class="merged" id="all.3NplFl" title="原文 : Install Prometheus">Prometheusのインストール</span></h3>
+<h3 id="_install_prometheus"><span class="merged" id="all.3NplFl"  title="原文:: Install Prometheus">Prometheusのインストール</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2D7Aj9" title="原文 : The simplest way to install Prometheus as part of an example or demo is to use the Prometheus Operator, which can be installed using a Helm chart.">例またはデモの一部としてPrometheusをインストールする最も簡単な方法は、Helmチャートを使用してインストールできる<a href="https://github.com/prometheus-operator/prometheus-operator" id="" target="_blank" >「Prometheusオペレータ」</a>を使用することです。</span></p>
 
@@ -398,19 +398,19 @@ lang="yaml"
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1waqFW"  title="原文: heap_memory_usage_after_gc_max_pct"><code>heap_memory_usage_after_gc_max_pct</code></span></p>
+<p><code>heap_memory_usage_after_gc_max_pct</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.3VJiK0"  title="原文: heap_memory_usage_after_gc_pct"><code>heap_memory_usage_after_gc_pct</code></span></p>
+<p><code>heap_memory_usage_after_gc_pct</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.3CnLg4"  title="原文: heap_memory_usage_after_gc"><code>heap_memory_usage_after_gc</code></span></p>
+<p><code>heap_memory_usage_after_gc</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.NCV6H"  title="原文: heap_memory_usage_after_gc_max"><code>heap_memory_usage_after_gc_max</code></span></p>
+<p><code>heap_memory_usage_after_gc_max</code></p>
 
 </li>
 </ul>

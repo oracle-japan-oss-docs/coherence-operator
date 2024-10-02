@@ -78,7 +78,7 @@ spec:
 
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.4gbTpN" title="原文 : Coherence has been configured to use the Java util logging.">Coherenceは、Javaのユーティリティ・ロギングを使用するように構成されています。</span></li>
-<li data-value="2"><span class="merged" id="all.20m6qG" title="原文 : The Coherence logger name has been set to com.oracle.coherence, which matches the logging configuration file.">Coherenceログ出力名は、ロギング構成ファイルと一致する<code>com.oracle.coherence</code>に設定されています。</span></li>
+<li data-value="2"><span class="merged" id="all.20m6qG" title="原文 : The Coherence logger name has been set to com.oracle.coherence, which matches the logging configuration file.">Coherenceロガー名は、ロギング構成ファイルと一致する<code>com.oracle.coherence</code>に設定されています。</span></li>
 <li data-value="3"><span class="merged" id="all.44gOai" title="原文 : The Java util logging configuration file is set to the file injected by the Operator.">Javaのユーティリティ・ロギング構成ファイルは、オペレータによってインジェクトされるファイルに設定されます。</span></li>
 </ul>
 </div>

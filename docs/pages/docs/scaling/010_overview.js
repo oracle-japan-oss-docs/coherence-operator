@@ -64,20 +64,20 @@
 <thead>
 <tr>
 <th><span class="merged" id="all.42bBIm"  title="原文:: Value">値</span></th>
-<th><span class="merged" id="all.4JM9z7.44"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.45"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class=""><span class="merged" id="all.3yF7ME"  title="原文: ParallelUpSafeDown"><code>ParallelUpSafeDown</code></span></td>
+<td class=""><code>ParallelUpSafeDown</code></td>
 <td class=""><span class="merged" id="all.2EgEko.spl1" title="原文 : This is the default scaling policy.">これはデフォルトのスケーリング・ポリシーです。</span> <span class="merged" id="all.2EgEko.spl2" title="原文 : With this policy when scaling up Pods are added in parallel (the same as using the Parallel podManagementPolicy in a StatefulSet) and when scaling down Pods are removed one at a time (the same as the OrderedReady podManagementPolicy for a StatefulSet)."><code>Pods</code>をスケール・アップする場合、このポリシーはパラレルで追加されます(<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/${k8s-doc-version}/#statefulsetspec-v1-apps" id="" target="_blank" >StatefulSet</a>で<code>Parallel</code> <code>podManagementPolicy</code>を使用する場合と同じ)。また、<code>Pods</code>をスケール・ダウンする場合(StatefulSetの<code>OrderedReady</code> <code>podManagementPolicy</code>と同じ)。</span> <span class="merged" id="all.2EgEko.spl3" title="原文 : When scaling down a check is done to ensure that the members of the cluster have a safe StatusHA value before a Pod is removed (i.e. none of the Coherence cache services have an endangered status).">スケール・ダウンを行うと、<code>Pod</code>が削除される前に、クラスタのメンバーに安全なStatusHA値があることが確認されます(つまり、危険にさらされるステータスがなくなるCoherenceキャッシュ・サービスはありません)。</span> <span class="merged" id="all.2EgEko.spl4" title="原文 : This policy offers faster scaling up and start-up because pods are added in parallel as data should not be lost when adding members, but offers safe, albeit slower, scaling down as Pods are removed one by one.">このポリシーは、メンバーの追加時にデータが失われるべきではないため、ポッドが並行して追加されるため、より高速なスケール・アップおよび起動を提供しますが、<code>Pods</code>が1つずつ削除されるため、安全で安価な低速になります。</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.4cQruq.1"  title="原文: Parallel"><code>Parallel</code></span></td>
+<td class=""><code>Parallel</code></td>
 <td class=""><span class="merged" id="all.2TAhEp.spl1" title="原文 : With this policy when scaling up Pods are added in parallel (the same as using the Parallel podManagementPolicy in a StatefulSet)."><code>Pods</code>のスケール・アップ時にこのポリシーを使用すると、パラレルに追加されます(<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/${k8s-doc-version}/#statefulsetspec-v1-apps" id="" target="_blank" >StatefulSet</a>で<code>Parallel</code> <code>podManagementPolicy</code>を使用する場合と同じです)。</span> <span class="merged" id="all.2TAhEp.spl2" title="原文 : With this policy no StatusHA check is performed either when scaling up or when scaling down.">このポリシーでは、スケール・アップ時またはスケール・ダウン時にStatusHAチェックは実行されません。</span> <span class="merged" id="all.2TAhEp.spl3" title="原文 : This policy allows faster start and scaling times but at the cost of no data safety; it is ideal for deployments that are storage disabled.">このポリシーにより、起動およびスケーリングの時間が短縮されますが、データの安全性がなく、ストレージが無効なデプロイメントに最適です。</span> </td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.3Yh6Zj"  title="原文: Safe"><code>Safe</code></span></td>
+<td class=""><code>Safe</code></td>
 <td class=""><span class="merged" id="all.1AUSCS.spl1" title="原文 : With this policy when scaling up and down Pods are removed one at a time (the same as the OrderedReady podManagementPolicy for a StatefulSet)."><code>Pods</code>のスケール・アップおよびスケール・ダウン時にこのポリシーを使用して、一度に1つずつ削除されます(StatefulSetの<code>OrderedReady</code> <code>podManagementPolicy</code>と同じです)。</span> <span class="merged" id="all.1AUSCS.spl2" title="原文 : When scaling down a check is done to ensure that the members of the deployment have a safe StatusHA value before a Pod is removed (i.e. none of the Coherence cache services have an endangered status).">スケール・ダウンを行うと、<code>Pod</code>が削除される前に、デプロイメントのメンバーに安全なStatusHA値があることが確認されます(つまり、危険にさらされたステータスを持たないCoherenceキャッシュ・サービスはありません)。</span> <span class="merged" id="all.1AUSCS.spl3" title="原文 : This policy is slower to start, scale up and scale down.">このポリシーは、起動、スケール・アップおよびスケール・ダウンに時間がかかります。</span> </td>
 </tr>
 </tbody>

@@ -115,11 +115,11 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.1yIpOq"  title="原文: $COHERENCE_HOME/lib/coherence.jar"><code>$COHERENCE_HOME/lib/coherence.jar</code></span></p>
+<p><code>$COHERENCE_HOME/lib/coherence.jar</code></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.3mPXR1"  title="原文: $COHERENCE_HOME/conf"><code>$COHERENCE_HOME/conf</code></span></p>
+<p><code>$COHERENCE_HOME/conf</code></p>
 
 </li>
 </ul>

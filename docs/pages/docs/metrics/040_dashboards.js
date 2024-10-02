@@ -47,7 +47,7 @@
 
 </li>
 <li>
-<span class="merged" id="all.QNIFM" title="原文 : Proxy Servers Summary &amp; Detail Dashboards"><router-link @click.native="this.scrollFix('#proxies')" to="#proxies">プロキシ・サーバーのサマリー&amp;詳細ダッシュボード</router-link></span>
+<span class="merged" id="all.QNIFM" title="原文 : Proxy Servers Summary &amp; Detail Dashboards"><router-link @click.native="this.scrollFix('#proxies')" to="#proxies">プロキシ・サーバー・サマリー&amp;詳細ダッシュボード</router-link></span>
 
 </li>
 <li>
@@ -74,6 +74,14 @@
 <span class="merged" id="all.413s41" title="原文 : Executors Summary &amp; Details Dashboards"><router-link @click.native="this.scrollFix('#executors')" to="#executors">エグゼキュータ・サマリー&amp;詳細ダッシュボード</router-link></span>
 
 </li>
+<li>
+<span class="merged" id="all.3AbFAs" title="原文 : gRPC Proxy Summary &amp; Details Dashboards"><router-link @click.native="this.scrollFix('#grpc')" to="#grpc">gRPCプロキシ・サマリー&amp;詳細ダッシュボード</router-link></span>
+
+</li>
+<li>
+<span class="merged" id="all.265tPd" title="原文 : Topics, Subscribers and Subscriber Groups Dashboards"><router-link @click.native="this.scrollFix('#topics')" to="#topics">トピック、サブスクライバおよびサブスクライバ・グループ・ダッシュボード</router-link></span>
+
+</li>
 </ol>
 </li>
 </ol>
@@ -86,14 +94,18 @@
 
 <h3 id="_variables"><span class="merged" id="all.BcB4E"  title="原文:: Variables">変数</span></h3>
 <div class="section">
-<p><img alt="変数" src="./images/grafana-variables.png" width="250" />
+<p><img alt="変数" src="./images/grafana-variables.png" width="450" />
 </p>
 
 <p><span class="merged" id="all.3SUfnI" title="原文 : Allows for selection of information to be displayed where there is more than one item.">複数のアイテムがある場所に表示される情報の選択を許可します。</span></p>
 
 <ol style="margin-left: 15px;">
 <li>
-<span class="merged" id="all.1qnymn" title="原文 : Cluster Name - Allows selection of the cluster to view metrics for">クラスタ名 - クラスタを選択してメトリクスを表示できます</span>
+<span class="merged" id="all.2PMFtp.spl1" title="原文 : Namespace - Allows selection of a namespace if you have multiple Coherence clusters with the same name in multipled namespaces.">ネームスペース - 複数のネームスペースに同じ名前を持つ複数のCoherenceクラスタがある場合、ネームスペースの選択を許可します。</span> <span class="merged" id="all.2PMFtp.spl2" title="原文 : Will default to None if you are not running in Kubernetes">Kubernetesで実行していない場合は、デフォルトで<code>None</code>に設定されます</span> 
+
+</li>
+<li>
+<span class="merged" id="all.1C4Xjo" title="原文 : Cluster Name - Allows selection of the specific cluster to view metrics for">クラスタ名 - 特定のクラスタを選択してメトリクスを表示できます</span>
 
 </li>
 <li>
@@ -111,7 +123,7 @@
 
 <h3 id="_annotations"><span class="merged" id="all.3lxl1W"  title="原文:: Annotations">注釈</span></h3>
 <div class="section">
-<p><img alt="注釈" src="./images/grafana-annotations.png" width="250" />
+<p><img alt="注釈" src="./images/grafana-annotations.png" width="350" />
 </p>
 
 <p><span class="merged" id="all.jO5Rb" title="原文 : Vertical red lines on a graph to indicate a change in a key markers such as:">グラフの垂直赤線で、次のようなキー・マーカーの変更を示します:</span></p>
@@ -137,11 +149,11 @@
 
 <ol style="margin-left: 15px;">
 <li>
-<span class="merged" id="all.qqCOP" title="原文 : Select Dashboard - In the top right a drop down list of dashboards is available selection">ダッシュボードの選択 - 右上のダッシュボードのドロップダウン・リストが選択可能です</span>
+<span class="merged" id="all.3asTzv" title="原文 : Select Dashboard - In the top right a drop-down list of dashboards is available selection">ダッシュボードの選択 - 右上には、ダッシュボードのドロップダウン・リストが選択可能です</span>
 
 </li>
 <li>
-<span class="merged" id="all.4Ul4Kn" title="原文 : Drill Through - Ability to drill through based upon service, member, node, etc.">ドリル・スルー - サービス、メンバー、ノードなどに基づいてドリル・スルーできます。</span>
+<span class="merged" id="all.1JFLAH" title="原文 : Drill Through - Ability to drill through based upon service, member, node, etc on highlighted columns.">ドリル・スルー - 強調表示された列のサービス、メンバー、ノードなどに基づいてドリル・スルーする機能。</span>
 
 </li>
 </ol>
@@ -179,11 +191,11 @@
 </ul>
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="ダッシュボード・メイン" src="./images/grafana-main.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="ダッシュボード・メイン" src="./images/grafana-main.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
-<h3 id="members"><span class="merged" id="all.2lf1sj" title="原文 : 2. Members Summary &amp; Details Dashboards">2.メンバー・サマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="members"><span class="merged" id="all.2lf1sj" title="原文 : 2. Members Summary &amp; Details Dashboards">2. メンバー・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.xXN0U" title="原文 : Shows an overview of all cluster members that are enabled for metrics capture including metrics such as:">メトリクス取得に対して有効になっているすべてのクラスタ・メンバーの概要を示します。は次のとおりです:</span></p>
 
@@ -210,11 +222,11 @@
 </li>
 </ul>
 
-<h4 id="_members_summary"><span class="merged" id="all.V9hTZ" title="原文 : Members Summary">メンバー要約</span></h4>
+<h4 id="_members_summary"><span class="merged" id="all.V9hTZ" title="原文 : Members Summary">メンバー・サマリー</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバー" src="./images/grafana-members.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバー" src="./images/grafana-members.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -222,12 +234,12 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバーの詳細" src="./images/grafana-members.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバーの詳細" src="./images/grafana-member.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>
 
-<h3 id="services"><span class="merged" id="all.478dZs" title="原文 : 3. Services Summary &amp; Details Dashboards">3.サービス・サマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="services"><span class="merged" id="all.478dZs" title="原文 : 3. Services Summary &amp; Details Dashboards">3. サービス・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4OQGnp" title="原文 : Shows an overview of all cluster services including metrics such as:">次のようなメトリクスを含むすべてのクラスタ・サービスの概要を示します:</span></p>
 
@@ -254,24 +266,24 @@
 </li>
 </ul>
 
-<h4 id="_services_summary"><span class="merged" id="all.2Wplcn"  title="原文:: Services Summary">サービスのサマリー</span></h4>
+<h4 id="_services_summary"><span class="merged" id="all.2Wplcn"  title="原文:: Services Summary">サービス・サマリー</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービス" src="./images/grafana-services.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービス" src="./images/grafana-services.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
-<h4 id="_service_details"><span class="merged" id="all.2d7XRY"  title="原文:: Service Details">サービスの詳細</span></h4>
+<h4 id="_service_details"><span class="merged" id="all.2d7XRY"  title="原文:: Service Details">サービス詳細</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービスの詳細" src="./images/grafana-service.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="サービス詳細" src="./images/grafana-service.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>
 
-<h3 id="caches"><span class="merged" id="all.1RORbc" title="原文 : 4. Caches Summary &amp; Detail Dashboards">4.キャッシュ・サマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="caches"><span class="merged" id="all.1RORbc" title="原文 : 4. Caches Summary &amp; Detail Dashboards">4. キャッシュ・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.1IieE8" title="原文 : Shows an overview of all caches including metrics such as:">次のようなメトリクスを含むすべてのキャッシュの概要を示します:</span></p>
 
@@ -294,7 +306,7 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="キャッシュ" src="./images/grafana-caches.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="キャッシュ" src="./images/grafana-caches.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -302,12 +314,12 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="キャッシュ詳細" src="./images/grafana-cache.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="キャッシュ詳細" src="./images/grafana-cache.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>
 
-<h3 id="proxies"><span class="merged" id="all.2zijYN" title="原文 : 5. Proxy Servers Summary &amp; Detail Dashboards">5.プロキシ・サーバーのサマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="proxies"><span class="merged" id="all.2zijYN" title="原文 : 5. Proxy Servers Summary &amp; Detail Dashboards">5. プロキシ・サーバー・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.hqeaU" title="原文 : Shows and overview of Proxy servers including metrics such as:">次のようなメトリクスを含むプロキシ・サーバーの表示および概要:</span></p>
 
@@ -334,7 +346,7 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="プロキシ・サーバー" src="./images/grafana-proxies.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="プロキシ・サーバー" src="./images/grafana-proxies.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -342,12 +354,12 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="プロキシ・サーバーの詳細" src="./images/grafana-proxy.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="プロキシ・サーバーの詳細" src="./images/grafana-proxy.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>
 
-<h3 id="persistence"><span class="merged" id="all.2CPKKI" title="原文 : 6. Persistence Summary Dashboard">6.永続性サマリー・ダッシュボード</span></h3>
+<h3 id="persistence"><span class="merged" id="all.2CPKKI" title="原文 : 6. Persistence Summary Dashboard">6. 永続性サマリー・ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4KDzCM" title="原文 : Shows and overview of Persistence including metrics such as:">次のようなメトリクスを含む永続性の表示および概要を示します:</span></p>
 
@@ -367,11 +379,11 @@
 </ul>
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="永続性" src="./images/grafana-persistence.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="永続性" src="./images/grafana-persistence.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
-<h3 id="federation"><span class="merged" id="all.2rjcc5" title="原文 : 7. Federation Summary &amp; Details Dashboards">7.フェデレーション・サマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="federation"><span class="merged" id="all.2rjcc5" title="原文 : 7. Federation Summary &amp; Details Dashboards">7. フェデレーション・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.1QVOgr" title="原文 : Shows overview of Federation including metrics such as:">次のようなメトリクスを含むフェデレーションの概要を示します:</span></p>
 
@@ -386,11 +398,11 @@
 </li>
 </ul>
 
-<h4 id="_federation_summary"><span class="merged" id="all.3ksVCd" title="原文 : Federation Summary">フェデレーション要約</span></h4>
+<h4 id="_federation_summary"><span class="merged" id="all.3ksVCd" title="原文 : Federation Summary">フェデレーション・サマリー</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="フェデレーション要約" src="./images/grafana-federation-summary.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="フェデレーション・サマリー" src="./images/grafana-federation-summary.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -398,12 +410,12 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="フェデレーション詳細" src="./images/grafana-federation-detail.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="フェデレーション詳細" src="./images/grafana-federation-detail.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>
 
-<h3 id="machines"><span class="merged" id="all.E9Jq2" title="原文 : 8. Machines Summary Dashboard">8.マシン要約ダッシュボード</span></h3>
+<h3 id="machines"><span class="merged" id="all.E9Jq2" title="原文 : 8. Machines Summary Dashboard">8. マシン・サマリー・ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4UoZV6" title="原文 : Shows an overview of all machines that make up the Kubernetes cluster underlying the Coherence cluster including metrics such as:">Coherenceクラスタの基礎となるKubernetesクラスタを構成する、次のようなメトリクスを含むすべてのマシンの概要を示します:</span></p>
 
@@ -419,7 +431,7 @@
 </ul>
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="マシン" src="./images/grafana-machines.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="マシン" src="./images/grafana-machines.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -439,11 +451,11 @@
 </ul>
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="HTTPサーバー" src="./images/grafana-http.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="HTTPサーバー" src="./images/grafana-http.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
-<h3 id="ed"><span class="merged" id="all.SbYWY" title="原文 : 10. Elastic Data Summary Dashboard">10.エラスティック・データ・サマリー・ダッシュボード</span></h3>
+<h3 id="ed"><span class="merged" id="all.SbYWY" title="原文 : 10. Elastic Data Summary Dashboard">10. エラスティック・データ・サマリー・ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.1LoajY.1" title="原文 : Shows an overview of all HTTP Servers running in the cluster including metrics such as:">次のようなメトリクスを含む、クラスタで実行されているすべてのHTTPサーバーの概要を示します:</span></p>
 
@@ -459,11 +471,11 @@
 </ul>
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エラスティック・データ" src="./images/grafana-elastic-data.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エラスティック・データ" src="./images/grafana-elastic-data.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
-<h3 id="executors"><span class="merged" id="all.2CZzDS" title="原文 : 11. Executors Summary &amp; Details Dashboards">11.エグゼキュータ・サマリー&amp;詳細ダッシュボード</span></h3>
+<h3 id="executors"><span class="merged" id="all.2CZzDS" title="原文 : 11. Executors Summary &amp; Details Dashboards">11. エグゼキュータ・サマリー&amp;詳細ダッシュボード</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2WiBhi" title="原文 : Shows an overview of all Executors running in the cluster including metrics such as:">次のようなメトリクスを含む、クラスタで実行されているすべてのエグゼキュータの概要を示します:</span></p>
 
@@ -482,11 +494,11 @@
 </li>
 </ul>
 
-<h4 id="_executors_summary"><span class="merged" id="all.1TlCsD" title="原文 : Executors Summary">エグゼキュータ要約</span></h4>
+<h4 id="_executors_summary"><span class="merged" id="all.1TlCsD" title="原文 : Executors Summary">エグゼキュータ・サマリー</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エグゼキュータ要約" src="./images/grafana-executors-summary.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エグゼキュータ・サマリー" src="./images/grafana-executors-summary.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 
@@ -494,7 +506,95 @@
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エグゼキュータ詳細" src="./images/grafana-executor-detail.png" width="950" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="エグゼキュータ詳細" src="./images/grafana-executor-detail.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+</div>
+
+<h3 id="grpc"><span class="merged" id="all.2pDyJN" title="原文 : 12. gRPC Proxy Summary &amp; Details Dashboards">12. gRPCプロキシ・サマリー&amp;詳細ダッシュボード</span></h3>
+<div class="section">
+<p><span class="merged" id="all.49VkaN" title="原文 : Shows an overview of all gRPC Proxies running in the cluster including metrics such as:">次のようなメトリクスを含む、クラスタで実行されているすべてのgRPCプロキシの概要を示します:</span></p>
+
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.13BoY6"  title="原文:: Connections">接続</span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.1uFgus" title="原文 : Requests and responses">リクエストおよびレスポンス</span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.40Xs3r"  title="原文:: Proxy list">「プロキシ」リスト</span></p>
+
+</li>
+</ul>
+
+<h4 id="_grpc_proxies_summary"><span class="merged" id="all.1byU6K" title="原文 : gRPC Proxies Summary">gRPCプロキシ・サマリー</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="gRPCプロキシ・サマリー" src="./images/grafana-grpc-proxies.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+
+<h4 id="_grpc_proxies_details"><span class="merged" id="all.4At0Q5" title="原文 : gRPC Proxies Details">gRPCプロキシ詳細</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="gRPCプロキシ詳細" src="./images/grafana-proxy.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+</div>
+
+<h3 id="topics"><span class="merged" id="all.4JRRL1" title="原文 : 13. Topics, Subscribers and Subscriber Groups Dashboards">13. トピック、サブスクライバおよびサブスクライバ・グループ・ダッシュボード</span></h3>
+<div class="section">
+<p><span class="merged" id="all.CY9D" title="原文 : Shows an overview of all Topics running in the cluster including metrics such as:">次のようなメトリクスを含む、クラスタで実行されているすべてのトピックの概要を示します:</span></p>
+
+<ul class="ulist">
+<li>
+<p><span class="merged" id="all.UyJzM" title="原文 : Topics, Subscribers and Subscriber Groups">トピック、サブスクライバおよびサブスクライバ・グループ</span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.OujW6" title="原文 : Published and received messages counts">公開済および受信済メッセージ数</span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.2BoaNl" title="原文 : Topic channel allocations">トピック・チャネル割当</span></p>
+
+</li>
+</ul>
+
+<h4 id="_topics_summary"><span class="merged" id="all.1k8Xmp" title="原文 : Topics Summary">トピック・サマリー</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="トピック・サマリー" src="./images/grafana-topics.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+
+<h4 id="_topic_details"><span class="merged" id="all.4SBKaQ"  title="原文:: Topic Details">トピックの詳細</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="トピック詳細" src="./images/grafana-topic.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+
+<h4 id="_topic_subscriber_group"><span class="merged" id="all.2Bxm4Q" title="原文 : Topic Subscriber Group">トピック・サブスクライバ・グループ</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="トピック・サブスクライバ・グループ詳細" src="./images/grafana-topic-subscriber-group.png" width="1024" /> </v-card-text> </v-card>
+
+</div>
+
+<h4 id="_topic_subscriber"><span class="merged" id="all.1idRnf" title="原文 : Topic Subscriber">トピック・サブスクライバ</span></h4>
+<div class="section">
+
+
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="トピック・サブスクライバ詳細" src="./images/grafana-topic-subscriber.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>

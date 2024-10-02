@@ -266,7 +266,7 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.14d2Fa.spl1" style='background-color:yellow' title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.14d2Fa.spl2" style='background-color:yellow' title="原文 : We set this using the COHERENCE_CACHECONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we’re using in this example.">♪これを<code>COHERENCE_CACHECONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
+<p><span class="merged" id="all.14d2Fa.spl1" title="原文 : The name of the cache configuration file.">キャッシュ構成ファイルの名前。</span> <span class="merged" id="all.14d2Fa.spl2" title="原文 : We set this using the COHERENCE_CACHECONFIG environment variable, and set the value to minimal-client-cache-config.xml, which is the configuration file we’re using in this example.">これを<code>COHERENCE_CACHECONFIG</code>環境変数を使用して設定し、この例で使用している構成ファイルである<code>minimal-client-cache-config.xml</code>に設定します。</span> </p>
 
 </li>
 <li>

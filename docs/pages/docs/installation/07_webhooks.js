@@ -43,13 +43,13 @@
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.4.0/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.4.1/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/cert-manager/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.6"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.9"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup
@@ -132,7 +132,7 @@ sed -i s/self-signed/manual/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.7"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.10"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3KC1JI.1" title="原文 : On MacOS the sed command is slightly different for in-place replacement and requires an empty string after the -i parameter:">MacOSでは、<code>sed</code>コマンドはインプレース置換で若干異なり、<code>-i</code>パラメータの後に空の文字列が必要です:</span></p>
 
 <markup
@@ -185,7 +185,7 @@ lang="bash"
 <p><span class="merged" id="all.2cjOdm" title="原文 : It is possible to start the Operator without it registering any web-hooks with the API server.">APIサーバーにwebフックを登録せずに、オペレータを起動できます。</span></p>
 
 <div class="admonition caution">
-<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.1"  title="原文:: Caution">注意</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.3"  title="原文:: Caution">注意</span></p>
 <p ><p><span class="merged" id="all.1Xdgbj.spl1" title="原文 : Running the Operator without web-hooks is not recommended.">webフックなしでオペレータを実行することはお薦めしません。</span> <span class="merged" id="all.1Xdgbj.spl2" title="原文 : The admission web-hooks validate the Coherence resource yaml before it gets into the k8s cluster.">アドミッションwebフックは、<code>Coherence</code>リソースyamlがk8sクラスタに入る前にバリデートします。</span> <span class="merged" id="all.1Xdgbj.spl3" title="原文 : Without the web-hooks, invalid yaml will be accepted by k8s and the Operator will then log errors when it tries to reconcile invalid yaml.">webフックがない場合、無効なyamlはk8sによって受け入れられ、無効なyamlを調整しようとすると、オペレータはエラーをログに記録します。</span> <span class="merged" id="all.1Xdgbj.spl4" title="原文 : Or worse, the Operator will create an invalid StatefulSet which will then fail to start.">さらに悪い場合は、オペレータによって無効な<code>StatefulSet</code>が作成され、起動に失敗します。</span> </p>
 </p>
 </div>

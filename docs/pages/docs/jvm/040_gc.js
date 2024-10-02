@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.labfc.spl1" title="原文 : The Coherence CRD has fields in the jvm.gc section to allow certain garbage collection parameters to be set."><code>Coherence</code> CRDには、特定のガベージ・コレクション・パラメータを設定できるように、<code>jvm.gc</code>セクションのフィールドがあります。</span> <span class="merged" id="all.labfc.spl2" title="原文 : These include GC logging, setting the collector to use and arbitrary GC arguments.">これには、GCロギング、使用するコレクタの設定、任意のGC引数が含まれます。</span> </p>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.2"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.3"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.4YuR9O" title="原文 : If running Kubernetes on ARM processors and using Coherence images built on Java 8 for ARM, note that the G1 garbage collector in that version of Java on ARM is marked as experimental.">ARMプロセッサでKubernetesを実行し、Java 8 for ARMでビルドされたCoherenceイメージを使用する場合、ARM上のそのバージョンのJavaのG1ガベージ・コレクタは実験的としてマークされます。</span></p>
 
 <p><span class="merged" id="all.2zwPk3.spl1" title="原文 : By default, the Operator configures the Coherence JVM to use G1.">デフォルトでは、オペレータはG1を使用するようにCoherence JVMを構成します。</span> <span class="merged" id="all.2zwPk3.spl2" title="原文 : This will cause errors on Arm64 Java 8 JMS unless the JVM option -XX:+UnlockExperimentalVMOptions is added in the Coherence resource spec.">これにより、JVMオプション<code>-XX:+UnlockExperimentalVMOptions</code>がCoherenceリソース仕様に追加されないかぎり、Arm64 Java 8 JMSにエラーが発生します。</span> <span class="merged" id="all.2zwPk3.spl3" title="原文 : Alternatively specify a different garbage collector, ideally on a version of Java this old, use CMS.">または、この古いバージョンのJavaで別のガベージ・コレクタを指定する場合は、CMSを使用します。</span> </p>
@@ -65,16 +65,16 @@ spec:
 <td class=""><span class="merged" id="all.2AIuAZ" title="原文 : JVM Argument Set">JVM引数セット</span></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.3PJKMS"  title="原文: G1"><code>G1</code></span></td>
-<td class=""><span class="merged" id="all.2pUuyu"  title="原文: -XX:+UseG1GC"><code>-XX:+UseG1GC</code></span></td>
+<td class=""><code>G1</code></td>
+<td class=""><code>-XX:+UseG1GC</code></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.4bfWZ"  title="原文: CMS"><code>CMS</code></span></td>
-<td class=""><span class="merged" id="all.3xE9Mc"  title="原文: -XX:+UseConcMarkSweepGC"><code>-XX:+UseConcMarkSweepGC</code></span></td>
+<td class=""><code>CMS</code></td>
+<td class=""><code>-XX:+UseConcMarkSweepGC</code></td>
 </tr>
 <tr>
-<td class=""><span class="merged" id="all.4cQruq"  title="原文: Parallel"><code>Parallel</code></span></td>
-<td class=""><span class="merged" id="all.4r7vY"  title="原文: -XX:+UseParallelGC"><code>-XX:+UseParallelGC</code></span></td>
+<td class=""><code>Parallel</code></td>
+<td class=""><code>-XX:+UseParallelGC</code></td>
 </tr>
 </tbody>
 </table>

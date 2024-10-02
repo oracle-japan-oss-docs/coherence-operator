@@ -59,7 +59,7 @@ lang="bash"
 <p><span class="merged" id="all.2ehoaH.spl1" title="原文 : In this example we will run a Coherence cluster using the CE image.">この例では、CEイメージを使用してCoherenceクラスタを実行します。</span> <span class="merged" id="all.2ehoaH.spl2" title="原文 : This image starts Coherence with health checks enabled on port 6676, an Extend proxy listening on port 20000, a gRPC proxy on port 1408, the cluster port set to 7574.">このイメージは、ポート6676でヘルス・チェックを有効にし、ポート20000でリスニングする拡張プロキシ、ポート1408でgRPCプロキシ、クラスタ・ポートを7574に設定してCoherenceを起動します。</span> <span class="merged" id="all.2ehoaH.spl3" title="原文 : We will also enable Coherence Management over REST on port 30000, and metrics on port 9612.">また、ポート30000でCoherence Management over RESTを有効にし、ポート9612でメトリクスを有効にします。</span> <span class="merged" id="all.2ehoaH.spl4" title="原文 : We will set the Coherence local port to a fixed value of 7575.">Coherenceローカル・ポートを固定値7575に設定します。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.16"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.20"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.Afdwp.spl1" title="原文 : Istio has a few requirements for how Kubernetes resources are configured.">Istioには、Kubernetesリソースの構成方法に関するいくつかの要件があります。</span> <span class="merged" id="all.Afdwp.spl2" title="原文 : One of those is labels, where an app and version label are required to specify the application name that the resource is part of and the version of that application.">その1つはラベルで、リソースが属するアプリケーション名およびアプリケーションのバージョンを指定するには、<code>app</code>および<code>version</code>ラベルが必要です。</span> <span class="merged" id="all.Afdwp.spl3" title="原文 : All the resources in this example contains those labels.">この例のすべてのリソースには、これらのラベルが含まれています。</span> </p>
 </p>
 </div>
@@ -149,7 +149,7 @@ spec:
 <li data-value="7"><span class="merged" id="all.j0V5F" title="原文 : The Coherence Metrics port 9612 is exposed with the name metrics mapping to the container port in the StatefulSet named metrics This port has an appProtocol of http to tell Istio that the port traffic is http traffic.">Coherenceメトリクス・ポート9612は、<code>metrics</code>という名前のStatefulSetのコンテナ・ポートへの<code>metrics</code>マッピングという名前で公開されています。このポートには、ポート・トラフィックがhttpトラフィックであることをIstioに知らせる<code>appProtocol</code>が<code>http</code>です。</span></li>
 </ul>
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.17"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.21"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.Q5DgR.spl1" title="原文 : Istio requires ports to specify the protocol used for their traffic, and this can be done in two ways.">Istioは、トラフィックに使用するプロトコルを指定するためにポートを必要とします。これは2つの方法で実行できます。</span> <span class="merged" id="all.Q5DgR.spl2" title="原文 : Either using the appProtocol field for the ports, as shown above.">前述のように、ポートに<code>appProtocol</code>フィールドを使用します。</span> <span class="merged" id="all.Q5DgR.spl3" title="原文 : Or, prefix the port name with the protocol, so instead of management the port name would be http-management">または、ポート名の前にプロトコルを付けるため、<code>management</code>のかわりに、ポート名は<code>http-management</code>になります</span> </p>
 </p>
 </div>
@@ -255,7 +255,7 @@ spec:
 <li data-value="11"><span class="merged" id="all.4CQqF5" title="原文 : As we are using Coherence CE 22.06 we can use Coherence built in health check endpoints for the readiness and liveness probes.">Coherence CE 22.06を使用しているため、レディネスおよびリブネス・プローブにCoherenceの組込みヘルス・チェック・エンドポイントを使用できます。</span></li>
 </ul>
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.18"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.22"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.2aRiFQ.spl1" title="原文 : The example above is using Coherence 22.06 which has built in health checks and health check endpoints which can be used as readiness and liveness probes in Kubernetes.">前述の例は、Coherence 22.06を使用しています。このCoherenceには、Kubernetesでレディネスおよびリブネス・プローブとして使用できるヘルス・チェックおよびヘルス・チェック・エンドポイントが組み込まれています。</span> <span class="merged" id="all.2aRiFQ.spl2" title="原文 : These endpoints are only available if you start Coherence correctly using the Bootstrap API introduced in 22.06.">これらのエンドポイントは、22.06で導入されたブートストラップAPIを使用してCoherenceを正しく起動した場合にのみ使用できます。</span> </p>
 
 <p><span class="merged" id="all.3norm9" title="原文 : Start Coherence using com.tangosol.net.Coherence as the main class.">メイン・クラスとして<code>com.tangosol.net.Coherence</code>を使用してCoherenceを起動します。</span></p>
@@ -414,7 +414,7 @@ lang="yaml"
 </li>
 </ul>
 
-<h4 id="_build_a_client_image"><span class="merged" id="all.3LFzmM" title="原文 : Build a Client Image">クライアント・イメージの構築</span></h4>
+<h4 id="_build_a_client_image"><span class="merged" id="all.3LFzmM" title="原文 : Build a Client Image">クライアント・イメージのビルド</span></h4>
 <div class="section">
 <p><span class="merged" id="all.4KvC99.spl1" title="原文 : For this example we need a simple client image that can be run with different configurations.">この例では、異なる構成で実行できる単純なクライアント・イメージが必要です。</span> <span class="merged" id="all.4KvC99.spl2" title="原文 : Instead of building an application we will use a Coherence Image from GitHub combined with the utilities from the Coherence Operator.">アプリケーションを作成するかわりに、GitHubのCoherenceイメージをCoherence Operatorのユーティリティと組み合せて使用します。</span> </p>
 
@@ -423,7 +423,7 @@ lang="yaml"
 <markup
 
 title="Dockerfile"
->FROM ghcr.io/oracle/coherence-operator:3.4.0 AS Builder
+>FROM ghcr.io/oracle/coherence-operator:3.4.1 AS Builder
 
 FROM ghcr.io/oracle/coherence-ce:22.06.7
 COPY --from=Builder /files /files
@@ -441,7 +441,7 @@ lang="bash"
 >curl -s https://repo1.maven.org/maven2/com/oracle/coherence/ce/coherence-java-client/22.06.7/coherence-java-client-22.06.7.jar \
   -o coherence-java-client-22.06.7.jar</markup>
 
-<p><span class="merged" id="all.47IsV3" title="原文 : Build the image with the following command:">次のコマンドを使用してイメージを構築します:</span></p>
+<p><span class="merged" id="all.47IsV3" title="原文 : Build the image with the following command:">次のコマンドを使用してイメージをビルドします:</span></p>
 
 <markup
 lang="bash"

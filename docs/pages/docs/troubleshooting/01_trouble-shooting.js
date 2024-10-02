@@ -96,7 +96,7 @@ spec:
   allowUnsafeDelete: true</markup>
 
 <div class="admonition caution">
-<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.2"  title="原文:: Caution">注意</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.4"  title="原文:: Caution">注意</span></p>
 <p ><p><span class="merged" id="all.1NWBl2.spl1" title="原文 : Setting the allowUnsafeDelete field to true will mean that the Operator will not be able to intercept the deletion and shutdown of a Coherence cluster and ensure it has a clean, safe shutdown."><code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはCoherenceクラスタの削除と停止をインターセプトできず、クリーンで安全な停止を確保できなくなります。</span> <span class="merged" id="all.1NWBl2.spl2" title="原文 : This is usually ok in CI/CD environments where the cluster and namespace are being cleaned up at the end of a test.">これは通常、CI/CD環境で、テストの終了時にクラスタおよびネームスペースがクリーンアップされている場合に問題ありません。</span> <span class="merged" id="all.1NWBl2.spl3" title="原文 : This options should not be used in a production cluster, especially where features such as Coherence persistence are being used, otherwise the cluster may not cleanly shut down and will then not be able to be restarted using the persisted data.">このオプションは、特にCoherence永続性などの機能が使用されている本番クラスタでは使用しないでください。そうしないと、クラスタがクリーンに停止して、永続データを使用して再起動できなくなります。</span> </p>
 </p>
 </div>

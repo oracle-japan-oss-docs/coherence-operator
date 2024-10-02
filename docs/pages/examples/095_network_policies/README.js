@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.3qAAFk.spl1" title="原文 : This example covers running the Coherence Operator and Coherence clusters in Kubernetes with network policies.">この例では、ネットワーク・ポリシーを使用してKubernetesでCoherence OperatorおよびCoherenceクラスタを実行する方法について説明します。</span> <span class="merged" id="all.3qAAFk.spl2" title="原文 : In Kubernetes, a Network Policy is an application-centric construct which allow you to specify how a pod is allowed to communicate with various network &quot;entities&quot; (we use the word &quot;entity&quot; here to avoid overloading the more common terms such as &quot;endpoints&quot; and &quot;services&quot;, which have specific Kubernetes connotations) over the network.">Kubernetesでは、<a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/" id="" target="_blank" >「ネットワーク・ポリシー」</a>はアプリケーション中心のコンストラクトであり、これによって、ポッドが様々なネットワーク・エンティティと通信する方法を指定できます(ここでは「エンティティ」という語を使用して、特定のKubernetes接続を持つ「エンドポイント」や「サービス」より一般的な用語のオーバーロードを回避します)。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.13"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.17"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.3hLfz5.spl1" title="原文 : Network policies in Kubernetes are easy to get wrong if you are not careful.">注意しないと、Kubernetesのネットワーク・ポリシーが間違ってしまうことがよくあります。</span> <span class="merged" id="all.3hLfz5.spl2" title="原文 : In this case a policy will either block traffic it should not, in which case your application will not work, or it will let traffic through it should block, which will be an invisible security hole.">この場合、ポリシーによってトラフィックがブロックされる(この場合、アプリケーションが動作しない)か、ポリシーによってトラフィックがブロックされる(不可視のセキュリティ・ホールになる)かのいずれかになります。</span> </p>
 
 <p><span class="merged" id="all.363qVI" title="原文 : It is obviously important to test your policies, but Kubernetes offers next to zero visibility into what the policies are actually doing, as it is typically the network CNI extensions that are providing the policy implementation and each of these may work in a different way.">ポリシーをテストすることは明らかに重要ですが、Kubernetesは、ポリシー実装を提供しているネットワークCNI拡張機能であり、これらのそれぞれが異なる方法で機能する可能性があるため、ポリシーが実際に行っていることはゼロの可視性に近くなります。</span></p>
@@ -1098,7 +1098,7 @@ spec:
     spec:
       containers:
       - name: net-test
-        image: ghcr.io/oracle/coherence-operator:3.4.0
+        image: ghcr.io/oracle/coherence-operator:3.4.1
         env:
           - name: HOST
             value: net-test-coherence-server.coh-test.svc
