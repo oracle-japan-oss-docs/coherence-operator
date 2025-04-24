@@ -37,12 +37,12 @@
 <p><span class="merged" id="all.C4GKm.spl1" title="原文 : You should not usually need to change the default values applied for the member and machine names, but you may need to change the values used for the site, or rack.">通常、<code>member</code>および<code>machine</code>名に適用されるデフォルト値を変更する必要はありませんが、サイトまたはラックに使用される値を変更する必要がある場合があります。</span> <span class="merged" id="all.C4GKm.spl2" title="原文 : The labels used for the site and rack are standard k8s labels but the k8s cluster being used may not have these labels set."><code>site</code>および<code>rack</code>に使用されるラベルは標準のk8sラベルですが、使用されるk8sクラスタにはこれらのラベルが設定されていない可能性があります。</span> </p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.2"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.4"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.WYKOG.spl1" title="原文 : If the Coherence site is specified but no value is set for rack, the Operator will configure the rack value to be the same as the site.">Coherenceサイトが指定されているが、ラックに値が設定されていない場合、オペレータはラック値をサイトと同じ値に構成します。</span> <span class="merged" id="all.WYKOG.spl2" title="原文 : Coherence will not set the site if any of the identity values below it are missing (i.e. rack, machine, member).">Coherenceは、その下のアイデンティティ値(ラック、マシン、メンバー)のいずれかが欠落している場合、サイトを設定しません。</span> </p>
 </p>
 </div>
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.1"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.3WM05I" title="原文 : Maintaining Site and Rack Safety"><strong>サイトおよびラックの安全性の維持</strong></span></p>
 
 <p><span class="merged" id="all.14UvK.spl1" title="原文 : The details below show alternate approaches to set the Coherence site and rack identity.">次の詳細は、Coherenceサイトおよびラック・アイデンティティを設定するための代替アプローチを示しています。</span> <span class="merged" id="all.14UvK.spl2" title="原文 : If site and rack are set to a fixed value for the deployment, then all Coherence members in that deployment will have the same value.">サイトとラックがデプロイメントの固定値に設定されている場合、そのデプロイメント内のすべてのCoherenceメンバーは同じ値になります。</span> <span class="merged" id="all.14UvK.spl3" title="原文 : This means it would be impossible for Coherence to become site or rack safe.">つまり、Coherenceがサイトまたはラック・セーフになることは不可能です。</span> </p>
@@ -110,7 +110,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.1atKBX" title="原文 : The site and rack values can be specified as system properties as part of the Coherence deployment yaml.">サイトおよびラックの値は、Coherenceデプロイメントyamlの一部としてシステム・プロパティとして指定できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.1"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.2"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

@@ -8,7 +8,7 @@
 
 <p><span class="merged" id="all.2t6EFf.spl1" title="原文 : A ServiceMonitor is created for an exposed port by setting the serviceMonitor.enabled field to true."><code>serviceMonitor.enabled</code>フィールドを<code>true</code>に設定することで、公開ポートに対して<code>ServiceMonitor</code>が作成されます。</span> <span class="merged" id="all.2t6EFf.spl2" title="原文 : The Operator will create a ServiceMonitor with the same name as the Service.">オペレータは、<code>Service</code>と同じ名前の<code>ServiceMonitor</code>を作成します。</span> <span class="merged" id="all.2t6EFf.spl3" title="原文 : The ServiceMonitor created will have a single endpoint for the port being exposed.">作成された<code>ServiceMonitor</code>には、公開されるポートの単一のエンドポイントが含まれます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.31"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.33"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -58,7 +58,7 @@ spec:
 
 <h3 id="_configure_the_servicemonitor"><span class="merged" id="all.2IdEHw" title="原文 : Configure the ServiceMonitor">ServiceMonitorの構成</span></h3>
 <div class="section">
-<p><span class="merged" id="all.3osxk2" title="原文 : The Coherence CRD ServiceMonitorSpec contains many of the fields from the Prometheus ServiceMonitorSpec and Prometheus Endpoint to allow the ServiceMonitor to be configured for most use-cases."><code>Coherence</code> CRD <router-link :to="{path: '/docs/about/04_coherence_spec', hash: '#_servicemonitorspec'}">ServiceMonitorSpec</router-link>には、<a href="https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#servicemonitorspec" id="" target="_blank" >Prometheus <code>ServiceMonitorSpec</code></a>および<a href="https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#endpoint" id="" target="_blank" >「Prometheusエンドポイント」</a>の多くのフィールドが含まれており、ほとんどのユースケースで<code>ServiceMonitor</code>を構成できます。</span></p>
+<p><span class="merged" id="all.O4lT1" title="原文 : The Coherence CRD ServiceMonitorSpec contains many of the fields from the Prometheus ServiceMonitorSpec and Prometheus Endpoint to allow the ServiceMonitor to be configured for most use-cases."><code>Coherence</code> CRD <router-link :to="{path: '/docs/about/04_coherence_spec', hash: '#_servicemonitorspec'}">ServiceMonitorSpec</router-link>には、<a href="https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#servicemonitorspec" id="" target="_blank" >Prometheus <code>ServiceMonitorSpec</code></a>および<a href="https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#endpoint" id="" target="_blank" >「Prometheusエンドポイント」</a>の多くのフィールドが含まれており、ほとんどのユースケースで<code>ServiceMonitor</code>を構成できます。</span></p>
 
 <p><span class="merged" id="all.8wRP9" title="原文 : In situations where the Coherence CRD does not have the required fields, for example when a different version of Prometheus has been installed to that used to build the Coherence Operator, then the solution would be to manually create ServiceMonitors instead of letting them be created by the Coherence Operator."><code>Coherence</code> CRDに必須フィールドがない場合(たとえば、Coherence Operatorのビルドに使用したバージョンに別のバージョンのPrometheusがインストールされている場合)、ソリューションは、Coherence Operatorで作成するのではなく、<code>ServiceMonitors</code>を手動で作成することです。</span></p>
 

@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.2avGF6.spl1" title="原文 : It is possible to configure metrics endpoint to use SSL to secure the communication between server and client.">サーバーとクライアント間の通信を保護するためにSSLを使用するようにメトリクス・エンドポイントを構成できます。</span> <span class="merged" id="all.2avGF6.spl2" title="原文 : The SSL configuration is in the coherence.metrics.ssl section of the CRD spec.">SSL構成は、CRD仕様の<code>coherence.metrics.ssl</code>セクションにあります。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.19"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.21"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

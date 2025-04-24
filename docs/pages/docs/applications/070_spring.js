@@ -53,7 +53,7 @@
 &#9500;&#9472;&#8853; usr
 &#9492;&#9472;&#8853; var</markup>
 
-<p><span class="merged" id="all.4QgErp" title="原文 : This type of image can be run by the Coherence Operator by specifying an application type of spring in the spec.application.type field and by setting the working directory to the exploded directory, for example:">このタイプのイメージは、<code>spec.application.type</code>フィールドに<code>spring</code>のアプリケーション・タイプを指定し、展開されたディレクトリに作業ディレクトリを設定することで、Coherence Operatorで実行できます。次に例を示します:</span></p>
+<p><span class="merged" id="all.3Xz4iv.spl1" title="原文 : Spring Boot 2.x or 3.x This type of image can be run by the Coherence Operator by specifying an application type of spring for Spring Boot 2.x applications or spring3 for SpringBoot 3.x applications."><strong>「Spring Boot 2.xまたは3.x」</strong>このタイプのイメージは、Spring Boot 2.xアプリケーションの場合は<code>spring</code>、SpringBoot 3.xアプリケーションの場合は<code>spring3</code>というアプリケーション・タイプを指定して、Coherence Operatorで実行できます。</span> <span class="merged" id="all.3Xz4iv.spl2" title="原文 : The application type is set in the spec.application.type field and by setting the working directory to the exploded directory, for example:">アプリケーション・タイプは、<code>spec.application.type</code>フィールドに設定され、作業ディレクトリを分解されたディレクトリに設定します。次に例を示します:</span> </p>
 
 <markup
 lang="yaml"
@@ -69,15 +69,41 @@ spec:
     workingDir: /spring  <span class="conum" data-value="2" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.252osN" title="原文 : The type field set to spring tells the Operator that this is a Spring Boot application."><code>type</code>フィールドを<code>spring</code>に設定すると、これがSpring Bootアプリケーションであることをオペレータに通知します。</span></li>
+<li data-value="1"><span class="merged" id="all.4dy1w3" title="原文 : The type field set to spring tells the Operator that this is a Spring Boot 2.x application."><code>spring</code>に設定された<code>type</code>フィールドは、これがSpring Boot 2.xアプリケーションであることをオペレータに伝えます。</span></li>
 <li data-value="2"><span class="merged" id="all.27dXB2" title="原文 : The working directory has been set to the directory containing the exploded Spring Boot application.">作業ディレクトリは、展開されたSpring Bootアプリケーションを含むディレクトリに設定されました。</span></li>
 </ul>
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: test
+spec:
+  image: my-spring-app:1.0.0
+  application:
+    type: spring3        <span class="conum" data-value="1" />
+    workingDir: /spring  <span class="conum" data-value="2" /></markup>
+
+<ul class="colist">
+<li data-value="1"><span class="merged" id="all.3ktMOd" title="原文 : The type field set to spring3 tells the Operator that this is a Spring Boot 3.x application."><code>spring3</code>に設定された<code>type</code>フィールドは、これがSpring Boot 3.xアプリケーションであることをオペレータに伝えます。</span></li>
+<li data-value="2"><span class="merged" id="all.27dXB2.1" title="原文 : The working directory has been set to the directory containing the exploded Spring Boot application.">作業ディレクトリは、展開されたSpring Bootアプリケーションを含むディレクトリに設定されました。</span></li>
+</ul>
 <p><span class="merged" id="all.4KW2iU" title="原文 : When the Operator starts the application it will then run a command equivalent to:">オペレータがアプリケーションを起動すると、次と同等のコマンドが実行されます:</span></p>
+
+<p><span class="merged" id="all.3rgsWs"  title="原文:: Spring Boot 2.x"><strong>Spring Boot 2.x</strong></span></p>
 
 <markup
 lang="bash"
 
 >cd /spring &amp;&amp; java org.springframework.boot.loader.PropertiesLauncher</markup>
+
+<p><span class="merged" id="all.1KangH"  title="原文:: Spring Boot 3.x"><strong>Spring Boot 3.x</strong></span></p>
+
+<markup
+lang="bash"
+
+>cd /spring &amp;&amp; java org.springframework.boot.loader.launch.PropertiesLauncher</markup>
 
 </div>
 
@@ -105,15 +131,24 @@ spec:
     springBootFatJar: /app/libs/catalogue-1.0.0.jar   <span class="conum" data-value="2" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.252osN.1" title="原文 : The type field set to spring tells the Operator that this is a Spring Boot application."><code>type</code>フィールドを<code>spring</code>に設定すると、これがSpring Bootアプリケーションであることをオペレータに通知します。</span></li>
+<li data-value="1"><span class="merged" id="all.252osN" title="原文 : The type field set to spring tells the Operator that this is a Spring Boot application."><code>type</code>フィールドを<code>spring</code>に設定すると、これがSpring Bootアプリケーションであることをオペレータに通知します。</span></li>
 <li data-value="2"><span class="merged" id="all.2dOndU" title="原文 : The location of the Spring Boot jar has been set.">Spring Boot jarのロケーションが設定されました。</span></li>
 </ul>
 <p><span class="merged" id="all.4KW2iU.1" title="原文 : When the Operator starts the application it will then run a command equivalent to:">オペレータがアプリケーションを起動すると、次と同等のコマンドが実行されます:</span></p>
 
+<p><span class="merged" id="all.3rgsWs.1"  title="原文:: Spring Boot 2.x"><strong>Spring Boot 2.x</strong></span></p>
+
 <markup
 lang="bash"
 
->java -cp /app/libs/catalogue-1.0.0.jar org.springframework.boot.loader.PropertiesLauncher</markup>
+>java --class-path /app/libs/catalogue-1.0.0.jar org.springframework.boot.loader.PropertiesLauncher</markup>
+
+<p><span class="merged" id="all.1KangH.1"  title="原文:: Spring Boot 3.x"><strong>Spring Boot 3.x</strong></span></p>
+
+<markup
+lang="bash"
+
+>java --class-path /app/libs/catalogue-1.0.0.jar org.springframework.boot.loader.launch.PropertiesLauncher</markup>
 
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.4QEbIk" title="原文 : The Operator does not run the fat jar using the java -jar command because it needs to add various other JVM arguments and append to the classpath, so it has to run the org.springframework.boot.loader.PropertiesLauncher class as opposed to the org.springframework.boot.loader.JarLauncher that java -jar would run.">オペレータは、<code>java -jar</code>コマンドを使用して、fat jarを実行しません。これは、他の様々なJVM引数を追加してクラスパスに追加する必要があるため、<code>java -jar</code>が実行される<code>org.springframework.boot.loader.JarLauncher</code>ではなく、<code>org.springframework.boot.loader.PropertiesLauncher</code>クラスを実行する必要があります。</span></p>
@@ -122,31 +157,17 @@ lang="bash"
 
 <h3 id="_using_could_native_buildpacks"><span class="merged" id="all.9yvGR" title="原文 : Using Could Native Buildpacks">ネイティブ・ビルド・パックの使用</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2f3svo" title="原文 : If the Spring Boot Maven or Gradle plugin has been used to produce an image using Cloud Native Buildpacks these images can work with the Coherence Operator.">Spring Boot MavenまたはGradleプラグインを使用して<a href="https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1" id="" target="_blank" >「クラウド・ネイティブのビルド・パック」</a>を使用してイメージを生成した場合、これらのイメージはCoherence Operatorと連携できます。</span></p>
+<p><span class="merged" id="all.3vQcY7" title="原文 : If the Spring Boot Maven or Gradle plugin has been used to produce an image using Cloud Native Buildpacks these images can work with the Coherence Operator.">Spring Boot MavenまたはGradleプラグインを使用して<a href="https://docs.spring.io/spring-boot/reference/packaging/container-images/cloud-native-buildpacks.html" id="" target="_blank" >「クラウド・ネイティブのビルド・パック」</a>を使用してイメージを生成した場合、これらのイメージはCoherence Operatorと連携できます。</span></p>
 
-<div class="admonition warning">
-<p class="admonition-textlabel"><span class="merged" id="all.2dRYIU"  title="原文:: Warning">警告</span></p>
-<p ><p><span class="merged" id="all.1cG9fO.spl1" title="原文 : Due to limitation on the way that arguments can be passed to the JVM when using Buildpacks images the Coherence operator will only work with images containing a JVM greater than Java 11.">Buildpacksイメージの使用時に引数をJVMに渡す方法の制限により、CoherenceオペレータはJava 11より大きいJVMを含むイメージでのみ動作します。</span> <span class="merged" id="all.1cG9fO.spl2" title="原文 : Although the Buildpacks launcher will honour the JAVA_OPTS or JAVA_TOOL_OPTIONS environment variables there appear to be size limitations for the values of these variables that make it impractical for the Operator to use them.">Buildpacksランチャは、<code>JAVA_OPTS</code>または<code>JAVA_TOOL_OPTIONS</code>環境変数を受け入れますが、これらの変数の値にはサイズ制限があるように見え、オペレータで使用することは現実的ではありません。</span> <span class="merged" id="all.1cG9fO.spl3" title="原文 : The Operator therefore creates a JVM arguments file to pass the arguments to the JVM.">したがって、オペレータはJVMに引数を渡すJVM引数ファイルを作成します。</span> <span class="merged" id="all.1cG9fO.spl4" title="原文 : At the time of writing these docs, Java 8 (which is the default version of Java used by the Spring Boot plugin) does not support the use of argument files for the JVM.">これらのドキュメントの記述時に、Java 8 (Spring Bootプラグインで使用されるデフォルトのバージョンのJava)はJVMの引数ファイルの使用をサポートしていません。</span> </p>
+<p><span class="merged" id="all.1kurGQ.spl1" title="原文 : Images using Cloud Native Buildpacks contain a special launcher executable the runs the Java application.">クラウド・ネイティブ・ビルド・パックを使用するイメージには、Javaアプリケーションを実行する特別なランチャ実行可能ファイルが含まれています。</span> <span class="merged" id="all.1kurGQ.spl2" title="原文 : This makes it more complex than normal for the Operator to provide a custom Java command.">これにより、オペレータがカスタムJavaコマンドを提供することが通常よりも複雑になります。</span> <span class="merged" id="all.1kurGQ.spl3" title="原文 : For images built using Cloud Native Buildpacks to work the Coherence resource must be configured to execute the images entry point instead of the Operator injecting a command line.">クラウド・ネイティブ・ビルド・パックを使用して構築されたイメージが機能するには、オペレータがコマンドラインを注入するのではなく、イメージ・エントリ・ポイントを実行するように<code>Coherence</code>リソースを構成する必要があります。</span> </p>
 
-<p><span class="merged" id="all.fPPVn" title="原文 : It is simple to configure the version of the JVM used by the Spring Boot plugin, for example in Maven:">MavenなどでSpring Bootプラグインによって使用されるJVMのバージョンを構成するのは簡単です:</span></p>
-
-<markup
-lang="xml"
-
->&lt;plugin&gt;
-  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-  &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-  &lt;version&gt;2.3.4.RELEASE&lt;/version&gt;
-  &lt;configuration&gt;
-    &lt;image&gt;
-      &lt;env&gt;
-        &lt;BP_JVM_VERSION&gt;11.*&lt;/BP_JVM_VERSION&gt;
-      &lt;/env&gt;
-    &lt;/image&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;</markup>
+<div class="admonition important">
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p"  title="原文:: Important">重要</span></p>
+<p ><p><span class="merged" id="all.2z6D50" title="原文 : Due to the way that the Coherence Operator configures JVM arguments when configured to use an image entry point, the image must be running Java 11 or higher.">イメージ・エントリ・ポイントを使用するように構成されている場合、Coherence OperatorがJVM引数を構成する方法により、イメージはJava 11以上を実行している必要があります。</span></p>
 </p>
 </div>
+<p><span class="merged" id="all.1mGCOy.spl1" title="原文 : Instead of building a custom command line, the Operator uses the JDK_JAVA_OPTIONS environment variable to pass and configured JVM options and system properties to the Spring application.">オペレータは、カスタム・コマンドラインを作成するかわりに、<code>JDK_JAVA_OPTIONS</code>環境変数を使用してJVMオプションおよびシステム・プロパティをSpringアプリケーションに渡し、構成します。</span> <span class="merged" id="all.1mGCOy.spl2" title="原文 : This is a standard environment variable that the JVM will effectively use to pre-pend JVM arguments to its command line.">これは、JVMがそのコマンドラインにJVM引数をプリペンドするために効果的に使用する標準環境変数です。</span> </p>
+
 <p><span class="merged" id="all.4Ug5I6.spl1" title="原文 : When creating a Coherence deployment for a Spring Boot Buildpacks image The application type must be set to spring.">Spring Boot Buildpacksイメージの<code>Coherence</code>デプロイメントを作成する場合、アプリケーション・タイプは<code>spring</code>に設定する必要があります。</span> <span class="merged" id="all.4Ug5I6.spl2" title="原文 : The Operator’s launcher will automatically detect that the image is a Buildpacks image and launch the application using the Buildpacks launcher.">オペレータのランチャは、イメージがBuildpacksイメージであることを自動的に検出し、Buildpacksランチャを使用してアプリケーションを起動します。</span> </p>
 
 <markup
@@ -159,72 +180,17 @@ metadata:
 spec:
   image: catalogue:1.0.0
   application:
-    type: spring <span class="conum" data-value="1" /></markup>
+    type: spring <span class="conum" data-value="1" />
+    useImageEntryPoint: true <span class="conum" data-value="2" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.4AbZXZ" title="原文 : The application type has been set to spring so that the operator knows that this is a Spring Boot application, and the fact that the image is a Buildpacks image will be auto-discovered.">アプリケーション・タイプが<code>spring</code>に設定されているため、これがSpring Bootアプリケーションであることがオペレータに認識され、イメージがBuildpacksイメージであることが自動検出されます。</span></li>
+<li data-value="1"><span class="merged" id="all.3Rig5m" title="原文 : The application type has been set to spring (for Spring Boot 2.x) or spring3 (for Spring Boot 3.x) so that the operator knows that this is a Spring Boot application, and the fact that the image is a Buildpacks image will be auto-discovered.">アプリケーション・タイプが<code>spring</code> (Spring Boot 2.xの場合)または<code>spring3</code> (Spring Boot 3.xの場合)に設定されているため、オペレータはこれがSpring Bootアプリケーションであることを認識し、イメージがBuildpacksイメージであるという事実は自動検出されます。</span></li>
+<li data-value="2"><span class="merged" id="all.2C62Pf" title="原文 : The Operator will run the image’s entry point and set the JDK_JAVA_OPTIONS environment variable to pass arguments to the JVM">オペレータはイメージのエントリ・ポイントを実行し、引数をJVMに渡すように<code>JDK_JAVA_OPTIONS</code>環境変数を設定</span></li>
 </ul>
-<p><span class="merged" id="all.2xfpyb" title="原文 : When the Operator starts the application it will then run the buildpacks launcher with a command equivalent to this:">オペレータがアプリケーションを起動すると、次のようなコマンドを持つbuildpacksランチャが実行されます:</span></p>
-
-<markup
-lang="bash"
-
->/cnb/lifecycle/launcher java @jvm-args-file org.springframework.boot.loader.PropertiesLauncher</markup>
+<p><span class="merged" id="all.31I3oy" title="原文 : For more information on using image entry points with the Coherence operator see the Run an Image Entry Point documentation.">Coherenceオペレータでイメージ・エントリ・ポイントを使用する方法の詳細は、<router-link to="/docs/applications/080_entrypoint">「イメージ・エントリ・ポイントの実行」</router-link>のドキュメントを参照してください。</span></p>
 
 
-<h4 id="_buildpacks_detection"><span class="merged" id="all.TGHtF" title="原文 : Buildpacks Detection">Buildpackの検出</span></h4>
-<div class="section">
-<p><span class="merged" id="all.4UJaaF" title="原文 : If for some reason buildpacks auto-detection does not work properly the Coherence CRD contains a filed to force buildpacks to be enabled or disabled.">なんらかの理由でbuildpackの自動検出が正常に機能しない場合、<code>Coherence</code> CRDには、buildpackを強制的に有効または無効にするためのファイルが含まれています。</span></p>
-
-<p><span class="merged" id="all.3uhYwI" title="原文 : The boolean field spec.application.cloudNativeBuildPack.enabled can be set to true to enable buildpacks or false to disable buildpack."><code>boolean</code>フィールド<code>spec.application.cloudNativeBuildPack.enabled</code>を<code>true</code>に設定してbuildpackを有効にするか、falseを設定してbuildpackを無効にできます。</span></p>
-
-<markup
-lang="yaml"
-
->apiVersion: coherence.oracle.com/v1
-kind: Coherence
-metadata:
-  name: test
-spec:
-  image: catalogue:1.0.0
-  application:
-    type: spring            <span class="conum" data-value="1" />
-    cloudNativeBuildPack:
-      enabled: true         <span class="conum" data-value="2" /></markup>
-
-<ul class="colist">
-<li data-value="1"><span class="merged" id="all.2cE1Pp" title="原文 : The application type has been set to spring so that the operator knows that this is a Spring Boot application">アプリケーション・タイプが<code>spring</code>に設定されているため、これがSpring Bootアプリケーションであることがオペレータに認識されます</span></li>
-<li data-value="2"><span class="merged" id="all.2YG1B7" title="原文 : The cloudNativeBuildPack.enabled field has been set to true to force the Operator to use the Buildpacks launcher."><code>cloudNativeBuildPack.enabled</code>フィールドが<code>true</code>に設定されており、オペレータがBuildpacksランチャを使用することを強制しています。</span></li>
-</ul>
-</div>
-
-<h4 id="_specify_the_buildpacks_launcher"><span class="merged" id="all.AHVdp" title="原文 : Specify the Buildpacks Launcher">Buildpacksランチャの指定</span></h4>
-<div class="section">
-<p><span class="merged" id="all.2A7gwR.spl1" title="原文 : A Cloud Native Buildpacks image uses a launcher mechanism to run the executable(s) in the image.">Cloud Native Buildpacksイメージでは、ランチャ・メカニズムを使用してイメージ内の実行可能ファイルを実行します。</span> <span class="merged" id="all.2A7gwR.spl2" title="原文 : The Coherence Operator launcher will configure the application and then invoke the same buildpacks launcher.">Coherence Operatorランチャはアプリケーションを構成し、同じbuildpacksランチャを起動します。</span> <span class="merged" id="all.2A7gwR.spl3" title="原文 : The Coherence Operator assumes that the buildpacks launcher is in the image in the location /cnb/lifecycle/launcher.">Coherence Operatorは、buildpacksランチャが<code>/cnb/lifecycle/launcher</code>のロケーションのイメージにあることを前提としています。</span> <span class="merged" id="all.2A7gwR.spl4" title="原文 : If a buildpacks image has been built with the launcher in a different location then the Coherence CRD contains a field to set the new location.">ランチャを別のロケーションにビルド・パック・イメージがビルドされている場合、<code>Coherence</code> CRDには新しいロケーションを設定するフィールドが含まれます。</span> </p>
-
-<p><span class="merged" id="all.44J8Z8" title="原文 : The spec.application.cloudNativeBuildPack.enabled field."><code>spec.application.cloudNativeBuildPack.enabled</code>フィールド。</span></p>
-
-<markup
-lang="yaml"
-
->apiVersion: coherence.oracle.com/v1
-kind: Coherence
-metadata:
-  name: test
-spec:
-  image: catalogue:1.0.0
-  application:
-    type: spring                    <span class="conum" data-value="1" />
-    cloudNativeBuildPack:
-      launcher: /buildpack/launcher <span class="conum" data-value="2" /></markup>
-
-<ul class="colist">
-<li data-value="1"><span class="merged" id="all.2cE1Pp.1" title="原文 : The application type has been set to spring so that the operator knows that this is a Spring Boot application">アプリケーション・タイプが<code>spring</code>に設定されているため、これがSpring Bootアプリケーションであることがオペレータに認識されます</span></li>
-<li data-value="2"><span class="merged" id="all.IJtdd" title="原文 : The buildpacks launcher that the Operator will invoke is located at /buildpack/launcher.">オペレータが起動するbuildpacksランチャは、<code>/buildpack/launcher</code>にあります。</span></li>
-</ul>
-</div>
-
-<h4 id="_buildpack_jvm_arguments"><span class="merged" id="all.2D2h8Y" title="原文 : Buildpack JVM Arguments">Buildpack JVM引数</span></h4>
+<h4 id="_buildpacks_jvm_arguments"><span class="merged" id="all.1v7S61" title="原文 : Buildpacks JVM Arguments">Buildpacks JVM引数</span></h4>
 <div class="section">
 <p><span class="merged" id="all.1YpkBz" title="原文 : A typical Spring Boot buildpack launcher will attempt to configure options such as heap size based on the container resource limits configured, so this must be taken into account if using any of the memory options available in the Coherence CRD as there may be conflicting configurations.">典型的なSpring Boot buildpackランチャは、構成されたコンテナ・リソース制限に基づいてヒープ・サイズなどのオプションを構成しようとするため、<code>Coherence</code> CRDで使用可能なメモリー・オプションのいずれかを使用すると、競合する構成がある可能性があるため、これを考慮する必要があります。</span></p>
 

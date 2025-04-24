@@ -31,7 +31,7 @@ tar -zxvf coherence-dashboards.tar.gz</markup>
 <p><span class="merged" id="all.48acbp.spl1" title="原文 : This section shows you how to import the Grafana dashboards into your own Grafana instance.">この項では、Grafanaダッシュボードを独自のGrafanaインスタンスにインポートする方法を示します。</span> <span class="merged" id="all.48acbp.spl2" title="原文 : Once you have obtained the dashboards using one of the methods above, the Grafana dashboard .json files will be in the dashboards/grafana/ subdirectory">前述のメソッドのいずれかを使用してダッシュボードを取得すると、Grafanaダッシュボードの<code>.json</code>ファイルが<code>dashboards/grafana/</code>サブディレクトリに格納されます</span> </p>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.4"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.6"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.1ShKUZ.spl1" title="原文 : By default, the Coherence dashboards require a datasource in Grafana named prometheus (which is case-sensitive).">デフォルトでは、Coherenceダッシュボードには<code>prometheus</code>という名前のGrafanaのデータソースが必要です(大/小文字が区別されます)。</span> <span class="merged" id="all.1ShKUZ.spl2" title="原文 : This datasource usually exists in an out-of-the-box Prometheus Operator installation.">通常、このデータソースは、すぐに使用できるPrometheusオペレータ・インストールに存在します。</span> <span class="merged" id="all.1ShKUZ.spl3" title="原文 : If your Grafana environment does not have this datasource, then there are two choices.">Grafana環境にこのデータソースがない場合は、2つの選択肢があります。</span> </p>
 
 <ul class="ulist">
@@ -63,7 +63,7 @@ done</markup>
 
 <h3 id="_bulk_import_grafana_dashboards"><span class="merged" id="all.l3Q8b" title="原文 : Bulk Import Grafana Dashboards">Grafanaダッシュボードの一括インポート</span></h3>
 <div class="section">
-<p><span class="merged" id="all.33L9Wq.spl1" title="原文 : At the time of writing, for whatever reason, Grafana does not provide a simple way to bulk import a set of dashboard files.">書込み時に、なんらかの理由で、Grafanaでは一連のダッシュボード・ファイルを一括インポートする簡単な方法はありません。</span> <span class="merged" id="all.33L9Wq.spl2" title="原文 : There are many examples and scripts on available in the community that show how to do this.">この方法を示す多くの例とスクリプトがコミュニティで使用可能です。</span> <span class="merged" id="all.33L9Wq.spl3" title="原文 : The Coherence Operator source contains a script that can be used for this purpose grafana-import.sh">Coherence Operatorソースには、この目的のために<a href="https://github.com/oracle/coherence-operator/raw/main/hack/grafana-import.sh" id="" target="_blank" >grafana-import.sh</a>に使用できるスクリプトが含まれています</span> </p>
+<p><span class="merged" id="all.19zGlz.spl1" title="原文 : At the time of writing, for whatever reason, Grafana does not provide a simple way to bulk import a set of dashboard files.">書込み時に、なんらかの理由で、Grafanaでは一連のダッシュボード・ファイルを一括インポートする簡単な方法はありません。</span> <span class="merged" id="all.19zGlz.spl2" title="原文 : There are many examples and scripts on available in the community that show how to do this.">この方法を示す多くの例とスクリプトがコミュニティで使用可能です。</span> <span class="merged" id="all.19zGlz.spl3" title="原文 : The Coherence Operator source contains a script that can be used for this purpose grafana-import.sh">Coherence Operatorソースには、この目的のために<a href="https://github.com/oracle/coherence-operator/raw/main/hack/grafana/grafana-import.sh" id="" target="_blank" >grafana-import.sh</a>に使用できるスクリプトが含まれています</span> </p>
 
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.4L3zT7" title="原文 : The grafana-import.sh script requires the JQ utility to parse json."><code>grafana-import.sh</code>スクリプトでは、jsonを解析するために<a href="https://stedolan.github.io/jq/" id="" target="_blank" >JQ</a>ユーティリティが必要です。</span></p>
@@ -73,7 +73,7 @@ done</markup>
 <markup
 lang="bash"
 
->curl -Lo grafana-import.sh https://github.com/oracle/coherence-operator/raw/main/hack/grafana-import.sh
+>curl -Lo grafana-import.sh https://github.com/oracle/coherence-operator/raw/main/hack/grafana/grafana-import.sh
 chmod +x grafana-import.sh</markup>
 
 <markup

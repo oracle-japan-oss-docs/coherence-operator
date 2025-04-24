@@ -34,21 +34,7 @@
 
 <h3 id="_image_entrypoint_what_does_the_operator_run"><span class="merged" id="all.48xxpU" title="原文 : Image EntryPoint - What Does the Operator Run?">イメージ<code>EntryPoint</code> - オペレータの実行内容</span></h3>
 <div class="section">
-<p><span class="merged" id="all.49vxHw.spl1" title="原文 : The image does not need to have an EntryPoint or command specified, it does not need to actually be executable.">イメージには、<code>EntryPoint</code>またはコマンドを指定する必要はありません。実際に実行可能である必要はありません。</span> <span class="merged" id="all.49vxHw.spl2" title="原文 : If the image does have an EntryPoint, it will just be ignored.">イメージに<code>EntryPoint</code>がある場合は、単に無視されます。</span> </p>
-
-<p><span class="merged" id="all.4as2FL.spl1" title="原文 : The Coherence Operator actually injects its own runner executable into the container which the container runs and which in turn builds the Java command line to execute.">Coherence Operatorは、実際に独自の<code>runner</code>実行可能ファイルをコンテナが実行され、次に実行するJavaコマンドラインをビルドするコンテナにインジェクトします。</span> <span class="merged" id="all.4as2FL.spl2" title="原文 : The runner process looks at arguments and environment variables configured for the Coherence container and from these constructs a Java command line that it then executes."><code>runner</code>プロセスでは、Coherenceコンテナ用に構成された引数および環境変数が参照され、これらの構造から実行されるJavaコマンドラインが参照されます。</span> </p>
-
-<p><span class="merged" id="all.2xnwEE" title="原文 : The default command might look something like this:">デフォルトのコマンドは次のようになります:</span></p>
-
-<markup
-lang="bash"
-
->java -cp `/app/resources:/app/classes:/app/libs/*` \
-    &lt;JVM args&gt; \
-    &lt;System Properties&gt; \
-    com.tangosol.net.DefaultCacheServer</markup>
-
-<p><span class="merged" id="all.44SZnA.spl1" title="原文 : The runner will work out the JVM’s classpath, args and system properties to add to the command line and execute the main class com.tangosol.net.DefaultCacheServer."><code>runner</code>は、コマンドラインに追加するJVMのクラスパス、引数およびシステム・プロパティを処理し、メイン・クラス<code>com.tangosol.net.DefaultCacheServer</code>を実行します。</span> <span class="merged" id="all.44SZnA.spl2" title="原文 : All these are configurable in the Coherence resource spec.">これらはすべて、<code>Coherence</code>リソース仕様で構成できます。</span> </p>
+<p><span class="merged" id="all.2SX2Lm.spl1" title="原文 : The image does not need to have an EntryPoint or command specified, it does not need to actually be executable.">イメージには、<code>EntryPoint</code>またはコマンドを指定する必要はありません。実際に実行可能である必要はありません。</span> <span class="merged" id="all.2SX2Lm.spl2" title="原文 : The default behaviour of the Coherence operator it to configure its own entry point to execute the Coherence container, if the image does have an EntryPoint, it will just be ignored.">Coherenceコンテナを実行するように独自のエントリ・ポイントを構成するためのCoherenceオペレータのデフォルトの動作。イメージに<code>EntryPoint</code>がある場合、それは無視されます。</span> </p>
 
 </div>
 
@@ -56,9 +42,8 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.4ZbjFF.spl1" title="原文 : If the CLASSPATH environment variable has been set in an image that classpath will be used when running the Coherence container."><code>CLASSPATH</code>環境変数が、Coherenceコンテナの実行時にクラスパスが使用されるイメージに設定されている場合。</span> <span class="merged" id="all.4ZbjFF.spl2" title="原文 : Other elements may also be added to the classpath depending on the configuration of the Coherence resource."><code>Coherence</code>リソースの構成に応じて、他の要素をクラスパスに追加することもできます。</span> </p>
 
-</div>
 
-<h3 id="_setting_the_classpath"><span class="merged" id="all.2zuzRh"  title="原文:: Setting the Classpath"> クラスパスの設定</span></h3>
+<h4 id="_setting_the_classpath"><span class="merged" id="all.2zuzRh"  title="原文:: Setting the Classpath">クラス・パスの設定</span></h4>
 <div class="section">
 <p><span class="merged" id="all.3ysQnM.spl1" title="原文 : An application image contains .jar files (at least coherence.jar), possibly Java class files, also possibly other ad-hoc files, all of which need to be on the application’s classpath.">アプリケーション・イメージには、<code>.jar</code>ファイル(少なくとも<code>coherence.jar</code>)が含まれており、場合によってはJavaクラス・ファイル、その他のアドホック・ファイル(すべてアプリケーションのクラスパスに存在する必要があります)。</span> <span class="merged" id="all.3ysQnM.spl2" title="原文 : There are certain classpath values that the operator supports out of the box without needing any extra configuration, but for occasions where the location of files in the image does not match the defaults a classpath can be specified.">特別な構成を必要とせずにオペレータがすぐにサポートする特定のクラスパス値がありますが、イメージ内のファイルのロケーションがクラスパスを指定できるデフォルトと一致しない場合もあります。</span> </p>
 
@@ -100,29 +85,12 @@ spec:
 <li data-value="2"><span class="merged" id="all.2wGZ6R" title="原文 : Each entry in the jvm.classpath will be appended to the classpath exactly as it is declared, so in this case the classpath will be /data/libs/*:/data/config"><code>jvm.classpath</code>の各エントリは、宣言されたとおりにクラスパスに付加されるため、この場合、クラスパスは<code>/data/libs/*:/data/config</code>になります</span></li>
 </ul>
 </div>
+</div>
 
 <h3 id="_optional_java_home_environment_variable"><span class="merged" id="all.vGb29" title="原文 : Optional JAVA_HOME Environment Variable">オプションの<code>JAVA_HOME</code>環境変数</span></h3>
 <div class="section">
 <p><span class="merged" id="all.LJQPG.spl1" title="原文 : The JAVA_HOME environment variable does not have to be set in the image."><code>JAVA_HOME</code>環境変数をイメージに設定する必要はありません。</span> <span class="merged" id="all.LJQPG.spl2" title="原文 : If it is set the JVM at that location will be used to run the application.">設定されている場合、そのロケーションのJVMがアプリケーションの実行に使用されます。</span> <span class="merged" id="all.LJQPG.spl3" title="原文 : If it is not set then the java executable must be on the PATH in the image.">設定されていない場合、<code>java</code>実行可能ファイルはイメージ内の<code>PATH</code>にある必要があります。</span> </p>
 
-</div>
-
-<h3 id="_optional_coherence_home_environment_variable"><span class="merged" id="all.4NQubX" title="原文 : Optional COHERENCE_HOME Environment Variable">オプションの<code>COHERENCE_HOME</code>環境変数</span></h3>
-<div class="section">
-<p><span class="merged" id="all.1moyaG.spl1" title="原文 : The COHERENCE_HOME environment variable does not have to be set in an image."><code>COHERENCE_HOME</code>環境変数をイメージに設定する必要はありません。</span> <span class="merged" id="all.1moyaG.spl2" title="原文 : Typically, all the jar files, including coherence.jar would be packaged into a single directory which is then used as the classpath.">通常、<code>coherence.jar</code>を含むすべてのjarファイルは、単一のディレクトリにパッケージ化され、クラスパスとして使用されます。</span> <span class="merged" id="all.1moyaG.spl3" title="原文 : It is possible to run official Coherence images published by Oracle, which have COHERENCE_HOME set, which is then used by the Operator to set the classpath."><code>COHERENCE_HOME</code>が設定されたOracleによって公開された正式なCoherenceイメージを実行できます。このイメージは、オペレータがクラスパスを設定するために使用します。</span> </p>
-
-<p><span class="merged" id="all.4P2J4a" title="原文 : If the COHERENCE_HOME environment variable is set in an image the following entries will be added to the end of the classpath:"><code>COHERENCE_HOME</code>環境変数がイメージに設定されている場合は、次のエントリがクラスパスの最後に追加されます:</span></p>
-
-<ul class="ulist">
-<li>
-<p><code>$COHERENCE_HOME/lib/coherence.jar</code></p>
-
-</li>
-<li>
-<p><code>$COHERENCE_HOME/conf</code></p>
-
-</li>
-</ul>
 </div>
 
 <h3 id="_additional_data_volumes"><span class="merged" id="all.1kbLUu" title="原文 : Additional Data Volumes">追加のデータ容量</span></h3>

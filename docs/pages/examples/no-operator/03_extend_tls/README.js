@@ -31,7 +31,7 @@
 
 <h2 id="_configure_coherence_extend_tls"><span class="merged" id="all.2MIJtZ" title="原文 : Configure Coherence Extend TLS">Coherence拡張TLSの構成</span></h2>
 <div class="section">
-<p><span class="merged" id="all.3F8ZDv.spl1" title="原文 : The Coherence documentation explains how to Use TLS Secure Communication.">Coherenceドキュメントでは、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/secure/using-ssl-secure-communication.html#GUID-90E20139-3945-4993-9048-7FBC93B243A3" id="" target="_blank" >「TLSセキュア通信の使用」</a>の方法について説明します。</span> <span class="merged" id="all.3F8ZDv.spl2" title="原文 : This example is going to use a standard approach to securing Extend with TLS.">この例では、TLSでExtendを保護するための標準アプローチを使用します。</span> <span class="merged" id="all.3F8ZDv.spl3" title="原文 : To provide the keystores and credentials the example will make use of Kubernetes Secrets to mount those files as Volumes in the StatefulSet.">キーストアおよび資格証明を提供するために、この例ではKubernetes <code>Secrets</code>を使用して、これらのファイルを<code>StatefulSet</code>に<code>Volumes</code>としてマウントします。</span> <span class="merged" id="all.3F8ZDv.spl4" title="原文 : This is much more flexible and secure than baking them into an application’s code or image.">これは、アプリケーションのコードまたはイメージにベイク処理するよりも、非常に柔軟で安全です。</span> </p>
+<p><span class="merged" id="all.1gzFaF.spl1" title="原文 : The Coherence documentation explains how to Use TLS Secure Communication.">Coherenceドキュメントでは、<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/secure/using-ssl-secure-communication.html#GUID-90E20139-3945-4993-9048-7FBC93B243A3" id="" target="_blank" >「TLSセキュア通信の使用」</a>の方法について説明します。</span> <span class="merged" id="all.1gzFaF.spl2" title="原文 : This example is going to use a standard approach to securing Extend with TLS.">この例では、TLSでExtendを保護するための標準アプローチを使用します。</span> <span class="merged" id="all.1gzFaF.spl3" title="原文 : To provide the keystores and credentials the example will make use of Kubernetes Secrets to mount those files as Volumes in the StatefulSet.">キーストアおよび資格証明を提供するために、この例ではKubernetes <code>Secrets</code>を使用して、これらのファイルを<code>StatefulSet</code>に<code>Volumes</code>としてマウントします。</span> <span class="merged" id="all.1gzFaF.spl4" title="原文 : This is much more flexible and secure than baking them into an application’s code or image.">これは、アプリケーションのコードまたはイメージにベイク処理するよりも、非常に柔軟で安全です。</span> </p>
 
 
 <h3 id="_configure_the_extend_proxy"><span class="merged" id="all.4QltDO" title="原文 : Configure the Extend Proxy">拡張プロキシの構成</span></h3>
@@ -218,7 +218,7 @@ spec:
           command:
             - java
           args:
-            - -cp
+            - "--class-path"
             - "@/app/jib-classpath-file"
             - -Xms1800m
             - -Xmx1800m
@@ -297,7 +297,7 @@ spec:
 </div>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.19"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.27"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.1omHLr.spl1" title="原文 : The COHERENCE_EXTEND_KEYSTORE and COHERENCE_EXTEND_TRUSTSTORE values must be URLs."><code>COHERENCE_EXTEND_KEYSTORE</code>および<code>COHERENCE_EXTEND_TRUSTSTORE</code>の値はURLである必要があります。</span> <span class="merged" id="all.1omHLr.spl2" title="原文 : In this case we refer to files usinf the file: prefix.">この場合、ファイルでは<code>file:</code>プレフィクスを使用します。</span> </p>
 </p>
 </div>

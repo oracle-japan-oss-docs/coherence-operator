@@ -13,7 +13,7 @@
 
 <p><span class="merged" id="all.16eozu.spl1" title="原文 : Once the Management port has been exposed, for example via a load balancer or port-forward command, the REST endpoint is available at http://host:port/management/coherence/cluster.">ロード・バランサやport-forwardコマンドなどを介して管理ポートが公開されると、RESTエンドポイントは<code><a href="http://host:port/management/coherence/cluster" id="" target="_blank" >http://host:port/management/coherence/cluster</a></code>で使用できます。</span> <span class="merged" id="all.16eozu.spl2" title="原文 : The Swagger JSON document for the API is available at http://host:port/management/coherence/cluster/metadata-catalog.">APIのSwagger JSONドキュメントは、<code><a href="http://host:port/management/coherence/cluster/metadata-catalog" id="" target="_blank" >http://host:port/management/coherence/cluster/metadata-catalog</a></code>で入手できます。</span> </p>
 
-<p><span class="merged" id="all.3UDkow" title="原文 : See the REST API for Managing Oracle Coherence documentation for full details on each of the endpoints.">各エンドポイントの詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/rest-reference/" id="" target="_blank" >「Oracle Coherenceを管理するためのREST API」</a>ドキュメントを参照してください。</span></p>
+<p><span class="merged" id="all.1zwWH0" title="原文 : See the REST API for Managing Oracle Coherence documentation for full details on each of the endpoints.">各エンドポイントの詳細は、<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/rest-reference/" id="" target="_blank" >「Oracle Coherenceを管理するためのREST API」</a>ドキュメントを参照してください。</span></p>
 
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.2cwaJr" title="原文 : Note: Use of Management over REST is available only when using the operator with clusters running Coherence 12.2.1.4 or later version.">ノート: Management over RESTの使用は、Coherence 12.2.1.4以降のバージョンを実行しているクラスタでオペレータを使用する場合のみ使用できます。</span></p>
@@ -224,11 +224,11 @@ lang="json"
 <div class="section">
 <p><span class="merged" id="all.3xjHYH" title="原文 : Management over REST can be used for all Coherence management functions, the same as would be available when using standard MBean access over JMX.">RESTでの管理は、JMXを介した標準のMBeanアクセスを使用する場合と同様に、すべてのCoherence管理機能に使用できます。</span></p>
 
-<p><span class="merged" id="all.143kS6" title="原文 : Please see the Coherence REST API for more information on these features.">これらの機能の詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/rest-reference/" id="" target="_blank" >Coherence REST API</a>を参照してください。</span></p>
+<p><span class="merged" id="all.3yD9ll" title="原文 : Please see the Coherence REST API for more information on these features.">これらの機能の詳細は、<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/rest-reference/" id="" target="_blank" >Coherence REST API</a>を参照してください。</span></p>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.4JkYS9" title="原文 : Connecting JVisualVM to Management over REST"><a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/manage/using-jmx-manage-oracle-coherence.html#GUID-D160B16B-7C1B-4641-AE94-3310DF8082EC" id="" target="_blank" >RESTを介した管理へのJVisualVMの接続</a></span></p>
+<p><span class="merged" id="all.NtMsH" title="原文 : Connecting JVisualVM to Management over REST"><a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/manage/using-jmx-manage-oracle-coherence.html#GUID-D160B16B-7C1B-4641-AE94-3310DF8082EC" id="" target="_blank" >RESTを介した管理へのJVisualVMの接続</a></span></p>
 
 </li>
 <li>
@@ -236,11 +236,11 @@ lang="json"
 
 </li>
 <li>
-<p><span class="merged" id="all.2Id7BX" title="原文 : Produce and extract a Java Flight Recorder (JFR) file"><a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/rest-reference/op-management-coherence-cluster-members-memberidentifier-diagnostic-cmd-jfrcmd-post.html" id="" target="_blank" >Java Flight Recorder (JFR)ファイルの生成および抽出</a></span></p>
+<p><span class="merged" id="all.1SqG8w" title="原文 : Produce and extract a Java Flight Recorder (JFR) file"><a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/rest-reference/op-management-coherence-cluster-members-memberidentifier-diagnostic-cmd-jfrcmd-post.html" id="" target="_blank" >Java Flight Recorder (JFR)ファイルの生成および抽出</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.1aBgq8" title="原文 : Access the Reporter"><a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/rest-reference/api-reporter.html" id="" target="_blank" >レポータへのアクセス</a></span></p>
+<p><span class="merged" id="all.3RumTO" title="原文 : Access the Reporter"><a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/rest-reference/api-reporter.html" id="" target="_blank" >レポータへのアクセス</a></span></p>
 
 </li>
 </ul>

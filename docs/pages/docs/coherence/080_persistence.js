@@ -15,7 +15,7 @@
 
 <h2 id="_configure_coherence_persistence"><span class="merged" id="all.2bBcAD" title="原文 : Configure Coherence Persistence">Coherence永続性の構成</span></h2>
 <div class="section">
-<p><span class="merged" id="all.EVaZE.spl1" title="原文 : The Coherence CRD allows the default persistence mode, and the storage location of persistence data to be configured."><code>Coherence</code> CRDを使用すると、デフォルトの永続性モードおよび永続性データのストレージのロケーションを構成できます。</span> <span class="merged" id="all.EVaZE.spl2" title="原文 : Persistence can be configured in the spec.coherence.persistence section of the CRD.">永続性は、CRDの<code>spec.coherence.persistence</code>セクションで構成できます。</span> <span class="merged" id="all.EVaZE.spl3" title="原文 : See the Coherence Persistence documentation for more details of how persistence works and its configuration.">永続性およびその構成の詳細は、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/administer/persisting-caches.html#GUID-3DC46E44-21E4-4DC4-9D12-231DE57FE7A1" id="" target="_blank" >「Coherenceの永続性」</a>ドキュメントを参照してください。</span> </p>
+<p><span class="merged" id="all.13Jggk.spl1" title="原文 : The Coherence CRD allows the default persistence mode, and the storage location of persistence data to be configured."><code>Coherence</code> CRDを使用すると、デフォルトの永続性モードおよび永続性データのストレージのロケーションを構成できます。</span> <span class="merged" id="all.13Jggk.spl2" title="原文 : Persistence can be configured in the spec.coherence.persistence section of the CRD.">永続性は、CRDの<code>spec.coherence.persistence</code>セクションで構成できます。</span> <span class="merged" id="all.13Jggk.spl3" title="原文 : See the Coherence Persistence documentation for more details of how persistence works and its configuration.">永続性およびその構成の詳細は、<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/administer/persisting-caches.html#GUID-3DC46E44-21E4-4DC4-9D12-231DE57FE7A1" id="" target="_blank" >「Coherenceの永続性」</a>ドキュメントを参照してください。</span> </p>
 
 </div>
 
@@ -26,7 +26,7 @@
 <div class="admonition note">
 <p class="admonition-inline"><span class="merged" id="all.3weZL2.spl1" title="原文 : active-backup persistence mode is only available in the most recent versions of Coherence."><code>active-backup</code>永続性モードは、Coherenceの最新バージョンでのみ使用できます。</span> <span class="merged" id="all.3weZL2.spl2" title="原文 : Please check the release notes for your version.">ご使用のバージョンのリリース・ノートを確認してください。</span> </p>
 </div>
-<p><span class="merged" id="all.6vDv5.2"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.3"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -109,7 +109,7 @@ spec:
 </div>
 </div>
 
-<h2 id="_snapshot_storage"><span class="merged" id="all.3ZO2DL"  title="原文:: Snapshot Storage">スナップショットの格納</span></h2>
+<h2 id="_snapshot_storage"><span class="merged" id="all.3ZO2DL" title="原文 : Snapshot Storage">スナップショット・ストレージ</span></h2>
 <div class="section">
 <p><span class="merged" id="all.VlHYx.spl1" title="原文 : Coherence allows on-demand snapshots to be taken of cache data.">Coherenceでは、オンデマンド・スナップショットをキャッシュ・データから取得できます。</span> <span class="merged" id="all.VlHYx.spl2" title="原文 : With the default configuration the snapshot files will be stored under the same persistence root location as active persistence data.">デフォルトの構成では、スナップショット・ファイルは、アクティブな永続性データと同じ永続性ルートのロケーションに格納されます。</span> <span class="merged" id="all.VlHYx.spl3" title="原文 : The Coherence spec allows a different location to be specified for storage of snapshot files so that active data and snapshot data can be stored in different locations and/or on different storage types in Kubernetes."><code>Coherence</code>仕様では、スナップショット・ファイルの格納に異なるロケーションを指定できるため、アクティブなデータおよびスナップショット・データを異なるロケーションに格納したり、Kubernetes異なるストレージ・タイプに格納できます。</span> </p>
 

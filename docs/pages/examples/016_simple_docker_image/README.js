@@ -28,7 +28,7 @@ title="src/docker/Dockerfile"
 # Health checks will only work with Coherence 22.06 and later
 HEALTHCHECK  --start-period=10s --interval=30s \
     CMD ["java", \
-    "-cp", "/app/libs/coherence.jar", \
+    "--class-path", "/app/libs/coherence.jar", \
     "com.tangosol.util.HealthCheckClient", \
     "http://127.0.0.1:6676/ready", \
     "||", "exit", "1"]
@@ -44,7 +44,7 @@ EXPOSE 9612
 EXPOSE 6676
 
 # Set the entry point to be the Java command to run
-ENTRYPOINT ["java", "-cp", "/app/classes:/app/libs/*", "com.tangosol.net.Coherence"]
+ENTRYPOINT ["java", "--class-path", "/app/classes:/app/libs/*", "com.tangosol.net.Coherence"]
 
 # Set any environment variables
 # Set the health check port to a fixed value (corresponding to the command above)
@@ -78,7 +78,7 @@ COPY app app</markup>
 
 <p><span class="merged" id="all.4AUTdT.spl1" title="原文 : The image entry point will run com.tangosol.net.Coherence to run a Coherence storage enabled server.">イメージ・エントリ・ポイントは、<code>com.tangosol.net.Coherence</code>を実行してCoherenceストレージが有効なサーバーを実行します。</span> <span class="merged" id="all.4AUTdT.spl2" title="原文 : The classpath is set to /app/classes:/app/libs/*.">クラスパスは<code>/app/classes:/app/libs/*</code>に設定されます。</span> <span class="merged" id="all.4AUTdT.spl3" title="原文 : This is the same classpath that the JIB plugin would add artifacts to and is also supported out of the box by the Coherence operator.">これは、JIBプラグインがアーティファクトを追加する場合と同じクラスパスであり、Coherenceオペレータによってボックスからもサポートされます。</span> </p>
 
-<p><span class="merged" id="all.3INfZz"  title="原文:: Environment Variables"><strong>環境変数</strong></span></p>
+<p><span class="merged" id="all.3INfZz" title="原文 : Environment Variables"><strong>環境変数</strong></span></p>
 
 <p><span class="merged" id="all.2XhRSL.spl1" title="原文 : A number of environment variables are set to configure Coherence.">Coherenceを構成するために多数の環境変数が設定されています。</span> <span class="merged" id="all.2XhRSL.spl2" title="原文 : These values could have been set as system properties in the entry point, but using environment variables is a simpler option when running containers as they can easily be overridden at deploy time.">これらの値はエントリ・ポイントでシステム・プロパティとして設定できましたが、デプロイ時に簡単にオーバーライドできるため、環境変数の使用はコンテナの実行時のほうが簡単です。</span> </p>
 
@@ -210,7 +210,7 @@ lang="xml"
 </ul>
 </li>
 <li>
-<p><span class="merged" id="all.2reBY1.spl1" title="原文 : The &lt;dependencySets&gt; configuration copies all the project dependencies (including transitive dependencies) to the app/libs directory (actually the target/docker/app/libs directory)."><code>&lt;dependencySets></code>構成では、すべてのプロジェクト依存関係(推移的依存関係を含む)が<code>app/libs</code>ディレクトリ(実際は<code>target/docker/app/libs</code>ディレクトリ)にコピーされます。</span> <span class="merged" id="all.2reBY1.spl2" title="原文 : Any version information will be stripped from the files, so coherence-22.06.7.jar would become coherence.jar.">バージョン情報はファイルから取り除かれるため、<code>coherence-22.06.7.jar</code>は<code>coherence.jar</code>になります。</span> </p>
+<p><span class="merged" id="all.3ZN9wX.spl1" title="原文 : The &lt;dependencySets&gt; configuration copies all the project dependencies (including transitive dependencies) to the app/libs directory (actually the target/docker/app/libs directory)."><code>&lt;dependencySets></code>構成では、すべてのプロジェクト依存関係(推移的依存関係を含む)が<code>app/libs</code>ディレクトリ(実際は<code>target/docker/app/libs</code>ディレクトリ)にコピーされます。</span> <span class="merged" id="all.3ZN9wX.spl2" title="原文 : Any version information will be stripped from the files, so coherence-22.06.10.jar would become coherence.jar.">バージョン情報はファイルから取り除かれるため、<code>coherence-22.06.10.jar</code>は<code>coherence.jar</code>になります。</span> </p>
 
 </li>
 </ul>
@@ -281,7 +281,7 @@ lang="bash"
 lang="groovy"
 title="build.gradle"
 >dependencies {
-    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.7")
+    implementation platform("com.oracle.coherence.ce:coherence-bom:22.06.10")
 
     implementation "com.oracle.coherence.ce:coherence"
     implementation "com.oracle.coherence.ce:coherence-json"

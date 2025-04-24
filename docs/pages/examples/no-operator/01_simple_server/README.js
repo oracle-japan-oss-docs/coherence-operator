@@ -186,7 +186,7 @@ spec:
 <tr>
 <th><span class="merged" id="all.4eTLuy"  title="原文:: Name">名前</span></th>
 <th><span class="merged" id="all.42bBIm.1"  title="原文:: Value">値</span></th>
-<th><span class="merged" id="all.4JM9z7.47"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.54"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>

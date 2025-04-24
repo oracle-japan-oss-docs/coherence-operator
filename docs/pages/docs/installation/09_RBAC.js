@@ -44,10 +44,10 @@
 <h3 id="_manually_install_crds"><span class="merged" id="all.1ZVh36" title="原文 : Manually Install CRDs">CRDを手動でインストール</span></h3>
 <div class="section">
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.2"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.4"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.2cA5Zk" title="原文 : Before installing the Operator, with either method described below, the CRDs MUST be manually installed from the Operator manifest files.">オペレータをインストールする前に、後述するいずれかのメソッドで、オペレータ・マニフェスト・ファイルからCRDを手動でインストールする必要があります。</span></p>
 
-<p><span class="merged" id="all.1FDmIV" title="原文 : The manifest files are published with the GitHub release at this link: 3.3.5 Manifests">マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.4.1/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.5 マニフェスト</a></span></p>
+<p><span class="merged" id="all.46mhhx" title="原文 : The manifest files are published with the GitHub release at this link: 3.3.5 Manifests">マニフェスト・ファイルは、このリンクでGitHubリリースとともに公開されます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.3.5 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3wyRpn" title="原文 : You MUST ensure that the CRD manifests match the version of the Operator being installed.">CRDマニフェストがインストールされるオペレータのバージョンと一致していることを確認する必要があります。</span></p>
 
@@ -135,7 +135,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.357g24" title="原文 : To install without cluster roles, after unpacking the manifests .tar.gz edit the config/kustomization.yaml file to comment out the inclusion of the cluster role bindings.">クラスタ・ロールなしでインストールするには、マニフェスト<code>.tar.gz</code>を解凍した後、<code>config/kustomization.yaml</code>ファイルを編集して、クラスタ・ロール・バインディングの包含をコメント・アウトします。</span></p>
 
-<p><span class="merged" id="all.6vDv5.6"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.7"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -264,7 +264,7 @@ subjects:
 <div class="section">
 <p><span class="merged" id="all.10x5oR" title="原文 : In environments where Kubernetes administrators are happy to allow the Operator read-only access to Node information, the required ClusterRole can be created by leaving the relevant lines uncommented in the config/kustomization.yaml file.">Kubernetes管理者が<code>Node</code>情報へのオペレータの読取り専用アクセスを満足できる環境では、関連する行を<code>config/kustomization.yaml</code>ファイルにコメント解除して、必要な<code>ClusterRole</code>を作成できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.7"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.8"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

@@ -1,9 +1,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.4.0",
+        release: "3.4.3",
         releases: [
-            "3.4.0"
+            "3.4.3"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -299,6 +299,19 @@ function createRoutes(){
             component: loadPage('docs-applications-070_spring', '/docs/applications/070_spring', {})
         },
         {
+            path: '/docs/applications/080_entrypoint',
+            meta: {
+                h1: 'Run an Image Entry Point',
+                title: 'Run an Image Entry Point',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-applications-080_entrypoint', '/docs/applications/080_entrypoint', {})
+        },
+        {
             path: '/docs/coherence/010_overview',
             meta: {
                 h1: 'Overview',
@@ -572,6 +585,32 @@ function createRoutes(){
             component: loadPage('docs-ports-040_servicemonitors', '/docs/ports/040_servicemonitors', {})
         },
         {
+            path: '/docs/networking/010_overview',
+            meta: {
+                h1: 'Overview',
+                title: 'Overview',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-networking-010_overview', '/docs/networking/010_overview', {})
+        },
+        {
+            path: '/docs/networking/020_dual_stack',
+            meta: {
+                h1: 'Dual Stack Networking',
+                title: 'Dual Stack Networking',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-networking-020_dual_stack', '/docs/networking/020_dual_stack', {})
+        },
+        {
             path: '/docs/scaling/010_overview',
             meta: {
                 h1: 'Scale Coherence Deployments',
@@ -635,6 +674,32 @@ function createRoutes(){
                 hasNav: true
             },
             component: loadPage('docs-management-025_coherence_cli', '/docs/management/025_coherence_cli', {})
+        },
+        {
+            path: '/docs/management/026_queryplus',
+            meta: {
+                h1: 'The Coherence Query Plus',
+                title: 'The Coherence Query Plus',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-management-026_queryplus', '/docs/management/026_queryplus', {})
+        },
+        {
+            path: '/docs/management/027_jshell',
+            meta: {
+                h1: 'Using JShell',
+                title: 'Using JShell',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-management-027_jshell', '/docs/management/027_jshell', {})
         },
         {
             path: '/docs/management/040_ssl',
@@ -1105,6 +1170,19 @@ function createRoutes(){
             component: loadPage('examples-900_demo-README', '/examples/900_demo/README', {})
         },
         {
+            path: '/examples/910_polyglot_demo/README',
+            meta: {
+                h1: 'Polyglot Client Demo',
+                title: 'Polyglot Client Demo',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('examples-910_polyglot_demo-README', '/examples/910_polyglot_demo/README', {})
+        },
+        {
             path: '/examples/no-operator/000_overview',
             meta: {
                 h1: 'Overview',
@@ -1209,19 +1287,6 @@ function createRoutes(){
             component: loadPage('docs-troubleshooting-02_heap_dump', '/docs/troubleshooting/02_heap_dump', {})
         },
         {
-            path: '/docs/webhooks/01_introduction',
-            meta: {
-                h1: 'Operator K8s Webhooks',
-                title: 'Operator K8s Webhooks',
-                h1Prefix: null,
-                description: null,
-                keywords: null,
-                customLayout: null,
-                hasNav: false
-            },
-            component: loadPage('docs-webhooks-01_introduction', '/docs/webhooks/01_introduction', {})
-        },
-        {
             path: '/docs/performance/010_performance',
             meta: {
                 h1: 'Performance Testing',
@@ -1233,6 +1298,19 @@ function createRoutes(){
                 hasNav: false
             },
             component: loadPage('docs-performance-010_performance', '/docs/performance/010_performance', {})
+        },
+        {
+            path: '/docs/webhooks/01_introduction',
+            meta: {
+                h1: 'Operator K8s Webhooks',
+                title: 'Operator K8s Webhooks',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: false
+            },
+            component: loadPage('docs-webhooks-01_introduction', '/docs/webhooks/01_introduction', {})
         },
         {
             path: '/examples/README',
@@ -1311,7 +1389,8 @@ function createNav(){
                 { href: '/docs/applications/040_application_main', title: 'Set the Application Main' },
                 { href: '/docs/applications/050_application_args', title: 'Set Application Arguments' },
                 { href: '/docs/applications/060_application_working_dir', title: 'Set the Working Directory' },
-                { href: '/docs/applications/070_spring', title: 'Spring Boot Applications' }
+                { href: '/docs/applications/070_spring', title: 'Spring Boot Applications' },
+                { href: '/docs/applications/080_entrypoint', title: 'Run an Image Entry Point' }
             ]
         },
         {
@@ -1357,6 +1436,15 @@ function createNav(){
             ]
         },
         {
+            title: 'Networking',
+            action: 'share',
+            group: '/networking',
+            items: [
+                { href: '/docs/networking/010_overview', title: 'Overview' },
+                { href: '/docs/networking/020_dual_stack', title: 'Dual Stack Networking' }
+            ]
+        },
+        {
             title: 'Scaling Up & Down',
             action: 'fa-balance-scale',
             group: '/scaling',
@@ -1380,6 +1468,8 @@ function createNav(){
                 { href: '/docs/management/010_overview', title: 'Overview' },
                 { href: '/docs/management/020_management_over_rest', title: 'Management over REST' },
                 { href: '/docs/management/025_coherence_cli', title: 'The Coherence CLI' },
+                { href: '/docs/management/026_queryplus', title: 'The Coherence Query Plus' },
+                { href: '/docs/management/027_jshell', title: 'Using JShell' },
                 { href: '/docs/management/040_ssl', title: 'SSL with Management over REST' },
                 { href: '/docs/management/100_tmb_test', title: 'Coherence Network Testing' }
             ]
@@ -1443,7 +1533,8 @@ function createNav(){
                 { href: '/examples/200_autoscaler/README', title: 'Autoscaling Coherence Clusters' },
                 { href: '/examples/300_helm/README', title: 'Manage Coherence using Helm' },
                 { href: '/examples/400_Istio/README', title: 'Using Coherence with Istio' },
-                { href: '/examples/900_demo/README', title: 'The Coherence Demo App' }
+                { href: '/examples/900_demo/README', title: 'The Coherence Demo App' },
+                { href: '/examples/910_polyglot_demo/README', title: 'Polyglot Client Demo' }
             ]
         },
         {

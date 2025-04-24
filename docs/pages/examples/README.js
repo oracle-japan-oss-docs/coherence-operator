@@ -23,11 +23,11 @@
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">こんにちは世界</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.vbpYz.1" title="原文 : Deploying the most basic Coherence cluster using the Operator.">オペレータを使用した最も基本的なCoherenceクラスタのデプロイ。</span></p>
-</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/025_extend_client/README"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/025_extend_client/README"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">Coherence*Extendクライアント</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.mRTvz.1" title="原文 : An example demonstrating various ways to configure and use Coherence*Extend with Kubernetes.">Kubernetesを使用してCoherence*Extendを構成および使用するための様々な方法を示す例。</span></p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link @click.native="this.scrollFix('#examples/020_deployment/README.adoc')" to="#examples/020_deployment/README.adoc"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link @click.native="this.scrollFix('#examples/020_deployment/README.adoc')" to="#examples/020_deployment/README.adoc"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">デプロイメント</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1cUQRp.1" title="原文 : This example shows how to deploy Coherence applications using the Coherence Operator.">この例では、Coherence Operatorを使用してCoherenceアプリケーションをデプロイする方法を示します。</span></p>
@@ -42,8 +42,8 @@
 </v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/100_federation/README"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">フェデレーション</span></v-card-title> <v-card-text class="caption">
 <p></p>
-<p><span class="merged" id="all.2kCjks.1.spl1" title="原文 : This is a simple Coherence federation example.">これは単純なCoherenceフェデレーションの例です。</span> <span class="merged" id="all.2kCjks.1.spl2" title="原文 : The federation feature requires Coherence Grid Edition.">フェデレーション機能にはCoherence Grid Editionが必要です。</span> </p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/200_autoscaler/README"><div class="card__link-hover"/>
+<p><span class="merged" id="all.2NxmvF.1.spl1" title="原文 : This example shows configuring federation using Oracle Cloud.">この例では、Oracle Cloudを使用したフェデレーションの構成を示します。</span> <span class="merged" id="all.2NxmvF.1.spl2" title="原文 : (OCI) The federation feature requires Coherence Grid Edition.">(OCI)フェデレーション機能には、Coherence Grid Editionが必要です。</span> </p>
+</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/200_autoscaler/README"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">自動スケーリング</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.4MsEdH.1" title="原文 : Scaling Coherence clusters using the horizontal Pod Autoscaler.">水平なPod Autoscalerを使用したCoherenceクラスタのスケーリング。</span></p>
@@ -55,10 +55,14 @@
 </router-link> <v-card-title primary class="headline layout justify-center"> <span style="text-align:center">Istio</span> </v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.3BJaXa.1" title="原文 : Istio Support">Istioサポート</span></p>
-</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/900_demo/README"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/900_demo/README"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">Coherenceデモ・アプリケーション</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.47amyD.1" title="原文 : Deploying the Coherence demo application.">Coherenceデモ・アプリケーションのデプロイ。</span></p>
+</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/910_polyglot_demo/README"><div class="card__link-hover"/>
+</router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">多言語クライアント・デモ</span></v-card-title> <v-card-text class="caption">
+<p></p>
+<p><span class="merged" id="all.2wYTXG.1" title="原文 : Deploy Python, JavaScript or Go applications using the Operator.">オペレータを使用してPython、JavaScriptまたはGoアプリケーションをデプロイします。</span></p>
 </v-card-text>
 </v-card>
 </v-flex>

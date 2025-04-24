@@ -230,11 +230,11 @@
 
 </div>
 
-<h4 id="_member_details"><span class="merged" id="all.3PjWCs"  title="原文:: Member Details">メンバーの詳細</span></h4>
+<h4 id="_member_details"><span class="merged" id="all.3PjWCs"  title="原文:: Member Details">メンバー詳細</span></h4>
 <div class="section">
 
 
-<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバーの詳細" src="./images/grafana-member.png" width="1024" /> </v-card-text> </v-card>
+<v-card> <v-card-text class="overflow-y-hidden" style="text-align:center"> <img alt="メンバー詳細" src="./images/grafana-member.png" width="1024" /> </v-card-text> </v-card>
 
 </div>
 </div>

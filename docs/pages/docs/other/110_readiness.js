@@ -40,7 +40,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.3zw9sD" title="原文 : The Coherence CRD spec.readinessProbe field is identical to configuring a readiness probe for a Pod in Kubernetes; see Configure Liveness &amp; Readiness"><code>Coherence</code> CRD <code>spec.readinessProbe</code>フィールドは、Kubernetesの<code>Pod</code>のレディネス・プローブの構成と同じです。<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/" id="" target="_blank" >「リブネス&amp;レディネスの構成」</a>を参照してください</span></p>
 
-<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.30"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -68,7 +68,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.1zoJFX" title="原文 : The Coherence CRD spec.livenessProbe field is identical to configuring a liveness probe for a Pod in Kubernetes; see Configure Liveness &amp; Readiness"><code>Coherence</code> CRD <code>spec.livenessProbe</code>フィールドは、Kubernetes内の<code>Pod</code>のリブネス・プローブの構成と同じです。<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/" id="" target="_blank" >「リブネス&amp;レディネスの構成」</a>を参照してください</span></p>
 
-<p><span class="merged" id="all.6vDv5.29"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.31"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

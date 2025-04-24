@@ -4,13 +4,24 @@
 
 <h2 id="_using_coherence_with_istio"><span class="merged" id="all.4OqKpf" title="原文 : Using Coherence with Istio">IstioでのCoherenceの使用</span></h2>
 <div class="section">
-<p><span class="merged" id="all.289IP.spl1" title="原文 : You can run the Coherence cluster and manage them using the Coherence Operator alongside Istio.">Coherenceクラスタを実行し、<a href="https://istio.io" id="" target="_blank" >Istio</a>とともにCoherence Operatorを使用して管理できます。</span> <span class="merged" id="all.289IP.spl2" title="原文 : Coherence clusters managed with the Coherence Operator 3.4.1 and later work with Istio 1.9.1 and later out of the box.">Coherence Operator 3.4.1以降で管理されるCoherenceクラスタは、Istio 1.9.1以降をすぐに操作できます。</span> <span class="merged" id="all.289IP.spl3" title="原文 : Coherence caches can be accessed from outside the Coherence cluster via Coherence*Extend, REST, and other supported Coherence clients.">Coherenceキャッシュには、Coherence*Extend、REST、およびサポートされているその他のCoherenceクライアントを介して、Coherenceクラスタの外部からアクセスできます。</span> <span class="merged" id="all.289IP.spl4" title="原文 : Using Coherence clusters with Istio does not require the Coherence Operator to also be using Istio (and vice-versa) .">IstioでCoherenceクラスタを使用する場合、Coherence OperatorもIstioを使用する必要はありません(逆も同様)。</span> <span class="merged" id="all.289IP.spl5" title="原文 : The Coherence Operator can manage Coherence clusters independent of whether those clusters are using Istio or not.">Coherence Operatorは、これらのクラスタがIstioを使用しているかどうかに関係なく、Coherenceクラスタを管理できます。</span> </p>
+<p><span class="merged" id="all.496Nkv.spl1" title="原文 : You can run the Coherence cluster and manage them using the Coherence Operator alongside Istio.">Coherenceクラスタを実行し、<a href="https://istio.io" id="" target="_blank" >Istio</a>とともにCoherence Operatorを使用して管理できます。</span> <span class="merged" id="all.496Nkv.spl2" title="原文 : Coherence clusters managed with the Coherence Operator 3.5.0 and later work with Istio 1.9.1 and later out of the box.">Coherence Operator 3.5.0で管理されるCoherenceクラスタは、Istio 1.9.1以降で即時利用可能な状態で動作します。</span> <span class="merged" id="all.496Nkv.spl3" title="原文 : Coherence caches can be accessed from outside the Coherence cluster via Coherence*Extend, REST, and other supported Coherence clients.">Coherenceキャッシュには、Coherence*Extend、REST、およびサポートされているその他のCoherenceクライアントを介して、Coherenceクラスタの外部からアクセスできます。</span> <span class="merged" id="all.496Nkv.spl4" title="原文 : Using Coherence clusters with Istio does not require the Coherence Operator to also be using Istio (and vice-versa) .">IstioでCoherenceクラスタを使用する場合、Coherence OperatorもIstioを使用する必要はありません(逆も同様)。</span> <span class="merged" id="all.496Nkv.spl5" title="原文 : The Coherence Operator can manage Coherence clusters independent of whether those clusters are using Istio or not.">Coherence Operatorは、これらのクラスタがIstioを使用しているかどうかに関係なく、Coherenceクラスタを管理できます。</span> </p>
 
 <p><span class="merged" id="all.13sF9t" title="原文 : Although Coherence itself can be configured to use TLS, when using Istio Coherence cluster members and clients can just use the default socket configurations and Istio will control and route all the traffic over mTLS.">Coherence自体はTLSを使用するように構成できますが、Istio Coherenceクラスタ・メンバーおよびクライアントを使用する場合、デフォルトのソケット構成のみを使用でき、IstioはmTLSを介してすべてのトラフィックを制御およびルーティングします。</span></p>
 
 <div class="admonition tip">
 <p class="admonition-textlabel"><span class="merged" id="all.245DJ6.12"  title="原文:: Tip">ヒント</span></p>
 <p ><p><span class="merged" id="all.M214a.spl1" title="原文 : Coherence clusters can be manually configured to work with Istio, even if not using the Operator.">Coherenceクラスタは、オペレータを使用していなくても、Istioと連携するように手動で構成できます。</span> <span class="merged" id="all.M214a.spl2" title="原文 : See the Istio example in the No Operator Examples"><router-link to="/examples/no-operator/04_istio/README">「オペレータなしの例」</router-link>のIstioの例を参照してください</span> </p>
+</p>
+</div>
+<div class="admonition important">
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.8"  title="原文:: Important">重要</span></p>
+<p ><p><span class="merged" id="all.LZMrK" title="原文 : Upgrading Istio"><strong>Istioのアップグレード</strong></span></p>
+
+<p><span class="merged" id="all.46jX5m.spl1" title="原文 : The Istio documentations states that the recommended way to upgrade Istio is to use Istio revisions and canary upgrades.">Istioのドキュメントでは、Istioをアップグレードするための推奨される方法は<a href="https://istio.io/latest/docs/setup/upgrade/canary/" id="" target="_blank" >「Istioのリビジョンとカナリア・アップグレード」</a>を使用することです。</span> <span class="merged" id="all.46jX5m.spl2" title="原文 : If Istio is upgraded using a simple in-place upgrade option this will cause Coherence Pods to have communication issues and ultimately make the Coherence cluster unusable.">単純なインプレース・アップグレード・オプションを使用してIstioをアップグレードすると、Coherenceポッドに通信の問題が発生し、最終的にCoherenceクラスタが使用できなくなります。</span> <span class="merged" id="all.46jX5m.spl3" title="原文 : This is because an in-place Istio upgrade will cause the Istio Proxy in the side-car containers to receive config updates and then to drain all the TCP connections it is managing, hence causing Coherence containers to disconnect from each other.">これは、インプレースIstioアップグレードによって、サイドカ・コンテナのIstioプロキシが構成更新を受信し、管理しているすべてのTCP接続をドレインするため、Coherenceコンテナが相互に切断されるためです。</span> </p>
+
+<p><span class="merged" id="all.4fjBJ4" title="原文 : This issue is not just related to Coherence but can impact any long-lived TCP connections, for example connections to a database.">この問題は、Coherenceに関連するだけでなく、データベースへの接続など、存続期間の長いTCP接続に影響する可能性があります。</span></p>
+
+<p><span class="merged" id="all.yZmBJ" title="原文 : If you are using Istio in a managed environment where you do not control its life-cycle, you must ensure that the people that are responsible for managing Istio use the recommended upgrade approach.">ライフサイクルを制御しないマネージド環境でIstioを使用している場合は、Istioを管理する担当者が推奨されるアップグレード・アプローチを使用していることを確認する必要があります。</span></p>
 </p>
 </div>
 
@@ -161,7 +172,7 @@ metadata:
   name: storage
 spec:
   replicas: 3
-  image: ghcr.io/oracle/coherence-ce:22.06.7
+  image: container-registry.oracle.com/middleware/coherence-ce:14.1.2-0-1
   labels:
     app: storage      <span class="conum" data-value="1" />
     version: 1.0.0    <span class="conum" data-value="2" />
@@ -256,7 +267,7 @@ kind: CoherenceJob
 metadata:
   name: client
 spec:
-  image: ghcr.io/oracle/coherence-ce:22.06.7  <span class="conum" data-value="1" />
+  image: container-registry.oracle.com/middleware/coherence-ce:14.1.2-0-1  <span class="conum" data-value="1" />
   restartPolicy: Never
   cluster: storage  <span class="conum" data-value="2" />
   coherence:

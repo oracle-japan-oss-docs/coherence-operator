@@ -45,7 +45,7 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.42"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.49"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
@@ -133,7 +133,7 @@ spec:
 <thead>
 <tr>
 <th><span class="merged" id="all.4aWXsE.1"  title="原文:: JVM Option">JVMオプション</span></th>
-<th><span class="merged" id="all.4JM9z7.43"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.50"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
@@ -150,7 +150,7 @@ spec:
 </div>
 <p><span class="merged" id="all.2PYNEu" title="原文 : The &lt;size&gt; parameter is a numeric integer followed by a suffix to the size value: &quot;k&quot; or &quot;K&quot; to indicate kilobytes, &quot;m&quot; or &quot;M&quot; to indicate megabytes, &quot;g&quot; or &quot;G&quot; to indicate gigabytes, or, &quot;t&quot; or &quot;T&quot; to indicate terabytes."><code>&lt;size></code>パラメータは数値整数で、その後にサイズ値のサフィクスが続きます: キロバイトを示す"k"または"K"、メガバイトを示す"m"または"M"、ギガバイトを示す"g"または"G"、テラバイトを示す"t"または"T"です。</span></p>
 
-<p><span class="merged" id="all.6vDv5.11"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.12"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -179,7 +179,7 @@ spec:
 
 <p><span class="merged" id="all.3pnVcl.spl1" title="原文 : To set the JVM both the initial amd max heap sizes to the same value, set the jvm.memory.heapSize field.">初期値および最大ヒープ・サイズの両方のJVMを同じ値に設定するには、<code>jvm.memory.heapSize</code>フィールドを設定します。</span> <span class="merged" id="all.3pnVcl.spl2" title="原文 : The value of the field can be any value that can be used with the JVM -XX:InitialHeapSize and -XX:MaxHeapSize (or -Xmx and -Xms) arguments.">フィールドの値は、JVM <code>-XX:InitialHeapSize</code>および<code>-XX:MaxHeapSize</code> (または<code>-Xmx</code>および<code>-Xms</code>)引数で使用できる任意の値です。</span> <span class="merged" id="all.3pnVcl.spl3" title="原文 : The value of the jvm.memory.heapSize field will be used to set both the -XX:InitialHeapSize, and the -XX:MaxHeapSize arguments to the same value, so the heap will be a fixed size."><code>jvm.memory.heapSize</code>フィールドの値は、<code>-XX:InitialHeapSize</code>引数と<code>-XX:MaxHeapSize</code>引数の両方を同じ値に設定するために使用されるため、ヒープは固定サイズになります。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.12"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.13"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

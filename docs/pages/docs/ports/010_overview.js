@@ -2,7 +2,7 @@
 <span title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center;"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html" target="disclaimer">&nbsp;&nbsp;機械翻訳について&nbsp;&nbsp;</a></span>
 
 
-<h2 id="_overview"><span class="merged" id="all.YrpRV.7"  title="原文:: Overview">概要</span></h2>
+<h2 id="_overview"><span class="merged" id="all.YrpRV.8"  title="原文:: Overview">概要</span></h2>
 <div class="section">
 <p><span class="merged" id="all.TTPXD.spl1" title="原文 : Almost every application deployed into a Kubernetes cluster needs to communicate with other processes to provide services to other processes or consume services to other processes.">Kubernetesクラスタにデプロイされるほとんどのアプリケーションは、他のプロセスにサービスを提供したり、他のプロセスにサービスを消費するために、他のプロセスと通信する必要があります。</span> <span class="merged" id="all.TTPXD.spl2" title="原文 : This is achieved by exposing ports on containers in Pods and optionally exposing those same ports using Services and ingress.">これは、<code>Pods</code>内のコンテナにポートを公開し、オプションで<code>Services</code>およびイングレスを使用してこれらの同じポートを公開することによって実現されます。</span> <span class="merged" id="all.TTPXD.spl3" title="原文 : The Coherence CRD spec makes it simple to add ports to the Coherence container and configure Services to expose those ports."><code>Coherence</code> CRD仕様では、Coherenceコンテナにポートを追加し、それらのポートを公開するように<code>Services</code>を構成できます。</span> </p>
 

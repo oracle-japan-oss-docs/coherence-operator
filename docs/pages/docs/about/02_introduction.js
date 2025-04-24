@@ -63,6 +63,12 @@
 
 </div>
 
+<h3 id="_dual_stack_kubernetes_clusters"><span class="merged" id="all.4MRsyK" title="原文 : Dual-Stack Kubernetes Clusters">デュアル・スタックKubernetesクラスタ</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1kpzZp" title="原文 : The Operator supports running Coherence on dual-stack IPv4 and IPv6 Kubernetes clusters.">オペレータは、デュアル・スタックIPv4およびIPv6 KubernetesクラスタでのCoherenceの実行をサポートしています。</span></p>
+
+</div>
+
 <h3 id="_consistency"><span class="merged" id="all.5S5Qx"  title="原文:: Consistency">一貫性</span></h3>
 <div class="section">
 <p><span class="merged" id="all.4KDQ5M" title="原文 : By using the Operator to manage Coherence clusters all clusters are configured and managed the same way making it easier for DevOps to manage multiple clusters and applications.">オペレータを使用してCoherenceクラスタを管理することで、すべてのクラスタが構成および管理されるため、DevOpsで複数のクラスタおよびアプリケーションの管理が容易になります。</span></p>

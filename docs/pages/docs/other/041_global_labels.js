@@ -122,7 +122,7 @@ spec:
 </ul>
 <p><span class="merged" id="all.4058X6" title="原文 : Both of these command line flags can be specified multiple times if required.">これらのコマンド行フラグは、必要に応じて複数回指定できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.20"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.22"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="bash"
@@ -138,7 +138,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.44DFzA" title="原文 : When installing the Operator using the manifest yaml files, additional command line flags can be configured by manually editing the yaml file before installing.">マニフェストyamlファイルを使用してオペレータをインストールする場合、インストール前にyamlファイルを手動で編集することで、追加のコマンドライン・フラグを構成できます。</span></p>
 
-<p><span class="merged" id="all.1M13CC" title="原文 : Download the yaml manifest file from the GitHub repo https://github.com/oracle/coherence-operator/releases/download/v3.4.1/coherence-operator.yaml">GitHubリポジトリ<a href="https://github.com/oracle/coherence-operator/releases/download/v3.4.1/coherence-operator.yaml" id="" target="_blank" >https://github.com/oracle/coherence-operator/releases/download/v3.4.1/coherence-operator.yaml</a>からyamlマニフェスト・ファイルをダウンロード</span></p>
+<p><span class="merged" id="all.3VLlnO" title="原文 : Download the yaml manifest file from the GitHub repo https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml">GitHubリポジトリ<a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml" id="" target="_blank" >https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml</a>からyamlマニフェスト・ファイルをダウンロード</span></p>
 
 <p><span class="merged" id="all.SBiqw" title="原文 : Find the section of the yaml file the defines the Operator container args, the default looks like this">オペレータ・コンテナ引数を定義するyamlファイルのセクションを検索します。デフォルトはこんな感じです</span></p>
 
@@ -167,7 +167,7 @@ title="coherence-operator.yaml"
         - two=label-two`</markup>
 
 <div class="admonition important">
-<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.5"  title="原文:: Important">重要</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.7"  title="原文:: Important">重要</span></p>
 <p ><p><span class="merged" id="all.315hcL.spl1" title="原文 : Container arguments must each be a separate entry in the arg list.">コンテナ引数は、それぞれ引数リスト内の個別のエントリである必要があります。</span> <span class="merged" id="all.315hcL.spl2" title="原文 : This is valid">これは有効です</span> </p>
 
 <markup
@@ -220,7 +220,7 @@ lang="bash"
     coherence/coherence-operator</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.12"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.20"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.k4S1B" title="原文 : When setting the Helm chart values globalLabels or globalAnnotations any labels and annotations specified will also be applied to all the resources installed by the Helm Chart too.">Helmチャート値<code>globalLabels</code>または<code>globalAnnotations</code>を設定すると、指定したラベルおよび注釈も、Helmチャートによってインストールされたすべてのリソースに適用されます。</span></p>
 </p>
 </div>

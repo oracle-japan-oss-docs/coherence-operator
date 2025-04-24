@@ -28,6 +28,10 @@
 
 </li>
 <li>
+<p><span class="merged" id="all.1wGyCy" title="原文 : I messed up a Coherence deployment and now cannot apply a fixed yaml"><router-link @click.native="this.scrollFix('#messed')" to="#messed">Coherenceデプロイメントを混乱させましたが、固定yamlを適用できません</router-link></span></p>
+
+</li>
+<li>
 <p><span class="merged" id="all.3FuXJR" title="原文 : My Coherence cluster is stuck with some running Pods and some pending Pods, I want to scale down"><router-link @click.native="this.scrollFix('#stuck-pending')" to="#stuck-pending">Coherenceクラスタは、実行中のポッドと一部の保留中のポッドにスタックしています。スケール・ダウンしたいです</router-link></span></p>
 
 </li>
@@ -45,6 +49,10 @@
 </li>
 <li>
 <p><span class="merged" id="all.4XIITG" title="原文 : I’m using Arm64 and Java 8 and the JVM will not start due to using G1GC"><router-link @click.native="this.scrollFix('#arm-java8')" to="#arm-java8">Arm64およびJava 8を使用しているため、JVMはG1GCの使用により開始されません</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.19IT19" title="原文 : Why do I see warnings about IPMonitor being disabled when Coherence starts"><router-link @click.native="this.scrollFix('#ipmon')" to="#ipmon">Coherenceの起動時にIPMonitorが無効になっているという警告が表示される理由</router-link></span></p>
 
 </li>
 </ul>
@@ -83,7 +91,7 @@ kubectl -n &lt;NAMESPACE&gt; delete coherence/&lt;COHERENCE_RESOURCE_NAME&gt;</m
 
 <p><span class="merged" id="all.3Rat3.spl1" title="原文 : Alternatively, if you are running the Operator in a CI/CD environment and just want to be able to clean up after tests you can run Coherence clusters with the allowUnsafeDelete option enabled.">または、オペレータをCI/CD環境で実行していて、テスト後にクリーン・アップできるようにする場合は、<code>allowUnsafeDelete</code>オプションを有効にしてCoherenceクラスタを実行できます。</span> <span class="merged" id="all.3Rat3.spl2" title="原文 : By setting the allowUnsafeDelete field to true in the Coherence resource the Operator will not add a finalizer to that Coherence resource, allowing it to be deleted if its namespace is deleted."><code>Coherence</code>リソースで<code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはそのCoherenceリソースにファイナライザを追加せず、そのネームスペースが削除された場合にファイナライザを削除できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.32"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.34"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -96,7 +104,7 @@ spec:
   allowUnsafeDelete: true</markup>
 
 <div class="admonition caution">
-<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.4"  title="原文:: Caution">注意</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.4Pmf1N.7"  title="原文:: Caution">注意</span></p>
 <p ><p><span class="merged" id="all.1NWBl2.spl1" title="原文 : Setting the allowUnsafeDelete field to true will mean that the Operator will not be able to intercept the deletion and shutdown of a Coherence cluster and ensure it has a clean, safe shutdown."><code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはCoherenceクラスタの削除と停止をインターセプトできず、クリーンで安全な停止を確保できなくなります。</span> <span class="merged" id="all.1NWBl2.spl2" title="原文 : This is usually ok in CI/CD environments where the cluster and namespace are being cleaned up at the end of a test.">これは通常、CI/CD環境で、テストの終了時にクラスタおよびネームスペースがクリーンアップされている場合に問題ありません。</span> <span class="merged" id="all.1NWBl2.spl3" title="原文 : This options should not be used in a production cluster, especially where features such as Coherence persistence are being used, otherwise the cluster may not cleanly shut down and will then not be able to be restarted using the persisted data.">このオプションは、特にCoherence永続性などの機能が使用されている本番クラスタでは使用しないでください。そうしないと、クラスタがクリーンに停止して、永続データを使用して再起動できなくなります。</span> </p>
 </p>
 </div>
@@ -113,6 +121,24 @@ spec:
 <p><span class="merged" id="all.2WEzEQ.1.spl1" title="原文 : The readiness/liveness probe used by the Operator in the Coherence Pods checks a number of things to determine whether the Pods is ready, one of these is whether the JVM is a cluster member.">Coherenceポッドのオペレータが使用するレディネス/リブネス・プローブは、ポッドの準備ができているかどうかを判断するためにいくつかの事項をチェックします。これらの1つは、JVMがクラスタ・メンバーかどうかです。</span> <span class="merged" id="all.2WEzEQ.1.spl2" title="原文 : If your application uses a custom main class and is not properly bootstrapping Coherence then the Pod will not be ready until your application code actually touches a Coherence resource causing Coherence to start and join the cluster.">アプリケーションでカスタム・メイン・クラスが使用され、Coherenceが正しくブートストラップされていない場合、アプリケーション・コードが実際にCoherenceリソースに接続され、Coherenceが起動してクラスタに参加するまで、ポッドは準備されません。</span> </p>
 
 <p><span class="merged" id="all.3O231E.1.spl1" title="原文 : When running in clusters with the Operator using custom main classes it is advisable to properly bootstrap Coherence from within your main method.">カスタム・メイン・クラスを使用してOperatorを使用してクラスタで実行する場合は、<code>main</code>メソッド内からCoherenceを適切にブートストラップすることをお薦めします。</span> <span class="merged" id="all.3O231E.1.spl2" title="原文 : This can be done using the new Coherence bootstrap API available from CE release 20.12 or by calling com.tangosol.net.DefaultCacheServer.startServerDaemon().waitForServiceStart();">これを行うには、CEリリース20.12または<code>com.tangosol.net.DefaultCacheServer.startServerDaemon().waitForServiceStart();</code>をコールして、新しいCoherenceブートストラップAPIを使用できます</span> </p>
+
+</div>
+
+<h3 id="messed"><span class="merged" id="all.4YFg4p" title="原文 : I messed up a Coherence deployment and now cannot apply a fixed yaml">Coherenceデプロイメントを混乱させましたが、固定yamlを適用できません</span></h3>
+<div class="section">
+<p><span class="merged" id="all.1qc2vz.spl1" title="原文 : If you deploy a Coherence resource or perform a rolling upgrade of a Coherence resource, and there is an error somewhere that causes the Pods to fail to become ready, the Operator will refuse to allow any updates to be applied to that resource.">Coherenceリソースをデプロイする場合、またはCoherenceリソースのローリング・アップグレードを実行する場合に、ポッドの準備ができなくなるエラーがあると、オペレータはそのリソースへの更新の適用を拒否します。</span> <span class="merged" id="all.1qc2vz.spl2" title="原文 : This means it is impossible to re-apply the old working yaml and roll back an update.">つまり、古い作業yamlを再適用し、更新をロールバックすることはできません。</span> <span class="merged" id="all.1qc2vz.spl3" title="原文 : By default, the Operator will not apply an update to a Coherence cluster if any of the Pods is not ready or the cluster’s Status HA value is endangered.">デフォルトでは、ポッドのいずれかの準備ができていないか、クラスタの「ステータスのHA」値が危険にさらされている場合、オペレータはCoherenceクラスタに更新を適用しません。</span> <span class="merged" id="all.1qc2vz.spl4" title="原文 : This is to stop updates happening when Coherence is recovering from the loss of a Pod or still starting up.">これは、Coherenceがポッドの損失からリカバリ中であるか、起動中に発生する更新を停止します。</span> </p>
+
+<p><span class="merged" id="all.1XPuDi.spl1" title="原文 : This can be very annoying as the cluster is broken and needs to be fixed.">クラスタが破損し、修正する必要があるため、これは非常に厄介な場合があります。</span> <span class="merged" id="all.1XPuDi.spl2" title="原文 : The way to force the Operator to apply the update is to set the haBeforeUpdate field in the yaml to false.">オペレータが更新を適用するように強制する方法は、yamlの<code>haBeforeUpdate</code>フィールドを<code>false</code>に設定することです。</span> <span class="merged" id="all.1XPuDi.spl3" title="原文 : This causes the Operator to skip the status checks for the cluster and apply the update.">これにより、オペレータはクラスタのステータス・チェックをスキップして更新を適用します。</span> </p>
+
+<markup
+lang="yaml"
+
+>apiVersion: coherence.oracle.com/v1
+kind: Coherence
+metadata:
+  name: storage
+spec:
+  haBeforeUpdate: false</markup>
 
 </div>
 
@@ -195,6 +221,19 @@ lang="console"
 <p><span class="merged" id="all.4YuR9O.1" title="原文 : If running Kubernetes on ARM processors and using Coherence images built on Java 8 for ARM, note that the G1 garbage collector in that version of Java on ARM is marked as experimental.">ARMプロセッサでKubernetesを実行し、Java 8 for ARMでビルドされたCoherenceイメージを使用する場合、ARM上のそのバージョンのJavaのG1ガベージ・コレクタは実験的としてマークされます。</span></p>
 
 <p><span class="merged" id="all.1XVCma.spl1" title="原文 : By default, the Operator configures the Coherence JVM to use G1.">デフォルトでは、オペレータはG1を使用するようにCoherence JVMを構成します。</span> <span class="merged" id="all.1XVCma.spl2" title="原文 : This will cause errors on Arm64 Java 8 JMS unless the JVM option -XX:+UnlockExperimentalVMOptions is added in the Coherence resource spec (see Adding Arbitrary JVM Arguments).">これにより、JVMオプション<code>-XX:+UnlockExperimentalVMOptions</code>がCoherenceリソース仕様に追加されないかぎり、Arm64 Java 8 JMSにエラーが発生します(<router-link to="/docs/jvm/030_jvm_args">「任意のJVM引数の追加」</router-link>を参照)。</span> <span class="merged" id="all.1XVCma.spl3" title="原文 : Alternatively specify a different garbage collector, ideally on a version of Java this old, use CMS (see Garbage Collector Settings).">または、この古いバージョンのJavaで別のガベージ・コレクタを指定する場合は、CMSを使用します(<router-link to="/docs/jvm/040_gc">「ガベージ・コレクタ設定」</router-link>を参照)。</span> </p>
+
+</div>
+
+<h3 id="ipmon"><span class="merged" id="all.4BvUF1" title="原文 : Why do I see warnings about IPMonitor being disabled when Coherence starts">Coherenceの起動時にIPMonitorが無効になっているという警告が表示される理由</span></h3>
+<div class="section">
+<p><span class="merged" id="all.3hszwX" title="原文 : When Coherence starts a message similar to the following is displayed in the Coherence container’s log:">Coherenceが起動すると、Coherenceコンテナのログに次のようなメッセージが表示されます:</span></p>
+
+<markup
+
+
+>2024-07-01 14:43:55.410/3.785 Oracle Coherence GE 14.1.1.2206.10 (dev-jonathanknight) &lt;Warning&gt; (thread=Coherence, member=n/a): IPMonitor has been explicitly disabled, this is not a recommended practice and will result in a minimum death detection time of 300 seconds for failed machines or networks.</markup>
+
+<p><span class="merged" id="all.1kWFFu" title="原文 : This message is because the default behaviour of the Operator is to disable the Coherence IP Monitor, see the IP Monitor documentation for an explanation.">このメッセージは、オペレータのデフォルトの動作がCoherence IPモニターを無効にすることであるためです。説明は、<router-link @click.native="this.scrollFix('#_coherence_operator_api_docs/coherence/090_ipmonitor.adoc')" to="#_coherence_operator_api_docs/coherence/090_ipmonitor.adoc">「IPモニターのドキュメント」</router-link>を参照してください。</span></p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 
 <h2 id="_coherence_network_testing"><span class="merged" id="all.1U0q5x" title="原文 : Coherence Network Testing">Coherenceネットワーク・テスト</span></h2>
 <div class="section">
-<p><span class="merged" id="all.U8TVH.spl1" title="原文 : Coherence provides utilities that can be used to test network performance, which obviously has a big impact on a distributed system such as Coherence.">Coherenceは、ネットワーク・パフォーマンスのテストに使用できるユーティリティを提供し、Coherenceなどの分散システムに大きな影響を与えます。</span> <span class="merged" id="all.U8TVH.spl2" title="原文 : The documentation for these utilities can be found in the official Coherence Documentation.">これらのユーティリティのドキュメントは、公式の<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>にあります。</span> </p>
+<p><span class="merged" id="all.4XXFjo.spl1" title="原文 : Coherence provides utilities that can be used to test network performance, which obviously has a big impact on a distributed system such as Coherence.">Coherenceは、ネットワーク・パフォーマンスのテストに使用できるユーティリティを提供し、Coherenceなどの分散システムに大きな影響を与えます。</span> <span class="merged" id="all.4XXFjo.spl2" title="原文 : The documentation for these utilities can be found in the official Coherence Documentation.">これらのユーティリティのドキュメントは、公式の<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>にあります。</span> </p>
 
 <p><span class="merged" id="all.4AqR2s.spl1" title="原文 : Whilst generally these tests would be run on server hardware, with more and more Coherence deployments moving into the cloud and into Kubernetes these tests can also be performed in Pods to measure inter-Pod network performance.">通常、これらのテストはサーバー・ハードウェアで実行され、クラウドおよびKubernetesに移行するCoherenceデプロイメントが増えるため、これらのテストは<code>Pods</code>でも実行して、ポッド間ネットワークのパフォーマンスを測定できます。</span> <span class="merged" id="all.4AqR2s.spl2" title="原文 : This test can be used to see the impact of running Pods across different zones, or on different types of Kubernetes networks, with different Pod resource settings, etc.">このテストは、異なるゾーン間で<code>Pods</code>を実行した場合、または異なるタイプのKubernetesネットワーク、異なる<code>Pod</code>リソース設定などで実行した場合の影響を確認するために使用できます。</span> </p>
 
@@ -44,7 +44,7 @@ spec:
   restartPolicy: Never
   containers:
     - name: coherence
-      image: ghcr.io/oracle/coherence-ce:22.06  <span class="conum" data-value="1" />
+      image: container-registry.oracle.com/middleware/coherence-ce:14.1.2-0-1  <span class="conum" data-value="1" />
       ports:
         - name: mbus
           containerPort: 8000
@@ -59,7 +59,7 @@ spec:
 
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.1P7d0j" title="原文 : This example uses a Coherence CE image, but any image with coherence.jar in it could be used.">この例ではCoherence CEイメージを使用しますが、<code>coherence.jar</code>を含むイメージを使用できます。</span></li>
-<li data-value="2"><span class="merged" id="all.2F9J2" title="原文 : The command line that the container will execute is exactly the same as that for the listener process in the Coherence Documentation.">コンテナが実行するコマンドラインは、<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>のリスナー・プロセスの場合とまったく同じです。</span></li>
+<li data-value="2"><span class="merged" id="all.Kd9t0" title="原文 : The command line that the container will execute is exactly the same as that for the listener process in the Coherence Documentation.">コンテナが実行するコマンドラインは、<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>のリスナー・プロセスの場合とまったく同じです。</span></li>
 </ul>
 <p><span class="merged" id="all.FxiQL" title="原文 : Start the listener Pod:">リスナー<code>Pod</code>を起動します:</span></p>
 
@@ -93,7 +93,7 @@ spec:
   restartPolicy: Never
   containers:
     - name: coherence
-      image: ghcr.io/oracle/coherence-ce:22.06
+      image: container-registry.oracle.com/middleware/coherence-ce:14.1.2-0-1
       command:
         - java                         <span class="conum" data-value="1" />
         - -cp
@@ -105,7 +105,7 @@ spec:
         - tmb://message-bus-listener:8000  <span class="conum" data-value="2" /></markup>
 
 <ul class="colist">
-<li data-value="1"><span class="merged" id="all.2dCpCs" title="原文 : Again, the command line is the same as that for the sender process in the Coherence Documentation.">この場合も、コマンドラインは<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>の送信者プロセスと同じです。</span></li>
+<li data-value="1"><span class="merged" id="all.1fVmAW" title="原文 : Again, the command line is the same as that for the sender process in the Coherence Documentation.">この場合も、コマンドラインは<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/administer/performing-network-performance-test.html#GUID-7267AB06-6353-416E-B9FD-A75F7FBFE523" id="" target="_blank" >「Coherenceドキュメント」</a>の送信者プロセスと同じです。</span></li>
 <li data-value="2"><span class="merged" id="all.38owpg" title="原文 : The peer address uses the Service name message-bus-listener from the sender yaml."><code>peer</code>アドレスは、送信者<code>yaml</code>の<code>Service</code>名<code>message-bus-listener</code>を使用します。</span></li>
 </ul>
 <p><span class="merged" id="all.i8i6D" title="原文 : Start the sender Pod:">送信者<code>Pod</code>を起動します:</span></p>
@@ -127,7 +127,7 @@ now:  throughput(out 34805msg/s 1.14gb/s, in 348msg/s 11.3mb/s), latency(respons
 now:  throughput(out 34805msg/s 1.14gb/s, in 348msg/s 11.3mb/s), latency(response(avg 25.31ms, effective 110.03ms, min 374.70us, max 158.10ms), receipt 25.47ms), backlog(out 77% 83/s 308KB, in 0% 0/s 0B), connections 1, errors 0</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.11"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.18"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.EAnTt" title="原文 : Don’t forget to stop the Pods after obtaining the results:">結果の取得後に<code>Pods</code>を停止することを忘れないでください:</span></p>
 
 <markup

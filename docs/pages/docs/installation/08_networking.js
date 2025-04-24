@@ -5,25 +5,6 @@
 <h2 id="_os_networking_configuration"><span class="merged" id="all.AkyGS" title="原文 : O/S Networking Configuration">O/Sネットワーキング構成</span></h2>
 <div class="section">
 
-<h3 id="_operating_system_library_requirements"><span class="merged" id="all.4bwahA" title="原文 : Operating System Library Requirements">オペレーティング・システム・ライブラリの要件</span></h3>
-<div class="section">
-<p><span class="merged" id="all.Lp5Oz.spl1" title="原文 : In order for Coherence clusters to form correctly, the conntrack library must be installed.">Coherenceクラスタを正しく形成するには、<code>conntrack</code>ライブラリをインストールする必要があります。</span> <span class="merged" id="all.Lp5Oz.spl2" title="原文 : Most Kubernetes distributions will do this for you.">これは、ほとんどのKubernetesディストリビューションで行われます。</span> <span class="merged" id="all.Lp5Oz.spl3" title="原文 : If you have issues with clusters not forming, then you should check that conntrack is installed using this command (or equivalent):">クラスタが形成されない問題がある場合は、次のコマンド(または同等のコマンド)を使用して、<code>conntrack</code>がインストールされていることを確認する必要があります:</span> </p>
-
-<markup
-lang="bash"
-
->rpm -qa | grep conntrack</markup>
-
-<p><span class="merged" id="all.2Qi10S.spl1" title="原文 : You should see output similar to that shown below.">次のように出力されます。</span> <span class="merged" id="all.2Qi10S.spl2" title="原文 : If you do not, then you should install conntrack using your operating system tools.">そうでない場合は、オペレーティング・システムのツールを使用して<code>conntrack</code>をインストールする必要があります。</span> </p>
-
-<markup
-lang="bash"
-
->libnetfilter_conntrack-1.0.6-1.el7_3.x86_64
-conntrack-tools-1.4.4-4.el7.x86_64</markup>
-
-</div>
-
 <h3 id="_firewall_iptables_requirements"><span class="merged" id="all.2Fxxiw" title="原文 : Firewall (iptables) Requirements">ファイアウォール(iptables)の要件</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2rv2Dt.spl1" title="原文 : Some Kubernetes distributions create iptables rules that block some types of traffic that Coherence requires to form clusters.">一部のKubernetesディストリビューションでは、Coherenceがクラスタを形成するために必要とする一部のタイプのトラフィックをブロックする<code>iptables</code>ルールが作成されます。</span> <span class="merged" id="all.2rv2Dt.spl2"  title="原文: If you are not able to form clusters, then you can check for this issue using the following command:">クラスタを形成できない場合は、次のコマンドを使用してこの問題を確認できます:</span> </p>

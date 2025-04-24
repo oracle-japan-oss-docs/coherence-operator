@@ -98,7 +98,7 @@
 <v-card-title primary class="headline layout justify-center"><span style="text-align:center">JVMの構成</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.2KEfxH" title="原文 : Configure the behaviour of the JVM.">JVMの動作を構成します。</span></p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/ports/010_overview"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/ports/010_overview"><div class="card__link-hover"/>
 <span class="merged" id="all.19yBx2" title="原文 :  control_camera "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">control_camera</v-icon> </v-avatar> </v-layout></span>
 <div class="px-3">
 <v-divider class="indigo lighten-4"/>
@@ -106,6 +106,14 @@
 <v-card-title primary class="headline layout justify-center"><span style="text-align:center">ポートおよびサービスの公開</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1S1mBB" title="原文 : Configure services to expose ports provided by the application.">アプリケーションによって提供されるポートを公開するサービスを構成します。</span></p>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/networking/010_overview"><div class="card__link-hover"/>
+<span class="merged" id="all.2hzUpA" title="原文 :  share "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">share</v-icon> </v-avatar> </v-layout></span>
+<div class="px-3">
+<v-divider class="indigo lighten-4"/>
+</div>
+<v-card-title primary class="headline layout justify-center"><span style="text-align:center">ネットワーキング</span></v-card-title> <v-card-text class="caption">
+<p></p>
+<p><span class="merged" id="all.O5YRM" title="原文 : Configure networking settings.">ネットワーキング設定を構成します。</span></p>
 </v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/metrics/010_overview"><div class="card__link-hover"/>
 <span class="merged" id="all.2HzbQk" title="原文 :  speed "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"><v-icon class="xxx-large">speed</v-icon> </v-avatar> </v-layout></span>
 <div class="px-3">

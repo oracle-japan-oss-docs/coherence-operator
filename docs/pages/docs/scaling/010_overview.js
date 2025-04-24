@@ -64,7 +64,7 @@
 <thead>
 <tr>
 <th><span class="merged" id="all.42bBIm"  title="原文:: Value">値</span></th>
-<th><span class="merged" id="all.4JM9z7.45"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.52"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>

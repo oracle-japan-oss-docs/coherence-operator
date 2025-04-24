@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.4.0",
+        release: "3.4.3",
         releases: [
-            "3.4.0"
+            "3.4.3"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -299,6 +299,19 @@ function createRoutes(){
             component: loadPage('docs-applications-070_spring', '/docs/applications/070_spring', {})
         },
         {
+            path: '/docs/applications/080_entrypoint',
+            meta: {
+                h1: 'イメージ・エントリ・ポイントの実行',
+                title: 'イメージ・エントリ・ポイントの実行',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-applications-080_entrypoint', '/docs/applications/080_entrypoint', {})
+        },
+        {
             path: '/docs/coherence/010_overview',
             meta: {
                 h1: '概要',
@@ -572,6 +585,32 @@ function createRoutes(){
             component: loadPage('docs-ports-040_servicemonitors', '/docs/ports/040_servicemonitors', {})
         },
         {
+            path: '/docs/networking/010_overview',
+            meta: {
+                h1: '概要',
+                title: '概要',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-networking-010_overview', '/docs/networking/010_overview', {})
+        },
+        {
+            path: '/docs/networking/020_dual_stack',
+            meta: {
+                h1: 'デュアル・スタック・ネットワーキング',
+                title: 'デュアル・スタック・ネットワーキング',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-networking-020_dual_stack', '/docs/networking/020_dual_stack', {})
+        },
+        {
             path: '/docs/scaling/010_overview',
             meta: {
                 h1: 'Coherenceデプロイメントのスケーリング',
@@ -635,6 +674,32 @@ function createRoutes(){
                 hasNav: true
             },
             component: loadPage('docs-management-025_coherence_cli', '/docs/management/025_coherence_cli', {})
+        },
+        {
+            path: '/docs/management/026_queryplus',
+            meta: {
+                h1: 'Coherence Query Plus',
+                title: 'Coherence Query Plus',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-management-026_queryplus', '/docs/management/026_queryplus', {})
+        },
+        {
+            path: '/docs/management/027_jshell',
+            meta: {
+                h1: 'JShellの使用',
+                title: 'JShellの使用',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-management-027_jshell', '/docs/management/027_jshell', {})
         },
         {
             path: '/docs/management/040_ssl',
@@ -1105,6 +1170,19 @@ function createRoutes(){
             component: loadPage('examples-900_demo-README', '/examples/900_demo/README', {})
         },
         {
+            path: '/examples/910_polyglot_demo/README',
+            meta: {
+                h1: '多言語クライアント・デモ',
+                title: '多言語クライアント・デモ',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('examples-910_polyglot_demo-README', '/examples/910_polyglot_demo/README', {})
+        },
+        {
             path: '/examples/no-operator/000_overview',
             meta: {
                 h1: '概要',
@@ -1209,19 +1287,6 @@ function createRoutes(){
             component: loadPage('docs-troubleshooting-02_heap_dump', '/docs/troubleshooting/02_heap_dump', {})
         },
         {
-            path: '/docs/webhooks/01_introduction',
-            meta: {
-                h1: 'オペレータK8s Webフック',
-                title: 'オペレータK8s Webフック',
-                h1Prefix: null,
-                description: null,
-                keywords: null,
-                customLayout: null,
-                hasNav: false
-            },
-            component: loadPage('docs-webhooks-01_introduction', '/docs/webhooks/01_introduction', {})
-        },
-        {
             path: '/docs/performance/010_performance',
             meta: {
                 h1: 'パフォーマンス・テスト',
@@ -1233,6 +1298,19 @@ function createRoutes(){
                 hasNav: false
             },
             component: loadPage('docs-performance-010_performance', '/docs/performance/010_performance', {})
+        },
+        {
+            path: '/docs/webhooks/01_introduction',
+            meta: {
+                h1: 'オペレータK8s Webフック',
+                title: 'オペレータK8s Webフック',
+                h1Prefix: null,
+                description: null,
+                keywords: null,
+                customLayout: null,
+                hasNav: false
+            },
+            component: loadPage('docs-webhooks-01_introduction', '/docs/webhooks/01_introduction', {})
         },
         {
             path: '/examples/README',
@@ -1310,7 +1388,8 @@ function createNav(){
                 { href: '/docs/applications/040_application_main', title: 'アプリケーション・メインの設定' },
                 { href: '/docs/applications/050_application_args', title: 'アプリケーション引数の設定' },
                 { href: '/docs/applications/060_application_working_dir', title: '作業ディレクトリの設定' },
-                { href: '/docs/applications/070_spring', title: 'Spring Bootアプリケーション' }
+                { href: '/docs/applications/070_spring', title: 'Spring Bootアプリケーション' },
+                { href: '/docs/applications/080_entrypoint', title: 'イメージ・エントリ・ポイントの実行' }
             ]
         },
         {
@@ -1356,6 +1435,15 @@ function createNav(){
             ]
         },
         {
+            title: 'ネットワーキング',
+            action: 'share',
+            group: '/networking',
+            items: [
+                { href: '/docs/networking/010_overview', title: '概要' },
+                { href: '/docs/networking/020_dual_stack', title: 'デュアル・スタック・ネットワーキング' }
+            ]
+        },
+        {
             title: 'スケール・アップ&ダウン',
             action: 'fa-balance-scale',
             group: '/scaling',
@@ -1379,6 +1467,8 @@ function createNav(){
                 { href: '/docs/management/010_overview', title: '概要' },
                 { href: '/docs/management/020_management_over_rest', title: 'RESTを介した管理' },
                 { href: '/docs/management/025_coherence_cli', title: 'The Coherence CLI' },
+                { href: '/docs/management/026_queryplus', title: 'Coherence Query Plus' },
+                { href: '/docs/management/027_jshell', title: 'JShellの使用' },
                 { href: '/docs/management/040_ssl', title: 'RESTでの管理によるSSL' },
                 { href: '/docs/management/100_tmb_test', title: 'Coherenceネットワーク・テスト' }
             ]
@@ -1442,7 +1532,8 @@ function createNav(){
                 { href: '/examples/200_autoscaler/README', title: 'Coherenceクラスタの自動スケーリング' },
                 { href: '/examples/300_helm/README', title: 'Helmを使用したCoherenceの管理' },
                 { href: '/examples/400_Istio/README', title: 'IstioでのCoherenceの使用' },
-                { href: '/examples/900_demo/README', title: 'Coherenceデモ・アプリケーション' }
+                { href: '/examples/900_demo/README', title: 'Coherenceデモ・アプリケーション' },
+                { href: '/examples/910_polyglot_demo/README', title: '多言語クライアント・デモ' }
             ]
         },
         {

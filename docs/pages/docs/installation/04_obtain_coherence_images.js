@@ -53,7 +53,7 @@
 
 <p><span class="merged" id="all.4PiKHO.spl1" title="原文 : Once secrets have been created in the namespace that the Coherence resource is to be installed in then the secret name can be specified in the Coherence CRD spec."><code>Coherence</code>リソースがインストールされるネームスペースにシークレットが作成されると、<code>Coherence</code> CRD <code>spec</code>でシークレット名を指定できます。</span> <span class="merged" id="all.4PiKHO.spl2" title="原文 : It is possible to specify multiple secrets in the case where the different images being used are pulled from different registries.">異なるレジストリから異なるイメージがプルされる場合、複数のシークレットを指定できます。</span> </p>
 
-<p><span class="merged" id="all.39DxWR" title="原文 : For example to use the commercial Coherence 14.1.1.0.0 image from OCR specify the image and image pull secrets in the Coherence resource yaml">たとえば、OCRの商用Coherence 14.1.1.0.0イメージを使用するには、<code>Coherence</code>リソースyamlのイメージおよびイメージ・プル・シークレットを指定</span></p>
+<p><span class="merged" id="all.Ly5Y1" title="原文 : For example to use the commercial Coherence 14.1.2.0.0 image from OCR specify the image and image pull secrets in the Coherence resource yaml">たとえば、OCRから商用Coherence 14.1.2.0.0イメージを使用するには、<code>Coherence</code>リソースyamlでイメージおよびイメージ・プル・シークレットを指定</span></p>
 
 <markup
 lang="yaml"
@@ -63,7 +63,7 @@ kind: Coherence
 metadata:
   name: test-cluster
 spec:
-  image: container-registry.oracle.com/middleware/coherence:14.1.1.0.0
+  image: container-registry.oracle.com/middleware/coherence:14.1.2.0.0
   imagePullSecrets:
     - name: coherence-secret  <span class="conum" data-value="1" /></markup>
 

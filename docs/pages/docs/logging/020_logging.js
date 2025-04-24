@@ -30,7 +30,7 @@
 <div class="section">
 <p><span class="merged" id="all.4JPcBS.spl1" title="原文 : Coherence will log to the console by default so to be able to ship logs to Elasticsearch it needs to be configured to write to log files.">Coherenceはデフォルトでコンソールに記録されるため、ログ・ファイルに書き込むように構成する必要があるElasticsearchにログを送信できます。</span> <span class="merged" id="all.4JPcBS.spl2" title="原文 : One way to do this is to add a Java Util Logging configuration file and then to configure Coherence to use the JDK logger.">これを行う方法の1つは、Javaユーティリティ・ロギング構成ファイルを追加し、JDKロガーを使用するようにCoherenceを構成することです。</span> </p>
 
-<p><span class="merged" id="all.8QRBU.spl1" title="原文 : In the jvm.args section of the Coherence CRD the system properties should be added to set the configuration file used by Java util logging and to configure Coherence logging."><code>Coherence</code> CRDの<code>jvm.args</code>セクションで、システム・プロパティを追加して、Javaユーティリティ・ロギングで使用される構成ファイルを設定し、Coherenceロギングを構成する必要があります。</span> <span class="merged" id="all.8QRBU.spl2" title="原文 : See the Coherence Logging Config documentation for more details.">詳細は、Coherenceの<a href="https://docs.oracle.com/en/middleware/standalone/coherence/14.1.1.2206/develop-applications/operational-configuration-elements.html" id="" target="_blank" >「ロギング構成」</a>ドキュメントを参照してください。</span> </p>
+<p><span class="merged" id="all.26kZ1.spl1" title="原文 : In the jvm.args section of the Coherence CRD the system properties should be added to set the configuration file used by Java util logging and to configure Coherence logging."><code>Coherence</code> CRDの<code>jvm.args</code>セクションで、システム・プロパティを追加して、Javaユーティリティ・ロギングで使用される構成ファイルを設定し、Coherenceロギングを構成する必要があります。</span> <span class="merged" id="all.26kZ1.spl2" title="原文 : See the Coherence Logging Config documentation for more details.">詳細は、Coherenceの<a href="https://docs.oracle.com/en/middleware/fusion-middleware/coherence/14.1.2/develop-applications/operational-configuration-elements.html" id="" target="_blank" >「ロギング構成」</a>ドキュメントを参照してください。</span> </p>
 
 <p><span class="merged" id="all.3fnSm1.spl1" title="原文 : There are alternative ways to configure the Java util logger besides using a configuration file, just as there are alternative logging frameworks that Coherence can be configured to use to produce log files.">Javaのユーティリティ・ロガーを構成する代替方法は、構成ファイルを使用する以外に、ログ・ファイルの生成に使用するようCoherenceを構成できる代替ロギング・フレームワークがあるのと同様です。</span> <span class="merged" id="all.3fnSm1.spl2" title="原文 : This example is going to use Java util logging as that is the simplest to demonstrate without requiring any additional logging libraries.">この例では、Javaのユーティリティ・ロギングを使用します。これは、追加のロギング・ライブラリを必要とせずに、最も簡単に実証できるためです。</span> </p>
 
@@ -60,7 +60,7 @@ java.util.logging.SimpleFormatter.format=%5$s%6$s%n</markup>
 
 <p><span class="merged" id="all.1EOCPa" title="原文 : To configure Cohrence and the logger some system properties need to be added to the jvm.args field of the Coherence CRD spec:">Cohrenceとロガーを構成するには、<code>Coherence</code> CRD仕様の<code>jvm.args</code>フィールドにシステム・プロパティを追加する必要があります:</span></p>
 
-<p><span class="merged" id="all.6vDv5.16"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.17"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -87,7 +87,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.1gjS7m.spl1" title="原文 : The logging configuration above configures Coherence to write logs to the /logs directory.">前述のロギング構成では、Coherenceを構成してログを<code>/logs</code>ディレクトリに書き込みます。</span> <span class="merged" id="all.1gjS7m.spl2" title="原文 : For this location to be accessible to both the coherence container and to the fluentd container it needs to be created as a Volume in the Pod and mounted to both containers.">このロケーションが<code>coherence</code>コンテナと<code>fluentd</code>コンテナの両方からアクセスできるようにするには、<code>Pod</code>で<code>Volume</code>として作成し、両方のコンテナにマウントする必要があります。</span> <span class="merged" id="all.1gjS7m.spl3" title="原文 : As this Volume can be ephemeral and is typically not required to live longer than the Pod the simplest type of Volume to use is an emptyDir volume source.">この<code>Volume</code>は一時的であり、通常は<code>Pod</code>より長く存続する必要がないため、使用する最も単純なタイプの<code>Volume</code>は<code>emptyDir</code>ボリューム・ソースです。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.17"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.18"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -207,10 +207,10 @@ data:
     &lt;filter coherence-cluster&gt;                  <span class="conum" data-value="3" />
      @type record_transformer
      &lt;record&gt;
-       cluster "#{ENV['COH_CLUSTER_NAME']}"
-       role "#{ENV['COH_ROLE']}"
+       cluster "#{ENV['COHERENCE_CLUSTER']}"
+       role "#{ENV['COHERENCE_ROLE']}"
        host "#{ENV['HOSTNAME']}"
-       pod-uid "#{ENV['COH_POD_UID']}"
+       pod-uid "#{ENV['COHERENCE_OPERATOR__POD_UID']}"
      &lt;/record&gt;
     &lt;/filter&gt;
 

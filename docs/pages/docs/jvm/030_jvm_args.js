@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.3oglnm.spl1" title="原文 : The Coherence CRD allows any arbitrary JVM arguments to be passed to the JVM in the coherence container by using the jvm.args field of the CRD spec."><code>Coherence</code> CRDを使用すると、CRD仕様の<code>jvm.args</code>フィールドを使用して、任意のJVM引数を<code>coherence</code>コンテナのJVMに渡すことができます。</span> <span class="merged" id="all.3oglnm.spl2" title="原文 : Any valid system property or JVM argument can be added to the jvm.args list.">有効なシステム・プロパティまたはJVM引数を<code>jvm.args</code>リストに追加できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.8"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.9"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -61,7 +61,7 @@ spec:
 -Dcoherence.role=&lt;role&gt;
 -Dcoherence.wka=&lt;deployment-name&gt;-wka.svc
 -Dcoherence.cacheconfig=coherence-cache-config.xml
--Dcoherence.k8s.operator.health.port=6676
+-Dcoherence.operator.health.port=6676
 -Dcoherence.management.http.port=30000
 -Dcoherence.metrics.http.port=9612
 -Dcoherence.distributed.persistence-mode=on-demand

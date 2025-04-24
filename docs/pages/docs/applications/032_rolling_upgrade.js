@@ -28,7 +28,7 @@
 <thead>
 <tr>
 <th><span class="merged" id="all.lBqIi"  title="原文: RollingUpdateStrategy">RollingUpdateStrategy</span></th>
-<th><span class="merged" id="all.4JM9z7.41"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="all.4JM9z7.48"  title="原文:: Description">説明</span></th>
 </tr>
 </thead>
 <tbody>
