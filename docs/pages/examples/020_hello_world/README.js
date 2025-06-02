@@ -14,7 +14,7 @@
 
 <h3 id="_install_the_operator"><span class="merged" id="all.3Uw9Iy" title="原文 : Install the Operator">オペレータのインストール</span></h3>
 <div class="section">
-<p><span class="merged" id="all.YmiWo.spl1" title="原文 : If you have not already done so, you need to install the Coherence Operator.">まだインストールしていない場合は、Coherence Operatorをインストールする必要があります。</span> <span class="merged" id="all.YmiWo.spl2" title="原文 : There are a few simple ways to do this as described in the Installation Guide"><router-link to="/docs/installation/01_installation">「インストール・ガイド」</router-link>で説明するように、いくつかの簡単な方法があります</span> </p>
+<p><span class="merged" id="all.k0zQp.spl1" title="原文 : If you have not already done so, you need to install the Coherence Operator.">まだインストールしていない場合は、Coherence Operatorをインストールする必要があります。</span> <span class="merged" id="all.k0zQp.spl2" title="原文 : There are a few simple ways to do this as described in the Installation Guide"><router-link to="/docs/installation/001_installation">「インストール・ガイド」</router-link>で説明するように、いくつかの簡単な方法があります</span> </p>
 
 </div>
 

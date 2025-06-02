@@ -79,11 +79,11 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.j38oP" title="原文 : Docker version 17.03+."><a href="https://docs.docker.com/install/" id="" target="_blank" >Docker</a>バージョン17.03+。</span></p>
+<p><span class="merged" id="all.4P4fA3" title="原文 : A suitable container platform such as Podman or Docker.">PodmanやDockerなどの適切なコンテナ・プラットフォーム。</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4dbHBC" title="原文 : Access to a Kubernetes v1.14.0+ cluster.">Kubernetes v1.14.0+クラスタにアクセスします。</span></p>
+<p><span class="merged" id="all.1UOmE7" title="原文 : Access to a Kubernetes cluster running a currently supported Kubernetes version.">現在サポートされているKubernetesバージョンを実行しているKubernetesクラスタにアクセスします。</span></p>
 
 </li>
 <li>
@@ -161,7 +161,7 @@ lang="bash"
 
 <h2 id="install-operator"><span class="merged" id="all.LO8kI" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.2xyldj" title="原文 : Install the Coherence Operator using your preferred method in the Operator Installation Guide"><a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/01_installation" id="" target="_blank" >「インストール・ガイド」</a>オペレータの優先メソッドを使用したCoherence Operatorのインストール</span></p>
+<p><span class="merged" id="all.2PnTIE" title="原文 : Install the Coherence Operator using your preferred method in the Operator Installation Guide"><a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/001_installation" id="" target="_blank" >「インストール・ガイド」</a>オペレータの優先メソッドを使用したCoherence Operatorのインストール</span></p>
 
 <p><span class="merged" id="all.4aoXCL" title="原文 : Confirm the operator is running, for example if the operator is installed into the coherence-example namespace:">オペレータが<code>coherence-example</code>ネームスペースにインストールされている場合など、オペレータが実行中であることを確認します:</span></p>
 
@@ -895,7 +895,7 @@ lang="bash"
 
 <h4 id="_import_the_grafana_dashboards"><span class="merged" id="all.27SNQP" title="原文 : Import the Grafana Dashboards">Grafanaダッシュボードのインポート</span></h4>
 <div class="section">
-<p><span class="merged" id="all.5yxbI" title="原文 : To import the Coherence Grafana dashboards follow the instructions in the Operator documentation section Importing Grafana Dashboards.">Coherence Grafanaダッシュボードをインポートするには、オペレータのドキュメント・セクション<router-link @click.native="this.scrollFix('#metrics/030_importing.adoc')" to="#metrics/030_importing.adoc">「Grafanaダッシュボードのインポート」</router-link>の手順に従います。</span></p>
+<p><span class="merged" id="all.2aAW0r" title="原文 : To import the Coherence Grafana dashboards follow the instructions in the Operator documentation section Importing Grafana Dashboards.">Coherence Grafanaダッシュボードをインポートするには、オペレータのドキュメント・セクション<router-link to="/docs/metrics/030_importing">「Grafanaダッシュボードのインポート」</router-link>の手順に従います。</span></p>
 
 <p><span class="merged" id="all.35ITiL" title="原文 : After importing the dashboards into Grafana and with the port-forward still running the Coherence dashboards can be accessed at localhost:3000/d/coh-main/coherence-dashboard-main">ダッシュボードをGrafanaにインポートした後、ポート・フォワードがまだ実行されている状態で、Coherenceダッシュボードには<a href="http://localhost:3000/d/coh-main/coherence-dashboard-main" id="" target="_blank" >localhost:3000/d/coh-main/coherence-dashboard-main</a>でアクセスできます</span></p>
 

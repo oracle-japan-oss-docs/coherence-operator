@@ -73,7 +73,7 @@
 
 </li>
 <li>
-<p><span class="merged" id="all.1JSfFr" title="原文 : Obtaining Commercial Coherence Images"><router-link @click.native="this.scrollFix('#../installation/04_obtain_coherence_images.adoc')" to="#../installation/04_obtain_coherence_images.adoc">商用Coherenceイメージの取得</router-link></span></p>
+<p><span class="merged" id="all.EjR5o" title="原文 : Obtaining Commercial Coherence Images"><router-link @click.native="this.scrollFix('#docs/installation/04_obtain_coherence_images.adoc')" to="#docs/installation/04_obtain_coherence_images.adoc">商用Coherenceイメージの取得</router-link></span></p>
 
 </li>
 </ul>
@@ -301,7 +301,7 @@
 
 <h4 id="install-operator"><span class="merged" id="all.2CLSny.1" title="原文 : 1. Install the Coherence Operator">1. Coherence Operatorのインストール</span></h4>
 <div class="section">
-<p><span class="merged" id="all.2UE6k0" title="原文 : To run the examples below, you will need to have installed the Coherence Operator, do this using whatever method you prefer from the Installation Guide.">次の例では、Coherence Operatorをインストールし、<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/01_installation" id="" target="_blank" >「インストール・ガイド」</a>から必要なメソッドを使用してインストールする必要があります。</span></p>
+<p><span class="merged" id="all.3vzQcc" title="原文 : To run the examples below, you will need to have installed the Coherence Operator, do this using whatever method you prefer from the Installation Guide.">次の例では、Coherence Operatorをインストールし、<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/001_installation" id="" target="_blank" >「インストール・ガイド」</a>から必要なメソッドを使用してインストールする必要があります。</span></p>
 
 <markup
 lang="bash"

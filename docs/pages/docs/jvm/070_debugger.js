@@ -13,7 +13,7 @@
 <div class="section">
 <p><span class="merged" id="all.3WeN5n" title="原文 : One scenario for debugging is for the Coherence JVM to open a port and listen for a debugger connection request.">デバッグのシナリオの1つは、Coherence JVMがポートを開き、デバッガ接続リクエストをリスニングすることです。</span></p>
 
-<p><span class="merged" id="all.6vDv5.14"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.13"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -60,7 +60,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.3MPG4u" title="原文 : Another scenario for debugging is for the Coherence JVM to connect out to a listening debugger.">デバッグのもう1つのシナリオは、Coherence JVMがリスニング・デバッガに接続することです。</span></p>
 
-<p><span class="merged" id="all.6vDv5.15"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.14"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

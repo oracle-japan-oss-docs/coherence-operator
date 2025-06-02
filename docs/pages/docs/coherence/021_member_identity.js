@@ -154,7 +154,7 @@ lang="bash"
 
 <h4 id="_using_kubectl_or_kustomize"><span class="merged" id="all.peXrY" title="原文 : Using Kubectl or Kustomize">KubectlまたはKustomizeの使用</span></h4>
 <div class="section">
-<p><span class="merged" id="all.3XiipX" title="原文 : If using kubectl or kustomize as described in the Installation Guide the additional environment variables can be applied using kustomize commands."><router-link to="/docs/installation/01_installation">「インストール・ガイド」</router-link>の説明に従って<code>kubectl</code>または<code>kustomize</code>を使用する場合、<code>kustomize</code>コマンドを使用して追加の環境変数を適用できます。</span></p>
+<p><span class="merged" id="all.2dAnXS" title="原文 : If using kubectl or kustomize as described in the Installation Guide the additional environment variables can be applied using kustomize commands."><router-link to="/docs/installation/001_installation">「インストール・ガイド」</router-link>の説明に従って<code>kubectl</code>または<code>kustomize</code>を使用する場合、<code>kustomize</code>コマンドを使用して追加の環境変数を適用できます。</span></p>
 
 <markup
 lang="bash"

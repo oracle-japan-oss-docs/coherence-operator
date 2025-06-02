@@ -82,11 +82,11 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.dfzh0" title="原文 : Configure Services for Ports"><router-link @click.native="this.scrollFix('#ports/030_services.adoc')" to="#ports/030_services.adoc">ポートのサービスの構成</router-link></span></p>
+<p><span class="merged" id="all.34zSmN" title="原文 : Configure Services for Ports"><router-link to="/docs/ports/030_services">ポートのサービスの構成</router-link></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.QeuA8" title="原文 : Prometheus ServiceMonitors"><router-link @click.native="this.scrollFix('#ports/040_servicemonitors.adoc')" to="#ports/040_servicemonitors.adoc">Prometheus ServiceMonitors</router-link></span></p>
+<p><span class="merged" id="all.1jobWg" title="原文 : Prometheus ServiceMonitors"><router-link to="/docs/ports/040_servicemonitors">Prometheus ServiceMonitors</router-link></span></p>
 
 </li>
 </ul>

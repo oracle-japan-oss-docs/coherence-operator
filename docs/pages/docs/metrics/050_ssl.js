@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.2avGF6.spl1" title="原文 : It is possible to configure metrics endpoint to use SSL to secure the communication between server and client.">サーバーとクライアント間の通信を保護するためにSSLを使用するようにメトリクス・エンドポイントを構成できます。</span> <span class="merged" id="all.2avGF6.spl2" title="原文 : The SSL configuration is in the coherence.metrics.ssl section of the CRD spec.">SSL構成は、CRD仕様の<code>coherence.metrics.ssl</code>セクションにあります。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.21"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.20"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -51,7 +51,7 @@ spec:
 <li data-value="13"><span class="merged" id="all.Fa8yb.1" title="原文 : The optional requireClientCert field if set to true enables two-way SSL where the client must also provide a valid certificate">オプションの<code>requireClientCert</code>フィールドを<code>true</code>に設定すると、クライアントが有効な証明書も指定する必要がある双方向SSLが有効になります</span></li>
 <li data-value="14"><span class="merged" id="all.i3cqR.1" title="原文 : The optional secrets field sets the name of the Kubernetes Secret to use to obtain the key store, truct store and password files from.">オプションの<code>secrets</code>フィールドは、キー・ストア、tructストアおよびパスワード・ファイルの取得に使用するKubernetes <code>Secret</code>の名前を設定します。</span></li>
 </ul>
-<p><span class="merged" id="all.166sUt.spl1" title="原文 : The various files and keystores referred to in the configuration above can be any location accessible in the image used by the coherence container in the deployment’s Pods.">前述の構成で参照される様々なファイルおよびキーストアは、デプロイメントの<code>Pods</code>の<code>coherence</code>コンテナで使用されるイメージでアクセス可能な任意のロケーションです。</span> <span class="merged" id="all.166sUt.spl2" title="原文 : Typically, for things such as SSL keys and certs, these would be provided by obtained from Secrets loaded as additional Pod Volumes.">通常、SSLキーや証明書などの場合、これらは追加の<code>Pod</code> <code>Volumes</code>としてロードされた<code>Secrets</code>から取得されます。</span> <span class="merged" id="all.166sUt.spl3" title="原文 : See Add Secrets Volumes for the documentation on how to specify secrets as additional volumes.">追加ボリュームとしてシークレットを指定する方法については、<router-link @click.native="this.scrollFix('#other/060_secret_volumes.adoc')" to="#other/060_secret_volumes.adoc">「シークレット・ボリュームの追加」</router-link>を参照してください。</span> </p>
+<p><span class="merged" id="all.1QAars.1.spl1" title="原文 : The various files and keystores referred to in the configuration above can be any location accessible in the image used by the coherence container in the deployment’s Pods.">前述の構成で参照される様々なファイルおよびキーストアは、デプロイメントの<code>Pods</code>の<code>coherence</code>コンテナで使用されるイメージでアクセス可能な任意のロケーションです。</span> <span class="merged" id="all.1QAars.1.spl2" title="原文 : Typically, for things such as SSL keys and certs, these would be provided by obtained from Secrets loaded as additional Pod Volumes.">通常、SSLキーや証明書などの場合、これらは追加の<code>Pod</code> <code>Volumes</code>としてロードされた<code>Secrets</code>から取得されます。</span> <span class="merged" id="all.1QAars.1.spl3" title="原文 : See Add Secrets Volumes for the documentation on how to specify secrets as additional volumes.">追加ボリュームとしてシークレットを指定する方法については、<router-link to="/docs/other/060_secret_volumes">「シークレット・ボリュームの追加」</router-link>を参照してください。</span> </p>
 
 </div>
 </doc-view>

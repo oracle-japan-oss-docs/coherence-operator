@@ -91,7 +91,7 @@ kubectl -n &lt;NAMESPACE&gt; delete coherence/&lt;COHERENCE_RESOURCE_NAME&gt;</m
 
 <p><span class="merged" id="all.3Rat3.spl1" title="原文 : Alternatively, if you are running the Operator in a CI/CD environment and just want to be able to clean up after tests you can run Coherence clusters with the allowUnsafeDelete option enabled.">または、オペレータをCI/CD環境で実行していて、テスト後にクリーン・アップできるようにする場合は、<code>allowUnsafeDelete</code>オプションを有効にしてCoherenceクラスタを実行できます。</span> <span class="merged" id="all.3Rat3.spl2" title="原文 : By setting the allowUnsafeDelete field to true in the Coherence resource the Operator will not add a finalizer to that Coherence resource, allowing it to be deleted if its namespace is deleted."><code>Coherence</code>リソースで<code>allowUnsafeDelete</code>フィールドを<code>true</code>に設定すると、オペレータはそのCoherenceリソースにファイナライザを追加せず、そのネームスペースが削除された場合にファイナライザを削除できます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.34"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.33"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -233,7 +233,7 @@ lang="console"
 
 >2024-07-01 14:43:55.410/3.785 Oracle Coherence GE 14.1.1.2206.10 (dev-jonathanknight) &lt;Warning&gt; (thread=Coherence, member=n/a): IPMonitor has been explicitly disabled, this is not a recommended practice and will result in a minimum death detection time of 300 seconds for failed machines or networks.</markup>
 
-<p><span class="merged" id="all.1kWFFu" title="原文 : This message is because the default behaviour of the Operator is to disable the Coherence IP Monitor, see the IP Monitor documentation for an explanation.">このメッセージは、オペレータのデフォルトの動作がCoherence IPモニターを無効にすることであるためです。説明は、<router-link @click.native="this.scrollFix('#_coherence_operator_api_docs/coherence/090_ipmonitor.adoc')" to="#_coherence_operator_api_docs/coherence/090_ipmonitor.adoc">「IPモニターのドキュメント」</router-link>を参照してください。</span></p>
+<p><span class="merged" id="all.1V1s6k" title="原文 : This message is because the default behaviour of the Operator is to disable the Coherence IP Monitor, see the IP Monitor documentation for an explanation.">このメッセージは、オペレータのデフォルトの動作がCoherence IPモニターを無効にすることであるためです。説明は、<router-link to="/docs/coherence/090_ipmonitor">「IPモニターのドキュメント」</router-link>を参照してください。</span></p>
 
 </div>
 </div>

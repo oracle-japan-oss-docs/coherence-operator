@@ -18,7 +18,7 @@
 
 <h3 id="_important_note_regarding_prometheus_metrics_prefix"><span class="merged" id="all.2oQ59c" title="原文 : Important Note Regarding Prometheus Metrics Prefix">Prometheusメトリクス・プレフィクスに関する重要なノート</span></h3>
 <div class="section">
-<p><span class="merged" id="all.2fihsy.spl1" title="原文 : From version 3.5.0 of the Coherence Operator, the packaged Grafana dashboards no longer use the vendor: prefix for querying Prometheus metrics.">Coherence Operatorのバージョン3.5.0から、パッケージ化されたGrafanaダッシュボードでは、Prometheusメトリクスの問合せに<strong>ベンダー:</strong>プレフィクスは使用されなくなりました。</span> <span class="merged" id="all.2fihsy.spl2" title="原文 : This prefix was deprecated a number of releases ago and the default, of legacy metrics, in Coherence and will be removed in the most recent Coherence releases after this Operator release.">このプレフィクスは、Coherenceで多数のリリースおよびデフォルトのレガシー・メトリクスが非推奨になり、このオペレータ・リリース以降の最新のCoherenceリリースで削除されます。</span> </p>
+<p><span class="merged" id="all.44Ia7L.spl1" title="原文 : From version 3.5.1 of the Coherence Operator, the packaged Grafana dashboards no longer use the vendor: prefix for querying Prometheus metrics.">Coherence Operatorのバージョン3.5.1から、パッケージ化されたGrafanaダッシュボードでは、Prometheusメトリクスの問合せに<strong>vendor:</strong>プレフィクスは使用されなくなりました。</span> <span class="merged" id="all.44Ia7L.spl2" title="原文 : This prefix was deprecated a number of releases ago and the default, of legacy metrics, in Coherence and will be removed in the most recent Coherence releases after this Operator release.">このプレフィクスは、Coherenceで多数のリリースおよびデフォルトのレガシー・メトリクスが非推奨になり、このオペレータ・リリース以降の最新のCoherenceリリースで削除されます。</span> </p>
 
 <p><span class="merged" id="all.1ElKaN" title="原文 : If you are using a Coherence cluster version you are using has not yet changed this property, you may see no metrics in the Grafana dashboards.">使用しているCoherenceクラスタ・バージョンがこのプロパティを変更していない場合は、Grafanaダッシュボードにメトリクスが表示されない場合があります。</span></p>
 
@@ -62,7 +62,7 @@ spec:
 
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.dK9X8" title="原文 : Setting the coherence.metrics.enabled field to true will enable metrics"><code>coherence.metrics.enabled</code>フィールドを<code>true</code>に設定すると、メトリクスが有効になります</span></li>
-<li data-value="2"><span class="merged" id="all.2bZx28.spl1" title="原文 : To expose metrics via a Service it is added to the ports list."><code>Service</code>を介してメトリクスを公開するには、<code>ports</code>リストに追加されます。</span> <span class="merged" id="all.2bZx28.spl2" title="原文 : The metrics port is a special case where the port number is optional so in this case metrics will bind to the default port 9612. (see Exposing Ports for details)"><code>metrics</code>ポートは、<code>port</code>番号がオプションであるため、この場合はメトリクスがデフォルトのポート<code>9612</code>にバインドされます(詳細は、<router-link @click.native="this.scrollFix('#ports/020_container_ports.adoc')" to="#ports/020_container_ports.adoc">「ポートの公開」</router-link>を参照)</span> </li>
+<li data-value="2"><span class="merged" id="all.27W3Oa.spl1" title="原文 : To expose metrics via a Service it is added to the ports list."><code>Service</code>を介してメトリクスを公開するには、<code>ports</code>リストに追加されます。</span> <span class="merged" id="all.27W3Oa.spl2" title="原文 : The metrics port is a special case where the port number is optional so in this case metrics will bind to the default port 9612. (see Exposing Ports for details)"><code>metrics</code>ポートは、<code>port</code>番号がオプションであるため、この場合はメトリクスがデフォルトのポート<code>9612</code>にバインドされます(詳細は、<router-link to="/docs/ports/020_container_ports">「ポートの公開」</router-link>を参照)</span> </li>
 </ul>
 
 <h4 id="_expose_metrics_on_a_different_port"><span class="merged" id="all.4E5ZbA" title="原文 : Expose Metrics on a Different Port">別のポートでのメトリクスの公開</span></h4>
@@ -164,7 +164,7 @@ spec:
 <ul class="colist">
 <li data-value="1"><span class="merged" id="all.3qcnHX" title="原文 : The serviceMonitor.enabled field is set to true for the metrics port."><code>metrics</code>ポートの<code>serviceMonitor.enabled</code>フィールドは<code>true</code>に設定されます。</span></li>
 </ul>
-<p><span class="merged" id="all.2hq1PR" title="原文 : See Exposing ports and Services - Service Monitors documentation for more details.">詳細は、<router-link @click.native="this.scrollFix('#ports/040_servicemonitors.adoc')" to="#ports/040_servicemonitors.adoc">「ポートおよびサービスの表示 - サービス・モニター」</router-link>のドキュメントを参照してください。</span></p>
+<p><span class="merged" id="all.1N4n2n" title="原文 : See Exposing ports and Services - Service Monitors documentation for more details.">詳細は、<router-link to="/docs/ports/040_servicemonitors">「ポートおよびサービスの表示 - サービス・モニター」</router-link>のドキュメントを参照してください。</span></p>
 
 </div>
 </doc-view>

@@ -186,7 +186,7 @@ namespace/coherence-demo created</markup>
 <h4 id="pre-3"><span class="merged" id="all.LO8kI.3" title="原文 : Install the Coherence Operator">Coherence Operatorのインストール</span></h4>
 <div class="section">
 <div class="admonition tip">
-<p class="admonition-inline"><span class="merged" id="all.3DytzG.spl1" title="原文 : The Coherence Operator is installed installed into a namespace called coherence.">Coherence Operatorは、<code>coherence</code>というネームスペースにインストールされます。</span> <span class="merged" id="all.3DytzG.spl2" title="原文 : To change this see the documentation below.">これを変更するには、次のドキュメントを参照してください。</span> </p>
+<p class="admonition-inline"><span class="merged" id="all.1ocleD.spl1" title="原文 : The Coherence Operator is installed into a namespace called coherence.">Coherence Operatorは、<code>coherence</code>というネームスペースにインストールされます。</span> <span class="merged" id="all.1ocleD.spl2" title="原文 : To change this see the documentation below.">これを変更するには、次のドキュメントを参照してください。</span> </p>
 </div>
 <markup
 lang="bash"
@@ -218,7 +218,7 @@ lang="bash"
 title="Output"
 >deployment.apps/coherence-operator-controller-manager condition met</markup>
 
-<p><span class="merged" id="all.3RYPM" title="原文 : See the Installation Guide for more information about installing the Coherence Operator.">Coherence Operatorのインストールの詳細は、<router-link to="/docs/installation/01_installation">「インストール・ガイド」</router-link>を参照してください。</span></p>
+<p><span class="merged" id="all.4ESH9E" title="原文 : See the Installation Guide for more information about installing the Coherence Operator.">Coherence Operatorのインストールの詳細は、<router-link to="/docs/installation/001_installation">「インストール・ガイド」</router-link>を参照してください。</span></p>
 
 </div>
 
@@ -336,15 +336,15 @@ CMD ["-h"]</markup>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.2NnJPC" title="原文 : py/main.py"><a href="py/main.py" id="" target="_blank" >py/main.py</a></span></p>
+<p><span class="merged" id="all.1YHVhf" title="原文 : py/main.py"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/py/main.py" id="" target="_blank" >py/main.py</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.ienXV" title="原文 : js/main.js"><a href="js/main.js" id="" target="_blank" >js/main.js</a></span></p>
+<p><span class="merged" id="all.4QQWL2" title="原文 : js/main.js"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/js/main.js" id="" target="_blank" >js/main.js</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.1WwH8I" title="原文 : go/main.go"><a href="go/main.go" id="" target="_blank" >go/main.go</a></span></p>
+<p><span class="merged" id="all.2RY8Dv" title="原文 : go/main.go"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/go/main.go" id="" target="_blank" >go/main.go</a></span></p>
 
 </li>
 </ul>
@@ -433,7 +433,7 @@ title="Output"
 
 <h4 id="dep-3"><span class="merged" id="all.1TdU65" title="原文 : Push Images">イメージのプッシュ</span></h4>
 <div class="section">
-<p><span class="merged" id="all.cojM" title="原文 : Choose one of the following methods, depending upon if you are using a local kind cluster or not.">ローカルの<strong>「種類」</strong>クラスタを使用しているかどうかに応じて、次のいずれかのメソッドを選択します。</span></p>
+<p><span class="merged" id="all.cojM" title="原文 : Choose one of the following methods, depending upon if you are using a local kind cluster or not.">ローカルの<strong>kind</strong>クラスタを使用しているかどうかに応じて、次のいずれかのメソッドを選択します。</span></p>
 
 <p><span class="merged" id="all.1FNM8j" title="原文 : You are running a local cluster using kind"><strong>kindを使用してローカル・クラスタを実行しています</strong></span></p>
 
@@ -461,18 +461,42 @@ docker push ghcr.io/username/repo/polyglot-client-go:1.0.0</markup>
 <span class="merged" id="all.nEuvn" title="原文 : Modify the following files to change the image name accordingly in the following deployment yaml files:">次のファイルを変更して、次のデプロイメントyamlファイルでイメージ名を適宜変更します:</span>
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.3gNB21" title="原文 : py-client.yaml"><a href="yaml/py-client.yaml" id="" target="_blank" >py-client.yaml</a></span></p>
+<p><span class="merged" id="all.Tzkqt" title="原文 : py-client.yaml"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/py-client.yaml" id="" target="_blank" >py-client.yaml</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.3cl8Sy" title="原文 : js-client.yaml"><a href="yaml/js-client.yaml" id="" target="_blank" >js-client.yaml</a></span></p>
+<p><span class="merged" id="all.PoW1q" title="原文 : js-client.yaml"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/js-client.yaml" id="" target="_blank" >js-client.yaml</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4IuxfA" title="原文 : go-client.yaml"><a href="yaml/go-client.yaml" id="" target="_blank" >go-client.yaml</a></span></p>
+<p><span class="merged" id="all.11zyhu" title="原文 : go-client.yaml"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/go-client.yaml" id="" target="_blank" >go-client.yaml</a></span></p>
 
 </li>
 </ul>
+</li>
+<li>
+<span class="merged" id="all.2ueAhD" title="原文 : Create a secret if your repository is not public:">リポジトリがパブリックでない場合はシークレットを作成します:</span>
+<p><span class="merged" id="all.XreoY" title="原文 : If the repository you are pushing to is not public, you will need to create a pull secret, and add this to the deployment yaml for each client.">プッシュするリポジトリがパブリックでない場合は、プル・シークレットを作成し、これを各クライアントのデプロイメントyamlに追加する必要があります。</span></p>
+
+<markup
+lang="bash"
+
+>kubectl create secret docker-registry my-pull-secret \
+    --docker-server=ghcr.io \
+    --docker-username="&lt;username&gt;" --docker-password="&lt;password&gt;" \
+    --docker-email="&lt;email&gt;" -n coherence-demo</markup>
+
+<p><span class="merged" id="all.40RsCH.spl1" title="原文 : In each of the client deployment files, above add imagePullSecrets after the image.">前述の各クライアント・デプロイメント・ファイルで、イメージの後に<code>imagePullSecrets</code>を追加します。</span> <span class="merged" id="all.40RsCH.spl2" title="原文 : For example in the go-client:">たとえば、go-clientの場合:</span> </p>
+
+<markup
+lang="yaml"
+
+>        - name: go-client
+          image: ghcr.io/username/repo/polyglot-client-go:1.0.0
+          imagePullPolicy: IfNotPresent
+          imagePullSecrets:
+            - name: my-pull-secret</markup>
+
 </li>
 </ol>
 </div>
@@ -575,15 +599,15 @@ coherence.coherence.oracle.com/demo-cluster condition met</markup>
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.gFnK5" title="原文 : Python Client"><a href="yaml/py-client.yaml" id="" target="_blank" >Pythonクライアント</a></span></p>
+<p><span class="merged" id="all.3RGfgE" title="原文 : Python Client"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/py-client.yaml" id="" target="_blank" >Pythonクライアント</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.23OA6V" title="原文 : JavaScript Client"><a href="yaml/js-client.yaml" id="" target="_blank" >JavaScriptクライアント</a></span></p>
+<p><span class="merged" id="all.264QVD" title="原文 : JavaScript Client"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/js-client.yaml" id="" target="_blank" >JavaScriptクライアント</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4gDQrJ" title="原文 : Go Client"><a href="yaml/go-client.yaml" id="" target="_blank" >Goクライアント</a></span></p>
+<p><span class="merged" id="all.1QXgi3" title="原文 : Go Client"><a href="https://github.com/oracle/coherence-operator/blob/main/examples/910_polyglot_demo/yaml/go-client.yaml" id="" target="_blank" >Goクライアント</a></span></p>
 
 </li>
 </ul>

@@ -96,19 +96,19 @@ cd coherence-operator/examples</markup>
 
 </li>
 <li>
-<p><span class="merged" id="all.j38oP.1" title="原文 : Docker version 17.03+."><a href="https://docs.docker.com/install/" id="" target="_blank" >Docker</a>バージョン17.03+。</span></p>
+<p><span class="merged" id="all.4P4fA3.1" title="原文 : A suitable container platform such as Podman or Docker.">PodmanやDockerなどの適切なコンテナ・プラットフォーム。</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.2U5Gf2" title="原文 : kubectl version v1.13.0+ ."><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" id="" target="_blank" >kubectl</a>バージョンv1.13.0+。</span></p>
+<p><span class="merged" id="all.1UOmE7.1" title="原文 : Access to a Kubernetes cluster running a currently supported Kubernetes version.">現在サポートされているKubernetesバージョンを実行しているKubernetesクラスタにアクセスします。</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.4dbHBC.1" title="原文 : Access to a Kubernetes v1.14.0+ cluster.">Kubernetes v1.14.0+クラスタにアクセスします。</span></p>
+<p><span class="merged" id="all.WCJHI"  title="原文:: kubectl."><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" id="" target="_blank" >kubectl</a></span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.37lroG" title="原文 : Helm version 3.2.4+"><a href="https://helm.sh/docs/intro/install/" id="" target="_blank" >Helm</a>バージョン3.2.4+</span></p>
+<p><span class="merged" id="all.1H69bZ"  title="原文:: Helm."><a href="https://helm.sh/docs/intro/install/" id="" target="_blank" >Helm</a></span></p>
 
 </li>
 </ul>

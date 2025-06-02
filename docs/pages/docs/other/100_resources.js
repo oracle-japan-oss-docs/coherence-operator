@@ -9,7 +9,7 @@
 <div class="admonition warning">
 <p class="admonition-inline"><span class="merged" id="all.6DWk0.spl1" title="原文 : When setting resource limits, in particular memory limits, for a container it is important to ensure that the Coherence JVM is properly configured so that it does not consume more memory than the limits.">リソース制限(特定のメモリー制限)を設定する場合、コンテナのCoherence JVMが制限よりも多くのメモリーを消費しないように適切に構成されるようにすることが重要です。</span> <span class="merged" id="all.6DWk0.spl2" title="原文 : If the JVM attempts to consume more memory than the resource limits allow the Pod can be killed by Kubernetes.">JVMがリソース制限よりも多くのメモリーを消費しようとすると、<code>Pod</code>をKubernetesで強制終了できます。</span> <span class="merged" id="all.6DWk0.spl3" title="原文 : See Configuring the JVM Memory for details on the different memory settings.">異なるメモリー設定の詳細は、<router-link to="/docs/jvm/050_memory">「JVMメモリーの構成」</router-link>を参照してください。</span> </p>
 </div>
-<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.27"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -36,7 +36,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.2GL0Ig.spl1" title="原文 : The Coherence Operator adds an init-container to the Pods that it manages.">Coherence Operatorは、管理対象のポッドにinitコンテナを追加します。</span> <span class="merged" id="all.2GL0Ig.spl2" title="原文 : This init container does nothing more than copy some files and ensure some directories exist.">このinitコンテナは、一部のファイルをコピーするのみで、ディレクトリが存在することを確認します。</span> <span class="merged" id="all.2GL0Ig.spl3" title="原文 : In terms of resource use it is extremely light.">資源の使用に関しては、極めて軽いです。</span> <span class="merged" id="all.2GL0Ig.spl4" title="原文 : Some customers have expressed a desire to still be able to set limits fo this init container, so this is possible using the spec.initResources field.">一部のお客様は、このinitコンテナに対して制限を設定できるようにしたいと表明しているため、<code>spec.initResources</code>フィールドを使用してこれを行うことができます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.29"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.28"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"

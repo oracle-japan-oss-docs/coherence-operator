@@ -4,7 +4,7 @@
 
 <h2 id="_importing_the_coherence_dashboards"><span class="merged" id="all.3xUzQ4" title="原文 : Importing the Coherence Dashboards">Coherenceダッシュボードのインポート</span></h2>
 <div class="section">
-<p><span class="merged" id="all.vXjuz.spl1" title="原文 : The Coherence Operator provides a set of dashboards for Coherence that may be imported into Grafana.">Coherence Operatorには、GrafanaにインポートできるCoherence用の一連のダッシュボードが用意されています。</span> <span class="merged" id="all.vXjuz.spl2" title="原文 : The Coherence dashboards are explained in detail on the Coherence Grafana Dashboards page.">Coherenceダッシュボードの詳細は、<router-link @click.native="this.scrollFix('#040_dashboards.adoc')" to="#040_dashboards.adoc">「Coherence Grafanaダッシュボード」</router-link>ページで説明します。</span> </p>
+<p><span class="merged" id="all.3oY0bK.spl1" title="原文 : The Coherence Operator provides a set of dashboards for Coherence that may be imported into Grafana.">Coherence Operatorには、GrafanaにインポートできるCoherence用の一連のダッシュボードが用意されています。</span> <span class="merged" id="all.3oY0bK.spl2" title="原文 : The Coherence dashboards are explained in detail on the Coherence Grafana Dashboards page.">Coherenceダッシュボードの詳細は、<router-link to="/docs/metrics/040_dashboards">「Coherence Grafanaダッシュボード」</router-link>ページで説明します。</span> </p>
 
 <p><span class="merged" id="all.22pVn" title="原文 : There are two ways to obtain the dashboards:">ダッシュボードを取得するには、次の2つの方法があります:</span></p>
 

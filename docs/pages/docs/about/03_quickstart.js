@@ -15,7 +15,7 @@
 
 <h2 id="_prerequisites"><span class="merged" id="all.2LZvWc"  title="原文:: Prerequisites">前提条件</span></h2>
 <div class="section">
-<p><span class="merged" id="all.Ofv4i" title="原文 : Ensure that the Coherence Operator prerequisites are available."><router-link to="/docs/installation/01_installation">「Coherence Operatorの前提条件」</router-link>が使用可能であることを確認します。</span></p>
+<p><span class="merged" id="all.cAs9K" title="原文 : Ensure that the Coherence Operator prerequisites are available."><router-link to="/docs/installation/001_installation">「Coherence Operatorの前提条件」</router-link>が使用可能であることを確認します。</span></p>
 
 </div>
 
@@ -26,7 +26,7 @@
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml</markup>
 
 <p><span class="merged" id="all.2vyxRX.spl1" title="原文 : This will create a namespace called coherence and install the Operator into it along with all the required ClusterRole and RoleBinding resources.">これにより、<code>coherence</code>というネームスペースが作成され、必要なすべての<code>ClusterRole</code>および<code>RoleBinding</code>リソースとともにオペレータがインストールされます。</span> <span class="merged" id="all.2vyxRX.spl2" title="原文 : The coherence namespace can be changed by downloading and editing the yaml file."><code>coherence</code>ネームスペースは、yamlファイルをダウンロードおよび編集することによって変更できます。</span> </p>
 
@@ -79,7 +79,7 @@ lang="bash"
 
 >helm install --namespace coherence-test  --name operator coherence/coherence-operator</markup>
 
-<p><span class="merged" id="all.4Scp2H" title="原文 : See the full install guide for more details.">詳細は、<router-link to="/docs/installation/01_installation">「フル・インストール・ガイド」</router-link>を参照してください。</span></p>
+<p><span class="merged" id="all.2AJAfS" title="原文 : See the full install guide for more details.">詳細は、<router-link to="/docs/installation/001_installation">「フル・インストール・ガイド」</router-link>を参照してください。</span></p>
 
 </div>
 </div>
@@ -87,7 +87,7 @@ lang="bash"
 
 <h2 id="_2_install_a_coherence_deployment"><span class="merged" id="all.1yBLKz" title="原文 : 2. Install a Coherence Deployment">2. Coherenceデプロイメントのインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.2gTFgF.spl1" title="原文 : Ensure that the Coherence images can be pulled by the Kubernetes cluster, see Obtain Coherence Images.">CoherenceイメージをKubernetesクラスタによってプルできることを確認します。<router-link to="/docs/installation/04_obtain_coherence_images">「Coherenceイメージの取得」</router-link>を参照してください。</span> <span class="merged" id="all.2gTFgF.spl2" title="原文 : By default, a Coherence resource will use the OSS Coherence CE image from Docker Hub.">デフォルトでは、<code>Coherence</code>リソースは、Docker HubのOSS Coherence CEイメージを使用します。</span> <span class="merged" id="all.2gTFgF.spl3" title="原文 : If a different image is to be used the image name will need to be specified in the Coherence yaml, see Setting the Application Image for documentation on how to specify a different images to use.">別のイメージを使用する場合は、<code>Coherence</code> yamlにイメージ名を指定する必要があります。使用する別のイメージの指定方法については、<router-link to="/docs/applications/010_overview">「アプリケーション・イメージの設定」</router-link>を参照してください。</span> </p>
+<p><span class="merged" id="all.2cnuQ1.spl1" title="原文 : Ensure that the Coherence images can be pulled by the Kubernetes cluster, see Obtain Coherence Images.">CoherenceイメージをKubernetesクラスタによってプルできることを確認します。<router-link @click.native="this.scrollFix('#docs/installation/04_obtain_coherence_images.adoc')" to="#docs/installation/04_obtain_coherence_images.adoc">「Coherenceイメージの取得」</router-link>を参照してください。</span> <span class="merged" id="all.2cnuQ1.spl2" title="原文 : By default, a Coherence resource will use the OSS Coherence CE image from Docker Hub.">デフォルトでは、<code>Coherence</code>リソースは、Docker HubのOSS Coherence CEイメージを使用します。</span> <span class="merged" id="all.2cnuQ1.spl3" title="原文 : If a different image is to be used the image name will need to be specified in the Coherence yaml, see Setting the Application Image for documentation on how to specify a different images to use.">別のイメージを使用する場合は、<code>Coherence</code> yamlにイメージ名を指定する必要があります。使用する別のイメージの指定方法については、<router-link to="/docs/applications/010_overview">「アプリケーション・イメージの設定」</router-link>を参照してください。</span> </p>
 
 
 <h3 id="_2_1_install_a_coherence_resource_using_the_minimal_required_configuration"><span class="merged" id="all.cVvds" title="原文 : 2.1 Install a Coherence resource using the minimal required configuration.">2.1 最小限必要な構成を使用してCoherenceリソースをインストールします。</span></h3>

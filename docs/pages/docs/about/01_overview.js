@@ -12,7 +12,7 @@
 <v-card-title primary class="headline layout justify-center"><span style="text-align:center">クイック・スタート</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1QE3X3" title="原文 : Quick start guide to running your first Coherence cluster using the Coherence Operator.">Coherence Operatorを使用して最初のCoherenceクラスタを実行するためのクイック・スタート・ガイド。</span></p>
-</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/installation/01_installation"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/installation/001_installation"><div class="card__link-hover"/>
 <span class="merged" id="all.44a7HY" title="原文 :  fa-save "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">fa-save</v-icon> </v-avatar> </v-layout></span>
 <div class="px-3">
 <v-divider class="indigo lighten-4"/>

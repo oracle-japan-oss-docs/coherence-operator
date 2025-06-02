@@ -91,7 +91,7 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.2TRFlp.spl1" title="原文 : Since Operator 3.5.0 it is possible to configure the IP family for the WKA Service.">オペレータ3.5.0は、WKAサービスのIPファミリを構成できます。</span> <span class="merged" id="all.2TRFlp.spl2" title="原文 : The spec.coherence.wka.ipFamily field can be set to either &quot;IPv4&quot; or &quot;IPv6&quot;."><code>spec.coherence.wka.ipFamily</code>フィールドは、IPv4またはIPv6のいずれかに設定できます。</span> <span class="merged" id="all.2TRFlp.spl3" title="原文 : This will cause Coherence to bind to the relevant IP address type.">これにより、Coherenceが関連するIPアドレス・タイプにバインドされます。</span> </p>
+<p><span class="merged" id="all.3NCbuk.spl1" title="原文 : Since Operator 3.5.1 it is possible to configure the IP family for the WKA Service.">オペレータ3.5.1は、WKAサービスのIPファミリを構成できます。</span> <span class="merged" id="all.3NCbuk.spl2" title="原文 : The spec.coherence.wka.ipFamily field can be set to either &quot;IPv4&quot; or &quot;IPv6&quot;."><code>spec.coherence.wka.ipFamily</code>フィールドは、IPv4またはIPv6のいずれかに設定できます。</span> <span class="merged" id="all.3NCbuk.spl3" title="原文 : This will cause Coherence to bind to the relevant IP address type.">これにより、Coherenceが関連するIPアドレス・タイプにバインドされます。</span> </p>
 
 </li>
 </ul>
@@ -110,7 +110,7 @@ spec:
     wka:
       ipFamily: IPv6</markup>
 
-<p><span class="merged" id="all.3XZETE" title="原文 : Since Operator 3.5.0 it is also possible to configure the IP families used by the headless service created for the StatefulSet if this is required.">オペレータ3.5.0は、StatefulSet用に作成されたヘッドレス・サービスで使用されるIPファミリを構成することもできます(必要な場合)。</span></p>
+<p><span class="merged" id="all.4RTC1X" title="原文 : Since Operator 3.5.1 it is also possible to configure the IP families used by the headless service created for the StatefulSet if this is required.">オペレータ3.5.1は、StatefulSet用に作成されたヘッドレス・サービスで使用されるIPファミリを構成することもできます(必要な場合)。</span></p>
 
 <p><span class="merged" id="all.QZzKe" title="原文 : The yaml below will configure WKA to use only IPv6, the headless Service created for the StatefulSet will be a dual-stack, IPv4 and IPv6 service.">次のyamlは、IPv6のみを使用するようにWKAを構成します。StatefulSet用に作成されたヘッドレス・サービスは、デュアル・スタック、IPv4およびIPv6サービスになります。</span></p>
 

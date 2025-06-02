@@ -62,7 +62,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.1ZByO1.spl1" title="原文 : The JShell session only starts the JShell REPL and Coherence is not started in the JShell process.">JShellセッションではJShell REPLのみが起動され、CoherenceはJShellプロセスでは起動されません。</span> <span class="merged" id="all.1ZByO1.spl2" title="原文 : As the JShell process has all the same configuration except it is configured to be storage disabled.">JShellプロセスの構成は、ストレージが無効になるように構成されている場合を除き、すべて同じです。</span> <span class="merged" id="all.1ZByO1.spl3" title="原文 : As the Coherence container in the Pod any of the normal ways to bootstrap Coherence can be used.">ポッドのCoherenceコンテナとして、Coherenceをブートストラップする通常の方法を使用できます。</span> <span class="merged" id="all.1ZByO1.spl4" title="原文 : Any configuration changes, for example setting system properties, can be done before Coherence is started.">システム・プロパティの設定など、構成の変更は、Coherenceの起動前に行うことができます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.19"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.18"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="java"

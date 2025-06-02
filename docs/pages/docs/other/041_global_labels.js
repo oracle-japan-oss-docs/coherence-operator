@@ -122,7 +122,7 @@ spec:
 </ul>
 <p><span class="merged" id="all.4058X6" title="原文 : Both of these command line flags can be specified multiple times if required.">これらのコマンド行フラグは、必要に応じて複数回指定できます。</span></p>
 
-<p><span class="merged" id="all.6vDv5.22"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.21"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="bash"
@@ -138,7 +138,7 @@ lang="bash"
 <div class="section">
 <p><span class="merged" id="all.44DFzA" title="原文 : When installing the Operator using the manifest yaml files, additional command line flags can be configured by manually editing the yaml file before installing.">マニフェストyamlファイルを使用してオペレータをインストールする場合、インストール前にyamlファイルを手動で編集することで、追加のコマンドライン・フラグを構成できます。</span></p>
 
-<p><span class="merged" id="all.3VLlnO" title="原文 : Download the yaml manifest file from the GitHub repo https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml">GitHubリポジトリ<a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml" id="" target="_blank" >https://github.com/oracle/coherence-operator/releases/download/v3.5.0/coherence-operator.yaml</a>からyamlマニフェスト・ファイルをダウンロード</span></p>
+<p><span class="merged" id="all.106rTa" title="原文 : Download the yaml manifest file from the GitHub repo https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml">GitHubリポジトリ<a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml" id="" target="_blank" >https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml</a>からyamlマニフェスト・ファイルをダウンロード</span></p>
 
 <p><span class="merged" id="all.SBiqw" title="原文 : Find the section of the yaml file the defines the Operator container args, the default looks like this">オペレータ・コンテナ引数を定義するyamlファイルのセクションを検索します。デフォルトはこんな感じです</span></p>
 

@@ -79,7 +79,7 @@ spec:
 </tbody>
 </table>
 </div>
-<p><span class="merged" id="all.6vDv5.10"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.9"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -101,7 +101,7 @@ spec:
 <div class="section">
 <p><span class="merged" id="all.4MXJ7R.spl1" title="原文 : Any arbitrary GC argument can be added to the jvm.gc.args field.">任意のGC引数を<code>jvm.gc.args</code>フィールドに追加できます。</span> <span class="merged" id="all.4MXJ7R.spl2" title="原文 : These arguments will be passed verbatim to the JVM command line.">これらの引数は、JVMコマンドラインにそのまま渡されます。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.11"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.10"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
@@ -119,7 +119,7 @@ spec:
 <p><span class="merged" id="all.3Z0p4L" title="原文 : In the example above the -XX:MaxGCPauseMillis=200 JVM argument will be added to the command line.">前述の例では、<code>-XX:MaxGCPauseMillis=200</code> JVM引数がコマンドラインに追加されます。</span></p>
 
 <div class="admonition note">
-<p class="admonition-inline"><span class="merged" id="all.AsqKG.spl1" title="原文 : The jvm.gc.args field will add the provided arguments to the end of the command line exactly as they are in the args list."><code>jvm.gc.args</code>フィールドでは、引数リストにある引数とまったく同じように、指定された引数がコマンドラインの最後に追加されます。</span> <span class="merged" id="all.AsqKG.spl2" title="原文 : This field provides the same functionality as JVM Args but sometimes it might be useful to be able to separate the two gorups of arguments in the CRD spec.">このフィールドは、<router-link @click.native="this.scrollFix('#jvm/030_jvm_args.adoc')" to="#jvm/030_jvm_args.adoc">「JVM引数」</router-link>と同じ機能を提供しますが、CRD仕様の2つの引数を分離できると便利な場合があります。</span> </p>
+<p class="admonition-inline"><span class="merged" id="all.3qg0sH.spl1" title="原文 : The jvm.gc.args field will add the provided arguments to the end of the command line exactly as they are in the args list."><code>jvm.gc.args</code>フィールドでは、引数リストにある引数とまったく同じように、指定された引数がコマンドラインの最後に追加されます。</span> <span class="merged" id="all.3qg0sH.spl2" title="原文 : This field provides the same functionality as JVM Args but sometimes it might be useful to be able to separate the two gorups of arguments in the CRD spec.">このフィールドは、<router-link to="/docs/jvm/030_jvm_args">「JVM引数」</router-link>と同じ機能を提供しますが、CRD仕様の2つの引数を分離できると便利な場合があります。</span> </p>
 </div>
 </div>
 </div>

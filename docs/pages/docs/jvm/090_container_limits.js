@@ -6,7 +6,7 @@
 <div class="section">
 <p><span class="merged" id="all.CuCdA.spl1" title="原文 : The JVM can be configured to respect container limits set, for example cpu and memory limits.">JVMは、CPUやメモリー制限など、設定されたコンテナ制限を考慮するように構成できます。</span> <span class="merged" id="all.CuCdA.spl2" title="原文 : This can be important if container limits have been set for the container in the resources section as a JVM that does not respect these limits can cause the Pod to be killed.">これは、これらの制限を尊重しないJVMによって<code>Pod</code>が強制される可能性があるため、<code>resources</code>セクションのコンテナにコンテナ制限が設定されている場合は重要です。</span> <span class="merged" id="all.CuCdA.spl3" title="原文 : This is done by adding the -XX:+UseContainerSupport JVM option.">これを行うには、<code>-XX:+UseContainerSupport</code> JVMオプションを追加します。</span> <span class="merged" id="all.CuCdA.spl4" title="原文 : It is possible to control this using the jvm.useContainerLimits field in the Coherence CRD spec.">これは、<code>Coherence</code> CRD仕様の<code>jvm.useContainerLimits</code>フィールドを使用して制御できます。</span> <span class="merged" id="all.CuCdA.spl5" title="原文 : If the field is not set, the operator adds the -XX:+UseContainerSupport option by default.">フィールドが設定されていない場合、オペレータはデフォルトで<code>-XX:+UseContainerSupport</code>オプションを追加します。</span> </p>
 
-<p><span class="merged" id="all.6vDv5.16"  title="原文:: For example:">例えば:</span></p>
+<p><span class="merged" id="all.6vDv5.15"  title="原文:: For example:">例えば:</span></p>
 
 <markup
 lang="yaml"
