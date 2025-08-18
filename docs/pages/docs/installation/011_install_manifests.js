@@ -8,7 +8,7 @@
 
 <div class="admonition note">
 <p class="admonition-textlabel"><span class="merged" id="all.22fJPu.6"  title="原文:: Note">ノート</span></p>
-<p ><p><span class="merged" id="all.v3f9B.spl1" title="原文 : As of v3.5.1 of the Operator the manifest yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.1以降、マニフェストyamlはオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.v3f9B.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
+<p ><p><span class="merged" id="all.3nBW3z.spl1" title="原文 : As of v3.5.3 of the Operator the manifest yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.3以降、マニフェストyamlはオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.3nBW3z.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
 </p>
 </div>
 <p><span class="merged" id="all.3MEUKf.spl1" title="原文 : The following command will install the Operator.">次のコマンドによってオペレータがインストールされます。</span> <span class="merged" id="all.3MEUKf.spl2" title="原文 : This assumes that the Kubernetes account being used to perform the installation has all the RBAC permissions required to install all the resource types in the yaml file.">ここでは、インストールの実行に使用されるKubernetesアカウントに、すべてのリソース・タイプをyamlファイルにインストールするために必要なすべてのRBAC権限があることを前提としています。</span> </p>
@@ -16,7 +16,7 @@
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-operator.yaml</markup>
 
 <p><span class="merged" id="all.H99fG.spl1" title="原文 : This will create a namespace called coherence and install the CRDs and the Operator into the namespace, along with all the required ClusterRole and RoleBinding resources.">これにより、<code>coherence</code>というネームスペースが作成され、必要なすべての<code>ClusterRole</code>および<code>RoleBinding</code>リソースとともに、CRDおよびオペレータがネームスペースにインストールされます。</span> <span class="merged" id="all.H99fG.spl2" title="原文 : The coherence namespace can be changed by downloading and editing the yaml file."><code>coherence</code>ネームスペースは、yamlファイルをダウンロードおよび編集することによって変更できます。</span> </p>
 
@@ -67,7 +67,7 @@ lang="bash"
 </ul>
 <div class="admonition note">
 <p class="admonition-textlabel"><span class="merged" id="all.22fJPu.8"  title="原文:: Note">ノート</span></p>
-<p ><p><span class="merged" id="all.2rVNSM.spl1" title="原文 : As of v3.5.1 of the Operator the coherence-operator-restricted.yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.1以降、<code>coherence-operator-restricted.yaml</code>はオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.2rVNSM.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
+<p ><p><span class="merged" id="all.1fWQnk.spl1" title="原文 : As of v3.5.3 of the Operator the coherence-operator-restricted.yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.3以降、<code>coherence-operator-restricted.yaml</code>はオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.1fWQnk.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
 </p>
 </div>
 <p><span class="merged" id="all.3MEUKf.1.spl1" title="原文 : The following command will install the Operator.">次のコマンドによってオペレータがインストールされます。</span> <span class="merged" id="all.3MEUKf.1.spl2" title="原文 : This assumes that the Kubernetes account being used to perform the installation has all the RBAC permissions required to install all the resource types in the yaml file.">ここでは、インストールの実行に使用されるKubernetesアカウントに、すべてのリソース・タイプをyamlファイルにインストールするために必要なすべてのRBAC権限があることを前提としています。</span> </p>
@@ -75,7 +75,7 @@ lang="bash"
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator-restricted.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-operator-restricted.yaml</markup>
 
 <div class="admonition important">
 <p class="admonition-textlabel"><span class="merged" id="all.1K6f2p.3"  title="原文:: Important">重要</span></p>
@@ -86,15 +86,13 @@ lang="bash"
 
 <h2 id="manual-crd"><span class="merged" id="all.69n36" title="原文 : Manually Install the CRDs">CRDを手動でインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.9fcSC.spl1" title="原文 : Although by default the Operator will install its CRDs, they can be manually installed into Kubernetes.">オペレータはデフォルトでCRDをインストールしますが、手動でKubernetesにインストールできます。</span> <span class="merged" id="all.9fcSC.spl2" title="原文 : This may be required where the Operator is running with restricted permissions as described above.">これは、前述のとおり、オペレータが制限付き権限で実行されている場合に必要になる場合があります。</span> </p>
-
 <p><span class="merged" id="all.BlPTJ" title="原文 : The Operator release artifacts include small versions of the two CRDs which can be installed with the following commands:">オペレータ・リリース・アーティファクトには、次のコマンドを使用してインストールできる2つのCRDの小さなバージョンが含まれています:</span></p>
 
 <markup
 lang="bash"
 
->kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence.oracle.com_coherence_small.yaml
-kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherencejob.oracle.com_coherence_small.yaml</markup>
+>kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence.oracle.com_coherence_small.yaml
+kubectl apply -f https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherencejob.oracle.com_coherence_small.yaml</markup>
 
 <p><span class="merged" id="all.2UQZFN" title="原文 : The small versions of the CRDs are identical to the full versions but hav a cut down OpenAPI spec with a lot of comments removed so that the CRDs are small enough to be installed with kubectl apply">CRDの小さなバージョンはフル・バージョンと同じですが、CRDが<code>kubectl apply</code>でインストールできるほど小さくなるように、多くのコメントが削除されたOpenAPI仕様の削減があります</span></p>
 

@@ -48,7 +48,9 @@ spec:
 
 <h3 id="_set_the_garbage_collector"><span class="merged" id="all.1pGagy" title="原文 : Set the Garbage Collector">ガベージ・コレクタの設定</span></h3>
 <div class="section">
-<p><span class="merged" id="all.3nXbHf.spl1" title="原文 : The garbage collector to use can be set using the jvm.gc.collector field.">使用するガベージ・コレクタは、<code>jvm.gc.collector</code>フィールドを使用して設定できます。</span> <span class="merged" id="all.3nXbHf.spl2" title="原文 : This field can be set to either G1, CMS or Parallel (the field is case-insensitive, invalid values will be silently ignored).">このフィールドは、<code>G1</code>、<code>CMS</code>または<code>Parallel</code>のいずれかに設定できます(フィールドでは大文字と小文字が区別されず、無効な値は暗黙的に無視されます)。</span> <span class="merged" id="all.3nXbHf.spl3" title="原文 : The default collector set, if none has been specified, will be G1.">デフォルト・コレクタ・セットは、何も指定されていない場合、<code>G1</code>になります。</span> </p>
+<p><span class="merged" id="all.4U7bKN.spl1" title="原文 : The garbage collector to use can be set using the jvm.gc.collector field.">使用するガベージ・コレクタは、<code>jvm.gc.collector</code>フィールドを使用して設定できます。</span> <span class="merged" id="all.4U7bKN.spl2" title="原文 : This field can be set to either G1, CMS or Parallel (the field is case-insensitive, invalid values will be silently ignored).">このフィールドは、<code>G1</code>、<code>CMS</code>または<code>Parallel</code>のいずれかに設定できます(フィールドでは大文字と小文字が区別されず、無効な値は暗黙的に無視されます)。</span> </p>
+
+<p><span class="merged" id="all.Wg3cS" title="原文 : The default collector set, if none has been specified, will be whatever is the default for the JVM being used.">デフォルトのコレクタ・セット(何も指定されていない場合)は、使用されているJVMのデフォルトになります。</span></p>
 
 
 <div class="table__overflow elevation-1  ">
@@ -76,6 +78,14 @@ spec:
 <td class=""><code>Parallel</code></td>
 <td class=""><code>-XX:+UseParallelGC</code></td>
 </tr>
+<tr>
+<td class=""><code>Serial</code></td>
+<td class=""><code>-XX:+UseSerialGC</code></td>
+</tr>
+<tr>
+<td class=""><code>ZGC</code></td>
+<td class=""><code>-XX:+UseZGC</code></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -91,10 +101,15 @@ metadata:
 spec:
   jvm:
     gc:
-      collector: "G1"</markup>
+      collector: "ZGC"</markup>
 
-<p><span class="merged" id="all.2t2vAb" title="原文 : The example above will add -XX:+UseG1GC to the command line.">前述の例では、コマンドラインに<code>-XX:+UseG1GC</code>を追加します。</span></p>
+<p><span class="merged" id="all.4CwGvf" title="原文 : The example above will add -XX:+UseZGC to the command line.">前述の例では、コマンドラインに<code>-XX:+UseZGC</code>を追加します。</span></p>
 
+<div class="admonition note">
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.18"  title="原文:: Note">ノート</span></p>
+<p ><p><span class="merged" id="all.38iptI" title="原文 : The JVM only allows a single -XX:Use** option that sets the garbage collector to use, so the collector should not be specified in both the spec.jvm.gc.collector field, and in the spec.jvm.args field.">JVMでは、ガベージ・コレクタを使用するように設定する単一の<code>-XX:Use*<strong>*</strong></code>オプションのみが許可されるため、<code>spec.jvm.gc.collector</code>フィールドと<code>spec.jvm.args</code>フィールドの両方にコレクタを指定しないでください。</span></p>
+</p>
+</div>
 </div>
 
 <h3 id="_adding_arbitrary_gc_args"><span class="merged" id="all.4MXs9C" title="原文 : Adding Arbitrary GC Args">任意のGC引数の追加</span></h3>

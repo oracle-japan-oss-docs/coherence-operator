@@ -4,16 +4,16 @@
 
 <h2 id="_install_using_kustomize"><span class="merged" id="all.42E3lU" title="原文 : Install Using Kustomize">Kustomizeを使ってインストール</span></h2>
 <div class="section">
-<p><span class="merged" id="all.284vot" title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.5.1 Manifests">yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.5.1 マニフェスト</a></span></p>
+<p><span class="merged" id="all.NTfmA" title="原文 : If you want to use yaml directly to install the operator, with something like kubectl, you can use the manifest files published with the GitHub release at this link: 3.5.3 Manifests">yamlを直接使用してオペレータをインストールする場合は、<code>kubectl</code>のように、このリンクでGitHubリリースで公開されたマニフェスト・ファイルを使用できます: <a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-operator-manifests.tar.gz" id="" target="_blank" >3.5.3 マニフェスト</a></span></p>
 
 <p><span class="merged" id="all.3iFoWt" title="原文 : These manifest files are for use with a tool called Kustomize, which is built into kubectl see the documentation here: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/">これらのマニフェスト・ファイルは、<code>kubectl</code>に組み込まれたKustomizeと呼ばれるツールで使用します。ここにあるドキュメントを参照してください: <a href="https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/" id="" target="_blank" >https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/</a></span></p>
 
 <div class="admonition note">
 <p class="admonition-textlabel"><span class="merged" id="all.22fJPu.13"  title="原文:: Note">ノート</span></p>
-<p ><p><span class="merged" id="all.v3f9B.1.spl1" title="原文 : As of v3.5.1 of the Operator the manifest yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.1以降、マニフェストyamlはオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.v3f9B.1.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
+<p ><p><span class="merged" id="all.3nBW3z.1.spl1" title="原文 : As of v3.5.3 of the Operator the manifest yaml also installs the two CRDs that the Operator uses.">オペレータのv3.5.3以降、マニフェストyamlはオペレータが使用する2つのCRDもインストールします。</span> <span class="merged" id="all.3nBW3z.1.spl2" title="原文 : In previous releases the Operator would install the CRDs when it started but this behaviour is disabled by default when installing with the manifest yaml.">以前のリリースでは、オペレータは起動時にCRDをインストールしていましたが、マニフェストyamlを使用してインストールすると、この動作はデフォルトで無効になっています。</span> </p>
 </p>
 </div>
-<p><span class="merged" id="all.1eliL" title="原文 : Download the 3.5.1 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.5.1 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
+<p><span class="merged" id="all.OIKQm" title="原文 : Download the 3.5.3 Manifests from the release page and unpack the file, which should produce a directory called manifests with a structure like this:">リリース・ページから<a href="https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-operator-manifests.tar.gz" id="" target="_blank" >「3.5.3 マニフェスト」</a>をダウンロードし、ファイルを解凍します。これにより、次のような構造を持つ<code>manifests</code>というディレクトリが生成されます:</span></p>
 
 <markup
 
@@ -68,14 +68,14 @@ lang="bash"
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.5.1</markup>
+>cd ./manager &amp;&amp; kustomize edit set image controller=myregistry/coherence-operator:3.5.3</markup>
 
 <p><span class="merged" id="all.325mTV" title="原文 : Change the name of the Operator image by running the command below, changing the image name to the registry and image name that you are using for the Operator utilities image">次のコマンドを実行してOperatorイメージの名前を変更し、そのイメージ名を、Operatorユーティリティのイメージに使用するレジストリおよびイメージ名に変更</span></p>
 
 <markup
 lang="bash"
 
->cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.5.1</markup>
+>cd ./manager &amp;&amp; kustomize edit add configmap env-vars --from-literal OPERATOR_IMAGE=myregistry/coherence-operator:3.5.3</markup>
 
 <p><span class="merged" id="all.3AmH2f.spl1" title="原文 : Change the name of the default Coherence image.">デフォルトのCoherenceイメージの名前を変更します。</span> <span class="merged" id="all.3AmH2f.spl2" title="原文 : If you are always going to be deploying your own application images then this does not need to change.">独自のアプリケーション・イメージを常にデプロイする場合、これを変更する必要はありません。</span> </p>
 

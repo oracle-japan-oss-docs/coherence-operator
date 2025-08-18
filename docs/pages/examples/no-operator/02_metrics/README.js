@@ -324,7 +324,7 @@ lang="bash"
 
 <h2 id="_grafana"><span class="merged" id="all.1v7sdF"  title="原文:: Grafana">Grafana</span></h2>
 <div class="section">
-<p><span class="merged" id="all.3VCI5k.spl1" title="原文 : We could now install Grafana and configure it to connect to Prometheus, either the local instance or the instance inside Kubernetes.">これで、Grafanaをインストールし、ローカル・インスタンスまたはKubernetes内のインスタンスPrometheusに接続するように構成できます。</span> <span class="merged" id="all.3VCI5k.spl2" title="原文 : The Coherence Operator provides a number of dashboards that can imported into Grafana.">Coherence Operatorには、Grafanaにインポートできる多数のダッシュボードが用意されています。</span> <span class="merged" id="all.3VCI5k.spl3" title="原文 : See the Operator Import Grafana Dashboards documentation.">オペレータの<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/metrics/030_importing" id="" target="_blank" >「Grafanaダッシュボードのインポート」</a>ドキュメントを参照してください。</span> </p>
+<p><span class="merged" id="all.2kHDqJ.spl1" title="原文 : We could now install Grafana and configure it to connect to Prometheus, either the local instance or the instance inside Kubernetes.">これで、Grafanaをインストールし、ローカル・インスタンスまたはKubernetes内のインスタンスPrometheusに接続するように構成できます。</span> <span class="merged" id="all.2kHDqJ.spl2" title="原文 : The Coherence Operator provides a number of dashboards that can imported into Grafana.">Coherence Operatorには、Grafanaにインポートできる多数のダッシュボードが用意されています。</span> <span class="merged" id="all.2kHDqJ.spl3" title="原文 : See the Operator Import Grafana Dashboards documentation.">オペレータの<a href="https://docs.coherence.community/coherence-operator/docs/latest/docs/metrics/030_importing" id="" target="_blank" >「Grafanaダッシュボードのインポート」</a>ドキュメントを参照してください。</span> </p>
 
 </div>
 </doc-view>

@@ -36,6 +36,14 @@
 <v-card-title primary class="headline layout justify-center"><span style="text-align:center">トラブルシューティング</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1qvy64" title="原文 : Hints and tips to troubleshoot common issues.">一般的な問題をトラブルシューティングするためのヒント。</span></p>
+</v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/installation/100_fips"><div class="card__link-hover"/>
+<span class="merged" id="all.2hQJZu" title="原文 :  widgets "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">widgets</v-icon> </v-avatar> </v-layout></span>
+<div class="px-3">
+<v-divider class="indigo lighten-4"/>
+</div>
+<v-card-title primary class="headline layout justify-center"> <span style="text-align:center">FIPS</span> </v-card-title> <v-card-text class="caption">
+<p></p>
+<p><span class="merged" id="all.WiGwA"  title="原文:: FIPS Compliance">FIPS 準拠</span></p>
 </v-card-text>
 </v-card>
 </v-flex>
@@ -139,7 +147,7 @@
 <p></p>
 <p><span class="merged" id="all.1gdd1N" title="原文 : Viewing and managing log files within using the Coherence Operator.">Coherence Operatorを使用して、ログ・ファイルを表示および管理します。</span></p>
 </v-card-text> </v-card> </v-flex> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/docs/about/04_coherence_spec"><div class="card__link-hover"/>
-<span class="merged" id="all.2hQJZu" title="原文 :  widgets "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">widgets</v-icon> </v-avatar> </v-layout></span>
+<span class="merged" id="all.2hQJZu.1" title="原文 :  widgets "></router-link> <v-layout align-center justify-center class=""> <v-avatar size="150px"> <v-icon class="xxx-large">widgets</v-icon> </v-avatar> </v-layout></span>
 <div class="px-3">
 <v-divider class="indigo lighten-4"/>
 </div>

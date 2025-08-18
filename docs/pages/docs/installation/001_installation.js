@@ -3,7 +3,7 @@
  <v-layout row wrap> <v-flex xs12 sm10 lg10> <v-card class="section-def" v-bind:color="$store.state.currentColor"> <v-card-text class="pa-3"> <v-card class="section-def__card"> <v-card-text>
 <dl>
 <dt slot=title><span class="merged" id="all.1Tb5TG" title="原文 : Coherence Operator Installation">Coherence Operatorインストール</span></dt>
-<dd slot="desc"><p><span class="merged" id="all.3Qw6GA" title="原文 : The Coherence Operator is available as an image from the GitHub container registry container-registry.oracle.com/middleware/coherence-operator:3.5.0 that can easily be installed into a Kubernetes cluster.">Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるGitHub Container Registry <code>container-registry.oracle.com/middleware/coherence-operator:3.5.0</code>のイメージとして使用できます。</span></p>
+<dd slot="desc"><p><span class="merged" id="all.4QMchQ" title="原文 : The Coherence Operator is available as an image from the GitHub container registry container-registry.oracle.com/middleware/coherence-operator:3.5.3 that can easily be installed into a Kubernetes cluster.">Coherence Operatorは、Kubernetesクラスタに簡単にインストールできるGitHub Container Registry <code>container-registry.oracle.com/middleware/coherence-operator:3.5.3</code>のイメージとして使用できます。</span></p>
 </dd>
 </dl>
 </v-card-text>
@@ -32,6 +32,14 @@
 </li>
 <li>
 <p><span class="merged" id="all.4fFd5p" title="原文 : Operator Scope - monitoring all or a fixed set of namespaces"><router-link @click.native="this.scrollFix('#scope')" to="#scope">オペレータ・スコープ - すべてまたは固定のネームスペース・セットのモニタリング</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.13qTPj" title="原文 : Configure TLS Cipher Suites"><router-link to="/docs/installation/090_tls_cipher">TLS暗号スイートの構成</router-link></span></p>
+
+</li>
+<li>
+<p><span class="merged" id="all.1lNFm1" title="原文 : FIPS Compliance"><router-link to="/docs/installation/100_fips">FIPS準拠</router-link></span></p>
 
 </li>
 </ul>

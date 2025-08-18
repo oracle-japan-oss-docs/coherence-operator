@@ -301,7 +301,7 @@
 
 <h4 id="install-operator"><span class="merged" id="all.2CLSny.1" title="原文 : 1. Install the Coherence Operator">1. Coherence Operatorのインストール</span></h4>
 <div class="section">
-<p><span class="merged" id="all.3vzQcc" title="原文 : To run the examples below, you will need to have installed the Coherence Operator, do this using whatever method you prefer from the Installation Guide.">次の例では、Coherence Operatorをインストールし、<a href="https://oracle.github.io/coherence-operator/docs/latest/#/docs/installation/001_installation" id="" target="_blank" >「インストール・ガイド」</a>から必要なメソッドを使用してインストールする必要があります。</span></p>
+<p><span class="merged" id="all.12FCkc" title="原文 : To run the examples below, you will need to have installed the Coherence Operator, do this using whatever method you prefer from the Installation Guide.">次の例では、Coherence Operatorをインストールし、<a href="https://docs.coherence.community/coherence-operator/docs/latest/docs/installation/001_installation" id="" target="_blank" >「インストール・ガイド」</a>から必要なメソッドを使用してインストールする必要があります。</span></p>
 
 <markup
 lang="bash"

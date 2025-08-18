@@ -13,8 +13,8 @@
 <markup
 lang="bash"
 
->curl https://oracle.github.io/coherence-operator/dashboards/latest/coherence-dashboards.tar.gz \
-    -o coherence-dashboards.tar.gz
+>curl https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-dashboards.tar.gz \
+    -Lo coherence-dashboards.tar.gz
 tar -zxvf coherence-dashboards.tar.gz</markup>
 
 <p><span class="merged" id="all.mKukc.spl1" title="原文 : The above commands will download the coherence-dashboards.tar.gz file and unpack it resulting in a directory named dashboards/ in the current working directory.">前述のコマンドは、<code>coherence-dashboards.tar.gz</code>ファイルをダウンロードし、解凍して、現在の作業ディレクトリに<code>dashboards/</code>という名前のディレクトリを作成します。</span> <span class="merged" id="all.mKukc.spl2" title="原文 : This dashboards/ directory will contain the various Coherence dashboard files.">この<code>dashboards/</code>ディレクトリには、様々なCoherenceダッシュボード・ファイルが含まれます。</span> </p>

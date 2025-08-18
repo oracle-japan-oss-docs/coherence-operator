@@ -2,9 +2,9 @@
 function createConfig() {
     return {
         home: "docs/about/01_overview",
-        release: "3.5.0",
+        release: "3.5.3",
         releases: [
-            "3.5.0"
+            "3.5.3"
         ],
         pathColors: {
             "*": "blue-grey"
@@ -258,6 +258,32 @@ function createRoutes(){
                 hasNav: true
             },
             component: loadPage('docs-installation-080_networking', '/docs/installation/080_networking', {})
+        },
+        {
+            path: '/docs/installation/090_tls_cipher',
+            meta: {
+                h1: 'TLS暗号スイート',
+                title: 'TLS暗号スイート',
+                h1Prefix: null,
+                description: 'Coherence Operator Documentation - TLS Cipher Suites',
+                keywords: 'oracle coherence, kubernetes, operator, documentation, TLS, cipher',
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-installation-090_tls_cipher', '/docs/installation/090_tls_cipher', {})
+        },
+        {
+            path: '/docs/installation/100_fips',
+            meta: {
+                h1: 'FIPSの互換性',
+                title: 'FIPSの互換性',
+                h1Prefix: null,
+                description: 'Coherence Operator Documentation - TLS Cipher Suites',
+                keywords: 'oracle coherence, kubernetes, operator, documentation, TLS, cipher',
+                customLayout: null,
+                hasNav: true
+            },
+            component: loadPage('docs-installation-100_fips', '/docs/installation/100_fips', {})
         },
         {
             path: '/docs/applications/010_overview',
@@ -1443,7 +1469,9 @@ function createNav(){
                 { href: '/docs/installation/040_obtain_coherence_images', title: 'Coherenceイメージの取得' },
                 { href: '/docs/installation/050_private_repos', title: 'プライベート・イメージ・レジストリの使用' },
                 { href: '/docs/installation/070_webhooks', title: 'オペレータWebフック' },
-                { href: '/docs/installation/080_networking', title: 'O/Sネットワーキング構成' }
+                { href: '/docs/installation/080_networking', title: 'O/Sネットワーキング構成' },
+                { href: '/docs/installation/090_tls_cipher', title: 'TLS暗号スイート' },
+                { href: '/docs/installation/100_fips', title: 'FIPSの互換性' }
             ]
         },
         {

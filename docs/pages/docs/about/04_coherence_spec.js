@@ -309,7 +309,7 @@
 </ul>
 </div>
 
-<h3 id="_action"><span class="merged" id="all.1B5r9w"  title="原文:: Action">Action</span></h3>
+<h3 id="_action"><span class="merged" id="all.1B5r9w"  title="原文:: Action">アクション</span></h3>
 <div class="section">
 <p><span class="merged" id="all.2v7Ym1" title="原文 : Action is an action to execute when the StatefulSet becomes ready.">Actionは、StatefulSetの準備ができたときに実行するアクションです。</span></p>
 
@@ -3472,6 +3472,24 @@
 <td class=""><code>*bool</code></td>
 <td class=""><span class="merged" id="all.njUKu.304"  title="原文:: false">false</span></td>
 </tr>
+<tr>
+<td class=""><code>loadBalancerClass</code></td>
+<td class=""><span class="merged" id="all.4DmUDa.spl1" title="原文 : loadBalancerClass is the class of the load balancer implementation this Service belongs to.">loadBalancerClassは、このサービスが属するロード・バランサ実装のクラスです。</span> <span class="merged" id="all.4DmUDa.spl2" title="原文 : If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. &quot;internal-vip&quot; or &quot;example.com/internal-vip&quot;.">指定する場合、このフィールドの値は、オプションのプレフィクス(たとえば、"internal-vip"または"example.com/internal-vip")を含むラベル形式の識別子である必要があります。</span> <span class="merged" id="all.4DmUDa.spl3" title="原文 : Unprefixed names are reserved for end-users.">接頭辞のない名前は、エンド・ユーザー用に予約されています。</span> <span class="merged" id="all.4DmUDa.spl4" title="原文 : This field can only be set when the Service type is &apos;LoadBalancer&apos;.">このフィールドは、サービス・タイプが'LoadBalancer'の場合にのみ設定できます。</span> <span class="merged" id="all.4DmUDa.spl5" title="原文 : If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation.">設定しない場合、デフォルトのロード・バランサ実装が使用されますが、今日では通常、これはクラウド・プロバイダ統合を介して行われますが、デフォルトの実装には適用する必要があります。</span> <span class="merged" id="all.4DmUDa.spl6" title="原文 : If set, it is assumed that a load balancer implementation is watching for Services with a matching class.">設定すると、ロード・バランサ実装が、一致するクラスを持つサービスを監視していると想定されます。</span> <span class="merged" id="all.4DmUDa.spl7" title="原文 : Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field.">デフォルトのロード・バランサ実装(クラウド・プロバイダなど)では、このフィールドを設定するサービスは無視する必要があります。</span> <span class="merged" id="all.4DmUDa.spl8" title="原文 : This field can only be set when creating or updating a Service to type &apos;LoadBalancer&apos;.">このフィールドは、'LoadBalancer'タイプのサービスを作成または更新する場合にのみ設定できます。</span> <span class="merged" id="all.4DmUDa.spl9" title="原文 : Once set, it can not be changed.">一度設定すると、変更できません。</span> <span class="merged" id="all.4DmUDa.spl10" title="原文 : This field will be wiped when a service is updated to a non &apos;LoadBalancer&apos; type.">サービスが非'LoadBalancer'タイプに更新されると、このフィールドは消去されます。</span> </td>
+<td class=""><code>*string</code></td>
+<td class=""><span class="merged" id="all.njUKu.305"  title="原文:: false">false</span></td>
+</tr>
+<tr>
+<td class=""><code>internalTrafficPolicy</code></td>
+<td class=""><span class="merged" id="all.3yT1uU.spl1" title="原文 : InternalTrafficPolicy describes how nodes distribute service traffic they receive on the ClusterIP.">InternalTrafficPolicyは、ClusterIPで受信するサービス・トラフィックをノードがどのように分散するかを示します。</span> <span class="merged" id="all.3yT1uU.spl2" title="原文 : If set to &quot;Local&quot;, the proxy will assume that pods only want to talk to endpoints of the service on the same node as the pod, dropping the traffic if there are no local endpoints.">「ローカル」に設定すると、プロキシは、ポッドがポッドと同じノード上のサービスのエンドポイントとのみ通信することを想定し、ローカル・エンドポイントがない場合はトラフィックを削除します。</span> <span class="merged" id="all.3yT1uU.spl3" title="原文 : The default value, &quot;Cluster&quot;, uses the standard behavior of routing to all endpoints evenly (possibly modified by topology and other features).">デフォルト値「クラスタ」では、すべてのエンドポイントへのルーティングの標準動作が均等に使用されます(トポロジやその他の機能によって変更される可能性があります)。</span> </td>
+<td class=""><code>*<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/${k8s-doc-version}/#serviceinternaltrafficpolicy-v1-core" id="" target="_blank" >corev1.ServiceInternalTrafficPolicy</a></code></td>
+<td class=""><span class="merged" id="all.njUKu.306"  title="原文:: false">false</span></td>
+</tr>
+<tr>
+<td class=""><code>trafficDistribution</code></td>
+<td class=""><span class="merged" id="all.45ZHBb.spl1" title="原文 : TrafficDistribution offers a way to express preferences for how traffic is distributed to Service endpoints.">TrafficDistributionは、トラフィックがサービス・エンドポイントに分散される方法に関するプリファレンスを表現する方法を提供します。</span> <span class="merged" id="all.45ZHBb.spl2" title="原文 : Implementations can use this field as a hint, but are not required to guarantee strict adherence.">実装では、このフィールドをヒントとして使用できますが、厳密な準拠を保証する必要はありません。</span> <span class="merged" id="all.45ZHBb.spl3" title="原文 : If the field is not set, the implementation will apply its default routing strategy.">フィールドが設定されていない場合、実装ではデフォルトのルーティング戦略が適用されます。</span> <span class="merged" id="all.45ZHBb.spl4" title="原文 : If set to &quot;PreferClose&quot;, implementations should prioritize endpoints that are in the same zone.">"PreferClose"に設定すると、実装は同じゾーンにあるエンドポイントに優先順位を付ける必要があります。</span> </td>
+<td class=""><code>*string</code></td>
+<td class=""><span class="merged" id="all.njUKu.307"  title="原文:: false">false</span></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -3511,13 +3529,13 @@
 <td class=""><code>namespace</code></td>
 <td class=""><span class="merged" id="all.2Xc3GC.spl1" title="原文 : The namespace that the deployment that this deployment depends on is installed into.">このデプロイメントが依存するデプロイメントが依存するネームスペースがインストールされます。</span> <span class="merged" id="all.2Xc3GC.spl2" title="原文 : Default to the same namespace as this deployment">このデプロイメントと同じネームスペースにデフォルト設定されます</span> </td>
 <td class=""><code>string</code></td>
-<td class=""><span class="merged" id="all.njUKu.305"  title="原文:: false">false</span></td>
+<td class=""><span class="merged" id="all.njUKu.308"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><code>podCount</code></td>
 <td class=""><span class="merged" id="all.I302D" title="原文 : The number of the Pods that should have been started before this deployments will be started, defaults to all Pods for the deployment.">このデプロイメントの開始前に開始する必要があるポッドの数。デフォルトでは、デプロイメントのすべてのポッドに設定されます。</span></td>
 <td class=""><code>int32</code></td>
-<td class=""><span class="merged" id="all.njUKu.306"  title="原文:: false">false</span></td>
+<td class=""><span class="merged" id="all.njUKu.309"  title="原文:: false">false</span></td>
 </tr>
 </tbody>
 </table>
@@ -3558,13 +3576,13 @@
 <td class=""><code>namespace</code></td>
 <td class=""><span class="merged" id="all.2Xc3GC.1.spl1" title="原文 : The namespace that the deployment that this deployment depends on is installed into.">このデプロイメントが依存するデプロイメントが依存するネームスペースがインストールされます。</span> <span class="merged" id="all.2Xc3GC.1.spl2" title="原文 : Default to the same namespace as this deployment">このデプロイメントと同じネームスペースにデフォルト設定されます</span> </td>
 <td class=""><code>string</code></td>
-<td class=""><span class="merged" id="all.njUKu.307"  title="原文:: false">false</span></td>
+<td class=""><span class="merged" id="all.njUKu.310"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><code>podCount</code></td>
 <td class=""><span class="merged" id="all.I302D.1" title="原文 : The number of the Pods that should have been started before this deployments will be started, defaults to all Pods for the deployment.">このデプロイメントの開始前に開始する必要があるポッドの数。デフォルトでは、デプロイメントのすべてのポッドに設定されます。</span></td>
 <td class=""><code>int32</code></td>
-<td class=""><span class="merged" id="all.njUKu.308"  title="原文:: false">false</span></td>
+<td class=""><span class="merged" id="all.njUKu.311"  title="原文:: false">false</span></td>
 </tr>
 <tr>
 <td class=""><code>ready</code></td>

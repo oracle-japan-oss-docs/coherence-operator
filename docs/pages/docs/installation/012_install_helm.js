@@ -56,11 +56,11 @@ lang="bash"
 
 <h3 id="helm-operator-image"><span class="merged" id="all.3NvRwL" title="原文 : Set the Operator Image">オペレータ・イメージの設定</span></h3>
 <div class="section">
-<p><span class="merged" id="all.3izK6.spl1" title="原文 : The Helm chart uses a default Operator image from container-registry.oracle.com/middleware/coherence-operator:3.5.0.">Helmチャートでは、<code>container-registry.oracle.com/middleware/coherence-operator:3.5.0</code>のデフォルトのオペレータ・イメージが使用されます。</span> <span class="merged" id="all.3izK6.spl2" title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then there are two ways to override the default.">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、デフォルトを上書きする方法が2つあります。</span> <span class="merged" id="all.3izK6.spl3" title="原文 : Either set the individual image.registry, image.name and image.tag values, or set the whole image name by setting the image value.">個別の<code>image.registry</code>、<code>image.name</code>および<code>image.tag</code>値を設定するか、<code>image</code>値を設定してイメージ名全体を設定します。</span> </p>
+<p><span class="merged" id="all.10Xdqt.spl1" title="原文 : The Helm chart uses a default Operator image from container-registry.oracle.com/middleware/coherence-operator:3.5.3.">Helmチャートでは、<code>container-registry.oracle.com/middleware/coherence-operator:3.5.3</code>のデフォルトのオペレータ・イメージが使用されます。</span> <span class="merged" id="all.10Xdqt.spl2" title="原文 : If the image needs to be pulled from a different location (for example an internal registry) then there are two ways to override the default.">イメージを別のロケーション(内部レジストリなど)からプルする必要がある場合は、デフォルトを上書きする方法が2つあります。</span> <span class="merged" id="all.10Xdqt.spl3" title="原文 : Either set the individual image.registry, image.name and image.tag values, or set the whole image name by setting the image value.">個別の<code>image.registry</code>、<code>image.name</code>および<code>image.tag</code>値を設定するか、<code>image</code>値を設定してイメージ名全体を設定します。</span> </p>
 
-<p><span class="merged" id="all.B8HNT" title="原文 : For example, if the Operator image has been deployed into a private registry named foo.com but with the same image name coherence-operator and tag 3.5.0 as the default image, then just the image.registry needs to be specified.">たとえば、オペレータ・イメージが<code>foo.com</code>という名前のプライベート・レジストリにデプロイされているが、デフォルト・イメージと同じイメージ名<code>coherence-operator</code>およびタグ<code>3.5.0</code>の場合は、<code>image.registry</code>のみを指定する必要があります。</span></p>
+<p><span class="merged" id="all.2zX8f1" title="原文 : For example, if the Operator image has been deployed into a private registry named foo.com but with the same image name coherence-operator and tag 3.5.3 as the default image, then just the image.registry needs to be specified.">たとえば、オペレータ・イメージが<code>foo.com</code>という名前のプライベート・レジストリにデプロイされているが、デフォルト・イメージと同じイメージ名<code>coherence-operator</code>およびタグ<code>3.5.3</code>の場合は、<code>image.registry</code>のみを指定する必要があります。</span></p>
 
-<p><span class="merged" id="all.DxdMR" title="原文 : In the example below, the image used to run the Operator will be foo.com/coherence-operator:3.5.0.">次の例では、オペレータの実行に使用されるイメージは<code>foo.com/coherence-operator:3.5.0</code>です。</span></p>
+<p><span class="merged" id="all.z3cpS" title="原文 : In the example below, the image used to run the Operator will be foo.com/coherence-operator:3.5.3.">次の例では、オペレータの実行に使用されるイメージは<code>foo.com/coherence-operator:3.5.3</code>です。</span></p>
 
 <markup
 lang="bash"
@@ -216,7 +216,7 @@ lang="bash"
 
 <p><span class="merged" id="all.2uqFQU" title="原文 : This can be done using a values file:">これは、値ファイルを使用して実行できます:</span></p>
 
-<p><span class="merged" id="all.2dhgZ2" title="原文 : Set the Pod securityContext"><strong>ポッドの設定securityContext</strong></span></p>
+<p><span class="merged" id="all.2dhgZ2" title="原文 : Set the Pod securityContext"><strong>ポッドsecurityContextの設定</strong></span></p>
 
 <markup
 lang="yaml"
@@ -247,7 +247,7 @@ lang="bash"
 
 <p><span class="merged" id="all.2nn9ac" title="原文 : Alternatively, the Pod or container securityContext values can be set on the command line as --set parameters:">または、ポッドまたはコンテナの<code>securityContext</code>値をコマンドラインで<code>--set</code>パラメータとして設定できます:</span></p>
 
-<p><span class="merged" id="all.2dhgZ2.1" title="原文 : Set the Pod securityContext"><strong>ポッドの設定securityContext</strong></span></p>
+<p><span class="merged" id="all.2dhgZ2.1" title="原文 : Set the Pod securityContext"><strong>ポッドsecurityContextの設定</strong></span></p>
 
 <markup
 lang="bash"
@@ -500,11 +500,11 @@ lang="bash"
 <p><span class="merged" id="all.1YjReb" title="原文 : The command above will use all the default configurations, but the usual methods of applying values to the install can be used.">前述のコマンドではすべてのデフォルト構成が使用されますが、インストールに値を適用する通常のメソッドを使用できます。</span></p>
 
 
-<h3 id="helm-upgrade-350"><span class="merged" id="all.2ubD0E" title="原文 : Upgrading From pre-3.5.1 Versions">3.5.1より前のバージョンからのアップグレード</span></h3>
+<h3 id="helm-upgrade-350"><span class="merged" id="all.2r6A5f" title="原文 : Upgrading From pre-3.5.3 Versions">3.5.3より前のバージョンからのアップグレード</span></h3>
 <div class="section">
-<p><span class="merged" id="all.3fIXM4.spl1" title="原文 : Before version 3.5.1 of the Coherence operator, the operator used to install the CRDs when it started.">Coherenceオペレータのバージョン3.5.1より前は、CRDの起動時にCRDのインストールに使用されるオペレータです。</span> <span class="merged" id="all.3fIXM4.spl2" title="原文 : In 3.5.1 this behaviour was changed and the operator no longer installs the CRDs, these must be installed along with the operator.">3.5.1では、この動作が変更され、オペレータがCRDをインストールしなくなったため、これらをオペレータとともにインストールする必要があります。</span> <span class="merged" id="all.3fIXM4.spl3" title="原文 : The 3.5.1 and above Helm chart includes the CRDs.">3.5.1以上のHelmチャートには、CRDが含まれます。</span> </p>
+<p><span class="merged" id="all.GSZbz.spl1" title="原文 : Before version 3.5.3 of the Coherence operator, the operator used to install the CRDs when it started.">Coherenceオペレータのバージョン3.5.3より前は、CRDの起動時にCRDのインストールに使用されるオペレータです。</span> <span class="merged" id="all.GSZbz.spl2" title="原文 : In 3.5.3 this behaviour was changed and the operator no longer installs the CRDs, these must be installed along with the operator.">3.5.3では、この動作が変更され、オペレータがCRDをインストールしなくなったため、これらをオペレータとともにインストールする必要があります。</span> <span class="merged" id="all.GSZbz.spl3" title="原文 : The 3.5.3 and above Helm chart includes the CRDs.">3.5.3以上のHelmチャートには、CRDが含まれます。</span> </p>
 
-<p><span class="merged" id="all.BmTO8.spl1" title="原文 : This causes an issue when performing a Helm upgrade from a pre-3.5.1 version because Helm did not install the CRDs.">これにより、HelmがCRDをインストールしなかったため、3.5.1より前のバージョンからHelmアップグレードを実行するときに問題が発生します。</span> <span class="merged" id="all.BmTO8.spl2" title="原文 : When attempting an upgrade Helm will display an error similar to the one below:">アップグレードを試行すると、Helmに次のようなエラーが表示されます:</span> </p>
+<p><span class="merged" id="all.20SzkY.spl1" title="原文 : This causes an issue when performing a Helm upgrade from a pre-3.5.3 version because Helm did not install the CRDs.">これにより、HelmがCRDをインストールしなかったため、3.5.3より前のバージョンからHelmアップグレードを実行するときに問題が発生します。</span> <span class="merged" id="all.20SzkY.spl2" title="原文 : When attempting an upgrade Helm will display an error similar to the one below:">アップグレードを試行すると、Helmに次のようなエラーが表示されます:</span> </p>
 
 <markup
 

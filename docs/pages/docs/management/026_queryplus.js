@@ -46,7 +46,7 @@ lang="bash"
 >kubectl exec -it storage-0 -c coherence -- /coherence-operator/runner queryplus</markup>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.16"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.19"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.2bPexs" title="原文 : The kubectl exec command must include the -it options so that kubectl creates an interactive terminal session."><code>kubectl</code>が対話型端末セッションを作成できるように、<code>kubectl exec</code>コマンドに<code>-it</code>オプションを含める必要があります。</span></p>
 </p>
 </div>

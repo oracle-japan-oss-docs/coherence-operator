@@ -52,7 +52,7 @@ lang="bash"
 <p><span class="merged" id="all.3EwN7R" title="原文 : After executing the above command, the jshell&gt; prompt will be displayed ready to accept input.">前述のコマンドを実行すると、入力を受け入れる準備ができた<code>jshell></code>プロンプトが表示されます。</span></p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.17"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.20"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.2bPexs.1" title="原文 : The kubectl exec command must include the -it options so that kubectl creates an interactive terminal session."><code>kubectl</code>が対話型端末セッションを作成できるように、<code>kubectl exec</code>コマンドに<code>-it</code>オプションを含める必要があります。</span></p>
 </p>
 </div>

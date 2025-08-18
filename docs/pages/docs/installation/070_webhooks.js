@@ -43,7 +43,7 @@
 <markup
 lang="bash"
 
->curl -L https://github.com/oracle/coherence-operator/releases/download/v3.5.1/coherence-operator.yaml \
+>curl -L https://github.com/oracle/coherence-operator/releases/download/v3.5.3/coherence-operator.yaml \
     -o coherence-operator.yaml
 sed -i s/self-signed/cert-manager/g coherence-operator.yaml
 kubectl apply -f coherence-operator.yaml</markup>

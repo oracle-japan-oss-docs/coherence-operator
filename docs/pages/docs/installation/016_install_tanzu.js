@@ -10,11 +10,11 @@
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.IuigQ" title="原文 : ghcr.io/oracle/coherence-operator-package:3.5.0 - the Coherence Operator package"><code>ghcr.io/oracle/coherence-operator-package:3.5.0</code> - Coherence Operatorパッケージ</span></p>
+<p><span class="merged" id="all.4StyZ2" title="原文 : ghcr.io/oracle/coherence-operator-package:3.5.3 - the Coherence Operator package"><code>ghcr.io/oracle/coherence-operator-package:3.5.3</code> - Coherence Operatorパッケージ</span></p>
 
 </li>
 <li>
-<p><span class="merged" id="all.2rypZa" title="原文 : ghcr.io/oracle/coherence-operator-repo:3.5.0 - the Coherence Operator repository"><code>ghcr.io/oracle/coherence-operator-repo:3.5.0</code> - Coherence Operatorリポジトリ</span></p>
+<p><span class="merged" id="all.49QNJ6" title="原文 : ghcr.io/oracle/coherence-operator-repo:3.5.3 - the Coherence Operator repository"><code>ghcr.io/oracle/coherence-operator-repo:3.5.3</code> - Coherence Operatorリポジトリ</span></p>
 
 </li>
 </ul>
@@ -27,7 +27,7 @@
 lang="bash"
 
 >tanzu package repository add coherence-repo \
-    --url ghcr.io/oracle/coherence-operator-repo:3.5.1 \
+    --url ghcr.io/oracle/coherence-operator-repo:3.5.3 \
     --namespace coherence \
     --create-namespace</markup>
 
@@ -59,7 +59,7 @@ lang="bash"
 lang="bash"
 
 >NAME                                  DISPLAY-NAME               SHORT-DESCRIPTION                                             LATEST-VERSION
-coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.5.1</markup>
+coherence-operator.oracle.github.com  Oracle Coherence Operator  A Kubernetes operator for managing Oracle Coherence clusters  3.5.3</markup>
 
 </div>
 
@@ -72,7 +72,7 @@ lang="bash"
 
 >tanzu package install coherence \
     --package-name coherence-operator.oracle.github.com \
-    --version 3.5.1 \
+    --version 3.5.3 \
     --namespace coherence</markup>
 
 <p><span class="merged" id="all.HoaXg" title="原文 : The Tanzu CLI will display the various steps it is going through to install the package and if all goes well, finally display Added installed package &apos;coherence&apos; The packages installed in the coherence namespace can be displayed using the CLI.">Tanzu CLIでは、パッケージのインストールに使用する様々なステップが表示され、すべてうまくいけば<code>Added installed package 'coherence'</code>が表示されます。<code>coherence</code>ネームスペースにインストールされたパッケージは、CLIを使用して表示できます。</span></p>
@@ -88,7 +88,7 @@ lang="bash"
 lang="bash"
 
 >NAME       PACKAGE-NAME                          PACKAGE-VERSION  STATUS
-coherence  coherence-operator.oracle.github.com  3.5.1            Reconcile succeeded</markup>
+coherence  coherence-operator.oracle.github.com  3.5.3            Reconcile succeeded</markup>
 
 <p><span class="merged" id="all.3WbWXb" title="原文 : The Operator is now installed and ready to mage Coherence clusters.">オペレータがインストールされ、Coherenceクラスタを形成する準備ができました。</span></p>
 

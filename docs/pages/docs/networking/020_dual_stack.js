@@ -7,7 +7,7 @@
 <p><span class="merged" id="all.G7M8G" title="原文 : This section describes using Coherence and the Operator with a dual stack Kubernetes cluster, where Pods and Services can have both IPv4 and IPv6 interfaces.">この項では、デュアル・スタックKubernetesクラスタでのCoherenceおよびオペレータの使用について説明します。このクラスタでは、ポッドとサービスはIPv4インタフェースとIPv6インタフェースの両方を持つことができます。</span></p>
 
 <div class="admonition note">
-<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.19"  title="原文:: Note">ノート</span></p>
+<p class="admonition-textlabel"><span class="merged" id="all.22fJPu.22"  title="原文:: Note">ノート</span></p>
 <p ><p><span class="merged" id="all.Elx8H.spl1" title="原文 : This section only really applies to making Coherence bind to the correct local IP address for inter-cluster communication.">この項は、クラスタ間通信の正しいローカルIPアドレスにCoherenceをバインドする場合にのみ実際に適用されます。</span> <span class="merged" id="all.Elx8H.spl2" title="原文 : Normally for other Coherence endpoints, such as Extend, gRPC, management, metrics, etc. Coherence will bind to all local addresses ubless specifically configured otherwise.">通常、Extend、gRPC、管理、メトリクスなど、他のCoherenceエンドポイントの場合、Coherenceは、特にそれ以外の場合に構成されていないかぎり、すべてのローカル・アドレスにバインドされます。</span> <span class="merged" id="all.Elx8H.spl3" title="原文 : This means that in and environment such as dual-stack Kubernetes where a Pod has both an IPv4 and IPv6 address, those Coherence endpoints will be reachable using either the IPv4 or IPv6 address of the Pod.">つまり、ポッドにIPv4アドレスとIPv6アドレスの両方があるデュアル・スタックKubernetesなどの環境では、それらのCoherenceエンドポイントはポッドのIPv4アドレスまたはIPv6アドレスのいずれかを使用して到達可能になります。</span> </p>
 </p>
 </div>
@@ -91,7 +91,7 @@ spec:
 
 <ul class="ulist">
 <li>
-<p><span class="merged" id="all.3NCbuk.spl1" title="原文 : Since Operator 3.5.1 it is possible to configure the IP family for the WKA Service.">オペレータ3.5.1は、WKAサービスのIPファミリを構成できます。</span> <span class="merged" id="all.3NCbuk.spl2" title="原文 : The spec.coherence.wka.ipFamily field can be set to either &quot;IPv4&quot; or &quot;IPv6&quot;."><code>spec.coherence.wka.ipFamily</code>フィールドは、IPv4またはIPv6のいずれかに設定できます。</span> <span class="merged" id="all.3NCbuk.spl3" title="原文 : This will cause Coherence to bind to the relevant IP address type.">これにより、Coherenceが関連するIPアドレス・タイプにバインドされます。</span> </p>
+<p><span class="merged" id="all.3dPJtk.spl1" title="原文 : Since Operator 3.5.3 it is possible to configure the IP family for the WKA Service.">オペレータ3.5.3は、WKAサービスのIPファミリを構成できます。</span> <span class="merged" id="all.3dPJtk.spl2" title="原文 : The spec.coherence.wka.ipFamily field can be set to either &quot;IPv4&quot; or &quot;IPv6&quot;."><code>spec.coherence.wka.ipFamily</code>フィールドは、IPv4またはIPv6のいずれかに設定できます。</span> <span class="merged" id="all.3dPJtk.spl3" title="原文 : This will cause Coherence to bind to the relevant IP address type.">これにより、Coherenceが関連するIPアドレス・タイプにバインドされます。</span> </p>
 
 </li>
 </ul>
@@ -110,7 +110,7 @@ spec:
     wka:
       ipFamily: IPv6</markup>
 
-<p><span class="merged" id="all.4RTC1X" title="原文 : Since Operator 3.5.1 it is also possible to configure the IP families used by the headless service created for the StatefulSet if this is required.">オペレータ3.5.1は、StatefulSet用に作成されたヘッドレス・サービスで使用されるIPファミリを構成することもできます(必要な場合)。</span></p>
+<p><span class="merged" id="all.2jbohN" title="原文 : Since Operator 3.5.3 it is also possible to configure the IP families used by the headless service created for the StatefulSet if this is required.">オペレータ3.5.3は、StatefulSet用に作成されたヘッドレス・サービスで使用されるIPファミリを構成することもできます(必要な場合)。</span></p>
 
 <p><span class="merged" id="all.QZzKe" title="原文 : The yaml below will configure WKA to use only IPv6, the headless Service created for the StatefulSet will be a dual-stack, IPv4 and IPv6 service.">次のyamlは、IPv6のみを使用するようにWKAを構成します。StatefulSet用に作成されたヘッドレス・サービスは、デュアル・スタック、IPv4およびIPv6サービスになります。</span></p>
 

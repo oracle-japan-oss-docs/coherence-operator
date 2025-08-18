@@ -39,7 +39,7 @@ spec:
   name: coherence-operator
   source: coherence-operator-catalog
   sourceNamespace: openshift-marketplace
-  startingCSV: coherence-operator.v3.5.1</markup>
+  startingCSV: coherence-operator.v3.5.3</markup>
 
 <p><span class="merged" id="all.q9tFn" title="原文 : Apply the subscription yaml:">サブスクリプションYAMLを適用します:</span></p>
 

@@ -27,7 +27,7 @@
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">Coherence*Extendクライアント</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.mRTvz" title="原文 : An example demonstrating various ways to configure and use Coherence*Extend with Kubernetes.">Kubernetesを使用してCoherence*Extendを構成および使用するための様々な方法を示す例。</span></p>
-</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link @click.native="this.scrollFix('#examples/020_deployment/README.adoc')" to="#examples/020_deployment/README.adoc"><div class="card__link-hover"/>
+</v-card-text> </v-card> </v-flex> </v-layout> </v-container> </v-flex> </v-layout> <v-layout row wrap class="mb-5"> <v-flex xs12> <v-container fluid grid-list-md class="pa-0"> <v-layout row wrap class="pillars"> <v-flex xs12 sm4 lg3> <v-card> <router-link to="/examples/021_deployment/README"><div class="card__link-hover"/>
 </router-link> <v-card-title primary class="headline layout justify-center"><span style="text-align:center">デプロイメント</span></v-card-title> <v-card-text class="caption">
 <p></p>
 <p><span class="merged" id="all.1cUQRp" title="原文 : This example shows how to deploy Coherence applications using the Coherence Operator.">この例では、Coherence Operatorを使用してCoherenceアプリケーションをデプロイする方法を示します。</span></p>
